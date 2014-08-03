@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="aom.scripting.xs.sdk"
+	label="XS SDK Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="aom.scripting.xs"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="aom.scripting.xs.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>
