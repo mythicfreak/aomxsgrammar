@@ -4538,7 +4538,7 @@ public class InternalXSParser extends AbstractInternalContentAssistParser {
                 if ( (LA4_1==RULE_INT) ) {
                     int LA4_3 = input.LA(3);
 
-                    if ( (LA4_3==EOF||(LA4_3>=36 && LA4_3<=37)) ) {
+                    if ( (LA4_3==EOF||(LA4_3>=36 && LA4_3<=37)||LA4_3==52) ) {
                         alt4=1;
                     }
                     else if ( (LA4_3==34) ) {
@@ -4568,7 +4568,7 @@ public class InternalXSParser extends AbstractInternalContentAssistParser {
                 if ( (LA4_2==RULE_INT) ) {
                     int LA4_3 = input.LA(3);
 
-                    if ( (LA4_3==EOF||(LA4_3>=36 && LA4_3<=37)) ) {
+                    if ( (LA4_3==EOF||(LA4_3>=36 && LA4_3<=37)||LA4_3==52) ) {
                         alt4=1;
                     }
                     else if ( (LA4_3==34) ) {
@@ -4595,7 +4595,7 @@ public class InternalXSParser extends AbstractInternalContentAssistParser {
                 {
                 int LA4_3 = input.LA(2);
 
-                if ( (LA4_3==EOF||(LA4_3>=36 && LA4_3<=37)) ) {
+                if ( (LA4_3==EOF||(LA4_3>=36 && LA4_3<=37)||LA4_3==52) ) {
                     alt4=1;
                 }
                 else if ( (LA4_3==34) ) {
@@ -25039,28 +25039,28 @@ public class InternalXSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__VarAssignment_1"
-    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:8799:1: rule__SwitchCase__VarAssignment_1 : ( ruleSignedInt ) ;
+    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:8799:1: rule__SwitchCase__VarAssignment_1 : ( ruleLiteralOrConstantNum ) ;
     public final void rule__SwitchCase__VarAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:8803:1: ( ( ruleSignedInt ) )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:8804:1: ( ruleSignedInt )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:8803:1: ( ( ruleLiteralOrConstantNum ) )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:8804:1: ( ruleLiteralOrConstantNum )
             {
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:8804:1: ( ruleSignedInt )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:8805:1: ruleSignedInt
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:8804:1: ( ruleLiteralOrConstantNum )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:8805:1: ruleLiteralOrConstantNum
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getSwitchCaseAccess().getVarSignedIntParserRuleCall_1_0()); 
+               before(grammarAccess.getSwitchCaseAccess().getVarLiteralOrConstantNumParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSignedInt_in_rule__SwitchCase__VarAssignment_118325);
-            ruleSignedInt();
+            pushFollow(FOLLOW_ruleLiteralOrConstantNum_in_rule__SwitchCase__VarAssignment_118325);
+            ruleLiteralOrConstantNum();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getSwitchCaseAccess().getVarSignedIntParserRuleCall_1_0()); 
+               after(grammarAccess.getSwitchCaseAccess().getVarLiteralOrConstantNumParserRuleCall_1_0()); 
             }
 
             }
@@ -27990,7 +27990,7 @@ public class InternalXSParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__SwitchStatement__DefaultAssignment_6_in_rule__SwitchStatement__Group__6__Impl9897 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SwitchStatement__Group__7__Impl_in_rule__SwitchStatement__Group__79928 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_45_in_rule__SwitchStatement__Group__7__Impl9956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SwitchCase__Group__0__Impl_in_rule__SwitchCase__Group__010003 = new BitSet(new long[]{0x0000000000001810L});
+    public static final BitSet FOLLOW_rule__SwitchCase__Group__0__Impl_in_rule__SwitchCase__Group__010003 = new BitSet(new long[]{0x0000000000001830L});
     public static final BitSet FOLLOW_rule__SwitchCase__Group__1_in_rule__SwitchCase__Group__010006 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_51_in_rule__SwitchCase__Group__0__Impl10034 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SwitchCase__Group__1__Impl_in_rule__SwitchCase__Group__110065 = new BitSet(new long[]{0x0010000000000000L});
@@ -28277,7 +28277,7 @@ public class InternalXSParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_RULE_ID_in_rule__SwitchStatement__VarAssignment_218228 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSwitchCase_in_rule__SwitchStatement__CasesAssignment_518263 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSwitchDefault_in_rule__SwitchStatement__DefaultAssignment_618294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSignedInt_in_rule__SwitchCase__VarAssignment_118325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralOrConstantNum_in_rule__SwitchCase__VarAssignment_118325 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStatement_in_rule__SwitchCase__StatementAssignment_418356 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStatement_in_rule__SwitchDefault__StatementAssignment_318387 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExpression_in_rule__ReturnStatement__ExpressionAssignment_2_118418 = new BitSet(new long[]{0x0000000000000002L});

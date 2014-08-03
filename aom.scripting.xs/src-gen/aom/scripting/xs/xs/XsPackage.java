@@ -852,7 +852,7 @@ public interface XsPackage extends EPackage
   int SWITCH_CASE = 20;
 
   /**
-   * The feature id for the '<em><b>Var</b></em>' attribute.
+   * The feature id for the '<em><b>Var</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -2429,15 +2429,15 @@ public interface XsPackage extends EPackage
   EClass getSwitchCase();
 
   /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.SwitchCase#getVar <em>Var</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.SwitchCase#getVar <em>Var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Var</em>'.
+   * @return the meta object for the containment reference '<em>Var</em>'.
    * @see aom.scripting.xs.xs.SwitchCase#getVar()
    * @see #getSwitchCase()
    * @generated
    */
-  EAttribute getSwitchCase_Var();
+  EReference getSwitchCase_Var();
 
   /**
    * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.SwitchCase#getStatement <em>Statement</em>}'.
@@ -3615,12 +3615,12 @@ public interface XsPackage extends EPackage
     EClass SWITCH_CASE = eINSTANCE.getSwitchCase();
 
     /**
-     * The meta object literal for the '<em><b>Var</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Var</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SWITCH_CASE__VAR = eINSTANCE.getSwitchCase_Var();
+    EReference SWITCH_CASE__VAR = eINSTANCE.getSwitchCase_Var();
 
     /**
      * The meta object literal for the '<em><b>Statement</b></em>' containment reference feature.

@@ -2155,9 +2155,9 @@ ruleSwitchCase returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSwitchCaseAccess().getVarSignedIntParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getSwitchCaseAccess().getVarLiteralOrConstantNumParserRuleCall_1_0()); 
 	    }
-		lv_var_1_0=ruleSignedInt		{
+		lv_var_1_0=ruleLiteralOrConstantNum		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSwitchCaseRule());
 	        }
@@ -2165,7 +2165,7 @@ ruleSwitchCase returns [EObject current=null]
        			$current, 
        			"var",
         		lv_var_1_0, 
-        		"SignedInt");
+        		"LiteralOrConstantNum");
 	        afterParserOrEnumRuleCall();
 	    }
 

@@ -781,7 +781,6 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cContentsVarDeclarationOrStatementParserRuleCall_2_0 = (RuleCall)cContentsAssignment_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		////  : {CompoundStatement} '{' (vars += VarDeclaration ';')* statements += Statement* '}'
 		//CompoundStatement:
 		//	{CompoundStatement} "{" contents+=VarDeclarationOrStatement* "}";
 		public ParserRule getRule() { return rule; }
@@ -1148,29 +1147,29 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCaseKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cVarAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cVarSignedIntParserRuleCall_1_0 = (RuleCall)cVarAssignment_1.eContents().get(0);
+		private final RuleCall cVarLiteralOrConstantNumParserRuleCall_1_0 = (RuleCall)cVarAssignment_1.eContents().get(0);
 		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cStatementAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cStatementStatementParserRuleCall_4_0 = (RuleCall)cStatementAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		////TODO other constant expressions (strings, floats, ... allowed?)
+		////TODO check if strings, floats, ... allowed
 		//SwitchCase:
-		//	"case" var=SignedInt ":" "{" statement=Statement "}";
+		//	"case" var=LiteralOrConstantNum ":" "{" statement=Statement "}";
 		public ParserRule getRule() { return rule; }
 
-		//"case" var=SignedInt ":" "{" statement=Statement "}"
+		//"case" var=LiteralOrConstantNum ":" "{" statement=Statement "}"
 		public Group getGroup() { return cGroup; }
 
 		//"case"
 		public Keyword getCaseKeyword_0() { return cCaseKeyword_0; }
 
-		//var=SignedInt
+		//var=LiteralOrConstantNum
 		public Assignment getVarAssignment_1() { return cVarAssignment_1; }
 
-		//SignedInt
-		public RuleCall getVarSignedIntParserRuleCall_1_0() { return cVarSignedIntParserRuleCall_1_0; }
+		//LiteralOrConstantNum
+		public RuleCall getVarLiteralOrConstantNumParserRuleCall_1_0() { return cVarLiteralOrConstantNumParserRuleCall_1_0; }
 
 		//":"
 		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
@@ -2307,7 +2306,6 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 		return getParamsAccess().getRule();
 	}
 
-	////  : {CompoundStatement} '{' (vars += VarDeclaration ';')* statements += Statement* '}'
 	//CompoundStatement:
 	//	{CompoundStatement} "{" contents+=VarDeclarationOrStatement* "}";
 	public CompoundStatementElements getCompoundStatementAccess() {
@@ -2391,9 +2389,9 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 		return getSwitchStatementAccess().getRule();
 	}
 
-	////TODO other constant expressions (strings, floats, ... allowed?)
+	////TODO check if strings, floats, ... allowed
 	//SwitchCase:
-	//	"case" var=SignedInt ":" "{" statement=Statement "}";
+	//	"case" var=LiteralOrConstantNum ":" "{" statement=Statement "}";
 	public SwitchCaseElements getSwitchCaseAccess() {
 		return (pSwitchCase != null) ? pSwitchCase : (pSwitchCase = new SwitchCaseElements());
 	}

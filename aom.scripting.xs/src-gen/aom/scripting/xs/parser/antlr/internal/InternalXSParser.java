@@ -916,7 +916,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     if ( (LA6_3==14) ) {
                         alt6=2;
                     }
-                    else if ( (LA6_3==EOF||(LA6_3>=19 && LA6_3<=20)) ) {
+                    else if ( (LA6_3==EOF||(LA6_3>=19 && LA6_3<=20)||LA6_3==48) ) {
                         alt6=1;
                     }
                     else {
@@ -946,7 +946,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     if ( (LA6_3==14) ) {
                         alt6=2;
                     }
-                    else if ( (LA6_3==EOF||(LA6_3>=19 && LA6_3<=20)) ) {
+                    else if ( (LA6_3==EOF||(LA6_3>=19 && LA6_3<=20)||LA6_3==48) ) {
                         alt6=1;
                     }
                     else {
@@ -973,7 +973,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                 if ( (LA6_3==14) ) {
                     alt6=2;
                 }
-                else if ( (LA6_3==EOF||(LA6_3>=19 && LA6_3<=20)) ) {
+                else if ( (LA6_3==EOF||(LA6_3>=19 && LA6_3<=20)||LA6_3==48) ) {
                     alt6=1;
                 }
                 else {
@@ -6037,7 +6037,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSwitchCase"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2147:1: ruleSwitchCase returns [EObject current=null] : (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2147:1: ruleSwitchCase returns [EObject current=null] : (otherlv_0= 'case' ( (lv_var_1_0= ruleLiteralOrConstantNum ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' ) ;
     public final EObject ruleSwitchCase() throws RecognitionException {
         EObject current = null;
 
@@ -6045,7 +6045,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
         Token otherlv_2=null;
         Token otherlv_3=null;
         Token otherlv_5=null;
-        AntlrDatatypeRuleToken lv_var_1_0 = null;
+        EObject lv_var_1_0 = null;
 
         EObject lv_statement_4_0 = null;
 
@@ -6053,11 +6053,11 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2150:28: ( (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2151:1: (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2150:28: ( (otherlv_0= 'case' ( (lv_var_1_0= ruleLiteralOrConstantNum ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2151:1: (otherlv_0= 'case' ( (lv_var_1_0= ruleLiteralOrConstantNum ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2151:1: (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2151:3: otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}'
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2151:1: (otherlv_0= 'case' ( (lv_var_1_0= ruleLiteralOrConstantNum ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2151:3: otherlv_0= 'case' ( (lv_var_1_0= ruleLiteralOrConstantNum ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}'
             {
             otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleSwitchCase5296); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6065,19 +6065,19 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_0, grammarAccess.getSwitchCaseAccess().getCaseKeyword_0());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2155:1: ( (lv_var_1_0= ruleSignedInt ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2156:1: (lv_var_1_0= ruleSignedInt )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2155:1: ( (lv_var_1_0= ruleLiteralOrConstantNum ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2156:1: (lv_var_1_0= ruleLiteralOrConstantNum )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2156:1: (lv_var_1_0= ruleSignedInt )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2157:3: lv_var_1_0= ruleSignedInt
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2156:1: (lv_var_1_0= ruleLiteralOrConstantNum )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2157:3: lv_var_1_0= ruleLiteralOrConstantNum
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getSwitchCaseAccess().getVarSignedIntParserRuleCall_1_0()); 
+              	        newCompositeNode(grammarAccess.getSwitchCaseAccess().getVarLiteralOrConstantNumParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleSignedInt_in_ruleSwitchCase5317);
-            lv_var_1_0=ruleSignedInt();
+            pushFollow(FOLLOW_ruleLiteralOrConstantNum_in_ruleSwitchCase5317);
+            lv_var_1_0=ruleLiteralOrConstantNum();
 
             state._fsp--;
             if (state.failed) return current;
@@ -6090,7 +6090,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                      			current, 
                      			"var",
                       		lv_var_1_0, 
-                      		"SignedInt");
+                      		"LiteralOrConstantNum");
               	        afterParserOrEnumRuleCall();
               	    
             }
@@ -10260,8 +10260,8 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_41_in_ruleSwitchStatement5213 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSwitchCase_in_entryRuleSwitchCase5249 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSwitchCase5259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleSwitchCase5296 = new BitSet(new long[]{0x0000000000003010L});
-    public static final BitSet FOLLOW_ruleSignedInt_in_ruleSwitchCase5317 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_47_in_ruleSwitchCase5296 = new BitSet(new long[]{0x0000000000003030L});
+    public static final BitSet FOLLOW_ruleLiteralOrConstantNum_in_ruleSwitchCase5317 = new BitSet(new long[]{0x0001000000000000L});
     public static final BitSet FOLLOW_48_in_ruleSwitchCase5329 = new BitSet(new long[]{0x0000010000000000L});
     public static final BitSet FOLLOW_40_in_ruleSwitchCase5341 = new BitSet(new long[]{0x001C757B8007B870L});
     public static final BitSet FOLLOW_ruleStatement_in_ruleSwitchCase5362 = new BitSet(new long[]{0x0000020000000000L});

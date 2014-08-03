@@ -854,7 +854,7 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (var=SignedInt statement=Statement)
+	 *     (var=LiteralOrConstantNum statement=Statement)
 	 */
 	protected void sequence_SwitchCase(EObject context, SwitchCase semanticObject) {
 		if(errorAcceptor != null) {
@@ -865,7 +865,7 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getSwitchCaseAccess().getVarSignedIntParserRuleCall_1_0(), semanticObject.getVar());
+		feeder.accept(grammarAccess.getSwitchCaseAccess().getVarLiteralOrConstantNumParserRuleCall_1_0(), semanticObject.getVar());
 		feeder.accept(grammarAccess.getSwitchCaseAccess().getStatementStatementParserRuleCall_4_0(), semanticObject.getStatement());
 		feeder.finish();
 	}

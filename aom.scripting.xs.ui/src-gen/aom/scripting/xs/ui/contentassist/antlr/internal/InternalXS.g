@@ -8802,8 +8802,8 @@ rule__SwitchCase__VarAssignment_1
     }
 :
 (
-{ before(grammarAccess.getSwitchCaseAccess().getVarSignedIntParserRuleCall_1_0()); }
-	ruleSignedInt{ after(grammarAccess.getSwitchCaseAccess().getVarSignedIntParserRuleCall_1_0()); }
+{ before(grammarAccess.getSwitchCaseAccess().getVarLiteralOrConstantNumParserRuleCall_1_0()); }
+	ruleLiteralOrConstantNum{ after(grammarAccess.getSwitchCaseAccess().getVarLiteralOrConstantNumParserRuleCall_1_0()); }
 )
 
 ;

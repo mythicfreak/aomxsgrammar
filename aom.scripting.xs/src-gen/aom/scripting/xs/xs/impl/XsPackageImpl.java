@@ -1068,9 +1068,9 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSwitchCase_Var()
+  public EReference getSwitchCase_Var()
   {
-    return (EAttribute)switchCaseEClass.getEStructuralFeatures().get(0);
+    return (EReference)switchCaseEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1765,7 +1765,7 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     createEReference(switchStatementEClass, SWITCH_STATEMENT__DEFAULT);
 
     switchCaseEClass = createEClass(SWITCH_CASE);
-    createEAttribute(switchCaseEClass, SWITCH_CASE__VAR);
+    createEReference(switchCaseEClass, SWITCH_CASE__VAR);
     createEReference(switchCaseEClass, SWITCH_CASE__STATEMENT);
 
     switchDefaultEClass = createEClass(SWITCH_DEFAULT);
@@ -1995,7 +1995,7 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     initEReference(getSwitchStatement_Default(), this.getSwitchDefault(), null, "default", null, 0, 1, SwitchStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(switchCaseEClass, SwitchCase.class, "SwitchCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSwitchCase_Var(), ecorePackage.getEInt(), "var", null, 0, 1, SwitchCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSwitchCase_Var(), this.getLiteralOrConstantNum(), null, "var", null, 0, 1, SwitchCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSwitchCase_Statement(), this.getStatement(), null, "statement", null, 0, 1, SwitchCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(switchDefaultEClass, SwitchDefault.class, "SwitchDefault", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

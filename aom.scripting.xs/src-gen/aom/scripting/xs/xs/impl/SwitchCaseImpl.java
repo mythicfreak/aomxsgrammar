@@ -2,6 +2,7 @@
  */
 package aom.scripting.xs.xs.impl;
 
+import aom.scripting.xs.xs.LiteralOrConstantNum;
 import aom.scripting.xs.xs.Statement;
 import aom.scripting.xs.xs.SwitchCase;
 import aom.scripting.xs.xs.XsPackage;
@@ -32,24 +33,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements SwitchCase
 {
   /**
-   * The default value of the '{@link #getVar() <em>Var</em>}' attribute.
+   * The cached value of the '{@link #getVar() <em>Var</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getVar()
    * @generated
    * @ordered
    */
-  protected static final int VAR_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getVar() <em>Var</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVar()
-   * @generated
-   * @ordered
-   */
-  protected int var = VAR_EDEFAULT;
+  protected LiteralOrConstantNum var;
 
   /**
    * The cached value of the '{@link #getStatement() <em>Statement</em>}' containment reference.
@@ -87,7 +78,7 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getVar()
+  public LiteralOrConstantNum getVar()
   {
     return var;
   }
@@ -97,12 +88,37 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVar(int newVar)
+  public NotificationChain basicSetVar(LiteralOrConstantNum newVar, NotificationChain msgs)
   {
-    int oldVar = var;
+    LiteralOrConstantNum oldVar = var;
     var = newVar;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.SWITCH_CASE__VAR, oldVar, var));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.SWITCH_CASE__VAR, oldVar, newVar);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setVar(LiteralOrConstantNum newVar)
+  {
+    if (newVar != var)
+    {
+      NotificationChain msgs = null;
+      if (var != null)
+        msgs = ((InternalEObject)var).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.SWITCH_CASE__VAR, null, msgs);
+      if (newVar != null)
+        msgs = ((InternalEObject)newVar).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.SWITCH_CASE__VAR, null, msgs);
+      msgs = basicSetVar(newVar, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.SWITCH_CASE__VAR, newVar, newVar));
   }
 
   /**
@@ -163,6 +179,8 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
   {
     switch (featureID)
     {
+      case XsPackage.SWITCH_CASE__VAR:
+        return basicSetVar(null, msgs);
       case XsPackage.SWITCH_CASE__STATEMENT:
         return basicSetStatement(null, msgs);
     }
@@ -198,7 +216,7 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
     switch (featureID)
     {
       case XsPackage.SWITCH_CASE__VAR:
-        setVar((Integer)newValue);
+        setVar((LiteralOrConstantNum)newValue);
         return;
       case XsPackage.SWITCH_CASE__STATEMENT:
         setStatement((Statement)newValue);
@@ -218,7 +236,7 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
     switch (featureID)
     {
       case XsPackage.SWITCH_CASE__VAR:
-        setVar(VAR_EDEFAULT);
+        setVar((LiteralOrConstantNum)null);
         return;
       case XsPackage.SWITCH_CASE__STATEMENT:
         setStatement((Statement)null);
@@ -238,28 +256,11 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
     switch (featureID)
     {
       case XsPackage.SWITCH_CASE__VAR:
-        return var != VAR_EDEFAULT;
+        return var != null;
       case XsPackage.SWITCH_CASE__STATEMENT:
         return statement != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (var: ");
-    result.append(var);
-    result.append(')');
-    return result.toString();
   }
 
 } //SwitchCaseImpl

@@ -85,7 +85,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//SwitchStatement/default"/>
     </genClasses>
     <genClasses ecoreClass="XS.ecore#//SwitchCase">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//SwitchCase/var"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//SwitchCase/var"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//SwitchCase/statement"/>
     </genClasses>
     <genClasses ecoreClass="XS.ecore#//SwitchDefault">

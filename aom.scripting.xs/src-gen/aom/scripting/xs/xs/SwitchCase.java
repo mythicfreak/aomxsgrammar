@@ -24,30 +24,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface SwitchCase extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Var</b></em>' attribute.
+   * Returns the value of the '<em><b>Var</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Var</em>' attribute isn't clear,
+   * If the meaning of the '<em>Var</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Var</em>' attribute.
-   * @see #setVar(int)
+   * @return the value of the '<em>Var</em>' containment reference.
+   * @see #setVar(LiteralOrConstantNum)
    * @see aom.scripting.xs.xs.XsPackage#getSwitchCase_Var()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  int getVar();
+  LiteralOrConstantNum getVar();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.SwitchCase#getVar <em>Var</em>}' attribute.
+   * Sets the value of the '{@link aom.scripting.xs.xs.SwitchCase#getVar <em>Var</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Var</em>' attribute.
+   * @param value the new value of the '<em>Var</em>' containment reference.
    * @see #getVar()
    * @generated
    */
-  void setVar(int value);
+  void setVar(LiteralOrConstantNum value);
 
   /**
    * Returns the value of the '<em><b>Statement</b></em>' containment reference.
