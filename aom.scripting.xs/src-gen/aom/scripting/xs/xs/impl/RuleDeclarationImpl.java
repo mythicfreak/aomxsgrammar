@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#isActive <em>Active</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#isRunImmediately <em>Run Immediately</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#isHighFrequency <em>High Frequency</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#getGroup <em>Group</em>}</li>
@@ -36,24 +36,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclaration
 {
   /**
-   * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
+   * The default value of the '{@link #isActive() <em>Active</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStatus()
+   * @see #isActive()
    * @generated
    * @ordered
    */
-  protected static final String STATUS_EDEFAULT = null;
+  protected static final boolean ACTIVE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
+   * The cached value of the '{@link #isActive() <em>Active</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStatus()
+   * @see #isActive()
    * @generated
    * @ordered
    */
-  protected String status = STATUS_EDEFAULT;
+  protected boolean active = ACTIVE_EDEFAULT;
 
   /**
    * The default value of the '{@link #isRunImmediately() <em>Run Immediately</em>}' attribute.
@@ -191,9 +191,9 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getStatus()
+  public boolean isActive()
   {
-    return status;
+    return active;
   }
 
   /**
@@ -201,12 +201,12 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setStatus(String newStatus)
+  public void setActive(boolean newActive)
   {
-    String oldStatus = status;
-    status = newStatus;
+    boolean oldActive = active;
+    active = newActive;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.RULE_DECLARATION__STATUS, oldStatus, status));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.RULE_DECLARATION__ACTIVE, oldActive, active));
   }
 
   /**
@@ -398,8 +398,8 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
-      case XsPackage.RULE_DECLARATION__STATUS:
-        return getStatus();
+      case XsPackage.RULE_DECLARATION__ACTIVE:
+        return isActive();
       case XsPackage.RULE_DECLARATION__RUN_IMMEDIATELY:
         return isRunImmediately();
       case XsPackage.RULE_DECLARATION__HIGH_FREQUENCY:
@@ -426,8 +426,8 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
-      case XsPackage.RULE_DECLARATION__STATUS:
-        setStatus((String)newValue);
+      case XsPackage.RULE_DECLARATION__ACTIVE:
+        setActive((Boolean)newValue);
         return;
       case XsPackage.RULE_DECLARATION__RUN_IMMEDIATELY:
         setRunImmediately((Boolean)newValue);
@@ -461,8 +461,8 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
-      case XsPackage.RULE_DECLARATION__STATUS:
-        setStatus(STATUS_EDEFAULT);
+      case XsPackage.RULE_DECLARATION__ACTIVE:
+        setActive(ACTIVE_EDEFAULT);
         return;
       case XsPackage.RULE_DECLARATION__RUN_IMMEDIATELY:
         setRunImmediately(RUN_IMMEDIATELY_EDEFAULT);
@@ -496,8 +496,8 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
-      case XsPackage.RULE_DECLARATION__STATUS:
-        return STATUS_EDEFAULT == null ? status != null : !STATUS_EDEFAULT.equals(status);
+      case XsPackage.RULE_DECLARATION__ACTIVE:
+        return active != ACTIVE_EDEFAULT;
       case XsPackage.RULE_DECLARATION__RUN_IMMEDIATELY:
         return runImmediately != RUN_IMMEDIATELY_EDEFAULT;
       case XsPackage.RULE_DECLARATION__HIGH_FREQUENCY:
@@ -525,8 +525,8 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (status: ");
-    result.append(status);
+    result.append(" (active: ");
+    result.append(active);
     result.append(", runImmediately: ");
     result.append(runImmediately);
     result.append(", highFrequency: ");

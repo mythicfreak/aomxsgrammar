@@ -35,7 +35,7 @@
     </genClasses>
     <genClasses ecoreClass="XS.ecore#//IncludeStatement"/>
     <genClasses ecoreClass="XS.ecore#//RuleDeclaration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//RuleDeclaration/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//RuleDeclaration/active"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//RuleDeclaration/runImmediately"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//RuleDeclaration/highFrequency"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//RuleDeclaration/group"/>

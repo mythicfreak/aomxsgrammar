@@ -70,8 +70,7 @@ public class AbstractXSProposalProvider extends org.eclipse.xtext.common.ui.cont
 	public void completeRuleDeclaration_Name(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
-	public void completeRuleDeclaration_Status(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
-		// subclasses may override
+	public void completeRuleDeclaration_Active(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
 	public void completeRuleDeclaration_RunImmediately(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {

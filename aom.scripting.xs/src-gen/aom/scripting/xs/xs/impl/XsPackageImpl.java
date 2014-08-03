@@ -668,7 +668,7 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRuleDeclaration_Status()
+  public EAttribute getRuleDeclaration_Active()
   {
     return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(0);
   }
@@ -1713,7 +1713,7 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     includeStatementEClass = createEClass(INCLUDE_STATEMENT);
 
     ruleDeclarationEClass = createEClass(RULE_DECLARATION);
-    createEAttribute(ruleDeclarationEClass, RULE_DECLARATION__STATUS);
+    createEAttribute(ruleDeclarationEClass, RULE_DECLARATION__ACTIVE);
     createEAttribute(ruleDeclarationEClass, RULE_DECLARATION__RUN_IMMEDIATELY);
     createEAttribute(ruleDeclarationEClass, RULE_DECLARATION__HIGH_FREQUENCY);
     createEAttribute(ruleDeclarationEClass, RULE_DECLARATION__GROUP);
@@ -1943,7 +1943,7 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     initEClass(includeStatementEClass, IncludeStatement.class, "IncludeStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(ruleDeclarationEClass, RuleDeclaration.class, "RuleDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRuleDeclaration_Status(), ecorePackage.getEString(), "status", null, 0, 1, RuleDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRuleDeclaration_Active(), ecorePackage.getEBoolean(), "active", null, 0, 1, RuleDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRuleDeclaration_RunImmediately(), ecorePackage.getEBoolean(), "runImmediately", null, 0, 1, RuleDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRuleDeclaration_HighFrequency(), ecorePackage.getEBoolean(), "highFrequency", null, 0, 1, RuleDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRuleDeclaration_Group(), ecorePackage.getEString(), "group", null, 0, 1, RuleDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -42,7 +42,7 @@ public class XSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSignedNumAccess().getAlternatives(), "rule__SignedNum__Alternatives");
 					put(grammarAccess.getLiteralOrConstantNumAccess().getAlternatives(), "rule__LiteralOrConstantNum__Alternatives");
 					put(grammarAccess.getBoolAccess().getAlternatives(), "rule__Bool__Alternatives");
-					put(grammarAccess.getRuleDeclarationAccess().getStatusAlternatives_2_0_0(), "rule__RuleDeclaration__StatusAlternatives_2_0_0");
+					put(grammarAccess.getRuleDeclarationAccess().getAlternatives_2_0(), "rule__RuleDeclaration__Alternatives_2_0");
 					put(grammarAccess.getVarTypeSpecifierAccess().getAlternatives(), "rule__VarTypeSpecifier__Alternatives");
 					put(grammarAccess.getFunTypeSpecifierAccess().getAlternatives(), "rule__FunTypeSpecifier__Alternatives");
 					put(grammarAccess.getParamsAccess().getAlternatives(), "rule__Params__Alternatives");
@@ -130,7 +130,7 @@ public class XSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunDeclarationAccess().getStatementsAssignment_6(), "rule__FunDeclaration__StatementsAssignment_6");
 					put(grammarAccess.getIncludeStatementAccess().getNameAssignment_1(), "rule__IncludeStatement__NameAssignment_1");
 					put(grammarAccess.getRuleDeclarationAccess().getNameAssignment_1(), "rule__RuleDeclaration__NameAssignment_1");
-					put(grammarAccess.getRuleDeclarationAccess().getStatusAssignment_2_0(), "rule__RuleDeclaration__StatusAssignment_2_0");
+					put(grammarAccess.getRuleDeclarationAccess().getActiveAssignment_2_0_0(), "rule__RuleDeclaration__ActiveAssignment_2_0_0");
 					put(grammarAccess.getRuleDeclarationAccess().getRunImmediatelyAssignment_2_1(), "rule__RuleDeclaration__RunImmediatelyAssignment_2_1");
 					put(grammarAccess.getRuleDeclarationAccess().getHighFrequencyAssignment_2_2(), "rule__RuleDeclaration__HighFrequencyAssignment_2_2");
 					put(grammarAccess.getRuleDeclarationAccess().getGroupAssignment_2_3_1(), "rule__RuleDeclaration__GroupAssignment_2_3_1");

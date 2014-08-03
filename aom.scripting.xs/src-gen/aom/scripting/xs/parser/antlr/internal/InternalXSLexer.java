@@ -1233,10 +1233,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3518:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3518:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3508:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3508:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3518:11: ( '^' )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3508:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1245,7 +1245,7 @@ public class InternalXSLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3518:11: '^'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3508:11: '^'
                     {
                     match('^'); 
 
@@ -1263,7 +1263,7 @@ public class InternalXSLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3518:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3508:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -1312,10 +1312,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3520:10: ( ( '0' .. '9' )+ )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3520:12: ( '0' .. '9' )+
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3510:10: ( ( '0' .. '9' )+ )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3510:12: ( '0' .. '9' )+
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3520:12: ( '0' .. '9' )+
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3510:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -1329,7 +1329,7 @@ public class InternalXSLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3520:13: '0' .. '9'
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3510:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1361,10 +1361,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3522:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3522:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3512:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3512:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3522:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3512:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1382,10 +1382,10 @@ public class InternalXSLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3522:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3512:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3522:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3512:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1401,7 +1401,7 @@ public class InternalXSLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3522:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3512:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1417,7 +1417,7 @@ public class InternalXSLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3522:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3512:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1442,10 +1442,10 @@ public class InternalXSLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3522:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3512:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3522:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3512:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1461,7 +1461,7 @@ public class InternalXSLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3522:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3512:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1477,7 +1477,7 @@ public class InternalXSLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3522:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3512:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1520,12 +1520,12 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3524:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3524:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3514:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3514:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3524:24: ( options {greedy=false; } : . )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3514:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1550,7 +1550,7 @@ public class InternalXSLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3524:52: .
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3514:52: .
             	    {
             	    matchAny(); 
 
@@ -1580,12 +1580,12 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3526:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3526:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3516:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3516:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3526:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3516:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1598,7 +1598,7 @@ public class InternalXSLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3526:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3516:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1618,7 +1618,7 @@ public class InternalXSLexer extends Lexer {
                 }
             } while (true);
 
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3526:40: ( ( '\\r' )? '\\n' )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3516:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1627,9 +1627,9 @@ public class InternalXSLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3526:41: ( '\\r' )? '\\n'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3516:41: ( '\\r' )? '\\n'
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3526:41: ( '\\r' )?
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3516:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1638,7 +1638,7 @@ public class InternalXSLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3526:41: '\\r'
+                            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3516:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1670,10 +1670,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3528:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3528:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3518:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3518:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3528:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3518:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1727,8 +1727,8 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3530:16: ( . )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3530:18: .
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3520:16: ( . )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3520:18: .
             {
             matchAny(); 
 

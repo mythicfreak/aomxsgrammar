@@ -1560,25 +1560,23 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RuleDeclaration__StatusAlternatives_2_0_0
+rule__RuleDeclaration__Alternatives_2_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRuleDeclarationAccess().getStatusActiveKeyword_2_0_0_0()); }
-
-	'active' 
-
-{ after(grammarAccess.getRuleDeclarationAccess().getStatusActiveKeyword_2_0_0_0()); }
+{ before(grammarAccess.getRuleDeclarationAccess().getActiveAssignment_2_0_0()); }
+(rule__RuleDeclaration__ActiveAssignment_2_0_0)
+{ after(grammarAccess.getRuleDeclarationAccess().getActiveAssignment_2_0_0()); }
 )
 
     |(
-{ before(grammarAccess.getRuleDeclarationAccess().getStatusInactiveKeyword_2_0_0_1()); }
+{ before(grammarAccess.getRuleDeclarationAccess().getInactiveKeyword_2_0_1()); }
 
 	'inactive' 
 
-{ after(grammarAccess.getRuleDeclarationAccess().getStatusInactiveKeyword_2_0_0_1()); }
+{ after(grammarAccess.getRuleDeclarationAccess().getInactiveKeyword_2_0_1()); }
 )
 
 ;
@@ -7599,9 +7597,9 @@ rule__RuleDeclaration__UnorderedGroup_2__Impl
 	 				}
 					(
 					
-						{ before(grammarAccess.getRuleDeclarationAccess().getStatusAssignment_2_0()); }
-						(rule__RuleDeclaration__StatusAssignment_2_0)
-						{ after(grammarAccess.getRuleDeclarationAccess().getStatusAssignment_2_0()); }
+						{ before(grammarAccess.getRuleDeclarationAccess().getAlternatives_2_0()); }
+						(rule__RuleDeclaration__Alternatives_2_0)
+						{ after(grammarAccess.getRuleDeclarationAccess().getAlternatives_2_0()); }
 					)
  				)
 			)  |
@@ -8287,15 +8285,22 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RuleDeclaration__StatusAssignment_2_0
+rule__RuleDeclaration__ActiveAssignment_2_0_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRuleDeclarationAccess().getStatusAlternatives_2_0_0()); }
-(rule__RuleDeclaration__StatusAlternatives_2_0_0)
-{ after(grammarAccess.getRuleDeclarationAccess().getStatusAlternatives_2_0_0()); }
+{ before(grammarAccess.getRuleDeclarationAccess().getActiveActiveKeyword_2_0_0_0()); }
+(
+{ before(grammarAccess.getRuleDeclarationAccess().getActiveActiveKeyword_2_0_0_0()); }
+
+	'active' 
+
+{ after(grammarAccess.getRuleDeclarationAccess().getActiveActiveKeyword_2_0_0_0()); }
+)
+
+{ after(grammarAccess.getRuleDeclarationAccess().getActiveActiveKeyword_2_0_0_0()); }
 )
 
 ;

@@ -829,7 +829,7 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         (status='active' | status='inactive') 
+	 *         active?='active'? 
 	 *         runImmediately?='runImmediately'? 
 	 *         highFrequency?='highFrequency'? 
 	 *         group=ID? 

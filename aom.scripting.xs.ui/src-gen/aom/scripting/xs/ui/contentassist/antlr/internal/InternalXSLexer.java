@@ -176,10 +176,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:15:7: ( 'active' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:15:9: 'active'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:15:7: ( 'inactive' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:15:9: 'inactive'
             {
-            match("active"); 
+            match("inactive"); 
 
 
             }
@@ -197,10 +197,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:16:7: ( 'inactive' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:16:9: 'inactive'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:16:7: ( 'int' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:16:9: 'int'
             {
-            match("inactive"); 
+            match("int"); 
 
 
             }
@@ -218,10 +218,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:17:7: ( 'int' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:17:9: 'int'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:17:7: ( 'float' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:17:9: 'float'
             {
-            match("int"); 
+            match("float"); 
 
 
             }
@@ -239,10 +239,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:18:7: ( 'float' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:18:9: 'float'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:18:7: ( 'bool' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:18:9: 'bool'
             {
-            match("float"); 
+            match("bool"); 
 
 
             }
@@ -260,10 +260,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:19:7: ( 'bool' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:19:9: 'bool'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:19:7: ( 'vector' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:19:9: 'vector'
             {
-            match("bool"); 
+            match("vector"); 
 
 
             }
@@ -281,10 +281,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:20:7: ( 'vector' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:20:9: 'vector'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:20:7: ( 'string' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:20:9: 'string'
             {
-            match("vector"); 
+            match("string"); 
 
 
             }
@@ -302,10 +302,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:21:7: ( 'string' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:21:9: 'string'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:21:7: ( 'void' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:21:9: 'void'
             {
-            match("string"); 
+            match("void"); 
 
 
             }
@@ -323,10 +323,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:22:7: ( 'void' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:22:9: 'void'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:22:7: ( '++' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:22:9: '++'
             {
-            match("void"); 
+            match("++"); 
 
 
             }
@@ -344,10 +344,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:23:7: ( '++' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:23:9: '++'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:23:7: ( '--' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:23:9: '--'
             {
-            match("++"); 
+            match("--"); 
 
 
             }
@@ -365,10 +365,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:24:7: ( '--' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:24:9: '--'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:24:7: ( '==' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:24:9: '=='
             {
-            match("--"); 
+            match("=="); 
 
 
             }
@@ -386,10 +386,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:25:7: ( '==' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:25:9: '=='
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:25:7: ( '!=' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:25:9: '!='
             {
-            match("=="); 
+            match("!="); 
 
 
             }
@@ -407,10 +407,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:26:7: ( '!=' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:26:9: '!='
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:26:7: ( '<=' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:26:9: '<='
             {
-            match("!="); 
+            match("<="); 
 
 
             }
@@ -428,11 +428,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:27:7: ( '<=' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:27:9: '<='
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:27:7: ( '<' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:27:9: '<'
             {
-            match("<="); 
-
+            match('<'); 
 
             }
 
@@ -449,10 +448,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:28:7: ( '<' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:28:9: '<'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:28:7: ( '>' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:28:9: '>'
             {
-            match('<'); 
+            match('>'); 
 
             }
 
@@ -469,10 +468,11 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:29:7: ( '>' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:29:9: '>'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:29:7: ( '>=' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:29:9: '>='
             {
-            match('>'); 
+            match(">="); 
+
 
             }
 
@@ -489,11 +489,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:30:7: ( '>=' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:30:9: '>='
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:30:7: ( '*' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:30:9: '*'
             {
-            match(">="); 
-
+            match('*'); 
 
             }
 
@@ -510,10 +509,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:31:7: ( '*' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:31:9: '*'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:31:7: ( '/' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:31:9: '/'
             {
-            match('*'); 
+            match('/'); 
 
             }
 
@@ -530,10 +529,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:32:7: ( '/' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:32:9: '/'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:32:7: ( '%' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:32:9: '%'
             {
-            match('/'); 
+            match('%'); 
 
             }
 
@@ -550,10 +549,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:33:7: ( '%' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:33:9: '%'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:33:7: ( ';' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:33:9: ';'
             {
-            match('%'); 
+            match(';'); 
 
             }
 
@@ -570,10 +569,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:34:7: ( ';' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:34:9: ';'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:34:7: ( '.' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:34:9: '.'
             {
-            match(';'); 
+            match('.'); 
 
             }
 
@@ -590,10 +589,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:35:7: ( '.' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:35:9: '.'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:35:7: ( '(' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:35:9: '('
             {
-            match('.'); 
+            match('('); 
 
             }
 
@@ -610,10 +609,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:36:7: ( '(' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:36:9: '('
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:36:7: ( ',' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:36:9: ','
             {
-            match('('); 
+            match(','); 
 
             }
 
@@ -630,10 +629,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:37:7: ( ',' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:37:9: ','
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:37:7: ( ')' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:37:9: ')'
             {
-            match(','); 
+            match(')'); 
 
             }
 
@@ -650,10 +649,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:38:7: ( ')' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:38:9: ')'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:38:7: ( '=' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:38:9: '='
             {
-            match(')'); 
+            match('='); 
 
             }
 
@@ -670,10 +669,11 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:39:7: ( '=' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:39:9: '='
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:39:7: ( 'include' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:39:9: 'include'
             {
-            match('='); 
+            match("include"); 
+
 
             }
 
@@ -690,10 +690,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:40:7: ( 'include' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:40:9: 'include'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:40:7: ( 'rule' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:40:9: 'rule'
             {
-            match("include"); 
+            match("rule"); 
 
 
             }
@@ -711,10 +711,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:41:7: ( 'rule' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:41:9: 'rule'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:41:7: ( 'group' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:41:9: 'group'
             {
-            match("rule"); 
+            match("group"); 
 
 
             }
@@ -732,10 +732,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:42:7: ( 'group' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:42:9: 'group'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:42:7: ( 'minInterval' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:42:9: 'minInterval'
             {
-            match("group"); 
+            match("minInterval"); 
 
 
             }
@@ -753,10 +753,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:43:7: ( 'minInterval' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:43:9: 'minInterval'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:43:7: ( 'maxInterval' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:43:9: 'maxInterval'
             {
-            match("minInterval"); 
+            match("maxInterval"); 
 
 
             }
@@ -774,11 +774,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:44:7: ( 'maxInterval' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:44:9: 'maxInterval'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:44:7: ( '{' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:44:9: '{'
             {
-            match("maxInterval"); 
-
+            match('{'); 
 
             }
 
@@ -795,10 +794,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:45:7: ( '{' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:45:9: '{'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:45:7: ( '}' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:45:9: '}'
             {
-            match('{'); 
+            match('}'); 
 
             }
 
@@ -815,10 +814,11 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:46:7: ( '}' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:46:9: '}'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:46:7: ( 'if' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:46:9: 'if'
             {
-            match('}'); 
+            match("if"); 
+
 
             }
 
@@ -835,10 +835,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:47:7: ( 'if' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:47:9: 'if'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:47:7: ( 'else' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:47:9: 'else'
             {
-            match("if"); 
+            match("else"); 
 
 
             }
@@ -856,10 +856,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:48:7: ( 'else' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:48:9: 'else'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:48:7: ( 'while' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:48:9: 'while'
             {
-            match("else"); 
+            match("while"); 
 
 
             }
@@ -877,10 +877,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:49:7: ( 'while' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:49:9: 'while'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:49:7: ( 'for' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:49:9: 'for'
             {
-            match("while"); 
+            match("for"); 
 
 
             }
@@ -898,10 +898,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:50:7: ( 'for' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:50:9: 'for'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:50:7: ( 'switch' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:50:9: 'switch'
             {
-            match("for"); 
+            match("switch"); 
 
 
             }
@@ -919,10 +919,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:51:7: ( 'switch' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:51:9: 'switch'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:51:7: ( 'case' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:51:9: 'case'
             {
-            match("switch"); 
+            match("case"); 
 
 
             }
@@ -940,11 +940,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:52:7: ( 'case' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:52:9: 'case'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:52:7: ( ':' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:52:9: ':'
             {
-            match("case"); 
-
+            match(':'); 
 
             }
 
@@ -961,10 +960,11 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:53:7: ( ':' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:53:9: ':'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:53:7: ( 'default' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:53:9: 'default'
             {
-            match(':'); 
+            match("default"); 
+
 
             }
 
@@ -981,10 +981,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:54:7: ( 'default' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:54:9: 'default'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:54:7: ( 'return' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:54:9: 'return'
             {
-            match("default"); 
+            match("return"); 
 
 
             }
@@ -1002,10 +1002,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:55:7: ( 'return' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:55:9: 'return'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:55:7: ( 'continue' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:55:9: 'continue'
             {
-            match("return"); 
+            match("continue"); 
 
 
             }
@@ -1023,10 +1023,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:56:7: ( 'continue' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:56:9: 'continue'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:56:7: ( 'break' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:56:9: 'break'
             {
-            match("continue"); 
+            match("break"); 
 
 
             }
@@ -1044,10 +1044,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:57:7: ( 'break' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:57:9: 'break'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:57:7: ( 'active' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:57:9: 'active'
             {
-            match("break"); 
+            match("active"); 
 
 
             }
@@ -1233,10 +1233,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9333:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9333:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9338:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9338:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9333:11: ( '^' )?
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9338:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1245,7 +1245,7 @@ public class InternalXSLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9333:11: '^'
+                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9338:11: '^'
                     {
                     match('^'); 
 
@@ -1263,7 +1263,7 @@ public class InternalXSLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9333:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9338:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -1312,10 +1312,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9335:10: ( ( '0' .. '9' )+ )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9335:12: ( '0' .. '9' )+
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9340:10: ( ( '0' .. '9' )+ )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9340:12: ( '0' .. '9' )+
             {
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9335:12: ( '0' .. '9' )+
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9340:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -1329,7 +1329,7 @@ public class InternalXSLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9335:13: '0' .. '9'
+            	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9340:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1361,10 +1361,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9337:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9337:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9342:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9342:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9337:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9342:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1382,10 +1382,10 @@ public class InternalXSLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9337:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9342:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9337:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9342:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1401,7 +1401,7 @@ public class InternalXSLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9337:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9342:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1417,7 +1417,7 @@ public class InternalXSLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9337:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9342:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1442,10 +1442,10 @@ public class InternalXSLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9337:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9342:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9337:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9342:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1461,7 +1461,7 @@ public class InternalXSLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9337:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9342:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1477,7 +1477,7 @@ public class InternalXSLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9337:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9342:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1520,12 +1520,12 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9339:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9339:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9344:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9344:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9339:24: ( options {greedy=false; } : . )*
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9344:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1550,7 +1550,7 @@ public class InternalXSLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9339:52: .
+            	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9344:52: .
             	    {
             	    matchAny(); 
 
@@ -1580,12 +1580,12 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9341:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9341:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9346:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9346:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9341:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9346:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1598,7 +1598,7 @@ public class InternalXSLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9341:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9346:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1618,7 +1618,7 @@ public class InternalXSLexer extends Lexer {
                 }
             } while (true);
 
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9341:40: ( ( '\\r' )? '\\n' )?
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9346:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1627,9 +1627,9 @@ public class InternalXSLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9341:41: ( '\\r' )? '\\n'
+                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9346:41: ( '\\r' )? '\\n'
                     {
-                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9341:41: ( '\\r' )?
+                    // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9346:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1638,7 +1638,7 @@ public class InternalXSLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9341:41: '\\r'
+                            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9346:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1670,10 +1670,10 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9343:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9343:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9348:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9348:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9343:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9348:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1727,8 +1727,8 @@ public class InternalXSLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9345:16: ( . )
-            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9345:18: .
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9350:16: ( . )
+            // ../aom.scripting.xs.ui/src-gen/aom/scripting/xs/ui/contentassist/antlr/internal/InternalXS.g:9350:18: .
             {
             matchAny(); 
 
@@ -2189,111 +2189,111 @@ public class InternalXSLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\53\1\55\7\57\1\75\1\51\1\100\1\102\1\uffff\1\106\6\uffff"+
-        "\3\57\2\uffff\3\57\1\uffff\2\57\3\51\2\uffff\2\51\6\uffff\1\57\1"+
-        "\uffff\5\57\1\152\6\57\21\uffff\6\57\2\uffff\5\57\1\uffff\2\57\5"+
-        "\uffff\3\57\1\u0083\2\57\1\u0086\1\57\1\uffff\25\57\1\u009e\2\57"+
-        "\1\uffff\2\57\1\uffff\1\57\1\u00a4\2\57\1\u00a7\3\57\1\u00ab\6\57"+
-        "\1\u00b2\2\57\1\u00b5\4\57\1\uffff\1\u00ba\1\u00bb\3\57\1\uffff"+
-        "\1\u00bf\1\57\1\uffff\3\57\1\uffff\2\57\1\u00c6\3\57\1\uffff\1\57"+
-        "\1\u00cb\1\uffff\1\57\1\u00cd\2\57\2\uffff\1\u00d0\2\57\1\uffff"+
-        "\1\u00d3\1\u00d4\1\u00d5\1\u00d6\1\57\1\u00d8\1\uffff\3\57\1\u00dc"+
-        "\1\uffff\1\57\1\uffff\2\57\1\uffff\1\57\1\u00e1\4\uffff\1\57\1\uffff"+
-        "\2\57\1\u00e5\1\uffff\1\57\1\u00e7\1\57\1\u00e9\1\uffff\3\57\1\uffff"+
-        "\1\u00ed\1\uffff\1\57\1\uffff\3\57\1\uffff\6\57\1\u00f8\1\u00f9"+
-        "\2\57\2\uffff\2\57\1\u00fe\1\u00ff\2\uffff";
+        "\1\uffff\1\53\1\55\6\57\1\74\1\51\1\77\1\101\1\uffff\1\105\6\uffff"+
+        "\3\57\2\uffff\3\57\1\uffff\3\57\3\51\2\uffff\2\51\6\uffff\1\57\1"+
+        "\uffff\4\57\1\151\6\57\21\uffff\6\57\2\uffff\5\57\1\uffff\3\57\5"+
+        "\uffff\3\57\1\u0083\1\57\1\u0085\1\57\1\uffff\26\57\1\u009e\2\57"+
+        "\1\uffff\1\57\1\uffff\1\57\1\u00a3\2\57\1\u00a6\3\57\1\u00aa\6\57"+
+        "\1\u00b1\2\57\1\u00b4\5\57\1\uffff\1\u00ba\1\u00bb\2\57\1\uffff"+
+        "\1\u00be\1\57\1\uffff\3\57\1\uffff\2\57\1\u00c5\3\57\1\uffff\1\57"+
+        "\1\u00ca\1\uffff\1\57\1\u00cc\3\57\2\uffff\2\57\1\uffff\1\u00d2"+
+        "\1\u00d3\1\u00d4\1\u00d5\1\57\1\u00d7\1\uffff\3\57\1\u00db\1\uffff"+
+        "\1\57\1\uffff\1\57\1\u00de\2\57\1\u00e1\4\uffff\1\57\1\uffff\2\57"+
+        "\1\u00e5\1\uffff\1\57\1\u00e7\1\uffff\1\57\1\u00e9\1\uffff\3\57"+
+        "\1\uffff\1\u00ed\1\uffff\1\57\1\uffff\3\57\1\uffff\6\57\1\u00f8"+
+        "\1\u00f9\2\57\2\uffff\2\57\1\u00fe\1\u00ff\2\uffff";
     static final String DFA12_eofS =
         "\u0100\uffff";
     static final String DFA12_minS =
-        "\1\0\1\53\1\55\1\162\1\141\1\143\1\146\1\157\1\145\1\164\4\75\1"+
-        "\uffff\1\52\6\uffff\1\145\1\162\1\141\2\uffff\1\154\1\150\1\141"+
-        "\1\uffff\1\145\1\151\1\174\1\46\1\101\2\uffff\2\0\6\uffff\1\165"+
-        "\1\uffff\1\154\1\157\1\162\1\164\1\141\1\60\1\157\1\145\1\143\1"+
-        "\151\1\141\1\151\21\uffff\1\154\1\164\1\157\1\156\1\170\1\164\2"+
-        "\uffff\1\163\1\164\1\151\1\163\1\156\1\uffff\1\146\1\147\5\uffff"+
-        "\1\145\1\163\1\141\1\60\1\151\1\143\1\60\1\154\1\uffff\1\154\1\141"+
-        "\1\164\1\144\1\151\2\164\1\145\1\111\2\165\2\111\1\141\2\145\1\154"+
-        "\1\145\1\163\1\141\1\150\1\60\1\145\1\164\1\uffff\1\166\1\164\1"+
-        "\uffff\1\165\1\60\1\153\1\157\1\60\1\156\1\151\1\143\1\60\1\155"+
-        "\1\162\1\160\2\156\1\142\1\60\1\162\1\145\1\60\1\151\1\164\1\165"+
-        "\1\106\1\uffff\2\60\1\145\1\151\1\144\1\uffff\1\60\1\162\1\uffff"+
-        "\1\147\1\143\1\150\1\uffff\1\155\1\156\1\60\2\164\1\154\1\uffff"+
-        "\1\156\1\60\1\uffff\1\156\1\60\1\154\1\162\2\uffff\1\60\1\166\1"+
-        "\145\1\uffff\4\60\1\145\1\60\1\uffff\3\145\1\60\1\uffff\1\165\1"+
-        "\uffff\1\164\1\145\1\uffff\1\145\1\60\4\uffff\1\144\1\uffff\2\162"+
-        "\1\60\1\uffff\1\145\1\60\1\161\1\60\1\uffff\1\151\2\166\1\uffff"+
-        "\1\60\1\uffff\1\165\1\uffff\3\141\1\uffff\1\145\1\164\2\154\1\156"+
-        "\1\145\2\60\1\143\1\154\2\uffff\2\171\2\60\2\uffff";
+        "\1\0\1\53\1\55\1\162\1\141\1\146\1\157\1\145\1\164\4\75\1\uffff"+
+        "\1\52\6\uffff\1\145\1\162\1\141\2\uffff\1\154\1\150\1\141\1\uffff"+
+        "\1\145\1\143\1\151\1\174\1\46\1\101\2\uffff\2\0\6\uffff\1\165\1"+
+        "\uffff\1\154\1\157\1\162\1\141\1\60\1\157\1\145\1\143\1\151\1\141"+
+        "\1\151\21\uffff\1\154\1\164\1\157\1\156\1\170\1\164\2\uffff\1\163"+
+        "\1\164\1\151\1\163\1\156\1\uffff\1\146\1\164\1\147\5\uffff\1\145"+
+        "\1\163\1\141\1\60\1\143\1\60\1\154\1\uffff\1\154\1\141\1\164\1\144"+
+        "\1\151\2\164\1\145\1\111\2\165\2\111\1\141\2\145\1\154\1\145\1\163"+
+        "\1\141\1\151\1\150\1\60\1\145\1\164\1\uffff\1\164\1\uffff\1\165"+
+        "\1\60\1\153\1\157\1\60\1\156\1\151\1\143\1\60\1\155\1\162\1\160"+
+        "\2\156\1\142\1\60\1\162\1\145\1\60\1\151\1\164\1\165\1\166\1\106"+
+        "\1\uffff\2\60\1\151\1\144\1\uffff\1\60\1\162\1\uffff\1\147\1\143"+
+        "\1\150\1\uffff\1\155\1\156\1\60\2\164\1\154\1\uffff\1\156\1\60\1"+
+        "\uffff\1\156\1\60\1\154\1\145\1\162\2\uffff\1\166\1\145\1\uffff"+
+        "\4\60\1\145\1\60\1\uffff\3\145\1\60\1\uffff\1\165\1\uffff\1\164"+
+        "\1\60\2\145\1\60\4\uffff\1\144\1\uffff\2\162\1\60\1\uffff\1\145"+
+        "\1\60\1\uffff\1\161\1\60\1\uffff\1\151\2\166\1\uffff\1\60\1\uffff"+
+        "\1\165\1\uffff\3\141\1\uffff\1\145\1\164\2\154\1\156\1\145\2\60"+
+        "\1\143\1\154\2\uffff\2\171\2\60\2\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\53\1\55\1\162\1\157\1\143\1\156\1\162\1\157\1\167\4"+
-        "\75\1\uffff\1\57\6\uffff\1\165\1\162\1\165\2\uffff\1\170\1\150\1"+
-        "\157\1\uffff\1\145\1\151\1\174\1\46\1\172\2\uffff\2\uffff\6\uffff"+
-        "\1\165\1\uffff\1\154\1\157\1\162\2\164\1\172\1\157\1\145\1\143\1"+
-        "\151\1\162\1\151\21\uffff\1\156\1\164\1\157\1\156\1\170\1\164\2"+
-        "\uffff\1\163\1\164\1\151\1\163\1\156\1\uffff\1\146\1\147\5\uffff"+
-        "\1\145\1\163\1\141\1\172\1\151\1\143\1\172\1\154\1\uffff\1\154\1"+
-        "\141\1\164\1\144\1\151\2\164\1\145\1\111\2\165\2\111\1\141\2\145"+
-        "\1\154\1\145\1\164\1\141\1\150\1\172\1\145\1\164\1\uffff\1\166\1"+
-        "\164\1\uffff\1\165\1\172\1\153\1\157\1\172\1\156\1\151\1\143\1\172"+
-        "\1\155\1\162\1\160\2\156\1\142\1\172\1\162\1\145\1\172\1\151\1\164"+
-        "\1\165\1\106\1\uffff\2\172\1\145\1\151\1\144\1\uffff\1\172\1\162"+
-        "\1\uffff\1\147\1\143\1\150\1\uffff\1\155\1\156\1\172\2\164\1\154"+
-        "\1\uffff\1\156\1\172\1\uffff\1\156\1\172\1\154\1\162\2\uffff\1\172"+
-        "\1\166\1\145\1\uffff\4\172\1\145\1\172\1\uffff\3\145\1\172\1\uffff"+
-        "\1\165\1\uffff\1\164\1\145\1\uffff\1\145\1\172\4\uffff\1\144\1\uffff"+
-        "\2\162\1\172\1\uffff\1\145\1\172\1\161\1\172\1\uffff\1\151\2\166"+
-        "\1\uffff\1\172\1\uffff\1\165\1\uffff\3\141\1\uffff\1\145\1\164\2"+
-        "\154\1\156\1\145\2\172\1\143\1\154\2\uffff\2\171\2\172\2\uffff";
+        "\1\uffff\1\53\1\55\1\162\1\157\1\156\1\162\1\157\1\167\4\75\1\uffff"+
+        "\1\57\6\uffff\1\165\1\162\1\165\2\uffff\1\170\1\150\1\157\1\uffff"+
+        "\1\145\1\143\1\151\1\174\1\46\1\172\2\uffff\2\uffff\6\uffff\1\165"+
+        "\1\uffff\1\154\1\157\1\162\1\164\1\172\1\157\1\145\1\143\1\151\1"+
+        "\162\1\151\21\uffff\1\156\1\164\1\157\1\156\1\170\1\164\2\uffff"+
+        "\1\163\1\164\1\151\1\163\1\156\1\uffff\1\146\1\164\1\147\5\uffff"+
+        "\1\145\1\163\1\141\1\172\1\143\1\172\1\154\1\uffff\1\154\1\141\1"+
+        "\164\1\144\1\151\2\164\1\145\1\111\2\165\2\111\1\141\2\145\1\154"+
+        "\1\145\1\164\1\141\1\151\1\150\1\172\1\145\1\164\1\uffff\1\164\1"+
+        "\uffff\1\165\1\172\1\153\1\157\1\172\1\156\1\151\1\143\1\172\1\155"+
+        "\1\162\1\160\2\156\1\142\1\172\1\162\1\145\1\172\1\151\1\164\1\165"+
+        "\1\166\1\106\1\uffff\2\172\1\151\1\144\1\uffff\1\172\1\162\1\uffff"+
+        "\1\147\1\143\1\150\1\uffff\1\155\1\156\1\172\2\164\1\154\1\uffff"+
+        "\1\156\1\172\1\uffff\1\156\1\172\1\154\1\145\1\162\2\uffff\1\166"+
+        "\1\145\1\uffff\4\172\1\145\1\172\1\uffff\3\145\1\172\1\uffff\1\165"+
+        "\1\uffff\1\164\1\172\2\145\1\172\4\uffff\1\144\1\uffff\2\162\1\172"+
+        "\1\uffff\1\145\1\172\1\uffff\1\161\1\172\1\uffff\1\151\2\166\1\uffff"+
+        "\1\172\1\uffff\1\165\1\uffff\3\141\1\uffff\1\145\1\164\2\154\1\156"+
+        "\1\145\2\172\1\143\1\154\2\uffff\2\171\2\172\2\uffff";
     static final String DFA12_acceptS =
-        "\16\uffff\1\25\1\uffff\1\27\1\30\1\31\1\32\1\33\1\34\3\uffff\1"+
-        "\43\1\44\3\uffff\1\53\5\uffff\1\70\1\71\2\uffff\1\75\1\76\1\15\1"+
-        "\1\1\16\1\2\1\uffff\1\70\14\uffff\1\17\1\35\1\20\1\21\1\22\1\24"+
-        "\1\23\1\25\1\73\1\74\1\26\1\27\1\30\1\31\1\32\1\33\1\34\6\uffff"+
-        "\1\43\1\44\5\uffff\1\53\2\uffff\1\66\1\67\1\71\1\72\1\75\10\uffff"+
-        "\1\45\30\uffff\1\50\2\uffff\1\7\27\uffff\1\3\5\uffff\1\11\2\uffff"+
-        "\1\14\3\uffff\1\37\6\uffff\1\46\2\uffff\1\52\4\uffff\1\4\1\10\3"+
-        "\uffff\1\57\6\uffff\1\40\4\uffff\1\47\1\uffff\1\63\2\uffff\1\5\2"+
-        "\uffff\1\12\1\13\1\62\1\51\1\uffff\1\55\3\uffff\1\64\4\uffff\1\36"+
-        "\3\uffff\1\65\1\uffff\1\54\1\uffff\1\6\3\uffff\1\56\12\uffff\1\41"+
-        "\1\42\4\uffff\1\61\1\60";
+        "\15\uffff\1\24\1\uffff\1\26\1\27\1\30\1\31\1\32\1\33\3\uffff\1"+
+        "\42\1\43\3\uffff\1\52\6\uffff\1\70\1\71\2\uffff\1\75\1\76\1\14\1"+
+        "\1\1\15\1\2\1\uffff\1\70\13\uffff\1\16\1\34\1\17\1\20\1\21\1\23"+
+        "\1\22\1\24\1\73\1\74\1\25\1\26\1\27\1\30\1\31\1\32\1\33\6\uffff"+
+        "\1\42\1\43\5\uffff\1\52\3\uffff\1\66\1\67\1\71\1\72\1\75\7\uffff"+
+        "\1\44\31\uffff\1\47\1\uffff\1\6\30\uffff\1\3\4\uffff\1\10\2\uffff"+
+        "\1\13\3\uffff\1\36\6\uffff\1\45\2\uffff\1\51\5\uffff\1\4\1\7\2\uffff"+
+        "\1\56\6\uffff\1\37\4\uffff\1\46\1\uffff\1\63\5\uffff\1\11\1\12\1"+
+        "\62\1\50\1\uffff\1\54\3\uffff\1\64\2\uffff\1\57\2\uffff\1\35\3\uffff"+
+        "\1\65\1\uffff\1\53\1\uffff\1\5\3\uffff\1\55\12\uffff\1\40\1\41\4"+
+        "\uffff\1\61\1\60";
     static final String DFA12_specialS =
-        "\1\0\45\uffff\1\1\1\2\u00d8\uffff}>";
+        "\1\2\45\uffff\1\0\1\1\u00d8\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\51\2\50\2\51\1\50\22\51\1\50\1\13\1\46\2\51\1\20\1\42\1"+
-            "\47\1\23\1\25\1\16\1\1\1\24\1\2\1\22\1\17\12\45\1\36\1\21\1"+
-            "\14\1\12\1\15\2\51\32\44\3\51\1\43\1\44\1\51\1\5\1\7\1\35\1"+
-            "\37\1\33\1\4\1\27\1\40\1\6\3\44\1\30\4\44\1\26\1\11\1\3\1\44"+
-            "\1\10\1\34\3\44\1\31\1\41\1\32\uff82\51",
+            "\11\51\2\50\2\51\1\50\22\51\1\50\1\12\1\46\2\51\1\17\1\42\1"+
+            "\47\1\22\1\24\1\15\1\1\1\23\1\2\1\21\1\16\12\45\1\35\1\20\1"+
+            "\13\1\11\1\14\2\51\32\44\3\51\1\43\1\44\1\51\1\37\1\6\1\34\1"+
+            "\36\1\32\1\4\1\26\1\40\1\5\3\44\1\27\4\44\1\25\1\10\1\3\1\44"+
+            "\1\7\1\33\3\44\1\30\1\41\1\31\uff82\51",
             "\1\52",
             "\1\54",
             "\1\56",
             "\1\60\12\uffff\1\61\2\uffff\1\62",
-            "\1\63",
-            "\1\65\7\uffff\1\64",
-            "\1\66\2\uffff\1\67",
-            "\1\70\11\uffff\1\71",
-            "\1\72\2\uffff\1\73",
-            "\1\74",
+            "\1\64\7\uffff\1\63",
+            "\1\65\2\uffff\1\66",
+            "\1\67\11\uffff\1\70",
+            "\1\71\2\uffff\1\72",
+            "\1\73",
+            "\1\75",
             "\1\76",
-            "\1\77",
-            "\1\101",
+            "\1\100",
             "",
-            "\1\104\4\uffff\1\105",
-            "",
+            "\1\103\4\uffff\1\104",
             "",
             "",
             "",
             "",
             "",
-            "\1\116\17\uffff\1\115",
-            "\1\117",
-            "\1\121\7\uffff\1\120\13\uffff\1\122",
+            "",
+            "\1\115\17\uffff\1\114",
+            "\1\116",
+            "\1\120\7\uffff\1\117\13\uffff\1\121",
             "",
             "",
-            "\1\125\13\uffff\1\126",
-            "\1\127",
-            "\1\130\15\uffff\1\131",
+            "\1\124\13\uffff\1\125",
+            "\1\126",
+            "\1\127\15\uffff\1\130",
             "",
+            "\1\132",
             "\1\133",
             "\1\134",
             "\1\135",
@@ -2314,15 +2314,14 @@ public class InternalXSLexer extends Lexer {
             "\1\143",
             "\1\144",
             "\1\145",
-            "\1\146",
-            "\1\147\1\uffff\1\151\20\uffff\1\150",
+            "\1\146\1\uffff\1\150\20\uffff\1\147",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\152",
             "\1\153",
             "\1\154",
             "\1\155",
-            "\1\156",
-            "\1\160\20\uffff\1\157",
-            "\1\161",
+            "\1\157\20\uffff\1\156",
+            "\1\160",
             "",
             "",
             "",
@@ -2340,20 +2339,21 @@ public class InternalXSLexer extends Lexer {
             "",
             "",
             "",
-            "\1\162\1\uffff\1\163",
+            "\1\161\1\uffff\1\162",
+            "\1\163",
             "\1\164",
             "\1\165",
             "\1\166",
             "\1\167",
+            "",
+            "",
             "\1\170",
-            "",
-            "",
             "\1\171",
             "\1\172",
             "\1\173",
             "\1\174",
-            "\1\175",
             "",
+            "\1\175",
             "\1\176",
             "\1\177",
             "",
@@ -2366,10 +2366,10 @@ public class InternalXSLexer extends Lexer {
             "\1\u0082",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0084",
-            "\1\u0085",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
-            "\1\u0087",
+            "\1\u0086",
             "",
+            "\1\u0087",
             "\1\u0088",
             "\1\u0089",
             "\1\u008a",
@@ -2387,8 +2387,8 @@ public class InternalXSLexer extends Lexer {
             "\1\u0096",
             "\1\u0097",
             "\1\u0098",
-            "\1\u0099",
-            "\1\u009b\1\u009a",
+            "\1\u009a\1\u0099",
+            "\1\u009b",
             "\1\u009c",
             "\1\u009d",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
@@ -2396,27 +2396,27 @@ public class InternalXSLexer extends Lexer {
             "\1\u00a0",
             "",
             "\1\u00a1",
-            "\1\u00a2",
             "",
-            "\1\u00a3",
+            "\1\u00a2",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u00a4",
             "\1\u00a5",
-            "\1\u00a6",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u00a7",
             "\1\u00a8",
             "\1\u00a9",
-            "\1\u00aa",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u00ab",
             "\1\u00ac",
             "\1\u00ad",
             "\1\u00ae",
             "\1\u00af",
             "\1\u00b0",
-            "\1\u00b1",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u00b2",
             "\1\u00b3",
-            "\1\u00b4",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u00b5",
             "\1\u00b6",
             "\1\u00b7",
             "\1\u00b8",
@@ -2426,52 +2426,51 @@ public class InternalXSLexer extends Lexer {
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00bc",
             "\1\u00bd",
-            "\1\u00be",
             "",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
-            "\1\u00c0",
+            "\1\u00bf",
             "",
+            "\1\u00c0",
             "\1\u00c1",
             "\1\u00c2",
-            "\1\u00c3",
             "",
+            "\1\u00c3",
             "\1\u00c4",
-            "\1\u00c5",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u00c6",
             "\1\u00c7",
             "\1\u00c8",
+            "",
             "\1\u00c9",
-            "",
-            "\1\u00ca",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
-            "\1\u00cc",
+            "\1\u00cb",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u00cd",
             "\1\u00ce",
             "\1\u00cf",
             "",
             "",
-            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u00d0",
             "\1\u00d1",
-            "\1\u00d2",
             "",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
-            "\1\u00d7",
+            "\1\u00d6",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
+            "\1\u00d8",
             "\1\u00d9",
             "\1\u00da",
-            "\1\u00db",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
+            "\1\u00dc",
+            "",
             "\1\u00dd",
-            "",
-            "\1\u00de",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00df",
-            "",
             "\1\u00e0",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
@@ -2486,6 +2485,7 @@ public class InternalXSLexer extends Lexer {
             "",
             "\1\u00e6",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
             "\1\u00e8",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
@@ -2558,6 +2558,26 @@ public class InternalXSLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA12_38 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_38>='\u0000' && LA12_38<='\uFFFF')) ) {s = 96;}
+
+                        else s = 41;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_39 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_39>='\u0000' && LA12_39<='\uFFFF')) ) {s = 96;}
+
+                        else s = 41;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -2569,59 +2589,59 @@ public class InternalXSLexer extends Lexer {
 
                         else if ( (LA12_0=='f') ) {s = 4;}
 
-                        else if ( (LA12_0=='a') ) {s = 5;}
+                        else if ( (LA12_0=='i') ) {s = 5;}
 
-                        else if ( (LA12_0=='i') ) {s = 6;}
+                        else if ( (LA12_0=='b') ) {s = 6;}
 
-                        else if ( (LA12_0=='b') ) {s = 7;}
+                        else if ( (LA12_0=='v') ) {s = 7;}
 
-                        else if ( (LA12_0=='v') ) {s = 8;}
+                        else if ( (LA12_0=='s') ) {s = 8;}
 
-                        else if ( (LA12_0=='s') ) {s = 9;}
+                        else if ( (LA12_0=='=') ) {s = 9;}
 
-                        else if ( (LA12_0=='=') ) {s = 10;}
+                        else if ( (LA12_0=='!') ) {s = 10;}
 
-                        else if ( (LA12_0=='!') ) {s = 11;}
+                        else if ( (LA12_0=='<') ) {s = 11;}
 
-                        else if ( (LA12_0=='<') ) {s = 12;}
+                        else if ( (LA12_0=='>') ) {s = 12;}
 
-                        else if ( (LA12_0=='>') ) {s = 13;}
+                        else if ( (LA12_0=='*') ) {s = 13;}
 
-                        else if ( (LA12_0=='*') ) {s = 14;}
+                        else if ( (LA12_0=='/') ) {s = 14;}
 
-                        else if ( (LA12_0=='/') ) {s = 15;}
+                        else if ( (LA12_0=='%') ) {s = 15;}
 
-                        else if ( (LA12_0=='%') ) {s = 16;}
+                        else if ( (LA12_0==';') ) {s = 16;}
 
-                        else if ( (LA12_0==';') ) {s = 17;}
+                        else if ( (LA12_0=='.') ) {s = 17;}
 
-                        else if ( (LA12_0=='.') ) {s = 18;}
+                        else if ( (LA12_0=='(') ) {s = 18;}
 
-                        else if ( (LA12_0=='(') ) {s = 19;}
+                        else if ( (LA12_0==',') ) {s = 19;}
 
-                        else if ( (LA12_0==',') ) {s = 20;}
+                        else if ( (LA12_0==')') ) {s = 20;}
 
-                        else if ( (LA12_0==')') ) {s = 21;}
+                        else if ( (LA12_0=='r') ) {s = 21;}
 
-                        else if ( (LA12_0=='r') ) {s = 22;}
+                        else if ( (LA12_0=='g') ) {s = 22;}
 
-                        else if ( (LA12_0=='g') ) {s = 23;}
+                        else if ( (LA12_0=='m') ) {s = 23;}
 
-                        else if ( (LA12_0=='m') ) {s = 24;}
+                        else if ( (LA12_0=='{') ) {s = 24;}
 
-                        else if ( (LA12_0=='{') ) {s = 25;}
+                        else if ( (LA12_0=='}') ) {s = 25;}
 
-                        else if ( (LA12_0=='}') ) {s = 26;}
+                        else if ( (LA12_0=='e') ) {s = 26;}
 
-                        else if ( (LA12_0=='e') ) {s = 27;}
+                        else if ( (LA12_0=='w') ) {s = 27;}
 
-                        else if ( (LA12_0=='w') ) {s = 28;}
+                        else if ( (LA12_0=='c') ) {s = 28;}
 
-                        else if ( (LA12_0=='c') ) {s = 29;}
+                        else if ( (LA12_0==':') ) {s = 29;}
 
-                        else if ( (LA12_0==':') ) {s = 30;}
+                        else if ( (LA12_0=='d') ) {s = 30;}
 
-                        else if ( (LA12_0=='d') ) {s = 31;}
+                        else if ( (LA12_0=='a') ) {s = 31;}
 
                         else if ( (LA12_0=='h') ) {s = 32;}
 
@@ -2642,26 +2662,6 @@ public class InternalXSLexer extends Lexer {
                         else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 40;}
 
                         else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||(LA12_0>='#' && LA12_0<='$')||(LA12_0>='?' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 41;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_38 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_38>='\u0000' && LA12_38<='\uFFFF')) ) {s = 96;}
-
-                        else s = 41;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA12_39 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_39>='\u0000' && LA12_39<='\uFFFF')) ) {s = 96;}
-
-                        else s = 41;
 
                         if ( s>=0 ) return s;
                         break;

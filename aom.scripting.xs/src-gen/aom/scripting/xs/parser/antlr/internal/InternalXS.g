@@ -917,36 +917,26 @@ ruleRuleDeclaration returns [EObject current=null]
 					{ 
 	 				  getUnorderedGroupHelper().select(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 0);
 	 				}
-					({true}?=>(
+					({true}?=>((
 (
-(
-		lv_status_3_1=	'active' 
+		lv_active_3_0=	'active' 
     {
-        newLeafNode(lv_status_3_1, grammarAccess.getRuleDeclarationAccess().getStatusActiveKeyword_2_0_0_0());
+        newLeafNode(lv_active_3_0, grammarAccess.getRuleDeclarationAccess().getActiveActiveKeyword_2_0_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getRuleDeclarationRule());
 	        }
-       		setWithLastConsumed($current, "status", lv_status_3_1, null);
+       		setWithLastConsumed($current, "active", true, "active");
 	    }
 
-    |		lv_status_3_2=	'inactive' 
+)
+)
+    |	otherlv_4='inactive' 
     {
-        newLeafNode(lv_status_3_2, grammarAccess.getRuleDeclarationAccess().getStatusInactiveKeyword_2_0_0_1());
+    	newLeafNode(otherlv_4, grammarAccess.getRuleDeclarationAccess().getInactiveKeyword_2_0_1());
     }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRuleDeclarationRule());
-	        }
-       		setWithLastConsumed($current, "status", lv_status_3_2, null);
-	    }
-
-)
-
-)
 ))
 					{ 
 	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2());
@@ -961,9 +951,9 @@ ruleRuleDeclaration returns [EObject current=null]
 	 				}
 					({true}?=>(
 (
-		lv_runImmediately_4_0=	'runImmediately' 
+		lv_runImmediately_5_0=	'runImmediately' 
     {
-        newLeafNode(lv_runImmediately_4_0, grammarAccess.getRuleDeclarationAccess().getRunImmediatelyRunImmediatelyKeyword_2_1_0());
+        newLeafNode(lv_runImmediately_5_0, grammarAccess.getRuleDeclarationAccess().getRunImmediatelyRunImmediatelyKeyword_2_1_0());
     }
  
 	    {
@@ -988,9 +978,9 @@ ruleRuleDeclaration returns [EObject current=null]
 	 				}
 					({true}?=>(
 (
-		lv_highFrequency_5_0=	'highFrequency' 
+		lv_highFrequency_6_0=	'highFrequency' 
     {
-        newLeafNode(lv_highFrequency_5_0, grammarAccess.getRuleDeclarationAccess().getHighFrequencyHighFrequencyKeyword_2_2_0());
+        newLeafNode(lv_highFrequency_6_0, grammarAccess.getRuleDeclarationAccess().getHighFrequencyHighFrequencyKeyword_2_2_0());
     }
  
 	    {
@@ -1013,15 +1003,15 @@ ruleRuleDeclaration returns [EObject current=null]
 					{ 
 	 				  getUnorderedGroupHelper().select(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 3);
 	 				}
-					({true}?=>(	otherlv_6='group' 
+					({true}?=>(	otherlv_7='group' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getRuleDeclarationAccess().getGroupKeyword_2_3_0());
+    	newLeafNode(otherlv_7, grammarAccess.getRuleDeclarationAccess().getGroupKeyword_2_3_0());
     }
 (
 (
-		lv_group_7_0=RULE_ID
+		lv_group_8_0=RULE_ID
 		{
-			newLeafNode(lv_group_7_0, grammarAccess.getRuleDeclarationAccess().getGroupIDTerminalRuleCall_2_3_1_0()); 
+			newLeafNode(lv_group_8_0, grammarAccess.getRuleDeclarationAccess().getGroupIDTerminalRuleCall_2_3_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1030,7 +1020,7 @@ ruleRuleDeclaration returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"group",
-        		lv_group_7_0, 
+        		lv_group_8_0, 
         		"ID");
 	    }
 
@@ -1047,15 +1037,15 @@ ruleRuleDeclaration returns [EObject current=null]
 					{ 
 	 				  getUnorderedGroupHelper().select(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 4);
 	 				}
-					({true}?=>(	otherlv_8='minInterval' 
+					({true}?=>(	otherlv_9='minInterval' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getRuleDeclarationAccess().getMinIntervalKeyword_2_4_0());
+    	newLeafNode(otherlv_9, grammarAccess.getRuleDeclarationAccess().getMinIntervalKeyword_2_4_0());
     }
 (
 (
-		lv_minInterval_9_0=RULE_INT
+		lv_minInterval_10_0=RULE_INT
 		{
-			newLeafNode(lv_minInterval_9_0, grammarAccess.getRuleDeclarationAccess().getMinIntervalINTTerminalRuleCall_2_4_1_0()); 
+			newLeafNode(lv_minInterval_10_0, grammarAccess.getRuleDeclarationAccess().getMinIntervalINTTerminalRuleCall_2_4_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1064,7 +1054,7 @@ ruleRuleDeclaration returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"minInterval",
-        		lv_minInterval_9_0, 
+        		lv_minInterval_10_0, 
         		"INT");
 	    }
 
@@ -1081,15 +1071,15 @@ ruleRuleDeclaration returns [EObject current=null]
 					{ 
 	 				  getUnorderedGroupHelper().select(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 5);
 	 				}
-					({true}?=>(	otherlv_10='maxInterval' 
+					({true}?=>(	otherlv_11='maxInterval' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getRuleDeclarationAccess().getMaxIntervalKeyword_2_5_0());
+    	newLeafNode(otherlv_11, grammarAccess.getRuleDeclarationAccess().getMaxIntervalKeyword_2_5_0());
     }
 (
 (
-		lv_maxInterval_11_0=RULE_INT
+		lv_maxInterval_12_0=RULE_INT
 		{
-			newLeafNode(lv_maxInterval_11_0, grammarAccess.getRuleDeclarationAccess().getMaxIntervalINTTerminalRuleCall_2_5_1_0()); 
+			newLeafNode(lv_maxInterval_12_0, grammarAccess.getRuleDeclarationAccess().getMaxIntervalINTTerminalRuleCall_2_5_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1098,7 +1088,7 @@ ruleRuleDeclaration returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"maxInterval",
-        		lv_maxInterval_11_0, 
+        		lv_maxInterval_12_0, 
         		"INT");
 	    }
 
@@ -1123,14 +1113,14 @@ ruleRuleDeclaration returns [EObject current=null]
 		{ 
 	        newCompositeNode(grammarAccess.getRuleDeclarationAccess().getStatementsCompoundStatementParserRuleCall_3_0()); 
 	    }
-		lv_statements_12_0=ruleCompoundStatement		{
+		lv_statements_13_0=ruleCompoundStatement		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRuleDeclarationRule());
 	        }
        		set(
        			$current, 
        			"statements",
-        		lv_statements_12_0, 
+        		lv_statements_13_0, 
         		"CompoundStatement");
 	        afterParserOrEnumRuleCall();
 	    }

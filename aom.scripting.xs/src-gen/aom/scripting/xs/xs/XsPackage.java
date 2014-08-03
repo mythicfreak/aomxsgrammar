@@ -372,13 +372,13 @@ public interface XsPackage extends EPackage
   int RULE_DECLARATION__NAME = DECLARATION__NAME;
 
   /**
-   * The feature id for the '<em><b>Status</b></em>' attribute.
+   * The feature id for the '<em><b>Active</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RULE_DECLARATION__STATUS = DECLARATION_FEATURE_COUNT + 0;
+  int RULE_DECLARATION__ACTIVE = DECLARATION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Run Immediately</b></em>' attribute.
@@ -2001,15 +2001,15 @@ public interface XsPackage extends EPackage
   EClass getRuleDeclaration();
 
   /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.RuleDeclaration#getStatus <em>Status</em>}'.
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.RuleDeclaration#isActive <em>Active</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Status</em>'.
-   * @see aom.scripting.xs.xs.RuleDeclaration#getStatus()
+   * @return the meta object for the attribute '<em>Active</em>'.
+   * @see aom.scripting.xs.xs.RuleDeclaration#isActive()
    * @see #getRuleDeclaration()
    * @generated
    */
-  EAttribute getRuleDeclaration_Status();
+  EAttribute getRuleDeclaration_Active();
 
   /**
    * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.RuleDeclaration#isRunImmediately <em>Run Immediately</em>}'.
@@ -3271,12 +3271,12 @@ public interface XsPackage extends EPackage
     EClass RULE_DECLARATION = eINSTANCE.getRuleDeclaration();
 
     /**
-     * The meta object literal for the '<em><b>Status</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Active</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute RULE_DECLARATION__STATUS = eINSTANCE.getRuleDeclaration_Status();
+    EAttribute RULE_DECLARATION__ACTIVE = eINSTANCE.getRuleDeclaration_Active();
 
     /**
      * The meta object literal for the '<em><b>Run Immediately</b></em>' attribute feature.

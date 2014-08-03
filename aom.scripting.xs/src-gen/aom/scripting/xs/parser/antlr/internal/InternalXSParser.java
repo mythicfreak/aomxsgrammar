@@ -2478,33 +2478,33 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRuleDeclaration"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:880:1: ruleRuleDeclaration returns [EObject current=null] : (otherlv_0= 'rule' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ( (lv_statements_12_0= ruleCompoundStatement ) ) ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:880:1: ruleRuleDeclaration returns [EObject current=null] : (otherlv_0= 'rule' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ( (lv_statements_13_0= ruleCompoundStatement ) ) ) ;
     public final EObject ruleRuleDeclaration() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
-        Token lv_status_3_1=null;
-        Token lv_status_3_2=null;
-        Token lv_runImmediately_4_0=null;
-        Token lv_highFrequency_5_0=null;
-        Token otherlv_6=null;
-        Token lv_group_7_0=null;
-        Token otherlv_8=null;
-        Token lv_minInterval_9_0=null;
-        Token otherlv_10=null;
-        Token lv_maxInterval_11_0=null;
-        EObject lv_statements_12_0 = null;
+        Token lv_active_3_0=null;
+        Token otherlv_4=null;
+        Token lv_runImmediately_5_0=null;
+        Token lv_highFrequency_6_0=null;
+        Token otherlv_7=null;
+        Token lv_group_8_0=null;
+        Token otherlv_9=null;
+        Token lv_minInterval_10_0=null;
+        Token otherlv_11=null;
+        Token lv_maxInterval_12_0=null;
+        EObject lv_statements_13_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:883:28: ( (otherlv_0= 'rule' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ( (lv_statements_12_0= ruleCompoundStatement ) ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:884:1: (otherlv_0= 'rule' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ( (lv_statements_12_0= ruleCompoundStatement ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:883:28: ( (otherlv_0= 'rule' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ( (lv_statements_13_0= ruleCompoundStatement ) ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:884:1: (otherlv_0= 'rule' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ( (lv_statements_13_0= ruleCompoundStatement ) ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:884:1: (otherlv_0= 'rule' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ( (lv_statements_12_0= ruleCompoundStatement ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:884:3: otherlv_0= 'rule' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ( (lv_statements_12_0= ruleCompoundStatement ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:884:1: (otherlv_0= 'rule' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ( (lv_statements_13_0= ruleCompoundStatement ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:884:3: otherlv_0= 'rule' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ( (lv_statements_13_0= ruleCompoundStatement ) )
             {
             otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleRuleDeclaration2064); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2542,17 +2542,17 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:906:2: ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:908:1: ( ( ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+ {...}?) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:906:2: ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:908:1: ( ( ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+ {...}?) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:908:1: ( ( ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+ {...}?) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:909:2: ( ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+ {...}?)
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:908:1: ( ( ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+ {...}?) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:909:2: ( ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+ {...}?)
             {
             getUnorderedGroupHelper().enter(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2());
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:912:2: ( ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+ {...}?)
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:913:3: ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+ {...}?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:912:2: ( ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+ {...}?)
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:913:3: ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+ {...}?
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:913:3: ( ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) ) )+
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:913:3: ( ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) ) )+
             int cnt11=0;
             loop11:
             do {
@@ -2581,33 +2581,27 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:915:4: ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:915:4: ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:915:4: ({...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:916:5: {...}? => ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:915:4: ({...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:916:5: {...}? => ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 0) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 0)");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:916:112: ( ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:917:6: ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:916:112: ( ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:917:6: ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 0);
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:920:6: ({...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:920:7: {...}? => ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:920:6: ({...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:920:7: {...}? => ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "true");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:920:16: ( ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:921:1: ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) )
-            	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:921:1: ( (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:922:1: (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' )
-            	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:922:1: (lv_status_3_1= 'active' | lv_status_3_2= 'inactive' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:920:16: ( ( (lv_active_3_0= 'active' ) ) | otherlv_4= 'inactive' )
             	    int alt10=2;
             	    int LA10_0 = input.LA(1);
 
@@ -2626,12 +2620,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt10) {
             	        case 1 :
-            	            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:923:3: lv_status_3_1= 'active'
+            	            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:920:17: ( (lv_active_3_0= 'active' ) )
             	            {
-            	            lv_status_3_1=(Token)match(input,24,FOLLOW_24_in_ruleRuleDeclaration2151); if (state.failed) return current;
+            	            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:920:17: ( (lv_active_3_0= 'active' ) )
+            	            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:921:1: (lv_active_3_0= 'active' )
+            	            {
+            	            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:921:1: (lv_active_3_0= 'active' )
+            	            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:922:3: lv_active_3_0= 'active'
+            	            {
+            	            lv_active_3_0=(Token)match(input,24,FOLLOW_24_in_ruleRuleDeclaration2150); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
-            	                      newLeafNode(lv_status_3_1, grammarAccess.getRuleDeclarationAccess().getStatusActiveKeyword_2_0_0_0());
+            	                      newLeafNode(lv_active_3_0, grammarAccess.getRuleDeclarationAccess().getActiveActiveKeyword_2_0_0_0());
             	                  
             	            }
             	            if ( state.backtracking==0 ) {
@@ -2639,38 +2639,30 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	              	        if (current==null) {
             	              	            current = createModelElement(grammarAccess.getRuleDeclarationRule());
             	              	        }
-            	                     		setWithLastConsumed(current, "status", lv_status_3_1, null);
+            	                     		setWithLastConsumed(current, "active", true, "active");
             	              	    
             	            }
+
+            	            }
+
+
+            	            }
+
 
             	            }
             	            break;
             	        case 2 :
-            	            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:935:8: lv_status_3_2= 'inactive'
+            	            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:936:7: otherlv_4= 'inactive'
             	            {
-            	            lv_status_3_2=(Token)match(input,25,FOLLOW_25_in_ruleRuleDeclaration2180); if (state.failed) return current;
+            	            otherlv_4=(Token)match(input,25,FOLLOW_25_in_ruleRuleDeclaration2181); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
-            	                      newLeafNode(lv_status_3_2, grammarAccess.getRuleDeclarationAccess().getStatusInactiveKeyword_2_0_0_1());
+            	                  	newLeafNode(otherlv_4, grammarAccess.getRuleDeclarationAccess().getInactiveKeyword_2_0_1());
             	                  
-            	            }
-            	            if ( state.backtracking==0 ) {
-
-            	              	        if (current==null) {
-            	              	            current = createModelElement(grammarAccess.getRuleDeclarationRule());
-            	              	        }
-            	                     		setWithLastConsumed(current, "status", lv_status_3_2, null);
-            	              	    
             	            }
 
             	            }
             	            break;
-
-            	    }
-
-
-            	    }
-
 
             	    }
 
@@ -2688,36 +2680,36 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:957:4: ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:947:4: ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:957:4: ({...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:958:5: {...}? => ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:947:4: ({...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:948:5: {...}? => ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 1) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 1)");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:958:112: ( ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:959:6: ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:948:112: ( ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:949:6: ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 1);
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:962:6: ({...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:962:7: {...}? => ( (lv_runImmediately_4_0= 'runImmediately' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:952:6: ({...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:952:7: {...}? => ( (lv_runImmediately_5_0= 'runImmediately' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "true");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:962:16: ( (lv_runImmediately_4_0= 'runImmediately' ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:963:1: (lv_runImmediately_4_0= 'runImmediately' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:952:16: ( (lv_runImmediately_5_0= 'runImmediately' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:953:1: (lv_runImmediately_5_0= 'runImmediately' )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:963:1: (lv_runImmediately_4_0= 'runImmediately' )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:964:3: lv_runImmediately_4_0= 'runImmediately'
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:953:1: (lv_runImmediately_5_0= 'runImmediately' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:954:3: lv_runImmediately_5_0= 'runImmediately'
             	    {
-            	    lv_runImmediately_4_0=(Token)match(input,26,FOLLOW_26_in_ruleRuleDeclaration2268); if (state.failed) return current;
+            	    lv_runImmediately_5_0=(Token)match(input,26,FOLLOW_26_in_ruleRuleDeclaration2254); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	              newLeafNode(lv_runImmediately_4_0, grammarAccess.getRuleDeclarationAccess().getRunImmediatelyRunImmediatelyKeyword_2_1_0());
+            	              newLeafNode(lv_runImmediately_5_0, grammarAccess.getRuleDeclarationAccess().getRunImmediatelyRunImmediatelyKeyword_2_1_0());
             	          
             	    }
             	    if ( state.backtracking==0 ) {
@@ -2748,36 +2740,36 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:984:4: ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:974:4: ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:984:4: ({...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:985:5: {...}? => ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:974:4: ({...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:975:5: {...}? => ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 2) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 2)");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:985:112: ( ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:986:6: ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:975:112: ( ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:976:6: ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 2);
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:989:6: ({...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:989:7: {...}? => ( (lv_highFrequency_5_0= 'highFrequency' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:979:6: ({...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:979:7: {...}? => ( (lv_highFrequency_6_0= 'highFrequency' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "true");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:989:16: ( (lv_highFrequency_5_0= 'highFrequency' ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:990:1: (lv_highFrequency_5_0= 'highFrequency' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:979:16: ( (lv_highFrequency_6_0= 'highFrequency' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:980:1: (lv_highFrequency_6_0= 'highFrequency' )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:990:1: (lv_highFrequency_5_0= 'highFrequency' )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:991:3: lv_highFrequency_5_0= 'highFrequency'
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:980:1: (lv_highFrequency_6_0= 'highFrequency' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:981:3: lv_highFrequency_6_0= 'highFrequency'
             	    {
-            	    lv_highFrequency_5_0=(Token)match(input,27,FOLLOW_27_in_ruleRuleDeclaration2353); if (state.failed) return current;
+            	    lv_highFrequency_6_0=(Token)match(input,27,FOLLOW_27_in_ruleRuleDeclaration2339); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	              newLeafNode(lv_highFrequency_5_0, grammarAccess.getRuleDeclarationAccess().getHighFrequencyHighFrequencyKeyword_2_2_0());
+            	              newLeafNode(lv_highFrequency_6_0, grammarAccess.getRuleDeclarationAccess().getHighFrequencyHighFrequencyKeyword_2_2_0());
             	          
             	    }
             	    if ( state.backtracking==0 ) {
@@ -2808,45 +2800,45 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 4 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1011:4: ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1001:4: ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1011:4: ({...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1012:5: {...}? => ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1001:4: ({...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1002:5: {...}? => ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 3) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 3)");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1012:112: ( ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1013:6: ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1002:112: ( ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1003:6: ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 3);
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1016:6: ({...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1016:7: {...}? => (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1006:6: ({...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1006:7: {...}? => (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "true");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1016:16: (otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1016:18: otherlv_6= 'group' ( (lv_group_7_0= RULE_ID ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1006:16: (otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1006:18: otherlv_7= 'group' ( (lv_group_8_0= RULE_ID ) )
             	    {
-            	    otherlv_6=(Token)match(input,28,FOLLOW_28_in_ruleRuleDeclaration2433); if (state.failed) return current;
+            	    otherlv_7=(Token)match(input,28,FOLLOW_28_in_ruleRuleDeclaration2419); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	          	newLeafNode(otherlv_6, grammarAccess.getRuleDeclarationAccess().getGroupKeyword_2_3_0());
+            	          	newLeafNode(otherlv_7, grammarAccess.getRuleDeclarationAccess().getGroupKeyword_2_3_0());
             	          
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1020:1: ( (lv_group_7_0= RULE_ID ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1021:1: (lv_group_7_0= RULE_ID )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1010:1: ( (lv_group_8_0= RULE_ID ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1011:1: (lv_group_8_0= RULE_ID )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1021:1: (lv_group_7_0= RULE_ID )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1022:3: lv_group_7_0= RULE_ID
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1011:1: (lv_group_8_0= RULE_ID )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1012:3: lv_group_8_0= RULE_ID
             	    {
-            	    lv_group_7_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRuleDeclaration2450); if (state.failed) return current;
+            	    lv_group_8_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRuleDeclaration2436); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      			newLeafNode(lv_group_7_0, grammarAccess.getRuleDeclarationAccess().getGroupIDTerminalRuleCall_2_3_1_0()); 
+            	      			newLeafNode(lv_group_8_0, grammarAccess.getRuleDeclarationAccess().getGroupIDTerminalRuleCall_2_3_1_0()); 
             	      		
             	    }
             	    if ( state.backtracking==0 ) {
@@ -2857,7 +2849,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	             		setWithLastConsumed(
             	             			current, 
             	             			"group",
-            	              		lv_group_7_0, 
+            	              		lv_group_8_0, 
             	              		"ID");
             	      	    
             	    }
@@ -2884,45 +2876,45 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 5 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1045:4: ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1035:4: ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1045:4: ({...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1046:5: {...}? => ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1035:4: ({...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1036:5: {...}? => ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 4) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 4)");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1046:112: ( ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1047:6: ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1036:112: ( ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1037:6: ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 4);
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1050:6: ({...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1050:7: {...}? => (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1040:6: ({...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1040:7: {...}? => (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "true");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1050:16: (otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1050:18: otherlv_8= 'minInterval' ( (lv_minInterval_9_0= RULE_INT ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1040:16: (otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1040:18: otherlv_9= 'minInterval' ( (lv_minInterval_10_0= RULE_INT ) )
             	    {
-            	    otherlv_8=(Token)match(input,29,FOLLOW_29_in_ruleRuleDeclaration2523); if (state.failed) return current;
+            	    otherlv_9=(Token)match(input,29,FOLLOW_29_in_ruleRuleDeclaration2509); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	          	newLeafNode(otherlv_8, grammarAccess.getRuleDeclarationAccess().getMinIntervalKeyword_2_4_0());
+            	          	newLeafNode(otherlv_9, grammarAccess.getRuleDeclarationAccess().getMinIntervalKeyword_2_4_0());
             	          
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1054:1: ( (lv_minInterval_9_0= RULE_INT ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1055:1: (lv_minInterval_9_0= RULE_INT )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1044:1: ( (lv_minInterval_10_0= RULE_INT ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1045:1: (lv_minInterval_10_0= RULE_INT )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1055:1: (lv_minInterval_9_0= RULE_INT )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1056:3: lv_minInterval_9_0= RULE_INT
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1045:1: (lv_minInterval_10_0= RULE_INT )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1046:3: lv_minInterval_10_0= RULE_INT
             	    {
-            	    lv_minInterval_9_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleRuleDeclaration2540); if (state.failed) return current;
+            	    lv_minInterval_10_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleRuleDeclaration2526); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      			newLeafNode(lv_minInterval_9_0, grammarAccess.getRuleDeclarationAccess().getMinIntervalINTTerminalRuleCall_2_4_1_0()); 
+            	      			newLeafNode(lv_minInterval_10_0, grammarAccess.getRuleDeclarationAccess().getMinIntervalINTTerminalRuleCall_2_4_1_0()); 
             	      		
             	    }
             	    if ( state.backtracking==0 ) {
@@ -2933,7 +2925,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	             		setWithLastConsumed(
             	             			current, 
             	             			"minInterval",
-            	              		lv_minInterval_9_0, 
+            	              		lv_minInterval_10_0, 
             	              		"INT");
             	      	    
             	    }
@@ -2960,45 +2952,45 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 6 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1079:4: ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1069:4: ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1079:4: ({...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1080:5: {...}? => ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1069:4: ({...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1070:5: {...}? => ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 5) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "getUnorderedGroupHelper().canSelect(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 5)");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1080:112: ( ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1081:6: ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1070:112: ( ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1071:6: ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getRuleDeclarationAccess().getUnorderedGroup_2(), 5);
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1084:6: ({...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1084:7: {...}? => (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1074:6: ({...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1074:7: {...}? => (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleRuleDeclaration", "true");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1084:16: (otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1084:18: otherlv_10= 'maxInterval' ( (lv_maxInterval_11_0= RULE_INT ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1074:16: (otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1074:18: otherlv_11= 'maxInterval' ( (lv_maxInterval_12_0= RULE_INT ) )
             	    {
-            	    otherlv_10=(Token)match(input,30,FOLLOW_30_in_ruleRuleDeclaration2613); if (state.failed) return current;
+            	    otherlv_11=(Token)match(input,30,FOLLOW_30_in_ruleRuleDeclaration2599); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	          	newLeafNode(otherlv_10, grammarAccess.getRuleDeclarationAccess().getMaxIntervalKeyword_2_5_0());
+            	          	newLeafNode(otherlv_11, grammarAccess.getRuleDeclarationAccess().getMaxIntervalKeyword_2_5_0());
             	          
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1088:1: ( (lv_maxInterval_11_0= RULE_INT ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1089:1: (lv_maxInterval_11_0= RULE_INT )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1078:1: ( (lv_maxInterval_12_0= RULE_INT ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1079:1: (lv_maxInterval_12_0= RULE_INT )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1089:1: (lv_maxInterval_11_0= RULE_INT )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1090:3: lv_maxInterval_11_0= RULE_INT
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1079:1: (lv_maxInterval_12_0= RULE_INT )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1080:3: lv_maxInterval_12_0= RULE_INT
             	    {
-            	    lv_maxInterval_11_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleRuleDeclaration2630); if (state.failed) return current;
+            	    lv_maxInterval_12_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleRuleDeclaration2616); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      			newLeafNode(lv_maxInterval_11_0, grammarAccess.getRuleDeclarationAccess().getMaxIntervalINTTerminalRuleCall_2_5_1_0()); 
+            	      			newLeafNode(lv_maxInterval_12_0, grammarAccess.getRuleDeclarationAccess().getMaxIntervalINTTerminalRuleCall_2_5_1_0()); 
             	      		
             	    }
             	    if ( state.backtracking==0 ) {
@@ -3009,7 +3001,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	             		setWithLastConsumed(
             	             			current, 
             	             			"maxInterval",
-            	              		lv_maxInterval_11_0, 
+            	              		lv_maxInterval_12_0, 
             	              		"INT");
             	      	    
             	    }
@@ -3060,19 +3052,19 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1121:2: ( (lv_statements_12_0= ruleCompoundStatement ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1122:1: (lv_statements_12_0= ruleCompoundStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1111:2: ( (lv_statements_13_0= ruleCompoundStatement ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1112:1: (lv_statements_13_0= ruleCompoundStatement )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1122:1: (lv_statements_12_0= ruleCompoundStatement )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1123:3: lv_statements_12_0= ruleCompoundStatement
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1112:1: (lv_statements_13_0= ruleCompoundStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1113:3: lv_statements_13_0= ruleCompoundStatement
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getRuleDeclarationAccess().getStatementsCompoundStatementParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleCompoundStatement_in_ruleRuleDeclaration2703);
-            lv_statements_12_0=ruleCompoundStatement();
+            pushFollow(FOLLOW_ruleCompoundStatement_in_ruleRuleDeclaration2689);
+            lv_statements_13_0=ruleCompoundStatement();
 
             state._fsp--;
             if (state.failed) return current;
@@ -3084,7 +3076,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                      		set(
                      			current, 
                      			"statements",
-                      		lv_statements_12_0, 
+                      		lv_statements_13_0, 
                       		"CompoundStatement");
               	        afterParserOrEnumRuleCall();
               	    
@@ -3118,7 +3110,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVarModifier"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1147:1: entryRuleVarModifier returns [EObject current=null] : iv_ruleVarModifier= ruleVarModifier EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1137:1: entryRuleVarModifier returns [EObject current=null] : iv_ruleVarModifier= ruleVarModifier EOF ;
     public final EObject entryRuleVarModifier() throws RecognitionException {
         EObject current = null;
 
@@ -3126,13 +3118,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1148:2: (iv_ruleVarModifier= ruleVarModifier EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1149:2: iv_ruleVarModifier= ruleVarModifier EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1138:2: (iv_ruleVarModifier= ruleVarModifier EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1139:2: iv_ruleVarModifier= ruleVarModifier EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVarModifierRule()); 
             }
-            pushFollow(FOLLOW_ruleVarModifier_in_entryRuleVarModifier2739);
+            pushFollow(FOLLOW_ruleVarModifier_in_entryRuleVarModifier2725);
             iv_ruleVarModifier=ruleVarModifier();
 
             state._fsp--;
@@ -3140,7 +3132,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleVarModifier; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVarModifier2749); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVarModifier2735); if (state.failed) return current;
 
             }
 
@@ -3158,7 +3150,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVarModifier"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1156:1: ruleVarModifier returns [EObject current=null] : ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) ) ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1146:1: ruleVarModifier returns [EObject current=null] : ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) ) ) ;
     public final EObject ruleVarModifier() throws RecognitionException {
         EObject current = null;
 
@@ -3169,20 +3161,20 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1159:28: ( ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1160:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1149:28: ( ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1150:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1160:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1162:1: ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1150:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1152:1: ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1162:1: ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1163:2: ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1152:1: ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1153:2: ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* )
             {
             getUnorderedGroupHelper().enter(grammarAccess.getVarModifierAccess().getUnorderedGroup());
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1166:2: ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1167:3: ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1156:2: ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1157:3: ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )*
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1167:3: ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1157:3: ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) ) )*
             loop12:
             do {
                 int alt12=4;
@@ -3201,33 +3193,33 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                 switch (alt12) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1169:4: ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1159:4: ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1169:4: ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1170:5: {...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1159:4: ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1160:5: {...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getVarModifierAccess().getUnorderedGroup(), 0) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleVarModifier", "getUnorderedGroupHelper().canSelect(grammarAccess.getVarModifierAccess().getUnorderedGroup(), 0)");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1170:106: ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1171:6: ({...}? => ( (lv_static_1_0= 'static' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1160:106: ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1161:6: ({...}? => ( (lv_static_1_0= 'static' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getVarModifierAccess().getUnorderedGroup(), 0);
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1174:6: ({...}? => ( (lv_static_1_0= 'static' ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1174:7: {...}? => ( (lv_static_1_0= 'static' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1164:6: ({...}? => ( (lv_static_1_0= 'static' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1164:7: {...}? => ( (lv_static_1_0= 'static' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleVarModifier", "true");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1174:16: ( (lv_static_1_0= 'static' ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1175:1: (lv_static_1_0= 'static' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1164:16: ( (lv_static_1_0= 'static' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1165:1: (lv_static_1_0= 'static' )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1175:1: (lv_static_1_0= 'static' )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1176:3: lv_static_1_0= 'static'
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1165:1: (lv_static_1_0= 'static' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1166:3: lv_static_1_0= 'static'
             	    {
-            	    lv_static_1_0=(Token)match(input,31,FOLLOW_31_in_ruleVarModifier2836); if (state.failed) return current;
+            	    lv_static_1_0=(Token)match(input,31,FOLLOW_31_in_ruleVarModifier2822); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              newLeafNode(lv_static_1_0, grammarAccess.getVarModifierAccess().getStaticStaticKeyword_0_0());
@@ -3261,33 +3253,33 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1196:4: ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1186:4: ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1196:4: ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1197:5: {...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1186:4: ({...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1187:5: {...}? => ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getVarModifierAccess().getUnorderedGroup(), 1) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleVarModifier", "getUnorderedGroupHelper().canSelect(grammarAccess.getVarModifierAccess().getUnorderedGroup(), 1)");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1197:106: ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1198:6: ({...}? => ( (lv_const_2_0= 'const' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1187:106: ( ({...}? => ( (lv_const_2_0= 'const' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1188:6: ({...}? => ( (lv_const_2_0= 'const' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getVarModifierAccess().getUnorderedGroup(), 1);
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1201:6: ({...}? => ( (lv_const_2_0= 'const' ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1201:7: {...}? => ( (lv_const_2_0= 'const' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1191:6: ({...}? => ( (lv_const_2_0= 'const' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1191:7: {...}? => ( (lv_const_2_0= 'const' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleVarModifier", "true");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1201:16: ( (lv_const_2_0= 'const' ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1202:1: (lv_const_2_0= 'const' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1191:16: ( (lv_const_2_0= 'const' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1192:1: (lv_const_2_0= 'const' )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1202:1: (lv_const_2_0= 'const' )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1203:3: lv_const_2_0= 'const'
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1192:1: (lv_const_2_0= 'const' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1193:3: lv_const_2_0= 'const'
             	    {
-            	    lv_const_2_0=(Token)match(input,32,FOLLOW_32_in_ruleVarModifier2921); if (state.failed) return current;
+            	    lv_const_2_0=(Token)match(input,32,FOLLOW_32_in_ruleVarModifier2907); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              newLeafNode(lv_const_2_0, grammarAccess.getVarModifierAccess().getConstConstKeyword_1_0());
@@ -3321,33 +3313,33 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1223:4: ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1213:4: ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1223:4: ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1224:5: {...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1213:4: ({...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1214:5: {...}? => ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getVarModifierAccess().getUnorderedGroup(), 2) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleVarModifier", "getUnorderedGroupHelper().canSelect(grammarAccess.getVarModifierAccess().getUnorderedGroup(), 2)");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1224:106: ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1225:6: ({...}? => ( (lv_extern_3_0= 'extern' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1214:106: ( ({...}? => ( (lv_extern_3_0= 'extern' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1215:6: ({...}? => ( (lv_extern_3_0= 'extern' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getVarModifierAccess().getUnorderedGroup(), 2);
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1228:6: ({...}? => ( (lv_extern_3_0= 'extern' ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1228:7: {...}? => ( (lv_extern_3_0= 'extern' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1218:6: ({...}? => ( (lv_extern_3_0= 'extern' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1218:7: {...}? => ( (lv_extern_3_0= 'extern' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleVarModifier", "true");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1228:16: ( (lv_extern_3_0= 'extern' ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1229:1: (lv_extern_3_0= 'extern' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1218:16: ( (lv_extern_3_0= 'extern' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1219:1: (lv_extern_3_0= 'extern' )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1229:1: (lv_extern_3_0= 'extern' )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1230:3: lv_extern_3_0= 'extern'
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1219:1: (lv_extern_3_0= 'extern' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1220:3: lv_extern_3_0= 'extern'
             	    {
-            	    lv_extern_3_0=(Token)match(input,33,FOLLOW_33_in_ruleVarModifier3006); if (state.failed) return current;
+            	    lv_extern_3_0=(Token)match(input,33,FOLLOW_33_in_ruleVarModifier2992); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              newLeafNode(lv_extern_3_0, grammarAccess.getVarModifierAccess().getExternExternKeyword_2_0());
@@ -3416,7 +3408,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFunModifier"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1265:1: entryRuleFunModifier returns [EObject current=null] : iv_ruleFunModifier= ruleFunModifier EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1255:1: entryRuleFunModifier returns [EObject current=null] : iv_ruleFunModifier= ruleFunModifier EOF ;
     public final EObject entryRuleFunModifier() throws RecognitionException {
         EObject current = null;
 
@@ -3424,13 +3416,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1266:2: (iv_ruleFunModifier= ruleFunModifier EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1267:2: iv_ruleFunModifier= ruleFunModifier EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1256:2: (iv_ruleFunModifier= ruleFunModifier EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1257:2: iv_ruleFunModifier= ruleFunModifier EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFunModifierRule()); 
             }
-            pushFollow(FOLLOW_ruleFunModifier_in_entryRuleFunModifier3094);
+            pushFollow(FOLLOW_ruleFunModifier_in_entryRuleFunModifier3080);
             iv_ruleFunModifier=ruleFunModifier();
 
             state._fsp--;
@@ -3438,7 +3430,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleFunModifier; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFunModifier3104); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFunModifier3090); if (state.failed) return current;
 
             }
 
@@ -3456,7 +3448,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFunModifier"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1274:1: ruleFunModifier returns [EObject current=null] : ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) ) ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1264:1: ruleFunModifier returns [EObject current=null] : ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) ) ) ;
     public final EObject ruleFunModifier() throws RecognitionException {
         EObject current = null;
 
@@ -3466,20 +3458,20 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1277:28: ( ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1278:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1267:28: ( ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1268:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1278:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1280:1: ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1268:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1270:1: ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1280:1: ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1281:2: ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1270:1: ( ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1271:2: ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* )
             {
             getUnorderedGroupHelper().enter(grammarAccess.getFunModifierAccess().getUnorderedGroup());
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1284:2: ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1285:3: ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1274:2: ( ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1275:3: ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )*
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1285:3: ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1275:3: ( ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) ) )*
             loop13:
             do {
                 int alt13=3;
@@ -3495,33 +3487,33 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1287:4: ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1277:4: ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1287:4: ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1288:5: {...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1277:4: ({...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1278:5: {...}? => ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFunModifierAccess().getUnorderedGroup(), 0) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleFunModifier", "getUnorderedGroupHelper().canSelect(grammarAccess.getFunModifierAccess().getUnorderedGroup(), 0)");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1288:106: ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1289:6: ({...}? => ( (lv_static_1_0= 'static' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1278:106: ( ({...}? => ( (lv_static_1_0= 'static' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1279:6: ({...}? => ( (lv_static_1_0= 'static' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getFunModifierAccess().getUnorderedGroup(), 0);
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1292:6: ({...}? => ( (lv_static_1_0= 'static' ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1292:7: {...}? => ( (lv_static_1_0= 'static' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1282:6: ({...}? => ( (lv_static_1_0= 'static' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1282:7: {...}? => ( (lv_static_1_0= 'static' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleFunModifier", "true");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1292:16: ( (lv_static_1_0= 'static' ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1293:1: (lv_static_1_0= 'static' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1282:16: ( (lv_static_1_0= 'static' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1283:1: (lv_static_1_0= 'static' )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1293:1: (lv_static_1_0= 'static' )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1294:3: lv_static_1_0= 'static'
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1283:1: (lv_static_1_0= 'static' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1284:3: lv_static_1_0= 'static'
             	    {
-            	    lv_static_1_0=(Token)match(input,31,FOLLOW_31_in_ruleFunModifier3191); if (state.failed) return current;
+            	    lv_static_1_0=(Token)match(input,31,FOLLOW_31_in_ruleFunModifier3177); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              newLeafNode(lv_static_1_0, grammarAccess.getFunModifierAccess().getStaticStaticKeyword_0_0());
@@ -3555,33 +3547,33 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1314:4: ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1304:4: ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1314:4: ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1315:5: {...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1304:4: ({...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1305:5: {...}? => ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFunModifierAccess().getUnorderedGroup(), 1) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleFunModifier", "getUnorderedGroupHelper().canSelect(grammarAccess.getFunModifierAccess().getUnorderedGroup(), 1)");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1315:106: ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1316:6: ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1305:106: ( ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1306:6: ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getFunModifierAccess().getUnorderedGroup(), 1);
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1319:6: ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1319:7: {...}? => ( (lv_mutable_2_0= 'mutable' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1309:6: ({...}? => ( (lv_mutable_2_0= 'mutable' ) ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1309:7: {...}? => ( (lv_mutable_2_0= 'mutable' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleFunModifier", "true");
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1319:16: ( (lv_mutable_2_0= 'mutable' ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1320:1: (lv_mutable_2_0= 'mutable' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1309:16: ( (lv_mutable_2_0= 'mutable' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1310:1: (lv_mutable_2_0= 'mutable' )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1320:1: (lv_mutable_2_0= 'mutable' )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1321:3: lv_mutable_2_0= 'mutable'
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1310:1: (lv_mutable_2_0= 'mutable' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1311:3: lv_mutable_2_0= 'mutable'
             	    {
-            	    lv_mutable_2_0=(Token)match(input,34,FOLLOW_34_in_ruleFunModifier3276); if (state.failed) return current;
+            	    lv_mutable_2_0=(Token)match(input,34,FOLLOW_34_in_ruleFunModifier3262); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              newLeafNode(lv_mutable_2_0, grammarAccess.getFunModifierAccess().getMutableMutableKeyword_1_0());
@@ -3650,7 +3642,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVarTypeSpecifier"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1356:1: entryRuleVarTypeSpecifier returns [String current=null] : iv_ruleVarTypeSpecifier= ruleVarTypeSpecifier EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1346:1: entryRuleVarTypeSpecifier returns [String current=null] : iv_ruleVarTypeSpecifier= ruleVarTypeSpecifier EOF ;
     public final String entryRuleVarTypeSpecifier() throws RecognitionException {
         String current = null;
 
@@ -3658,13 +3650,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1357:2: (iv_ruleVarTypeSpecifier= ruleVarTypeSpecifier EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1358:2: iv_ruleVarTypeSpecifier= ruleVarTypeSpecifier EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1347:2: (iv_ruleVarTypeSpecifier= ruleVarTypeSpecifier EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1348:2: iv_ruleVarTypeSpecifier= ruleVarTypeSpecifier EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVarTypeSpecifierRule()); 
             }
-            pushFollow(FOLLOW_ruleVarTypeSpecifier_in_entryRuleVarTypeSpecifier3365);
+            pushFollow(FOLLOW_ruleVarTypeSpecifier_in_entryRuleVarTypeSpecifier3351);
             iv_ruleVarTypeSpecifier=ruleVarTypeSpecifier();
 
             state._fsp--;
@@ -3672,7 +3664,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleVarTypeSpecifier.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVarTypeSpecifier3376); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVarTypeSpecifier3362); if (state.failed) return current;
 
             }
 
@@ -3690,7 +3682,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVarTypeSpecifier"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1365:1: ruleVarTypeSpecifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'int' | kw= 'float' | kw= 'bool' | kw= 'vector' | kw= 'string' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1355:1: ruleVarTypeSpecifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'int' | kw= 'float' | kw= 'bool' | kw= 'vector' | kw= 'string' ) ;
     public final AntlrDatatypeRuleToken ruleVarTypeSpecifier() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3699,10 +3691,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1368:28: ( (kw= 'int' | kw= 'float' | kw= 'bool' | kw= 'vector' | kw= 'string' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1369:1: (kw= 'int' | kw= 'float' | kw= 'bool' | kw= 'vector' | kw= 'string' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1358:28: ( (kw= 'int' | kw= 'float' | kw= 'bool' | kw= 'vector' | kw= 'string' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1359:1: (kw= 'int' | kw= 'float' | kw= 'bool' | kw= 'vector' | kw= 'string' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1369:1: (kw= 'int' | kw= 'float' | kw= 'bool' | kw= 'vector' | kw= 'string' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1359:1: (kw= 'int' | kw= 'float' | kw= 'bool' | kw= 'vector' | kw= 'string' )
             int alt14=5;
             switch ( input.LA(1) ) {
             case 35:
@@ -3740,9 +3732,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             switch (alt14) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1370:2: kw= 'int'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1360:2: kw= 'int'
                     {
-                    kw=(Token)match(input,35,FOLLOW_35_in_ruleVarTypeSpecifier3414); if (state.failed) return current;
+                    kw=(Token)match(input,35,FOLLOW_35_in_ruleVarTypeSpecifier3400); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3753,9 +3745,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1377:2: kw= 'float'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1367:2: kw= 'float'
                     {
-                    kw=(Token)match(input,36,FOLLOW_36_in_ruleVarTypeSpecifier3433); if (state.failed) return current;
+                    kw=(Token)match(input,36,FOLLOW_36_in_ruleVarTypeSpecifier3419); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3766,9 +3758,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1384:2: kw= 'bool'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1374:2: kw= 'bool'
                     {
-                    kw=(Token)match(input,37,FOLLOW_37_in_ruleVarTypeSpecifier3452); if (state.failed) return current;
+                    kw=(Token)match(input,37,FOLLOW_37_in_ruleVarTypeSpecifier3438); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3779,9 +3771,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1391:2: kw= 'vector'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1381:2: kw= 'vector'
                     {
-                    kw=(Token)match(input,17,FOLLOW_17_in_ruleVarTypeSpecifier3471); if (state.failed) return current;
+                    kw=(Token)match(input,17,FOLLOW_17_in_ruleVarTypeSpecifier3457); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3792,9 +3784,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1398:2: kw= 'string'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1388:2: kw= 'string'
                     {
-                    kw=(Token)match(input,38,FOLLOW_38_in_ruleVarTypeSpecifier3490); if (state.failed) return current;
+                    kw=(Token)match(input,38,FOLLOW_38_in_ruleVarTypeSpecifier3476); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3827,7 +3819,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFunTypeSpecifier"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1411:1: entryRuleFunTypeSpecifier returns [String current=null] : iv_ruleFunTypeSpecifier= ruleFunTypeSpecifier EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1401:1: entryRuleFunTypeSpecifier returns [String current=null] : iv_ruleFunTypeSpecifier= ruleFunTypeSpecifier EOF ;
     public final String entryRuleFunTypeSpecifier() throws RecognitionException {
         String current = null;
 
@@ -3835,13 +3827,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1412:2: (iv_ruleFunTypeSpecifier= ruleFunTypeSpecifier EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1413:2: iv_ruleFunTypeSpecifier= ruleFunTypeSpecifier EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1402:2: (iv_ruleFunTypeSpecifier= ruleFunTypeSpecifier EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1403:2: iv_ruleFunTypeSpecifier= ruleFunTypeSpecifier EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFunTypeSpecifierRule()); 
             }
-            pushFollow(FOLLOW_ruleFunTypeSpecifier_in_entryRuleFunTypeSpecifier3531);
+            pushFollow(FOLLOW_ruleFunTypeSpecifier_in_entryRuleFunTypeSpecifier3517);
             iv_ruleFunTypeSpecifier=ruleFunTypeSpecifier();
 
             state._fsp--;
@@ -3849,7 +3841,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleFunTypeSpecifier.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFunTypeSpecifier3542); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFunTypeSpecifier3528); if (state.failed) return current;
 
             }
 
@@ -3867,7 +3859,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFunTypeSpecifier"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1420:1: ruleFunTypeSpecifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'void' | this_VarTypeSpecifier_1= ruleVarTypeSpecifier ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1410:1: ruleFunTypeSpecifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'void' | this_VarTypeSpecifier_1= ruleVarTypeSpecifier ) ;
     public final AntlrDatatypeRuleToken ruleFunTypeSpecifier() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3878,10 +3870,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1423:28: ( (kw= 'void' | this_VarTypeSpecifier_1= ruleVarTypeSpecifier ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1424:1: (kw= 'void' | this_VarTypeSpecifier_1= ruleVarTypeSpecifier )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1413:28: ( (kw= 'void' | this_VarTypeSpecifier_1= ruleVarTypeSpecifier ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1414:1: (kw= 'void' | this_VarTypeSpecifier_1= ruleVarTypeSpecifier )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1424:1: (kw= 'void' | this_VarTypeSpecifier_1= ruleVarTypeSpecifier )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1414:1: (kw= 'void' | this_VarTypeSpecifier_1= ruleVarTypeSpecifier )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -3900,9 +3892,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt15) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1425:2: kw= 'void'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1415:2: kw= 'void'
                     {
-                    kw=(Token)match(input,39,FOLLOW_39_in_ruleFunTypeSpecifier3580); if (state.failed) return current;
+                    kw=(Token)match(input,39,FOLLOW_39_in_ruleFunTypeSpecifier3566); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3913,14 +3905,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1432:5: this_VarTypeSpecifier_1= ruleVarTypeSpecifier
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1422:5: this_VarTypeSpecifier_1= ruleVarTypeSpecifier
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getFunTypeSpecifierAccess().getVarTypeSpecifierParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleVarTypeSpecifier_in_ruleFunTypeSpecifier3608);
+                    pushFollow(FOLLOW_ruleVarTypeSpecifier_in_ruleFunTypeSpecifier3594);
                     this_VarTypeSpecifier_1=ruleVarTypeSpecifier();
 
                     state._fsp--;
@@ -3961,7 +3953,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParams"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1450:1: entryRuleParams returns [EObject current=null] : iv_ruleParams= ruleParams EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1440:1: entryRuleParams returns [EObject current=null] : iv_ruleParams= ruleParams EOF ;
     public final EObject entryRuleParams() throws RecognitionException {
         EObject current = null;
 
@@ -3969,13 +3961,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1451:2: (iv_ruleParams= ruleParams EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1452:2: iv_ruleParams= ruleParams EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1441:2: (iv_ruleParams= ruleParams EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1442:2: iv_ruleParams= ruleParams EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getParamsRule()); 
             }
-            pushFollow(FOLLOW_ruleParams_in_entryRuleParams3653);
+            pushFollow(FOLLOW_ruleParams_in_entryRuleParams3639);
             iv_ruleParams=ruleParams();
 
             state._fsp--;
@@ -3983,7 +3975,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleParams; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleParams3663); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleParams3649); if (state.failed) return current;
 
             }
 
@@ -4001,7 +3993,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParams"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1459:1: ruleParams returns [EObject current=null] : ( ( (lv_param_0_0= 'void' ) ) | ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* ) ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1449:1: ruleParams returns [EObject current=null] : ( ( (lv_param_0_0= 'void' ) ) | ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* ) ) ;
     public final EObject ruleParams() throws RecognitionException {
         EObject current = null;
 
@@ -4015,10 +4007,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1462:28: ( ( ( (lv_param_0_0= 'void' ) ) | ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1463:1: ( ( (lv_param_0_0= 'void' ) ) | ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1452:28: ( ( ( (lv_param_0_0= 'void' ) ) | ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1453:1: ( ( (lv_param_0_0= 'void' ) ) | ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1463:1: ( ( (lv_param_0_0= 'void' ) ) | ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1453:1: ( ( (lv_param_0_0= 'void' ) ) | ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* ) )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -4037,15 +4029,15 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt17) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1463:2: ( (lv_param_0_0= 'void' ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1453:2: ( (lv_param_0_0= 'void' ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1463:2: ( (lv_param_0_0= 'void' ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1464:1: (lv_param_0_0= 'void' )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1453:2: ( (lv_param_0_0= 'void' ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1454:1: (lv_param_0_0= 'void' )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1464:1: (lv_param_0_0= 'void' )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1465:3: lv_param_0_0= 'void'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1454:1: (lv_param_0_0= 'void' )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1455:3: lv_param_0_0= 'void'
                     {
-                    lv_param_0_0=(Token)match(input,39,FOLLOW_39_in_ruleParams3706); if (state.failed) return current;
+                    lv_param_0_0=(Token)match(input,39,FOLLOW_39_in_ruleParams3692); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_param_0_0, grammarAccess.getParamsAccess().getParamVoidKeyword_0_0());
@@ -4069,23 +4061,23 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1479:6: ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1469:6: ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1479:6: ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1479:7: ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )*
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1469:6: ( ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )* )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1469:7: ( (lv_params_1_0= ruleVarDeclaration ) ) (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )*
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1479:7: ( (lv_params_1_0= ruleVarDeclaration ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1480:1: (lv_params_1_0= ruleVarDeclaration )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1469:7: ( (lv_params_1_0= ruleVarDeclaration ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1470:1: (lv_params_1_0= ruleVarDeclaration )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1480:1: (lv_params_1_0= ruleVarDeclaration )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1481:3: lv_params_1_0= ruleVarDeclaration
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1470:1: (lv_params_1_0= ruleVarDeclaration )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1471:3: lv_params_1_0= ruleVarDeclaration
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getParamsAccess().getParamsVarDeclarationParserRuleCall_1_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleVarDeclaration_in_ruleParams3747);
+                    pushFollow(FOLLOW_ruleVarDeclaration_in_ruleParams3733);
                     lv_params_1_0=ruleVarDeclaration();
 
                     state._fsp--;
@@ -4109,7 +4101,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1497:2: (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )*
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1487:2: (otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) ) )*
                     loop16:
                     do {
                         int alt16=2;
@@ -4122,26 +4114,26 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                         switch (alt16) {
                     	case 1 :
-                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1497:4: otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) )
+                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1487:4: otherlv_2= ',' ( (lv_params_3_0= ruleVarDeclaration ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleParams3760); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleParams3746); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getParamsAccess().getCommaKeyword_1_1_0());
                     	          
                     	    }
-                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1501:1: ( (lv_params_3_0= ruleVarDeclaration ) )
-                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1502:1: (lv_params_3_0= ruleVarDeclaration )
+                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1491:1: ( (lv_params_3_0= ruleVarDeclaration ) )
+                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1492:1: (lv_params_3_0= ruleVarDeclaration )
                     	    {
-                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1502:1: (lv_params_3_0= ruleVarDeclaration )
-                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1503:3: lv_params_3_0= ruleVarDeclaration
+                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1492:1: (lv_params_3_0= ruleVarDeclaration )
+                    	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1493:3: lv_params_3_0= ruleVarDeclaration
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getParamsAccess().getParamsVarDeclarationParserRuleCall_1_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleVarDeclaration_in_ruleParams3781);
+                    	    pushFollow(FOLLOW_ruleVarDeclaration_in_ruleParams3767);
                     	    lv_params_3_0=ruleVarDeclaration();
 
                     	    state._fsp--;
@@ -4203,7 +4195,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCompoundStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1527:1: entryRuleCompoundStatement returns [EObject current=null] : iv_ruleCompoundStatement= ruleCompoundStatement EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1517:1: entryRuleCompoundStatement returns [EObject current=null] : iv_ruleCompoundStatement= ruleCompoundStatement EOF ;
     public final EObject entryRuleCompoundStatement() throws RecognitionException {
         EObject current = null;
 
@@ -4211,13 +4203,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1528:2: (iv_ruleCompoundStatement= ruleCompoundStatement EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1529:2: iv_ruleCompoundStatement= ruleCompoundStatement EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1518:2: (iv_ruleCompoundStatement= ruleCompoundStatement EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1519:2: iv_ruleCompoundStatement= ruleCompoundStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCompoundStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleCompoundStatement_in_entryRuleCompoundStatement3820);
+            pushFollow(FOLLOW_ruleCompoundStatement_in_entryRuleCompoundStatement3806);
             iv_ruleCompoundStatement=ruleCompoundStatement();
 
             state._fsp--;
@@ -4225,7 +4217,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCompoundStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCompoundStatement3830); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCompoundStatement3816); if (state.failed) return current;
 
             }
 
@@ -4243,7 +4235,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompoundStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1536:1: ruleCompoundStatement returns [EObject current=null] : ( () otherlv_1= '{' ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )* otherlv_3= '}' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1526:1: ruleCompoundStatement returns [EObject current=null] : ( () otherlv_1= '{' ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )* otherlv_3= '}' ) ;
     public final EObject ruleCompoundStatement() throws RecognitionException {
         EObject current = null;
 
@@ -4255,14 +4247,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1539:28: ( ( () otherlv_1= '{' ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )* otherlv_3= '}' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1540:1: ( () otherlv_1= '{' ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )* otherlv_3= '}' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1529:28: ( ( () otherlv_1= '{' ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )* otherlv_3= '}' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1530:1: ( () otherlv_1= '{' ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )* otherlv_3= '}' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1540:1: ( () otherlv_1= '{' ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )* otherlv_3= '}' )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1540:2: () otherlv_1= '{' ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )* otherlv_3= '}'
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1530:1: ( () otherlv_1= '{' ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )* otherlv_3= '}' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1530:2: () otherlv_1= '{' ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )* otherlv_3= '}'
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1540:2: ()
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1541:5: 
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1530:2: ()
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1531:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -4274,13 +4266,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleCompoundStatement3876); if (state.failed) return current;
+            otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleCompoundStatement3862); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getCompoundStatementAccess().getLeftCurlyBracketKeyword_1());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1550:1: ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1540:1: ( (lv_contents_2_0= ruleVarDeclarationOrStatement ) )*
             loop18:
             do {
                 int alt18=2;
@@ -4293,17 +4285,17 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                 switch (alt18) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1551:1: (lv_contents_2_0= ruleVarDeclarationOrStatement )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1541:1: (lv_contents_2_0= ruleVarDeclarationOrStatement )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1551:1: (lv_contents_2_0= ruleVarDeclarationOrStatement )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1552:3: lv_contents_2_0= ruleVarDeclarationOrStatement
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1541:1: (lv_contents_2_0= ruleVarDeclarationOrStatement )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1542:3: lv_contents_2_0= ruleVarDeclarationOrStatement
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getCompoundStatementAccess().getContentsVarDeclarationOrStatementParserRuleCall_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleVarDeclarationOrStatement_in_ruleCompoundStatement3897);
+            	    pushFollow(FOLLOW_ruleVarDeclarationOrStatement_in_ruleCompoundStatement3883);
             	    lv_contents_2_0=ruleVarDeclarationOrStatement();
 
             	    state._fsp--;
@@ -4333,7 +4325,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_3=(Token)match(input,41,FOLLOW_41_in_ruleCompoundStatement3910); if (state.failed) return current;
+            otherlv_3=(Token)match(input,41,FOLLOW_41_in_ruleCompoundStatement3896); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getCompoundStatementAccess().getRightCurlyBracketKeyword_3());
@@ -4362,7 +4354,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVarDeclarationOrStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1580:1: entryRuleVarDeclarationOrStatement returns [EObject current=null] : iv_ruleVarDeclarationOrStatement= ruleVarDeclarationOrStatement EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1570:1: entryRuleVarDeclarationOrStatement returns [EObject current=null] : iv_ruleVarDeclarationOrStatement= ruleVarDeclarationOrStatement EOF ;
     public final EObject entryRuleVarDeclarationOrStatement() throws RecognitionException {
         EObject current = null;
 
@@ -4370,13 +4362,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1581:2: (iv_ruleVarDeclarationOrStatement= ruleVarDeclarationOrStatement EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1582:2: iv_ruleVarDeclarationOrStatement= ruleVarDeclarationOrStatement EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1571:2: (iv_ruleVarDeclarationOrStatement= ruleVarDeclarationOrStatement EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1572:2: iv_ruleVarDeclarationOrStatement= ruleVarDeclarationOrStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVarDeclarationOrStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleVarDeclarationOrStatement_in_entryRuleVarDeclarationOrStatement3946);
+            pushFollow(FOLLOW_ruleVarDeclarationOrStatement_in_entryRuleVarDeclarationOrStatement3932);
             iv_ruleVarDeclarationOrStatement=ruleVarDeclarationOrStatement();
 
             state._fsp--;
@@ -4384,7 +4376,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleVarDeclarationOrStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVarDeclarationOrStatement3956); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVarDeclarationOrStatement3942); if (state.failed) return current;
 
             }
 
@@ -4402,7 +4394,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVarDeclarationOrStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1589:1: ruleVarDeclarationOrStatement returns [EObject current=null] : ( (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' ) | this_Statement_2= ruleStatement ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1579:1: ruleVarDeclarationOrStatement returns [EObject current=null] : ( (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' ) | this_Statement_2= ruleStatement ) ;
     public final EObject ruleVarDeclarationOrStatement() throws RecognitionException {
         EObject current = null;
 
@@ -4415,10 +4407,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1592:28: ( ( (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' ) | this_Statement_2= ruleStatement ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1593:1: ( (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' ) | this_Statement_2= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1582:28: ( ( (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' ) | this_Statement_2= ruleStatement ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1583:1: ( (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' ) | this_Statement_2= ruleStatement )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1593:1: ( (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' ) | this_Statement_2= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1583:1: ( (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' ) | this_Statement_2= ruleStatement )
             int alt19=2;
             switch ( input.LA(1) ) {
             case 31:
@@ -4482,17 +4474,17 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             switch (alt19) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1593:2: (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1583:2: (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1593:2: (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1594:5: this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1583:2: (this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';' )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1584:5: this_VarDeclaration_0= ruleVarDeclaration otherlv_1= ';'
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getVarDeclarationOrStatementAccess().getVarDeclarationParserRuleCall_0_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleVarDeclaration_in_ruleVarDeclarationOrStatement4004);
+                    pushFollow(FOLLOW_ruleVarDeclaration_in_ruleVarDeclarationOrStatement3990);
                     this_VarDeclaration_0=ruleVarDeclaration();
 
                     state._fsp--;
@@ -4503,7 +4495,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    otherlv_1=(Token)match(input,11,FOLLOW_11_in_ruleVarDeclarationOrStatement4015); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,11,FOLLOW_11_in_ruleVarDeclarationOrStatement4001); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getVarDeclarationOrStatementAccess().getSemicolonKeyword_0_1());
@@ -4516,14 +4508,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1608:5: this_Statement_2= ruleStatement
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1598:5: this_Statement_2= ruleStatement
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getVarDeclarationOrStatementAccess().getStatementParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleStatement_in_ruleVarDeclarationOrStatement4044);
+                    pushFollow(FOLLOW_ruleStatement_in_ruleVarDeclarationOrStatement4030);
                     this_Statement_2=ruleStatement();
 
                     state._fsp--;
@@ -4560,7 +4552,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1624:1: entryRuleStatement returns [EObject current=null] : iv_ruleStatement= ruleStatement EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1614:1: entryRuleStatement returns [EObject current=null] : iv_ruleStatement= ruleStatement EOF ;
     public final EObject entryRuleStatement() throws RecognitionException {
         EObject current = null;
 
@@ -4568,13 +4560,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1625:2: (iv_ruleStatement= ruleStatement EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1626:2: iv_ruleStatement= ruleStatement EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1615:2: (iv_ruleStatement= ruleStatement EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1616:2: iv_ruleStatement= ruleStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleStatement_in_entryRuleStatement4079);
+            pushFollow(FOLLOW_ruleStatement_in_entryRuleStatement4065);
             iv_ruleStatement=ruleStatement();
 
             state._fsp--;
@@ -4582,7 +4574,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStatement4089); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStatement4075); if (state.failed) return current;
 
             }
 
@@ -4600,7 +4592,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1633:1: ruleStatement returns [EObject current=null] : (this_ExpressionStatement_0= ruleExpressionStatement | this_CompoundStatement_1= ruleCompoundStatement | this_IfElseStatement_2= ruleIfElseStatement | this_WhileStatement_3= ruleWhileStatement | this_ForStatement_4= ruleForStatement | this_SwitchStatement_5= ruleSwitchStatement | this_ReturnStatement_6= ruleReturnStatement | this_ContinueStatement_7= ruleContinueStatement | this_BreakStatement_8= ruleBreakStatement ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1623:1: ruleStatement returns [EObject current=null] : (this_ExpressionStatement_0= ruleExpressionStatement | this_CompoundStatement_1= ruleCompoundStatement | this_IfElseStatement_2= ruleIfElseStatement | this_WhileStatement_3= ruleWhileStatement | this_ForStatement_4= ruleForStatement | this_SwitchStatement_5= ruleSwitchStatement | this_ReturnStatement_6= ruleReturnStatement | this_ContinueStatement_7= ruleContinueStatement | this_BreakStatement_8= ruleBreakStatement ) ;
     public final EObject ruleStatement() throws RecognitionException {
         EObject current = null;
 
@@ -4626,10 +4618,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1636:28: ( (this_ExpressionStatement_0= ruleExpressionStatement | this_CompoundStatement_1= ruleCompoundStatement | this_IfElseStatement_2= ruleIfElseStatement | this_WhileStatement_3= ruleWhileStatement | this_ForStatement_4= ruleForStatement | this_SwitchStatement_5= ruleSwitchStatement | this_ReturnStatement_6= ruleReturnStatement | this_ContinueStatement_7= ruleContinueStatement | this_BreakStatement_8= ruleBreakStatement ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1637:1: (this_ExpressionStatement_0= ruleExpressionStatement | this_CompoundStatement_1= ruleCompoundStatement | this_IfElseStatement_2= ruleIfElseStatement | this_WhileStatement_3= ruleWhileStatement | this_ForStatement_4= ruleForStatement | this_SwitchStatement_5= ruleSwitchStatement | this_ReturnStatement_6= ruleReturnStatement | this_ContinueStatement_7= ruleContinueStatement | this_BreakStatement_8= ruleBreakStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1626:28: ( (this_ExpressionStatement_0= ruleExpressionStatement | this_CompoundStatement_1= ruleCompoundStatement | this_IfElseStatement_2= ruleIfElseStatement | this_WhileStatement_3= ruleWhileStatement | this_ForStatement_4= ruleForStatement | this_SwitchStatement_5= ruleSwitchStatement | this_ReturnStatement_6= ruleReturnStatement | this_ContinueStatement_7= ruleContinueStatement | this_BreakStatement_8= ruleBreakStatement ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1627:1: (this_ExpressionStatement_0= ruleExpressionStatement | this_CompoundStatement_1= ruleCompoundStatement | this_IfElseStatement_2= ruleIfElseStatement | this_WhileStatement_3= ruleWhileStatement | this_ForStatement_4= ruleForStatement | this_SwitchStatement_5= ruleSwitchStatement | this_ReturnStatement_6= ruleReturnStatement | this_ContinueStatement_7= ruleContinueStatement | this_BreakStatement_8= ruleBreakStatement )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1637:1: (this_ExpressionStatement_0= ruleExpressionStatement | this_CompoundStatement_1= ruleCompoundStatement | this_IfElseStatement_2= ruleIfElseStatement | this_WhileStatement_3= ruleWhileStatement | this_ForStatement_4= ruleForStatement | this_SwitchStatement_5= ruleSwitchStatement | this_ReturnStatement_6= ruleReturnStatement | this_ContinueStatement_7= ruleContinueStatement | this_BreakStatement_8= ruleBreakStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1627:1: (this_ExpressionStatement_0= ruleExpressionStatement | this_CompoundStatement_1= ruleCompoundStatement | this_IfElseStatement_2= ruleIfElseStatement | this_WhileStatement_3= ruleWhileStatement | this_ForStatement_4= ruleForStatement | this_SwitchStatement_5= ruleSwitchStatement | this_ReturnStatement_6= ruleReturnStatement | this_ContinueStatement_7= ruleContinueStatement | this_BreakStatement_8= ruleBreakStatement )
             int alt20=9;
             switch ( input.LA(1) ) {
             case RULE_INT:
@@ -4696,14 +4688,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             switch (alt20) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1638:5: this_ExpressionStatement_0= ruleExpressionStatement
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1628:5: this_ExpressionStatement_0= ruleExpressionStatement
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getStatementAccess().getExpressionStatementParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleExpressionStatement_in_ruleStatement4136);
+                    pushFollow(FOLLOW_ruleExpressionStatement_in_ruleStatement4122);
                     this_ExpressionStatement_0=ruleExpressionStatement();
 
                     state._fsp--;
@@ -4718,14 +4710,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1648:5: this_CompoundStatement_1= ruleCompoundStatement
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1638:5: this_CompoundStatement_1= ruleCompoundStatement
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getStatementAccess().getCompoundStatementParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleCompoundStatement_in_ruleStatement4163);
+                    pushFollow(FOLLOW_ruleCompoundStatement_in_ruleStatement4149);
                     this_CompoundStatement_1=ruleCompoundStatement();
 
                     state._fsp--;
@@ -4740,14 +4732,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1658:5: this_IfElseStatement_2= ruleIfElseStatement
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1648:5: this_IfElseStatement_2= ruleIfElseStatement
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getStatementAccess().getIfElseStatementParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleIfElseStatement_in_ruleStatement4190);
+                    pushFollow(FOLLOW_ruleIfElseStatement_in_ruleStatement4176);
                     this_IfElseStatement_2=ruleIfElseStatement();
 
                     state._fsp--;
@@ -4762,14 +4754,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1668:5: this_WhileStatement_3= ruleWhileStatement
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1658:5: this_WhileStatement_3= ruleWhileStatement
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getStatementAccess().getWhileStatementParserRuleCall_3()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleWhileStatement_in_ruleStatement4217);
+                    pushFollow(FOLLOW_ruleWhileStatement_in_ruleStatement4203);
                     this_WhileStatement_3=ruleWhileStatement();
 
                     state._fsp--;
@@ -4784,14 +4776,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1678:5: this_ForStatement_4= ruleForStatement
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1668:5: this_ForStatement_4= ruleForStatement
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getStatementAccess().getForStatementParserRuleCall_4()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleForStatement_in_ruleStatement4244);
+                    pushFollow(FOLLOW_ruleForStatement_in_ruleStatement4230);
                     this_ForStatement_4=ruleForStatement();
 
                     state._fsp--;
@@ -4806,14 +4798,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1688:5: this_SwitchStatement_5= ruleSwitchStatement
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1678:5: this_SwitchStatement_5= ruleSwitchStatement
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getStatementAccess().getSwitchStatementParserRuleCall_5()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleSwitchStatement_in_ruleStatement4271);
+                    pushFollow(FOLLOW_ruleSwitchStatement_in_ruleStatement4257);
                     this_SwitchStatement_5=ruleSwitchStatement();
 
                     state._fsp--;
@@ -4828,14 +4820,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1698:5: this_ReturnStatement_6= ruleReturnStatement
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1688:5: this_ReturnStatement_6= ruleReturnStatement
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getStatementAccess().getReturnStatementParserRuleCall_6()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleReturnStatement_in_ruleStatement4298);
+                    pushFollow(FOLLOW_ruleReturnStatement_in_ruleStatement4284);
                     this_ReturnStatement_6=ruleReturnStatement();
 
                     state._fsp--;
@@ -4850,14 +4842,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1708:5: this_ContinueStatement_7= ruleContinueStatement
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1698:5: this_ContinueStatement_7= ruleContinueStatement
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getStatementAccess().getContinueStatementParserRuleCall_7()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleContinueStatement_in_ruleStatement4325);
+                    pushFollow(FOLLOW_ruleContinueStatement_in_ruleStatement4311);
                     this_ContinueStatement_7=ruleContinueStatement();
 
                     state._fsp--;
@@ -4872,14 +4864,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1718:5: this_BreakStatement_8= ruleBreakStatement
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1708:5: this_BreakStatement_8= ruleBreakStatement
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getStatementAccess().getBreakStatementParserRuleCall_8()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleBreakStatement_in_ruleStatement4352);
+                    pushFollow(FOLLOW_ruleBreakStatement_in_ruleStatement4338);
                     this_BreakStatement_8=ruleBreakStatement();
 
                     state._fsp--;
@@ -4916,7 +4908,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpressionStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1734:1: entryRuleExpressionStatement returns [EObject current=null] : iv_ruleExpressionStatement= ruleExpressionStatement EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1724:1: entryRuleExpressionStatement returns [EObject current=null] : iv_ruleExpressionStatement= ruleExpressionStatement EOF ;
     public final EObject entryRuleExpressionStatement() throws RecognitionException {
         EObject current = null;
 
@@ -4924,13 +4916,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1735:2: (iv_ruleExpressionStatement= ruleExpressionStatement EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1736:2: iv_ruleExpressionStatement= ruleExpressionStatement EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1725:2: (iv_ruleExpressionStatement= ruleExpressionStatement EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1726:2: iv_ruleExpressionStatement= ruleExpressionStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpressionStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleExpressionStatement_in_entryRuleExpressionStatement4387);
+            pushFollow(FOLLOW_ruleExpressionStatement_in_entryRuleExpressionStatement4373);
             iv_ruleExpressionStatement=ruleExpressionStatement();
 
             state._fsp--;
@@ -4938,7 +4930,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleExpressionStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExpressionStatement4397); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExpressionStatement4383); if (state.failed) return current;
 
             }
 
@@ -4956,7 +4948,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpressionStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1743:1: ruleExpressionStatement returns [EObject current=null] : ( ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' ) | ( () otherlv_3= ';' ) ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1733:1: ruleExpressionStatement returns [EObject current=null] : ( ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' ) | ( () otherlv_3= ';' ) ) ;
     public final EObject ruleExpressionStatement() throws RecognitionException {
         EObject current = null;
 
@@ -4968,10 +4960,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1746:28: ( ( ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' ) | ( () otherlv_3= ';' ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1747:1: ( ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' ) | ( () otherlv_3= ';' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1736:28: ( ( ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' ) | ( () otherlv_3= ';' ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1737:1: ( ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' ) | ( () otherlv_3= ';' ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1747:1: ( ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' ) | ( () otherlv_3= ';' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1737:1: ( ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' ) | ( () otherlv_3= ';' ) )
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -4990,23 +4982,23 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt21) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1747:2: ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1737:2: ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1747:2: ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1747:3: ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1737:2: ( ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';' )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1737:3: ( (lv_expression_0_0= ruleExpression ) ) otherlv_1= ';'
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1747:3: ( (lv_expression_0_0= ruleExpression ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1748:1: (lv_expression_0_0= ruleExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1737:3: ( (lv_expression_0_0= ruleExpression ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1738:1: (lv_expression_0_0= ruleExpression )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1748:1: (lv_expression_0_0= ruleExpression )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1749:3: lv_expression_0_0= ruleExpression
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1738:1: (lv_expression_0_0= ruleExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1739:3: lv_expression_0_0= ruleExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getExpressionStatementAccess().getExpressionExpressionParserRuleCall_0_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleExpression_in_ruleExpressionStatement4444);
+                    pushFollow(FOLLOW_ruleExpression_in_ruleExpressionStatement4430);
                     lv_expression_0_0=ruleExpression();
 
                     state._fsp--;
@@ -5030,7 +5022,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_1=(Token)match(input,11,FOLLOW_11_in_ruleExpressionStatement4456); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,11,FOLLOW_11_in_ruleExpressionStatement4442); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getExpressionStatementAccess().getSemicolonKeyword_0_1());
@@ -5043,13 +5035,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1770:6: ( () otherlv_3= ';' )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1760:6: ( () otherlv_3= ';' )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1770:6: ( () otherlv_3= ';' )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1770:7: () otherlv_3= ';'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1760:6: ( () otherlv_3= ';' )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1760:7: () otherlv_3= ';'
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1770:7: ()
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1771:5: 
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1760:7: ()
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1761:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5061,7 +5053,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,11,FOLLOW_11_in_ruleExpressionStatement4485); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,11,FOLLOW_11_in_ruleExpressionStatement4471); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getExpressionStatementAccess().getSemicolonKeyword_1_1());
@@ -5096,7 +5088,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIfElseStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1788:1: entryRuleIfElseStatement returns [EObject current=null] : iv_ruleIfElseStatement= ruleIfElseStatement EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1778:1: entryRuleIfElseStatement returns [EObject current=null] : iv_ruleIfElseStatement= ruleIfElseStatement EOF ;
     public final EObject entryRuleIfElseStatement() throws RecognitionException {
         EObject current = null;
 
@@ -5104,13 +5096,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1789:2: (iv_ruleIfElseStatement= ruleIfElseStatement EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1790:2: iv_ruleIfElseStatement= ruleIfElseStatement EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1779:2: (iv_ruleIfElseStatement= ruleIfElseStatement EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1780:2: iv_ruleIfElseStatement= ruleIfElseStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIfElseStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleIfElseStatement_in_entryRuleIfElseStatement4522);
+            pushFollow(FOLLOW_ruleIfElseStatement_in_entryRuleIfElseStatement4508);
             iv_ruleIfElseStatement=ruleIfElseStatement();
 
             state._fsp--;
@@ -5118,7 +5110,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleIfElseStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIfElseStatement4532); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIfElseStatement4518); if (state.failed) return current;
 
             }
 
@@ -5136,7 +5128,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIfElseStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1797:1: ruleIfElseStatement returns [EObject current=null] : (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_ifStatement_4_0= ruleStatement ) ) ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )? ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1787:1: ruleIfElseStatement returns [EObject current=null] : (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_ifStatement_4_0= ruleStatement ) ) ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )? ) ;
     public final EObject ruleIfElseStatement() throws RecognitionException {
         EObject current = null;
 
@@ -5154,36 +5146,36 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1800:28: ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_ifStatement_4_0= ruleStatement ) ) ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )? ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1801:1: (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_ifStatement_4_0= ruleStatement ) ) ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )? )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1790:28: ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_ifStatement_4_0= ruleStatement ) ) ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )? ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1791:1: (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_ifStatement_4_0= ruleStatement ) ) ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )? )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1801:1: (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_ifStatement_4_0= ruleStatement ) ) ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )? )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1801:3: otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_ifStatement_4_0= ruleStatement ) ) ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1791:1: (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_ifStatement_4_0= ruleStatement ) ) ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )? )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1791:3: otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_ifStatement_4_0= ruleStatement ) ) ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )?
             {
-            otherlv_0=(Token)match(input,42,FOLLOW_42_in_ruleIfElseStatement4569); if (state.failed) return current;
+            otherlv_0=(Token)match(input,42,FOLLOW_42_in_ruleIfElseStatement4555); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getIfElseStatementAccess().getIfKeyword_0());
                   
             }
-            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleIfElseStatement4581); if (state.failed) return current;
+            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleIfElseStatement4567); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getIfElseStatementAccess().getLeftParenthesisKeyword_1());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1809:1: ( (lv_condition_2_0= ruleExpression ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1810:1: (lv_condition_2_0= ruleExpression )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1799:1: ( (lv_condition_2_0= ruleExpression ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1800:1: (lv_condition_2_0= ruleExpression )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1810:1: (lv_condition_2_0= ruleExpression )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1811:3: lv_condition_2_0= ruleExpression
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1800:1: (lv_condition_2_0= ruleExpression )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1801:3: lv_condition_2_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getIfElseStatementAccess().getConditionExpressionParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleIfElseStatement4602);
+            pushFollow(FOLLOW_ruleExpression_in_ruleIfElseStatement4588);
             lv_condition_2_0=ruleExpression();
 
             state._fsp--;
@@ -5207,24 +5199,24 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleIfElseStatement4614); if (state.failed) return current;
+            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleIfElseStatement4600); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getIfElseStatementAccess().getRightParenthesisKeyword_3());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1831:1: ( (lv_ifStatement_4_0= ruleStatement ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1832:1: (lv_ifStatement_4_0= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1821:1: ( (lv_ifStatement_4_0= ruleStatement ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1822:1: (lv_ifStatement_4_0= ruleStatement )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1832:1: (lv_ifStatement_4_0= ruleStatement )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1833:3: lv_ifStatement_4_0= ruleStatement
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1822:1: (lv_ifStatement_4_0= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1823:3: lv_ifStatement_4_0= ruleStatement
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getIfElseStatementAccess().getIfStatementStatementParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleStatement_in_ruleIfElseStatement4635);
+            pushFollow(FOLLOW_ruleStatement_in_ruleIfElseStatement4621);
             lv_ifStatement_4_0=ruleStatement();
 
             state._fsp--;
@@ -5248,7 +5240,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1849:2: ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1839:2: ( ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) ) )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -5261,12 +5253,12 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt22) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1849:3: ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1839:3: ( ( 'else' )=>otherlv_5= 'else' ) ( (lv_elseStatement_6_0= ruleStatement ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1849:3: ( ( 'else' )=>otherlv_5= 'else' )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1849:4: ( 'else' )=>otherlv_5= 'else'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1839:3: ( ( 'else' )=>otherlv_5= 'else' )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1839:4: ( 'else' )=>otherlv_5= 'else'
                     {
-                    otherlv_5=(Token)match(input,43,FOLLOW_43_in_ruleIfElseStatement4656); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,43,FOLLOW_43_in_ruleIfElseStatement4642); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getIfElseStatementAccess().getElseKeyword_5_0());
@@ -5275,18 +5267,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1854:2: ( (lv_elseStatement_6_0= ruleStatement ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1855:1: (lv_elseStatement_6_0= ruleStatement )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1844:2: ( (lv_elseStatement_6_0= ruleStatement ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1845:1: (lv_elseStatement_6_0= ruleStatement )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1855:1: (lv_elseStatement_6_0= ruleStatement )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1856:3: lv_elseStatement_6_0= ruleStatement
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1845:1: (lv_elseStatement_6_0= ruleStatement )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1846:3: lv_elseStatement_6_0= ruleStatement
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getIfElseStatementAccess().getElseStatementStatementParserRuleCall_5_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleStatement_in_ruleIfElseStatement4678);
+                    pushFollow(FOLLOW_ruleStatement_in_ruleIfElseStatement4664);
                     lv_elseStatement_6_0=ruleStatement();
 
                     state._fsp--;
@@ -5339,7 +5331,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleWhileStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1880:1: entryRuleWhileStatement returns [EObject current=null] : iv_ruleWhileStatement= ruleWhileStatement EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1870:1: entryRuleWhileStatement returns [EObject current=null] : iv_ruleWhileStatement= ruleWhileStatement EOF ;
     public final EObject entryRuleWhileStatement() throws RecognitionException {
         EObject current = null;
 
@@ -5347,13 +5339,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1881:2: (iv_ruleWhileStatement= ruleWhileStatement EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1882:2: iv_ruleWhileStatement= ruleWhileStatement EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1871:2: (iv_ruleWhileStatement= ruleWhileStatement EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1872:2: iv_ruleWhileStatement= ruleWhileStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getWhileStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleWhileStatement_in_entryRuleWhileStatement4716);
+            pushFollow(FOLLOW_ruleWhileStatement_in_entryRuleWhileStatement4702);
             iv_ruleWhileStatement=ruleWhileStatement();
 
             state._fsp--;
@@ -5361,7 +5353,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleWhileStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleWhileStatement4726); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleWhileStatement4712); if (state.failed) return current;
 
             }
 
@@ -5379,7 +5371,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWhileStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1889:1: ruleWhileStatement returns [EObject current=null] : (otherlv_0= 'while' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_statement_4_0= ruleStatement ) ) ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1879:1: ruleWhileStatement returns [EObject current=null] : (otherlv_0= 'while' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_statement_4_0= ruleStatement ) ) ) ;
     public final EObject ruleWhileStatement() throws RecognitionException {
         EObject current = null;
 
@@ -5394,36 +5386,36 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1892:28: ( (otherlv_0= 'while' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_statement_4_0= ruleStatement ) ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1893:1: (otherlv_0= 'while' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_statement_4_0= ruleStatement ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1882:28: ( (otherlv_0= 'while' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_statement_4_0= ruleStatement ) ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1883:1: (otherlv_0= 'while' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_statement_4_0= ruleStatement ) ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1893:1: (otherlv_0= 'while' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_statement_4_0= ruleStatement ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1893:3: otherlv_0= 'while' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_statement_4_0= ruleStatement ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1883:1: (otherlv_0= 'while' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_statement_4_0= ruleStatement ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1883:3: otherlv_0= 'while' otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ')' ( (lv_statement_4_0= ruleStatement ) )
             {
-            otherlv_0=(Token)match(input,44,FOLLOW_44_in_ruleWhileStatement4763); if (state.failed) return current;
+            otherlv_0=(Token)match(input,44,FOLLOW_44_in_ruleWhileStatement4749); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getWhileStatementAccess().getWhileKeyword_0());
                   
             }
-            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleWhileStatement4775); if (state.failed) return current;
+            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleWhileStatement4761); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getWhileStatementAccess().getLeftParenthesisKeyword_1());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1901:1: ( (lv_condition_2_0= ruleExpression ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1902:1: (lv_condition_2_0= ruleExpression )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1891:1: ( (lv_condition_2_0= ruleExpression ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1892:1: (lv_condition_2_0= ruleExpression )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1902:1: (lv_condition_2_0= ruleExpression )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1903:3: lv_condition_2_0= ruleExpression
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1892:1: (lv_condition_2_0= ruleExpression )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1893:3: lv_condition_2_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getWhileStatementAccess().getConditionExpressionParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleWhileStatement4796);
+            pushFollow(FOLLOW_ruleExpression_in_ruleWhileStatement4782);
             lv_condition_2_0=ruleExpression();
 
             state._fsp--;
@@ -5447,24 +5439,24 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleWhileStatement4808); if (state.failed) return current;
+            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleWhileStatement4794); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getWhileStatementAccess().getRightParenthesisKeyword_3());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1923:1: ( (lv_statement_4_0= ruleStatement ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1924:1: (lv_statement_4_0= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1913:1: ( (lv_statement_4_0= ruleStatement ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1914:1: (lv_statement_4_0= ruleStatement )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1924:1: (lv_statement_4_0= ruleStatement )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1925:3: lv_statement_4_0= ruleStatement
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1914:1: (lv_statement_4_0= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1915:3: lv_statement_4_0= ruleStatement
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getWhileStatementAccess().getStatementStatementParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleStatement_in_ruleWhileStatement4829);
+            pushFollow(FOLLOW_ruleStatement_in_ruleWhileStatement4815);
             lv_statement_4_0=ruleStatement();
 
             state._fsp--;
@@ -5511,7 +5503,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleForStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1949:1: entryRuleForStatement returns [EObject current=null] : iv_ruleForStatement= ruleForStatement EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1939:1: entryRuleForStatement returns [EObject current=null] : iv_ruleForStatement= ruleForStatement EOF ;
     public final EObject entryRuleForStatement() throws RecognitionException {
         EObject current = null;
 
@@ -5519,13 +5511,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1950:2: (iv_ruleForStatement= ruleForStatement EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1951:2: iv_ruleForStatement= ruleForStatement EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1940:2: (iv_ruleForStatement= ruleForStatement EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1941:2: iv_ruleForStatement= ruleForStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getForStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleForStatement_in_entryRuleForStatement4865);
+            pushFollow(FOLLOW_ruleForStatement_in_entryRuleForStatement4851);
             iv_ruleForStatement=ruleForStatement();
 
             state._fsp--;
@@ -5533,7 +5525,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleForStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleForStatement4875); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleForStatement4861); if (state.failed) return current;
 
             }
 
@@ -5551,7 +5543,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleForStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1958:1: ruleForStatement returns [EObject current=null] : (otherlv_0= 'for' otherlv_1= '(' ( (lv_var_2_0= ruleForVarDeclaration ) ) otherlv_3= ';' ( (lv_op_4_0= ruleRelOp ) ) ( (lv_expression_5_0= ruleExpression ) ) otherlv_6= ')' ( (lv_statement_7_0= ruleStatement ) ) ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1948:1: ruleForStatement returns [EObject current=null] : (otherlv_0= 'for' otherlv_1= '(' ( (lv_var_2_0= ruleForVarDeclaration ) ) otherlv_3= ';' ( (lv_op_4_0= ruleRelOp ) ) ( (lv_expression_5_0= ruleExpression ) ) otherlv_6= ')' ( (lv_statement_7_0= ruleStatement ) ) ) ;
     public final EObject ruleForStatement() throws RecognitionException {
         EObject current = null;
 
@@ -5571,36 +5563,36 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1961:28: ( (otherlv_0= 'for' otherlv_1= '(' ( (lv_var_2_0= ruleForVarDeclaration ) ) otherlv_3= ';' ( (lv_op_4_0= ruleRelOp ) ) ( (lv_expression_5_0= ruleExpression ) ) otherlv_6= ')' ( (lv_statement_7_0= ruleStatement ) ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1962:1: (otherlv_0= 'for' otherlv_1= '(' ( (lv_var_2_0= ruleForVarDeclaration ) ) otherlv_3= ';' ( (lv_op_4_0= ruleRelOp ) ) ( (lv_expression_5_0= ruleExpression ) ) otherlv_6= ')' ( (lv_statement_7_0= ruleStatement ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1951:28: ( (otherlv_0= 'for' otherlv_1= '(' ( (lv_var_2_0= ruleForVarDeclaration ) ) otherlv_3= ';' ( (lv_op_4_0= ruleRelOp ) ) ( (lv_expression_5_0= ruleExpression ) ) otherlv_6= ')' ( (lv_statement_7_0= ruleStatement ) ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1952:1: (otherlv_0= 'for' otherlv_1= '(' ( (lv_var_2_0= ruleForVarDeclaration ) ) otherlv_3= ';' ( (lv_op_4_0= ruleRelOp ) ) ( (lv_expression_5_0= ruleExpression ) ) otherlv_6= ')' ( (lv_statement_7_0= ruleStatement ) ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1962:1: (otherlv_0= 'for' otherlv_1= '(' ( (lv_var_2_0= ruleForVarDeclaration ) ) otherlv_3= ';' ( (lv_op_4_0= ruleRelOp ) ) ( (lv_expression_5_0= ruleExpression ) ) otherlv_6= ')' ( (lv_statement_7_0= ruleStatement ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1962:3: otherlv_0= 'for' otherlv_1= '(' ( (lv_var_2_0= ruleForVarDeclaration ) ) otherlv_3= ';' ( (lv_op_4_0= ruleRelOp ) ) ( (lv_expression_5_0= ruleExpression ) ) otherlv_6= ')' ( (lv_statement_7_0= ruleStatement ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1952:1: (otherlv_0= 'for' otherlv_1= '(' ( (lv_var_2_0= ruleForVarDeclaration ) ) otherlv_3= ';' ( (lv_op_4_0= ruleRelOp ) ) ( (lv_expression_5_0= ruleExpression ) ) otherlv_6= ')' ( (lv_statement_7_0= ruleStatement ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1952:3: otherlv_0= 'for' otherlv_1= '(' ( (lv_var_2_0= ruleForVarDeclaration ) ) otherlv_3= ';' ( (lv_op_4_0= ruleRelOp ) ) ( (lv_expression_5_0= ruleExpression ) ) otherlv_6= ')' ( (lv_statement_7_0= ruleStatement ) )
             {
-            otherlv_0=(Token)match(input,45,FOLLOW_45_in_ruleForStatement4912); if (state.failed) return current;
+            otherlv_0=(Token)match(input,45,FOLLOW_45_in_ruleForStatement4898); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getForStatementAccess().getForKeyword_0());
                   
             }
-            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleForStatement4924); if (state.failed) return current;
+            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleForStatement4910); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getForStatementAccess().getLeftParenthesisKeyword_1());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1970:1: ( (lv_var_2_0= ruleForVarDeclaration ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1971:1: (lv_var_2_0= ruleForVarDeclaration )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1960:1: ( (lv_var_2_0= ruleForVarDeclaration ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1961:1: (lv_var_2_0= ruleForVarDeclaration )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1971:1: (lv_var_2_0= ruleForVarDeclaration )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1972:3: lv_var_2_0= ruleForVarDeclaration
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1961:1: (lv_var_2_0= ruleForVarDeclaration )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1962:3: lv_var_2_0= ruleForVarDeclaration
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getForStatementAccess().getVarForVarDeclarationParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleForVarDeclaration_in_ruleForStatement4945);
+            pushFollow(FOLLOW_ruleForVarDeclaration_in_ruleForStatement4931);
             lv_var_2_0=ruleForVarDeclaration();
 
             state._fsp--;
@@ -5624,24 +5616,24 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,11,FOLLOW_11_in_ruleForStatement4957); if (state.failed) return current;
+            otherlv_3=(Token)match(input,11,FOLLOW_11_in_ruleForStatement4943); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getForStatementAccess().getSemicolonKeyword_3());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1992:1: ( (lv_op_4_0= ruleRelOp ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1993:1: (lv_op_4_0= ruleRelOp )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1982:1: ( (lv_op_4_0= ruleRelOp ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1983:1: (lv_op_4_0= ruleRelOp )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1993:1: (lv_op_4_0= ruleRelOp )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1994:3: lv_op_4_0= ruleRelOp
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1983:1: (lv_op_4_0= ruleRelOp )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1984:3: lv_op_4_0= ruleRelOp
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getForStatementAccess().getOpRelOpParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleRelOp_in_ruleForStatement4978);
+            pushFollow(FOLLOW_ruleRelOp_in_ruleForStatement4964);
             lv_op_4_0=ruleRelOp();
 
             state._fsp--;
@@ -5665,18 +5657,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2010:2: ( (lv_expression_5_0= ruleExpression ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2011:1: (lv_expression_5_0= ruleExpression )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2000:2: ( (lv_expression_5_0= ruleExpression ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2001:1: (lv_expression_5_0= ruleExpression )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2011:1: (lv_expression_5_0= ruleExpression )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2012:3: lv_expression_5_0= ruleExpression
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2001:1: (lv_expression_5_0= ruleExpression )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2002:3: lv_expression_5_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getForStatementAccess().getExpressionExpressionParserRuleCall_5_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleForStatement4999);
+            pushFollow(FOLLOW_ruleExpression_in_ruleForStatement4985);
             lv_expression_5_0=ruleExpression();
 
             state._fsp--;
@@ -5700,24 +5692,24 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,20,FOLLOW_20_in_ruleForStatement5011); if (state.failed) return current;
+            otherlv_6=(Token)match(input,20,FOLLOW_20_in_ruleForStatement4997); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getForStatementAccess().getRightParenthesisKeyword_6());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2032:1: ( (lv_statement_7_0= ruleStatement ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2033:1: (lv_statement_7_0= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2022:1: ( (lv_statement_7_0= ruleStatement ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2023:1: (lv_statement_7_0= ruleStatement )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2033:1: (lv_statement_7_0= ruleStatement )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2034:3: lv_statement_7_0= ruleStatement
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2023:1: (lv_statement_7_0= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2024:3: lv_statement_7_0= ruleStatement
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getForStatementAccess().getStatementStatementParserRuleCall_7_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleStatement_in_ruleForStatement5032);
+            pushFollow(FOLLOW_ruleStatement_in_ruleForStatement5018);
             lv_statement_7_0=ruleStatement();
 
             state._fsp--;
@@ -5764,7 +5756,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSwitchStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2058:1: entryRuleSwitchStatement returns [EObject current=null] : iv_ruleSwitchStatement= ruleSwitchStatement EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2048:1: entryRuleSwitchStatement returns [EObject current=null] : iv_ruleSwitchStatement= ruleSwitchStatement EOF ;
     public final EObject entryRuleSwitchStatement() throws RecognitionException {
         EObject current = null;
 
@@ -5772,13 +5764,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2059:2: (iv_ruleSwitchStatement= ruleSwitchStatement EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2060:2: iv_ruleSwitchStatement= ruleSwitchStatement EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2049:2: (iv_ruleSwitchStatement= ruleSwitchStatement EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2050:2: iv_ruleSwitchStatement= ruleSwitchStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSwitchStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleSwitchStatement_in_entryRuleSwitchStatement5068);
+            pushFollow(FOLLOW_ruleSwitchStatement_in_entryRuleSwitchStatement5054);
             iv_ruleSwitchStatement=ruleSwitchStatement();
 
             state._fsp--;
@@ -5786,7 +5778,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSwitchStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSwitchStatement5078); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSwitchStatement5064); if (state.failed) return current;
 
             }
 
@@ -5804,7 +5796,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSwitchStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2067:1: ruleSwitchStatement returns [EObject current=null] : (otherlv_0= 'switch' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' otherlv_4= '{' ( (lv_cases_5_0= ruleSwitchCase ) )* ( (lv_default_6_0= ruleSwitchDefault ) )? otherlv_7= '}' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2057:1: ruleSwitchStatement returns [EObject current=null] : (otherlv_0= 'switch' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' otherlv_4= '{' ( (lv_cases_5_0= ruleSwitchCase ) )* ( (lv_default_6_0= ruleSwitchDefault ) )? otherlv_7= '}' ) ;
     public final EObject ruleSwitchStatement() throws RecognitionException {
         EObject current = null;
 
@@ -5822,29 +5814,29 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2070:28: ( (otherlv_0= 'switch' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' otherlv_4= '{' ( (lv_cases_5_0= ruleSwitchCase ) )* ( (lv_default_6_0= ruleSwitchDefault ) )? otherlv_7= '}' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2071:1: (otherlv_0= 'switch' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' otherlv_4= '{' ( (lv_cases_5_0= ruleSwitchCase ) )* ( (lv_default_6_0= ruleSwitchDefault ) )? otherlv_7= '}' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2060:28: ( (otherlv_0= 'switch' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' otherlv_4= '{' ( (lv_cases_5_0= ruleSwitchCase ) )* ( (lv_default_6_0= ruleSwitchDefault ) )? otherlv_7= '}' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2061:1: (otherlv_0= 'switch' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' otherlv_4= '{' ( (lv_cases_5_0= ruleSwitchCase ) )* ( (lv_default_6_0= ruleSwitchDefault ) )? otherlv_7= '}' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2071:1: (otherlv_0= 'switch' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' otherlv_4= '{' ( (lv_cases_5_0= ruleSwitchCase ) )* ( (lv_default_6_0= ruleSwitchDefault ) )? otherlv_7= '}' )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2071:3: otherlv_0= 'switch' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' otherlv_4= '{' ( (lv_cases_5_0= ruleSwitchCase ) )* ( (lv_default_6_0= ruleSwitchDefault ) )? otherlv_7= '}'
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2061:1: (otherlv_0= 'switch' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' otherlv_4= '{' ( (lv_cases_5_0= ruleSwitchCase ) )* ( (lv_default_6_0= ruleSwitchDefault ) )? otherlv_7= '}' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2061:3: otherlv_0= 'switch' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' otherlv_4= '{' ( (lv_cases_5_0= ruleSwitchCase ) )* ( (lv_default_6_0= ruleSwitchDefault ) )? otherlv_7= '}'
             {
-            otherlv_0=(Token)match(input,46,FOLLOW_46_in_ruleSwitchStatement5115); if (state.failed) return current;
+            otherlv_0=(Token)match(input,46,FOLLOW_46_in_ruleSwitchStatement5101); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getSwitchStatementAccess().getSwitchKeyword_0());
                   
             }
-            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleSwitchStatement5127); if (state.failed) return current;
+            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleSwitchStatement5113); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getSwitchStatementAccess().getLeftParenthesisKeyword_1());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2079:1: ( (otherlv_2= RULE_ID ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2080:1: (otherlv_2= RULE_ID )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2069:1: ( (otherlv_2= RULE_ID ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2070:1: (otherlv_2= RULE_ID )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2080:1: (otherlv_2= RULE_ID )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2081:3: otherlv_2= RULE_ID
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2070:1: (otherlv_2= RULE_ID )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2071:3: otherlv_2= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -5853,7 +5845,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
               	        }
                       
             }
-            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSwitchStatement5147); if (state.failed) return current;
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSwitchStatement5133); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		newLeafNode(otherlv_2, grammarAccess.getSwitchStatementAccess().getVarVarDeclarationCrossReference_2_0()); 
@@ -5865,19 +5857,19 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleSwitchStatement5159); if (state.failed) return current;
+            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleSwitchStatement5145); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getSwitchStatementAccess().getRightParenthesisKeyword_3());
                   
             }
-            otherlv_4=(Token)match(input,40,FOLLOW_40_in_ruleSwitchStatement5171); if (state.failed) return current;
+            otherlv_4=(Token)match(input,40,FOLLOW_40_in_ruleSwitchStatement5157); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getSwitchStatementAccess().getLeftCurlyBracketKeyword_4());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2100:1: ( (lv_cases_5_0= ruleSwitchCase ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2090:1: ( (lv_cases_5_0= ruleSwitchCase ) )*
             loop23:
             do {
                 int alt23=2;
@@ -5890,17 +5882,17 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                 switch (alt23) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2101:1: (lv_cases_5_0= ruleSwitchCase )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2091:1: (lv_cases_5_0= ruleSwitchCase )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2101:1: (lv_cases_5_0= ruleSwitchCase )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2102:3: lv_cases_5_0= ruleSwitchCase
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2091:1: (lv_cases_5_0= ruleSwitchCase )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2092:3: lv_cases_5_0= ruleSwitchCase
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getSwitchStatementAccess().getCasesSwitchCaseParserRuleCall_5_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleSwitchCase_in_ruleSwitchStatement5192);
+            	    pushFollow(FOLLOW_ruleSwitchCase_in_ruleSwitchStatement5178);
             	    lv_cases_5_0=ruleSwitchCase();
 
             	    state._fsp--;
@@ -5930,7 +5922,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2118:3: ( (lv_default_6_0= ruleSwitchDefault ) )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2108:3: ( (lv_default_6_0= ruleSwitchDefault ) )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -5939,17 +5931,17 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt24) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2119:1: (lv_default_6_0= ruleSwitchDefault )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2109:1: (lv_default_6_0= ruleSwitchDefault )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2119:1: (lv_default_6_0= ruleSwitchDefault )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2120:3: lv_default_6_0= ruleSwitchDefault
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2109:1: (lv_default_6_0= ruleSwitchDefault )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2110:3: lv_default_6_0= ruleSwitchDefault
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getSwitchStatementAccess().getDefaultSwitchDefaultParserRuleCall_6_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleSwitchDefault_in_ruleSwitchStatement5214);
+                    pushFollow(FOLLOW_ruleSwitchDefault_in_ruleSwitchStatement5200);
                     lv_default_6_0=ruleSwitchDefault();
 
                     state._fsp--;
@@ -5976,7 +5968,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,41,FOLLOW_41_in_ruleSwitchStatement5227); if (state.failed) return current;
+            otherlv_7=(Token)match(input,41,FOLLOW_41_in_ruleSwitchStatement5213); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_7, grammarAccess.getSwitchStatementAccess().getRightCurlyBracketKeyword_7());
@@ -6005,7 +5997,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSwitchCase"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2148:1: entryRuleSwitchCase returns [EObject current=null] : iv_ruleSwitchCase= ruleSwitchCase EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2138:1: entryRuleSwitchCase returns [EObject current=null] : iv_ruleSwitchCase= ruleSwitchCase EOF ;
     public final EObject entryRuleSwitchCase() throws RecognitionException {
         EObject current = null;
 
@@ -6013,13 +6005,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2149:2: (iv_ruleSwitchCase= ruleSwitchCase EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2150:2: iv_ruleSwitchCase= ruleSwitchCase EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2139:2: (iv_ruleSwitchCase= ruleSwitchCase EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2140:2: iv_ruleSwitchCase= ruleSwitchCase EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSwitchCaseRule()); 
             }
-            pushFollow(FOLLOW_ruleSwitchCase_in_entryRuleSwitchCase5263);
+            pushFollow(FOLLOW_ruleSwitchCase_in_entryRuleSwitchCase5249);
             iv_ruleSwitchCase=ruleSwitchCase();
 
             state._fsp--;
@@ -6027,7 +6019,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSwitchCase; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSwitchCase5273); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSwitchCase5259); if (state.failed) return current;
 
             }
 
@@ -6045,7 +6037,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSwitchCase"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2157:1: ruleSwitchCase returns [EObject current=null] : (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2147:1: ruleSwitchCase returns [EObject current=null] : (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' ) ;
     public final EObject ruleSwitchCase() throws RecognitionException {
         EObject current = null;
 
@@ -6061,30 +6053,30 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2160:28: ( (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2161:1: (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2150:28: ( (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2151:1: (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2161:1: (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2161:3: otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}'
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2151:1: (otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2151:3: otherlv_0= 'case' ( (lv_var_1_0= ruleSignedInt ) ) otherlv_2= ':' otherlv_3= '{' ( (lv_statement_4_0= ruleStatement ) ) otherlv_5= '}'
             {
-            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleSwitchCase5310); if (state.failed) return current;
+            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleSwitchCase5296); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getSwitchCaseAccess().getCaseKeyword_0());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2165:1: ( (lv_var_1_0= ruleSignedInt ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2166:1: (lv_var_1_0= ruleSignedInt )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2155:1: ( (lv_var_1_0= ruleSignedInt ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2156:1: (lv_var_1_0= ruleSignedInt )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2166:1: (lv_var_1_0= ruleSignedInt )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2167:3: lv_var_1_0= ruleSignedInt
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2156:1: (lv_var_1_0= ruleSignedInt )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2157:3: lv_var_1_0= ruleSignedInt
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getSwitchCaseAccess().getVarSignedIntParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleSignedInt_in_ruleSwitchCase5331);
+            pushFollow(FOLLOW_ruleSignedInt_in_ruleSwitchCase5317);
             lv_var_1_0=ruleSignedInt();
 
             state._fsp--;
@@ -6108,30 +6100,30 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,48,FOLLOW_48_in_ruleSwitchCase5343); if (state.failed) return current;
+            otherlv_2=(Token)match(input,48,FOLLOW_48_in_ruleSwitchCase5329); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getSwitchCaseAccess().getColonKeyword_2());
                   
             }
-            otherlv_3=(Token)match(input,40,FOLLOW_40_in_ruleSwitchCase5355); if (state.failed) return current;
+            otherlv_3=(Token)match(input,40,FOLLOW_40_in_ruleSwitchCase5341); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getSwitchCaseAccess().getLeftCurlyBracketKeyword_3());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2191:1: ( (lv_statement_4_0= ruleStatement ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2192:1: (lv_statement_4_0= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2181:1: ( (lv_statement_4_0= ruleStatement ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2182:1: (lv_statement_4_0= ruleStatement )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2192:1: (lv_statement_4_0= ruleStatement )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2193:3: lv_statement_4_0= ruleStatement
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2182:1: (lv_statement_4_0= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2183:3: lv_statement_4_0= ruleStatement
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getSwitchCaseAccess().getStatementStatementParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleStatement_in_ruleSwitchCase5376);
+            pushFollow(FOLLOW_ruleStatement_in_ruleSwitchCase5362);
             lv_statement_4_0=ruleStatement();
 
             state._fsp--;
@@ -6155,7 +6147,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,41,FOLLOW_41_in_ruleSwitchCase5388); if (state.failed) return current;
+            otherlv_5=(Token)match(input,41,FOLLOW_41_in_ruleSwitchCase5374); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getSwitchCaseAccess().getRightCurlyBracketKeyword_5());
@@ -6184,7 +6176,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSwitchDefault"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2221:1: entryRuleSwitchDefault returns [EObject current=null] : iv_ruleSwitchDefault= ruleSwitchDefault EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2211:1: entryRuleSwitchDefault returns [EObject current=null] : iv_ruleSwitchDefault= ruleSwitchDefault EOF ;
     public final EObject entryRuleSwitchDefault() throws RecognitionException {
         EObject current = null;
 
@@ -6192,13 +6184,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2222:2: (iv_ruleSwitchDefault= ruleSwitchDefault EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2223:2: iv_ruleSwitchDefault= ruleSwitchDefault EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2212:2: (iv_ruleSwitchDefault= ruleSwitchDefault EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2213:2: iv_ruleSwitchDefault= ruleSwitchDefault EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSwitchDefaultRule()); 
             }
-            pushFollow(FOLLOW_ruleSwitchDefault_in_entryRuleSwitchDefault5424);
+            pushFollow(FOLLOW_ruleSwitchDefault_in_entryRuleSwitchDefault5410);
             iv_ruleSwitchDefault=ruleSwitchDefault();
 
             state._fsp--;
@@ -6206,7 +6198,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSwitchDefault; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSwitchDefault5434); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSwitchDefault5420); if (state.failed) return current;
 
             }
 
@@ -6224,7 +6216,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSwitchDefault"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2230:1: ruleSwitchDefault returns [EObject current=null] : (otherlv_0= 'default' otherlv_1= ':' otherlv_2= '{' ( (lv_statement_3_0= ruleStatement ) ) otherlv_4= '}' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2220:1: ruleSwitchDefault returns [EObject current=null] : (otherlv_0= 'default' otherlv_1= ':' otherlv_2= '{' ( (lv_statement_3_0= ruleStatement ) ) otherlv_4= '}' ) ;
     public final EObject ruleSwitchDefault() throws RecognitionException {
         EObject current = null;
 
@@ -6238,42 +6230,42 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2233:28: ( (otherlv_0= 'default' otherlv_1= ':' otherlv_2= '{' ( (lv_statement_3_0= ruleStatement ) ) otherlv_4= '}' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2234:1: (otherlv_0= 'default' otherlv_1= ':' otherlv_2= '{' ( (lv_statement_3_0= ruleStatement ) ) otherlv_4= '}' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2223:28: ( (otherlv_0= 'default' otherlv_1= ':' otherlv_2= '{' ( (lv_statement_3_0= ruleStatement ) ) otherlv_4= '}' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2224:1: (otherlv_0= 'default' otherlv_1= ':' otherlv_2= '{' ( (lv_statement_3_0= ruleStatement ) ) otherlv_4= '}' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2234:1: (otherlv_0= 'default' otherlv_1= ':' otherlv_2= '{' ( (lv_statement_3_0= ruleStatement ) ) otherlv_4= '}' )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2234:3: otherlv_0= 'default' otherlv_1= ':' otherlv_2= '{' ( (lv_statement_3_0= ruleStatement ) ) otherlv_4= '}'
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2224:1: (otherlv_0= 'default' otherlv_1= ':' otherlv_2= '{' ( (lv_statement_3_0= ruleStatement ) ) otherlv_4= '}' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2224:3: otherlv_0= 'default' otherlv_1= ':' otherlv_2= '{' ( (lv_statement_3_0= ruleStatement ) ) otherlv_4= '}'
             {
-            otherlv_0=(Token)match(input,49,FOLLOW_49_in_ruleSwitchDefault5471); if (state.failed) return current;
+            otherlv_0=(Token)match(input,49,FOLLOW_49_in_ruleSwitchDefault5457); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getSwitchDefaultAccess().getDefaultKeyword_0());
                   
             }
-            otherlv_1=(Token)match(input,48,FOLLOW_48_in_ruleSwitchDefault5483); if (state.failed) return current;
+            otherlv_1=(Token)match(input,48,FOLLOW_48_in_ruleSwitchDefault5469); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getSwitchDefaultAccess().getColonKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleSwitchDefault5495); if (state.failed) return current;
+            otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleSwitchDefault5481); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getSwitchDefaultAccess().getLeftCurlyBracketKeyword_2());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2246:1: ( (lv_statement_3_0= ruleStatement ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2247:1: (lv_statement_3_0= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2236:1: ( (lv_statement_3_0= ruleStatement ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2237:1: (lv_statement_3_0= ruleStatement )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2247:1: (lv_statement_3_0= ruleStatement )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2248:3: lv_statement_3_0= ruleStatement
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2237:1: (lv_statement_3_0= ruleStatement )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2238:3: lv_statement_3_0= ruleStatement
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getSwitchDefaultAccess().getStatementStatementParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleStatement_in_ruleSwitchDefault5516);
+            pushFollow(FOLLOW_ruleStatement_in_ruleSwitchDefault5502);
             lv_statement_3_0=ruleStatement();
 
             state._fsp--;
@@ -6297,7 +6289,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,41,FOLLOW_41_in_ruleSwitchDefault5528); if (state.failed) return current;
+            otherlv_4=(Token)match(input,41,FOLLOW_41_in_ruleSwitchDefault5514); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getSwitchDefaultAccess().getRightCurlyBracketKeyword_4());
@@ -6326,7 +6318,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleReturnStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2276:1: entryRuleReturnStatement returns [EObject current=null] : iv_ruleReturnStatement= ruleReturnStatement EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2266:1: entryRuleReturnStatement returns [EObject current=null] : iv_ruleReturnStatement= ruleReturnStatement EOF ;
     public final EObject entryRuleReturnStatement() throws RecognitionException {
         EObject current = null;
 
@@ -6334,13 +6326,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2277:2: (iv_ruleReturnStatement= ruleReturnStatement EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2278:2: iv_ruleReturnStatement= ruleReturnStatement EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2267:2: (iv_ruleReturnStatement= ruleReturnStatement EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2268:2: iv_ruleReturnStatement= ruleReturnStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getReturnStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleReturnStatement_in_entryRuleReturnStatement5564);
+            pushFollow(FOLLOW_ruleReturnStatement_in_entryRuleReturnStatement5550);
             iv_ruleReturnStatement=ruleReturnStatement();
 
             state._fsp--;
@@ -6348,7 +6340,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleReturnStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleReturnStatement5574); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleReturnStatement5560); if (state.failed) return current;
 
             }
 
@@ -6366,7 +6358,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReturnStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2285:1: ruleReturnStatement returns [EObject current=null] : ( () otherlv_1= 'return' (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )? otherlv_5= ';' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2275:1: ruleReturnStatement returns [EObject current=null] : ( () otherlv_1= 'return' (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )? otherlv_5= ';' ) ;
     public final EObject ruleReturnStatement() throws RecognitionException {
         EObject current = null;
 
@@ -6380,14 +6372,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2288:28: ( ( () otherlv_1= 'return' (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )? otherlv_5= ';' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2289:1: ( () otherlv_1= 'return' (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )? otherlv_5= ';' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2278:28: ( ( () otherlv_1= 'return' (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )? otherlv_5= ';' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2279:1: ( () otherlv_1= 'return' (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )? otherlv_5= ';' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2289:1: ( () otherlv_1= 'return' (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )? otherlv_5= ';' )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2289:2: () otherlv_1= 'return' (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )? otherlv_5= ';'
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2279:1: ( () otherlv_1= 'return' (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )? otherlv_5= ';' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2279:2: () otherlv_1= 'return' (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )? otherlv_5= ';'
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2289:2: ()
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2290:5: 
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2279:2: ()
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2280:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -6399,13 +6391,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,50,FOLLOW_50_in_ruleReturnStatement5620); if (state.failed) return current;
+            otherlv_1=(Token)match(input,50,FOLLOW_50_in_ruleReturnStatement5606); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getReturnStatementAccess().getReturnKeyword_1());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2299:1: (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2289:1: (otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')' )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -6414,26 +6406,26 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt25) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2299:3: otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2289:3: otherlv_2= '(' ( (lv_expression_3_0= ruleExpression ) ) otherlv_4= ')'
                     {
-                    otherlv_2=(Token)match(input,18,FOLLOW_18_in_ruleReturnStatement5633); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,18,FOLLOW_18_in_ruleReturnStatement5619); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getReturnStatementAccess().getLeftParenthesisKeyword_2_0());
                           
                     }
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2303:1: ( (lv_expression_3_0= ruleExpression ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2304:1: (lv_expression_3_0= ruleExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2293:1: ( (lv_expression_3_0= ruleExpression ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2294:1: (lv_expression_3_0= ruleExpression )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2304:1: (lv_expression_3_0= ruleExpression )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2305:3: lv_expression_3_0= ruleExpression
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2294:1: (lv_expression_3_0= ruleExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2295:3: lv_expression_3_0= ruleExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getReturnStatementAccess().getExpressionExpressionParserRuleCall_2_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleExpression_in_ruleReturnStatement5654);
+                    pushFollow(FOLLOW_ruleExpression_in_ruleReturnStatement5640);
                     lv_expression_3_0=ruleExpression();
 
                     state._fsp--;
@@ -6457,7 +6449,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,20,FOLLOW_20_in_ruleReturnStatement5666); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,20,FOLLOW_20_in_ruleReturnStatement5652); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getReturnStatementAccess().getRightParenthesisKeyword_2_2());
@@ -6469,7 +6461,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,11,FOLLOW_11_in_ruleReturnStatement5680); if (state.failed) return current;
+            otherlv_5=(Token)match(input,11,FOLLOW_11_in_ruleReturnStatement5666); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getReturnStatementAccess().getSemicolonKeyword_3());
@@ -6498,7 +6490,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContinueStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2337:1: entryRuleContinueStatement returns [EObject current=null] : iv_ruleContinueStatement= ruleContinueStatement EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2327:1: entryRuleContinueStatement returns [EObject current=null] : iv_ruleContinueStatement= ruleContinueStatement EOF ;
     public final EObject entryRuleContinueStatement() throws RecognitionException {
         EObject current = null;
 
@@ -6506,13 +6498,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2338:2: (iv_ruleContinueStatement= ruleContinueStatement EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2339:2: iv_ruleContinueStatement= ruleContinueStatement EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2328:2: (iv_ruleContinueStatement= ruleContinueStatement EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2329:2: iv_ruleContinueStatement= ruleContinueStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getContinueStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleContinueStatement_in_entryRuleContinueStatement5716);
+            pushFollow(FOLLOW_ruleContinueStatement_in_entryRuleContinueStatement5702);
             iv_ruleContinueStatement=ruleContinueStatement();
 
             state._fsp--;
@@ -6520,7 +6512,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleContinueStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContinueStatement5726); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContinueStatement5712); if (state.failed) return current;
 
             }
 
@@ -6538,7 +6530,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContinueStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2346:1: ruleContinueStatement returns [EObject current=null] : ( () otherlv_1= 'continue' otherlv_2= ';' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2336:1: ruleContinueStatement returns [EObject current=null] : ( () otherlv_1= 'continue' otherlv_2= ';' ) ;
     public final EObject ruleContinueStatement() throws RecognitionException {
         EObject current = null;
 
@@ -6548,14 +6540,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2349:28: ( ( () otherlv_1= 'continue' otherlv_2= ';' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2350:1: ( () otherlv_1= 'continue' otherlv_2= ';' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2339:28: ( ( () otherlv_1= 'continue' otherlv_2= ';' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2340:1: ( () otherlv_1= 'continue' otherlv_2= ';' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2350:1: ( () otherlv_1= 'continue' otherlv_2= ';' )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2350:2: () otherlv_1= 'continue' otherlv_2= ';'
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2340:1: ( () otherlv_1= 'continue' otherlv_2= ';' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2340:2: () otherlv_1= 'continue' otherlv_2= ';'
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2350:2: ()
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2351:5: 
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2340:2: ()
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2341:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -6567,13 +6559,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,51,FOLLOW_51_in_ruleContinueStatement5772); if (state.failed) return current;
+            otherlv_1=(Token)match(input,51,FOLLOW_51_in_ruleContinueStatement5758); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getContinueStatementAccess().getContinueKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,11,FOLLOW_11_in_ruleContinueStatement5784); if (state.failed) return current;
+            otherlv_2=(Token)match(input,11,FOLLOW_11_in_ruleContinueStatement5770); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getContinueStatementAccess().getSemicolonKeyword_2());
@@ -6602,7 +6594,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBreakStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2372:1: entryRuleBreakStatement returns [EObject current=null] : iv_ruleBreakStatement= ruleBreakStatement EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2362:1: entryRuleBreakStatement returns [EObject current=null] : iv_ruleBreakStatement= ruleBreakStatement EOF ;
     public final EObject entryRuleBreakStatement() throws RecognitionException {
         EObject current = null;
 
@@ -6610,13 +6602,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2373:2: (iv_ruleBreakStatement= ruleBreakStatement EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2374:2: iv_ruleBreakStatement= ruleBreakStatement EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2363:2: (iv_ruleBreakStatement= ruleBreakStatement EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2364:2: iv_ruleBreakStatement= ruleBreakStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBreakStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleBreakStatement_in_entryRuleBreakStatement5820);
+            pushFollow(FOLLOW_ruleBreakStatement_in_entryRuleBreakStatement5806);
             iv_ruleBreakStatement=ruleBreakStatement();
 
             state._fsp--;
@@ -6624,7 +6616,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleBreakStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBreakStatement5830); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBreakStatement5816); if (state.failed) return current;
 
             }
 
@@ -6642,7 +6634,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBreakStatement"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2381:1: ruleBreakStatement returns [EObject current=null] : ( () otherlv_1= 'break' otherlv_2= ';' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2371:1: ruleBreakStatement returns [EObject current=null] : ( () otherlv_1= 'break' otherlv_2= ';' ) ;
     public final EObject ruleBreakStatement() throws RecognitionException {
         EObject current = null;
 
@@ -6652,14 +6644,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2384:28: ( ( () otherlv_1= 'break' otherlv_2= ';' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2385:1: ( () otherlv_1= 'break' otherlv_2= ';' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2374:28: ( ( () otherlv_1= 'break' otherlv_2= ';' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2375:1: ( () otherlv_1= 'break' otherlv_2= ';' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2385:1: ( () otherlv_1= 'break' otherlv_2= ';' )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2385:2: () otherlv_1= 'break' otherlv_2= ';'
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2375:1: ( () otherlv_1= 'break' otherlv_2= ';' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2375:2: () otherlv_1= 'break' otherlv_2= ';'
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2385:2: ()
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2386:5: 
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2375:2: ()
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2376:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -6671,13 +6663,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,52,FOLLOW_52_in_ruleBreakStatement5876); if (state.failed) return current;
+            otherlv_1=(Token)match(input,52,FOLLOW_52_in_ruleBreakStatement5862); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getBreakStatementAccess().getBreakKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,11,FOLLOW_11_in_ruleBreakStatement5888); if (state.failed) return current;
+            otherlv_2=(Token)match(input,11,FOLLOW_11_in_ruleBreakStatement5874); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getBreakStatementAccess().getSemicolonKeyword_2());
@@ -6706,7 +6698,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePostFixOp"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2407:1: entryRulePostFixOp returns [String current=null] : iv_rulePostFixOp= rulePostFixOp EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2397:1: entryRulePostFixOp returns [String current=null] : iv_rulePostFixOp= rulePostFixOp EOF ;
     public final String entryRulePostFixOp() throws RecognitionException {
         String current = null;
 
@@ -6714,13 +6706,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2408:2: (iv_rulePostFixOp= rulePostFixOp EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2409:2: iv_rulePostFixOp= rulePostFixOp EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2398:2: (iv_rulePostFixOp= rulePostFixOp EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2399:2: iv_rulePostFixOp= rulePostFixOp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPostFixOpRule()); 
             }
-            pushFollow(FOLLOW_rulePostFixOp_in_entryRulePostFixOp5925);
+            pushFollow(FOLLOW_rulePostFixOp_in_entryRulePostFixOp5911);
             iv_rulePostFixOp=rulePostFixOp();
 
             state._fsp--;
@@ -6728,7 +6720,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulePostFixOp.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulePostFixOp5936); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulePostFixOp5922); if (state.failed) return current;
 
             }
 
@@ -6746,7 +6738,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePostFixOp"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2416:1: rulePostFixOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '++' | kw= '--' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2406:1: rulePostFixOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '++' | kw= '--' ) ;
     public final AntlrDatatypeRuleToken rulePostFixOp() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6755,10 +6747,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2419:28: ( (kw= '++' | kw= '--' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2420:1: (kw= '++' | kw= '--' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2409:28: ( (kw= '++' | kw= '--' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2410:1: (kw= '++' | kw= '--' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2420:1: (kw= '++' | kw= '--' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2410:1: (kw= '++' | kw= '--' )
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -6777,9 +6769,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt26) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2421:2: kw= '++'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2411:2: kw= '++'
                     {
-                    kw=(Token)match(input,53,FOLLOW_53_in_rulePostFixOp5974); if (state.failed) return current;
+                    kw=(Token)match(input,53,FOLLOW_53_in_rulePostFixOp5960); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6790,9 +6782,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2428:2: kw= '--'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2418:2: kw= '--'
                     {
-                    kw=(Token)match(input,54,FOLLOW_54_in_rulePostFixOp5993); if (state.failed) return current;
+                    kw=(Token)match(input,54,FOLLOW_54_in_rulePostFixOp5979); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6825,7 +6817,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2441:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2431:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
     public final EObject entryRuleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6833,13 +6825,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2442:2: (iv_ruleExpression= ruleExpression EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2443:2: iv_ruleExpression= ruleExpression EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2432:2: (iv_ruleExpression= ruleExpression EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2433:2: iv_ruleExpression= ruleExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_entryRuleExpression6033);
+            pushFollow(FOLLOW_ruleExpression_in_entryRuleExpression6019);
             iv_ruleExpression=ruleExpression();
 
             state._fsp--;
@@ -6847,7 +6839,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExpression6043); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExpression6029); if (state.failed) return current;
 
             }
 
@@ -6865,7 +6857,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2450:1: ruleExpression returns [EObject current=null] : ( ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) ) | ( (lv_expression_4_0= ruleSimpleExpression ) ) | ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) ) ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2440:1: ruleExpression returns [EObject current=null] : ( ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) ) | ( (lv_expression_4_0= ruleSimpleExpression ) ) | ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) ) ) ;
     public final EObject ruleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6883,18 +6875,19 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2453:28: ( ( ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) ) | ( (lv_expression_4_0= ruleSimpleExpression ) ) | ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2454:1: ( ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) ) | ( (lv_expression_4_0= ruleSimpleExpression ) ) | ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2443:28: ( ( ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) ) | ( (lv_expression_4_0= ruleSimpleExpression ) ) | ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2444:1: ( ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) ) | ( (lv_expression_4_0= ruleSimpleExpression ) ) | ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2454:1: ( ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) ) | ( (lv_expression_4_0= ruleSimpleExpression ) ) | ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2444:1: ( ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) ) | ( (lv_expression_4_0= ruleSimpleExpression ) ) | ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) ) )
             int alt27=3;
             int LA27_0 = input.LA(1);
 
             if ( (LA27_0==RULE_ID) ) {
                 switch ( input.LA(2) ) {
-                case 21:
+                case 53:
+                case 54:
                     {
-                    alt27=1;
+                    alt27=3;
                     }
                     break;
                 case EOF:
@@ -6919,10 +6912,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     alt27=2;
                     }
                     break;
-                case 53:
-                case 54:
+                case 21:
                     {
-                    alt27=3;
+                    alt27=1;
                     }
                     break;
                 default:
@@ -6946,13 +6938,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt27) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2454:2: ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2444:2: ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2454:2: ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2454:3: () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2444:2: ( () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2444:3: () ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2454:3: ()
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2455:5: 
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2444:3: ()
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2445:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -6964,21 +6956,21 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2460:2: ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2460:3: ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2450:2: ( ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2450:3: ( (lv_var_1_0= ruleVar ) ) otherlv_2= '=' ( (lv_expression_3_0= ruleExpression ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2460:3: ( (lv_var_1_0= ruleVar ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2461:1: (lv_var_1_0= ruleVar )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2450:3: ( (lv_var_1_0= ruleVar ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2451:1: (lv_var_1_0= ruleVar )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2461:1: (lv_var_1_0= ruleVar )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2462:3: lv_var_1_0= ruleVar
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2451:1: (lv_var_1_0= ruleVar )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2452:3: lv_var_1_0= ruleVar
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getExpressionAccess().getVarVarParserRuleCall_0_1_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleVar_in_ruleExpression6100);
+                    pushFollow(FOLLOW_ruleVar_in_ruleExpression6086);
                     lv_var_1_0=ruleVar();
 
                     state._fsp--;
@@ -7002,24 +6994,24 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleExpression6112); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleExpression6098); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getExpressionAccess().getEqualsSignKeyword_0_1_1());
                           
                     }
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2482:1: ( (lv_expression_3_0= ruleExpression ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2483:1: (lv_expression_3_0= ruleExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2472:1: ( (lv_expression_3_0= ruleExpression ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2473:1: (lv_expression_3_0= ruleExpression )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2483:1: (lv_expression_3_0= ruleExpression )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2484:3: lv_expression_3_0= ruleExpression
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2473:1: (lv_expression_3_0= ruleExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2474:3: lv_expression_3_0= ruleExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getExpressionAccess().getExpressionExpressionParserRuleCall_0_1_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleExpression_in_ruleExpression6133);
+                    pushFollow(FOLLOW_ruleExpression_in_ruleExpression6119);
                     lv_expression_3_0=ruleExpression();
 
                     state._fsp--;
@@ -7053,20 +7045,20 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2501:6: ( (lv_expression_4_0= ruleSimpleExpression ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2491:6: ( (lv_expression_4_0= ruleSimpleExpression ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2501:6: ( (lv_expression_4_0= ruleSimpleExpression ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2502:1: (lv_expression_4_0= ruleSimpleExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2491:6: ( (lv_expression_4_0= ruleSimpleExpression ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2492:1: (lv_expression_4_0= ruleSimpleExpression )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2502:1: (lv_expression_4_0= ruleSimpleExpression )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2503:3: lv_expression_4_0= ruleSimpleExpression
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2492:1: (lv_expression_4_0= ruleSimpleExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2493:3: lv_expression_4_0= ruleSimpleExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getExpressionAccess().getExpressionSimpleExpressionParserRuleCall_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleSimpleExpression_in_ruleExpression6162);
+                    pushFollow(FOLLOW_ruleSimpleExpression_in_ruleExpression6148);
                     lv_expression_4_0=ruleSimpleExpression();
 
                     state._fsp--;
@@ -7094,13 +7086,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2520:6: ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2510:6: ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2520:6: ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2520:7: () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2510:6: ( () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2510:7: () ( (otherlv_6= RULE_ID ) ) ( (lv_op_7_0= rulePostFixOp ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2520:7: ()
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2521:5: 
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2510:7: ()
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2511:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7112,11 +7104,11 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2526:2: ( (otherlv_6= RULE_ID ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2527:1: (otherlv_6= RULE_ID )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2516:2: ( (otherlv_6= RULE_ID ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2517:1: (otherlv_6= RULE_ID )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2527:1: (otherlv_6= RULE_ID )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2528:3: otherlv_6= RULE_ID
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2517:1: (otherlv_6= RULE_ID )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2518:3: otherlv_6= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7125,7 +7117,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                       	        }
                               
                     }
-                    otherlv_6=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExpression6198); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExpression6184); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		newLeafNode(otherlv_6, grammarAccess.getExpressionAccess().getPostfixVarVarDeclarationCrossReference_2_1_0()); 
@@ -7137,18 +7129,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2539:2: ( (lv_op_7_0= rulePostFixOp ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2540:1: (lv_op_7_0= rulePostFixOp )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2529:2: ( (lv_op_7_0= rulePostFixOp ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2530:1: (lv_op_7_0= rulePostFixOp )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2540:1: (lv_op_7_0= rulePostFixOp )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2541:3: lv_op_7_0= rulePostFixOp
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2530:1: (lv_op_7_0= rulePostFixOp )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2531:3: lv_op_7_0= rulePostFixOp
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getExpressionAccess().getOpPostFixOpParserRuleCall_2_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_rulePostFixOp_in_ruleExpression6219);
+                    pushFollow(FOLLOW_rulePostFixOp_in_ruleExpression6205);
                     lv_op_7_0=rulePostFixOp();
 
                     state._fsp--;
@@ -7201,7 +7193,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVar"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2565:1: entryRuleVar returns [EObject current=null] : iv_ruleVar= ruleVar EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2555:1: entryRuleVar returns [EObject current=null] : iv_ruleVar= ruleVar EOF ;
     public final EObject entryRuleVar() throws RecognitionException {
         EObject current = null;
 
@@ -7209,13 +7201,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2566:2: (iv_ruleVar= ruleVar EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2567:2: iv_ruleVar= ruleVar EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2556:2: (iv_ruleVar= ruleVar EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2557:2: iv_ruleVar= ruleVar EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVarRule()); 
             }
-            pushFollow(FOLLOW_ruleVar_in_entryRuleVar6256);
+            pushFollow(FOLLOW_ruleVar_in_entryRuleVar6242);
             iv_ruleVar=ruleVar();
 
             state._fsp--;
@@ -7223,7 +7215,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleVar; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVar6266); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVar6252); if (state.failed) return current;
 
             }
 
@@ -7241,7 +7233,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVar"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2574:1: ruleVar returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2564:1: ruleVar returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
     public final EObject ruleVar() throws RecognitionException {
         EObject current = null;
 
@@ -7250,14 +7242,14 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2577:28: ( ( (otherlv_0= RULE_ID ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2578:1: ( (otherlv_0= RULE_ID ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2567:28: ( ( (otherlv_0= RULE_ID ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2568:1: ( (otherlv_0= RULE_ID ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2578:1: ( (otherlv_0= RULE_ID ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2579:1: (otherlv_0= RULE_ID )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2568:1: ( (otherlv_0= RULE_ID ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2569:1: (otherlv_0= RULE_ID )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2579:1: (otherlv_0= RULE_ID )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2580:3: otherlv_0= RULE_ID
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2569:1: (otherlv_0= RULE_ID )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2570:3: otherlv_0= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -7266,7 +7258,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
               	        }
                       
             }
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleVar6310); if (state.failed) return current;
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleVar6296); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		newLeafNode(otherlv_0, grammarAccess.getVarAccess().getNameVarDeclarationCrossReference_0()); 
@@ -7298,7 +7290,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSimpleExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2599:1: entryRuleSimpleExpression returns [EObject current=null] : iv_ruleSimpleExpression= ruleSimpleExpression EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2589:1: entryRuleSimpleExpression returns [EObject current=null] : iv_ruleSimpleExpression= ruleSimpleExpression EOF ;
     public final EObject entryRuleSimpleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7306,13 +7298,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2600:2: (iv_ruleSimpleExpression= ruleSimpleExpression EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2601:2: iv_ruleSimpleExpression= ruleSimpleExpression EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2590:2: (iv_ruleSimpleExpression= ruleSimpleExpression EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2591:2: iv_ruleSimpleExpression= ruleSimpleExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSimpleExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleSimpleExpression_in_entryRuleSimpleExpression6345);
+            pushFollow(FOLLOW_ruleSimpleExpression_in_entryRuleSimpleExpression6331);
             iv_ruleSimpleExpression=ruleSimpleExpression();
 
             state._fsp--;
@@ -7320,7 +7312,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSimpleExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSimpleExpression6355); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSimpleExpression6341); if (state.failed) return current;
 
             }
 
@@ -7338,7 +7330,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2608:1: ruleSimpleExpression returns [EObject current=null] : (this_AndExpression_0= ruleAndExpression ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )* ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2598:1: ruleSimpleExpression returns [EObject current=null] : (this_AndExpression_0= ruleAndExpression ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )* ) ;
     public final EObject ruleSimpleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7351,18 +7343,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2611:28: ( (this_AndExpression_0= ruleAndExpression ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )* ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2612:1: (this_AndExpression_0= ruleAndExpression ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2601:28: ( (this_AndExpression_0= ruleAndExpression ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )* ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2602:1: (this_AndExpression_0= ruleAndExpression ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )* )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2612:1: (this_AndExpression_0= ruleAndExpression ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )* )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2613:5: this_AndExpression_0= ruleAndExpression ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2602:1: (this_AndExpression_0= ruleAndExpression ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2603:5: this_AndExpression_0= ruleAndExpression ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getSimpleExpressionAccess().getAndExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleAndExpression_in_ruleSimpleExpression6402);
+            pushFollow(FOLLOW_ruleAndExpression_in_ruleSimpleExpression6388);
             this_AndExpression_0=ruleAndExpression();
 
             state._fsp--;
@@ -7373,7 +7365,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2621:1: ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2611:1: ( () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) ) )*
             loop28:
             do {
                 int alt28=2;
@@ -7386,10 +7378,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                 switch (alt28) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2621:2: () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2611:2: () ( (lv_op_2_0= '||' ) ) ( (lv_right_3_0= ruleAndExpression ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2621:2: ()
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2622:5: 
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2611:2: ()
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2612:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -7401,13 +7393,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2627:2: ( (lv_op_2_0= '||' ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2628:1: (lv_op_2_0= '||' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2617:2: ( (lv_op_2_0= '||' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2618:1: (lv_op_2_0= '||' )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2628:1: (lv_op_2_0= '||' )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2629:3: lv_op_2_0= '||'
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2618:1: (lv_op_2_0= '||' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2619:3: lv_op_2_0= '||'
             	    {
-            	    lv_op_2_0=(Token)match(input,55,FOLLOW_55_in_ruleSimpleExpression6429); if (state.failed) return current;
+            	    lv_op_2_0=(Token)match(input,55,FOLLOW_55_in_ruleSimpleExpression6415); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              newLeafNode(lv_op_2_0, grammarAccess.getSimpleExpressionAccess().getOpVerticalLineVerticalLineKeyword_1_1_0());
@@ -7427,18 +7419,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2642:2: ( (lv_right_3_0= ruleAndExpression ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2643:1: (lv_right_3_0= ruleAndExpression )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2632:2: ( (lv_right_3_0= ruleAndExpression ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2633:1: (lv_right_3_0= ruleAndExpression )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2643:1: (lv_right_3_0= ruleAndExpression )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2644:3: lv_right_3_0= ruleAndExpression
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2633:1: (lv_right_3_0= ruleAndExpression )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2634:3: lv_right_3_0= ruleAndExpression
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getSimpleExpressionAccess().getRightAndExpressionParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleAndExpression_in_ruleSimpleExpression6463);
+            	    pushFollow(FOLLOW_ruleAndExpression_in_ruleSimpleExpression6449);
             	    lv_right_3_0=ruleAndExpression();
 
             	    state._fsp--;
@@ -7494,7 +7486,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAndExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2668:1: entryRuleAndExpression returns [EObject current=null] : iv_ruleAndExpression= ruleAndExpression EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2658:1: entryRuleAndExpression returns [EObject current=null] : iv_ruleAndExpression= ruleAndExpression EOF ;
     public final EObject entryRuleAndExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7502,13 +7494,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2669:2: (iv_ruleAndExpression= ruleAndExpression EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2670:2: iv_ruleAndExpression= ruleAndExpression EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2659:2: (iv_ruleAndExpression= ruleAndExpression EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2660:2: iv_ruleAndExpression= ruleAndExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAndExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleAndExpression_in_entryRuleAndExpression6501);
+            pushFollow(FOLLOW_ruleAndExpression_in_entryRuleAndExpression6487);
             iv_ruleAndExpression=ruleAndExpression();
 
             state._fsp--;
@@ -7516,7 +7508,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAndExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAndExpression6511); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAndExpression6497); if (state.failed) return current;
 
             }
 
@@ -7534,7 +7526,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAndExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2677:1: ruleAndExpression returns [EObject current=null] : (this_EqualsExpression_0= ruleEqualsExpression ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )* ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2667:1: ruleAndExpression returns [EObject current=null] : (this_EqualsExpression_0= ruleEqualsExpression ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )* ) ;
     public final EObject ruleAndExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7547,18 +7539,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2680:28: ( (this_EqualsExpression_0= ruleEqualsExpression ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )* ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2681:1: (this_EqualsExpression_0= ruleEqualsExpression ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2670:28: ( (this_EqualsExpression_0= ruleEqualsExpression ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )* ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2671:1: (this_EqualsExpression_0= ruleEqualsExpression ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )* )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2681:1: (this_EqualsExpression_0= ruleEqualsExpression ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )* )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2682:5: this_EqualsExpression_0= ruleEqualsExpression ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2671:1: (this_EqualsExpression_0= ruleEqualsExpression ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2672:5: this_EqualsExpression_0= ruleEqualsExpression ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getAndExpressionAccess().getEqualsExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleEqualsExpression_in_ruleAndExpression6558);
+            pushFollow(FOLLOW_ruleEqualsExpression_in_ruleAndExpression6544);
             this_EqualsExpression_0=ruleEqualsExpression();
 
             state._fsp--;
@@ -7569,7 +7561,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2690:1: ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2680:1: ( () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) ) )*
             loop29:
             do {
                 int alt29=2;
@@ -7582,10 +7574,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                 switch (alt29) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2690:2: () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2680:2: () ( (lv_op_2_0= '&&' ) ) ( (lv_right_3_0= ruleEqualsExpression ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2690:2: ()
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2691:5: 
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2680:2: ()
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2681:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -7597,13 +7589,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2696:2: ( (lv_op_2_0= '&&' ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2697:1: (lv_op_2_0= '&&' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2686:2: ( (lv_op_2_0= '&&' ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2687:1: (lv_op_2_0= '&&' )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2697:1: (lv_op_2_0= '&&' )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2698:3: lv_op_2_0= '&&'
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2687:1: (lv_op_2_0= '&&' )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2688:3: lv_op_2_0= '&&'
             	    {
-            	    lv_op_2_0=(Token)match(input,56,FOLLOW_56_in_ruleAndExpression6585); if (state.failed) return current;
+            	    lv_op_2_0=(Token)match(input,56,FOLLOW_56_in_ruleAndExpression6571); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              newLeafNode(lv_op_2_0, grammarAccess.getAndExpressionAccess().getOpAmpersandAmpersandKeyword_1_1_0());
@@ -7623,18 +7615,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2711:2: ( (lv_right_3_0= ruleEqualsExpression ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2712:1: (lv_right_3_0= ruleEqualsExpression )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2701:2: ( (lv_right_3_0= ruleEqualsExpression ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2702:1: (lv_right_3_0= ruleEqualsExpression )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2712:1: (lv_right_3_0= ruleEqualsExpression )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2713:3: lv_right_3_0= ruleEqualsExpression
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2702:1: (lv_right_3_0= ruleEqualsExpression )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2703:3: lv_right_3_0= ruleEqualsExpression
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getAndExpressionAccess().getRightEqualsExpressionParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleEqualsExpression_in_ruleAndExpression6619);
+            	    pushFollow(FOLLOW_ruleEqualsExpression_in_ruleAndExpression6605);
             	    lv_right_3_0=ruleEqualsExpression();
 
             	    state._fsp--;
@@ -7690,7 +7682,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEqualsExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2737:1: entryRuleEqualsExpression returns [EObject current=null] : iv_ruleEqualsExpression= ruleEqualsExpression EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2727:1: entryRuleEqualsExpression returns [EObject current=null] : iv_ruleEqualsExpression= ruleEqualsExpression EOF ;
     public final EObject entryRuleEqualsExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7698,13 +7690,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2738:2: (iv_ruleEqualsExpression= ruleEqualsExpression EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2739:2: iv_ruleEqualsExpression= ruleEqualsExpression EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2728:2: (iv_ruleEqualsExpression= ruleEqualsExpression EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2729:2: iv_ruleEqualsExpression= ruleEqualsExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEqualsExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleEqualsExpression_in_entryRuleEqualsExpression6657);
+            pushFollow(FOLLOW_ruleEqualsExpression_in_entryRuleEqualsExpression6643);
             iv_ruleEqualsExpression=ruleEqualsExpression();
 
             state._fsp--;
@@ -7712,7 +7704,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleEqualsExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEqualsExpression6667); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEqualsExpression6653); if (state.failed) return current;
 
             }
 
@@ -7730,7 +7722,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEqualsExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2746:1: ruleEqualsExpression returns [EObject current=null] : (this_ComparisonExpression_0= ruleComparisonExpression ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )? ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2736:1: ruleEqualsExpression returns [EObject current=null] : (this_ComparisonExpression_0= ruleComparisonExpression ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )? ) ;
     public final EObject ruleEqualsExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7744,18 +7736,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2749:28: ( (this_ComparisonExpression_0= ruleComparisonExpression ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )? ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2750:1: (this_ComparisonExpression_0= ruleComparisonExpression ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )? )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2739:28: ( (this_ComparisonExpression_0= ruleComparisonExpression ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )? ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2740:1: (this_ComparisonExpression_0= ruleComparisonExpression ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )? )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2750:1: (this_ComparisonExpression_0= ruleComparisonExpression ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )? )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2751:5: this_ComparisonExpression_0= ruleComparisonExpression ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2740:1: (this_ComparisonExpression_0= ruleComparisonExpression ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )? )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2741:5: this_ComparisonExpression_0= ruleComparisonExpression ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )?
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getEqualsExpressionAccess().getComparisonExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleComparisonExpression_in_ruleEqualsExpression6714);
+            pushFollow(FOLLOW_ruleComparisonExpression_in_ruleEqualsExpression6700);
             this_ComparisonExpression_0=ruleComparisonExpression();
 
             state._fsp--;
@@ -7766,7 +7758,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2759:1: ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2749:1: ( () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) ) )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -7775,10 +7767,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt30) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2759:2: () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2749:2: () ( (lv_op_2_0= ruleEqOp ) ) ( (lv_right_3_0= ruleComparisonExpression ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2759:2: ()
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2760:5: 
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2749:2: ()
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2750:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7790,18 +7782,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2765:2: ( (lv_op_2_0= ruleEqOp ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2766:1: (lv_op_2_0= ruleEqOp )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2755:2: ( (lv_op_2_0= ruleEqOp ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2756:1: (lv_op_2_0= ruleEqOp )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2766:1: (lv_op_2_0= ruleEqOp )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2767:3: lv_op_2_0= ruleEqOp
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2756:1: (lv_op_2_0= ruleEqOp )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2757:3: lv_op_2_0= ruleEqOp
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getEqualsExpressionAccess().getOpEqOpParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleEqOp_in_ruleEqualsExpression6744);
+                    pushFollow(FOLLOW_ruleEqOp_in_ruleEqualsExpression6730);
                     lv_op_2_0=ruleEqOp();
 
                     state._fsp--;
@@ -7825,18 +7817,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2783:2: ( (lv_right_3_0= ruleComparisonExpression ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2784:1: (lv_right_3_0= ruleComparisonExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2773:2: ( (lv_right_3_0= ruleComparisonExpression ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2774:1: (lv_right_3_0= ruleComparisonExpression )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2784:1: (lv_right_3_0= ruleComparisonExpression )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2785:3: lv_right_3_0= ruleComparisonExpression
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2774:1: (lv_right_3_0= ruleComparisonExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2775:3: lv_right_3_0= ruleComparisonExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getEqualsExpressionAccess().getRightComparisonExpressionParserRuleCall_1_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleComparisonExpression_in_ruleEqualsExpression6765);
+                    pushFollow(FOLLOW_ruleComparisonExpression_in_ruleEqualsExpression6751);
                     lv_right_3_0=ruleComparisonExpression();
 
                     state._fsp--;
@@ -7889,7 +7881,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEqOp"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2809:1: entryRuleEqOp returns [String current=null] : iv_ruleEqOp= ruleEqOp EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2799:1: entryRuleEqOp returns [String current=null] : iv_ruleEqOp= ruleEqOp EOF ;
     public final String entryRuleEqOp() throws RecognitionException {
         String current = null;
 
@@ -7897,13 +7889,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2810:2: (iv_ruleEqOp= ruleEqOp EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2811:2: iv_ruleEqOp= ruleEqOp EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2800:2: (iv_ruleEqOp= ruleEqOp EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2801:2: iv_ruleEqOp= ruleEqOp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEqOpRule()); 
             }
-            pushFollow(FOLLOW_ruleEqOp_in_entryRuleEqOp6804);
+            pushFollow(FOLLOW_ruleEqOp_in_entryRuleEqOp6790);
             iv_ruleEqOp=ruleEqOp();
 
             state._fsp--;
@@ -7911,7 +7903,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleEqOp.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEqOp6815); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEqOp6801); if (state.failed) return current;
 
             }
 
@@ -7929,7 +7921,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEqOp"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2818:1: ruleEqOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '==' | kw= '!=' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2808:1: ruleEqOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '==' | kw= '!=' ) ;
     public final AntlrDatatypeRuleToken ruleEqOp() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7938,10 +7930,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2821:28: ( (kw= '==' | kw= '!=' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2822:1: (kw= '==' | kw= '!=' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2811:28: ( (kw= '==' | kw= '!=' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2812:1: (kw= '==' | kw= '!=' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2822:1: (kw= '==' | kw= '!=' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2812:1: (kw= '==' | kw= '!=' )
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -7960,9 +7952,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt31) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2823:2: kw= '=='
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2813:2: kw= '=='
                     {
-                    kw=(Token)match(input,57,FOLLOW_57_in_ruleEqOp6853); if (state.failed) return current;
+                    kw=(Token)match(input,57,FOLLOW_57_in_ruleEqOp6839); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -7973,9 +7965,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2830:2: kw= '!='
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2820:2: kw= '!='
                     {
-                    kw=(Token)match(input,58,FOLLOW_58_in_ruleEqOp6872); if (state.failed) return current;
+                    kw=(Token)match(input,58,FOLLOW_58_in_ruleEqOp6858); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -8008,7 +8000,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComparisonExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2843:1: entryRuleComparisonExpression returns [EObject current=null] : iv_ruleComparisonExpression= ruleComparisonExpression EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2833:1: entryRuleComparisonExpression returns [EObject current=null] : iv_ruleComparisonExpression= ruleComparisonExpression EOF ;
     public final EObject entryRuleComparisonExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8016,13 +8008,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2844:2: (iv_ruleComparisonExpression= ruleComparisonExpression EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2845:2: iv_ruleComparisonExpression= ruleComparisonExpression EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2834:2: (iv_ruleComparisonExpression= ruleComparisonExpression EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2835:2: iv_ruleComparisonExpression= ruleComparisonExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getComparisonExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleComparisonExpression_in_entryRuleComparisonExpression6912);
+            pushFollow(FOLLOW_ruleComparisonExpression_in_entryRuleComparisonExpression6898);
             iv_ruleComparisonExpression=ruleComparisonExpression();
 
             state._fsp--;
@@ -8030,7 +8022,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleComparisonExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComparisonExpression6922); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComparisonExpression6908); if (state.failed) return current;
 
             }
 
@@ -8048,7 +8040,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComparisonExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2852:1: ruleComparisonExpression returns [EObject current=null] : (this_AdditiveExpression_0= ruleAdditiveExpression ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )? ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2842:1: ruleComparisonExpression returns [EObject current=null] : (this_AdditiveExpression_0= ruleAdditiveExpression ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )? ) ;
     public final EObject ruleComparisonExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8062,18 +8054,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2855:28: ( (this_AdditiveExpression_0= ruleAdditiveExpression ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )? ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2856:1: (this_AdditiveExpression_0= ruleAdditiveExpression ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )? )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2845:28: ( (this_AdditiveExpression_0= ruleAdditiveExpression ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )? ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2846:1: (this_AdditiveExpression_0= ruleAdditiveExpression ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )? )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2856:1: (this_AdditiveExpression_0= ruleAdditiveExpression ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )? )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2857:5: this_AdditiveExpression_0= ruleAdditiveExpression ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2846:1: (this_AdditiveExpression_0= ruleAdditiveExpression ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )? )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2847:5: this_AdditiveExpression_0= ruleAdditiveExpression ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )?
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getComparisonExpressionAccess().getAdditiveExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleAdditiveExpression_in_ruleComparisonExpression6969);
+            pushFollow(FOLLOW_ruleAdditiveExpression_in_ruleComparisonExpression6955);
             this_AdditiveExpression_0=ruleAdditiveExpression();
 
             state._fsp--;
@@ -8084,7 +8076,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2865:1: ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2855:1: ( () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) ) )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -8093,10 +8085,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt32) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2865:2: () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2855:2: () ( (lv_op_2_0= ruleRelOp ) ) ( (lv_right_3_0= ruleAdditiveExpression ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2865:2: ()
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2866:5: 
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2855:2: ()
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2856:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -8108,18 +8100,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2871:2: ( (lv_op_2_0= ruleRelOp ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2872:1: (lv_op_2_0= ruleRelOp )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2861:2: ( (lv_op_2_0= ruleRelOp ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2862:1: (lv_op_2_0= ruleRelOp )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2872:1: (lv_op_2_0= ruleRelOp )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2873:3: lv_op_2_0= ruleRelOp
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2862:1: (lv_op_2_0= ruleRelOp )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2863:3: lv_op_2_0= ruleRelOp
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getComparisonExpressionAccess().getOpRelOpParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleRelOp_in_ruleComparisonExpression6999);
+                    pushFollow(FOLLOW_ruleRelOp_in_ruleComparisonExpression6985);
                     lv_op_2_0=ruleRelOp();
 
                     state._fsp--;
@@ -8143,18 +8135,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2889:2: ( (lv_right_3_0= ruleAdditiveExpression ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2890:1: (lv_right_3_0= ruleAdditiveExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2879:2: ( (lv_right_3_0= ruleAdditiveExpression ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2880:1: (lv_right_3_0= ruleAdditiveExpression )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2890:1: (lv_right_3_0= ruleAdditiveExpression )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2891:3: lv_right_3_0= ruleAdditiveExpression
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2880:1: (lv_right_3_0= ruleAdditiveExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2881:3: lv_right_3_0= ruleAdditiveExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getComparisonExpressionAccess().getRightAdditiveExpressionParserRuleCall_1_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleAdditiveExpression_in_ruleComparisonExpression7020);
+                    pushFollow(FOLLOW_ruleAdditiveExpression_in_ruleComparisonExpression7006);
                     lv_right_3_0=ruleAdditiveExpression();
 
                     state._fsp--;
@@ -8207,7 +8199,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRelOp"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2915:1: entryRuleRelOp returns [String current=null] : iv_ruleRelOp= ruleRelOp EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2905:1: entryRuleRelOp returns [String current=null] : iv_ruleRelOp= ruleRelOp EOF ;
     public final String entryRuleRelOp() throws RecognitionException {
         String current = null;
 
@@ -8215,13 +8207,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2916:2: (iv_ruleRelOp= ruleRelOp EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2917:2: iv_ruleRelOp= ruleRelOp EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2906:2: (iv_ruleRelOp= ruleRelOp EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2907:2: iv_ruleRelOp= ruleRelOp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRelOpRule()); 
             }
-            pushFollow(FOLLOW_ruleRelOp_in_entryRuleRelOp7059);
+            pushFollow(FOLLOW_ruleRelOp_in_entryRuleRelOp7045);
             iv_ruleRelOp=ruleRelOp();
 
             state._fsp--;
@@ -8229,7 +8221,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleRelOp.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRelOp7070); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRelOp7056); if (state.failed) return current;
 
             }
 
@@ -8247,7 +8239,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRelOp"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2924:1: ruleRelOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '<=' | kw= '<' | kw= '>' | kw= '>=' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2914:1: ruleRelOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '<=' | kw= '<' | kw= '>' | kw= '>=' ) ;
     public final AntlrDatatypeRuleToken ruleRelOp() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -8256,10 +8248,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2927:28: ( (kw= '<=' | kw= '<' | kw= '>' | kw= '>=' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2928:1: (kw= '<=' | kw= '<' | kw= '>' | kw= '>=' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2917:28: ( (kw= '<=' | kw= '<' | kw= '>' | kw= '>=' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2918:1: (kw= '<=' | kw= '<' | kw= '>' | kw= '>=' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2928:1: (kw= '<=' | kw= '<' | kw= '>' | kw= '>=' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2918:1: (kw= '<=' | kw= '<' | kw= '>' | kw= '>=' )
             int alt33=4;
             switch ( input.LA(1) ) {
             case 59:
@@ -8292,9 +8284,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             switch (alt33) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2929:2: kw= '<='
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2919:2: kw= '<='
                     {
-                    kw=(Token)match(input,59,FOLLOW_59_in_ruleRelOp7108); if (state.failed) return current;
+                    kw=(Token)match(input,59,FOLLOW_59_in_ruleRelOp7094); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -8305,9 +8297,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2936:2: kw= '<'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2926:2: kw= '<'
                     {
-                    kw=(Token)match(input,60,FOLLOW_60_in_ruleRelOp7127); if (state.failed) return current;
+                    kw=(Token)match(input,60,FOLLOW_60_in_ruleRelOp7113); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -8318,9 +8310,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2943:2: kw= '>'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2933:2: kw= '>'
                     {
-                    kw=(Token)match(input,61,FOLLOW_61_in_ruleRelOp7146); if (state.failed) return current;
+                    kw=(Token)match(input,61,FOLLOW_61_in_ruleRelOp7132); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -8331,9 +8323,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2950:2: kw= '>='
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2940:2: kw= '>='
                     {
-                    kw=(Token)match(input,62,FOLLOW_62_in_ruleRelOp7165); if (state.failed) return current;
+                    kw=(Token)match(input,62,FOLLOW_62_in_ruleRelOp7151); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -8366,7 +8358,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAdditiveExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2963:1: entryRuleAdditiveExpression returns [EObject current=null] : iv_ruleAdditiveExpression= ruleAdditiveExpression EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2953:1: entryRuleAdditiveExpression returns [EObject current=null] : iv_ruleAdditiveExpression= ruleAdditiveExpression EOF ;
     public final EObject entryRuleAdditiveExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8374,13 +8366,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2964:2: (iv_ruleAdditiveExpression= ruleAdditiveExpression EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2965:2: iv_ruleAdditiveExpression= ruleAdditiveExpression EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2954:2: (iv_ruleAdditiveExpression= ruleAdditiveExpression EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2955:2: iv_ruleAdditiveExpression= ruleAdditiveExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAdditiveExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleAdditiveExpression_in_entryRuleAdditiveExpression7205);
+            pushFollow(FOLLOW_ruleAdditiveExpression_in_entryRuleAdditiveExpression7191);
             iv_ruleAdditiveExpression=ruleAdditiveExpression();
 
             state._fsp--;
@@ -8388,7 +8380,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAdditiveExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAdditiveExpression7215); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAdditiveExpression7201); if (state.failed) return current;
 
             }
 
@@ -8406,7 +8398,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAdditiveExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2972:1: ruleAdditiveExpression returns [EObject current=null] : (this_MultiplicativeExpression_0= ruleMultiplicativeExpression ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )* ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2962:1: ruleAdditiveExpression returns [EObject current=null] : (this_MultiplicativeExpression_0= ruleMultiplicativeExpression ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )* ) ;
     public final EObject ruleAdditiveExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8420,18 +8412,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2975:28: ( (this_MultiplicativeExpression_0= ruleMultiplicativeExpression ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )* ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2976:1: (this_MultiplicativeExpression_0= ruleMultiplicativeExpression ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2965:28: ( (this_MultiplicativeExpression_0= ruleMultiplicativeExpression ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )* ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2966:1: (this_MultiplicativeExpression_0= ruleMultiplicativeExpression ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )* )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2976:1: (this_MultiplicativeExpression_0= ruleMultiplicativeExpression ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )* )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2977:5: this_MultiplicativeExpression_0= ruleMultiplicativeExpression ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2966:1: (this_MultiplicativeExpression_0= ruleMultiplicativeExpression ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2967:5: this_MultiplicativeExpression_0= ruleMultiplicativeExpression ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getAdditiveExpressionAccess().getMultiplicativeExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleMultiplicativeExpression_in_ruleAdditiveExpression7262);
+            pushFollow(FOLLOW_ruleMultiplicativeExpression_in_ruleAdditiveExpression7248);
             this_MultiplicativeExpression_0=ruleMultiplicativeExpression();
 
             state._fsp--;
@@ -8442,7 +8434,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2985:1: ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2975:1: ( () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) ) )*
             loop34:
             do {
                 int alt34=2;
@@ -8455,10 +8447,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                 switch (alt34) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2985:2: () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2975:2: () ( (lv_op_2_0= ruleAddOp ) ) ( (lv_right_3_0= ruleMultiplicativeExpression ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2985:2: ()
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2986:5: 
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2975:2: ()
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2976:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -8470,18 +8462,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2991:2: ( (lv_op_2_0= ruleAddOp ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2992:1: (lv_op_2_0= ruleAddOp )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2981:2: ( (lv_op_2_0= ruleAddOp ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2982:1: (lv_op_2_0= ruleAddOp )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2992:1: (lv_op_2_0= ruleAddOp )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2993:3: lv_op_2_0= ruleAddOp
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2982:1: (lv_op_2_0= ruleAddOp )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2983:3: lv_op_2_0= ruleAddOp
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getAdditiveExpressionAccess().getOpAddOpParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleAddOp_in_ruleAdditiveExpression7292);
+            	    pushFollow(FOLLOW_ruleAddOp_in_ruleAdditiveExpression7278);
             	    lv_op_2_0=ruleAddOp();
 
             	    state._fsp--;
@@ -8505,18 +8497,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3009:2: ( (lv_right_3_0= ruleMultiplicativeExpression ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3010:1: (lv_right_3_0= ruleMultiplicativeExpression )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:2999:2: ( (lv_right_3_0= ruleMultiplicativeExpression ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3000:1: (lv_right_3_0= ruleMultiplicativeExpression )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3010:1: (lv_right_3_0= ruleMultiplicativeExpression )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3011:3: lv_right_3_0= ruleMultiplicativeExpression
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3000:1: (lv_right_3_0= ruleMultiplicativeExpression )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3001:3: lv_right_3_0= ruleMultiplicativeExpression
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getAdditiveExpressionAccess().getRightMultiplicativeExpressionParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleMultiplicativeExpression_in_ruleAdditiveExpression7313);
+            	    pushFollow(FOLLOW_ruleMultiplicativeExpression_in_ruleAdditiveExpression7299);
             	    lv_right_3_0=ruleMultiplicativeExpression();
 
             	    state._fsp--;
@@ -8572,7 +8564,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAddOp"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3035:1: entryRuleAddOp returns [String current=null] : iv_ruleAddOp= ruleAddOp EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3025:1: entryRuleAddOp returns [String current=null] : iv_ruleAddOp= ruleAddOp EOF ;
     public final String entryRuleAddOp() throws RecognitionException {
         String current = null;
 
@@ -8580,13 +8572,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3036:2: (iv_ruleAddOp= ruleAddOp EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3037:2: iv_ruleAddOp= ruleAddOp EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3026:2: (iv_ruleAddOp= ruleAddOp EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3027:2: iv_ruleAddOp= ruleAddOp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAddOpRule()); 
             }
-            pushFollow(FOLLOW_ruleAddOp_in_entryRuleAddOp7352);
+            pushFollow(FOLLOW_ruleAddOp_in_entryRuleAddOp7338);
             iv_ruleAddOp=ruleAddOp();
 
             state._fsp--;
@@ -8594,7 +8586,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAddOp.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAddOp7363); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAddOp7349); if (state.failed) return current;
 
             }
 
@@ -8612,7 +8604,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAddOp"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3044:1: ruleAddOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '+' | kw= '-' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3034:1: ruleAddOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '+' | kw= '-' ) ;
     public final AntlrDatatypeRuleToken ruleAddOp() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -8621,10 +8613,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3047:28: ( (kw= '+' | kw= '-' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3048:1: (kw= '+' | kw= '-' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3037:28: ( (kw= '+' | kw= '-' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3038:1: (kw= '+' | kw= '-' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3048:1: (kw= '+' | kw= '-' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3038:1: (kw= '+' | kw= '-' )
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -8643,9 +8635,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt35) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3049:2: kw= '+'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3039:2: kw= '+'
                     {
-                    kw=(Token)match(input,12,FOLLOW_12_in_ruleAddOp7401); if (state.failed) return current;
+                    kw=(Token)match(input,12,FOLLOW_12_in_ruleAddOp7387); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -8656,9 +8648,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3056:2: kw= '-'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3046:2: kw= '-'
                     {
-                    kw=(Token)match(input,13,FOLLOW_13_in_ruleAddOp7420); if (state.failed) return current;
+                    kw=(Token)match(input,13,FOLLOW_13_in_ruleAddOp7406); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -8691,7 +8683,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMultiplicativeExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3069:1: entryRuleMultiplicativeExpression returns [EObject current=null] : iv_ruleMultiplicativeExpression= ruleMultiplicativeExpression EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3059:1: entryRuleMultiplicativeExpression returns [EObject current=null] : iv_ruleMultiplicativeExpression= ruleMultiplicativeExpression EOF ;
     public final EObject entryRuleMultiplicativeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8699,13 +8691,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3070:2: (iv_ruleMultiplicativeExpression= ruleMultiplicativeExpression EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3071:2: iv_ruleMultiplicativeExpression= ruleMultiplicativeExpression EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3060:2: (iv_ruleMultiplicativeExpression= ruleMultiplicativeExpression EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3061:2: iv_ruleMultiplicativeExpression= ruleMultiplicativeExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMultiplicativeExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleMultiplicativeExpression_in_entryRuleMultiplicativeExpression7460);
+            pushFollow(FOLLOW_ruleMultiplicativeExpression_in_entryRuleMultiplicativeExpression7446);
             iv_ruleMultiplicativeExpression=ruleMultiplicativeExpression();
 
             state._fsp--;
@@ -8713,7 +8705,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleMultiplicativeExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiplicativeExpression7470); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiplicativeExpression7456); if (state.failed) return current;
 
             }
 
@@ -8731,7 +8723,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiplicativeExpression"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3078:1: ruleMultiplicativeExpression returns [EObject current=null] : (this_Atom_0= ruleAtom ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )* ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3068:1: ruleMultiplicativeExpression returns [EObject current=null] : (this_Atom_0= ruleAtom ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )* ) ;
     public final EObject ruleMultiplicativeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8745,18 +8737,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3081:28: ( (this_Atom_0= ruleAtom ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )* ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3082:1: (this_Atom_0= ruleAtom ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3071:28: ( (this_Atom_0= ruleAtom ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )* ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3072:1: (this_Atom_0= ruleAtom ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )* )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3082:1: (this_Atom_0= ruleAtom ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )* )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3083:5: this_Atom_0= ruleAtom ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3072:1: (this_Atom_0= ruleAtom ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3073:5: this_Atom_0= ruleAtom ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getMultiplicativeExpressionAccess().getAtomParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleAtom_in_ruleMultiplicativeExpression7517);
+            pushFollow(FOLLOW_ruleAtom_in_ruleMultiplicativeExpression7503);
             this_Atom_0=ruleAtom();
 
             state._fsp--;
@@ -8767,7 +8759,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3091:1: ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3081:1: ( () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) ) )*
             loop36:
             do {
                 int alt36=2;
@@ -8780,10 +8772,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                 switch (alt36) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3091:2: () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3081:2: () ( (lv_op_2_0= ruleMulOp ) ) ( (lv_right_3_0= ruleAtom ) )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3091:2: ()
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3092:5: 
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3081:2: ()
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3082:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -8795,18 +8787,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3097:2: ( (lv_op_2_0= ruleMulOp ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3098:1: (lv_op_2_0= ruleMulOp )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3087:2: ( (lv_op_2_0= ruleMulOp ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3088:1: (lv_op_2_0= ruleMulOp )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3098:1: (lv_op_2_0= ruleMulOp )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3099:3: lv_op_2_0= ruleMulOp
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3088:1: (lv_op_2_0= ruleMulOp )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3089:3: lv_op_2_0= ruleMulOp
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getMultiplicativeExpressionAccess().getOpMulOpParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleMulOp_in_ruleMultiplicativeExpression7547);
+            	    pushFollow(FOLLOW_ruleMulOp_in_ruleMultiplicativeExpression7533);
             	    lv_op_2_0=ruleMulOp();
 
             	    state._fsp--;
@@ -8830,18 +8822,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3115:2: ( (lv_right_3_0= ruleAtom ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3116:1: (lv_right_3_0= ruleAtom )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3105:2: ( (lv_right_3_0= ruleAtom ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3106:1: (lv_right_3_0= ruleAtom )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3116:1: (lv_right_3_0= ruleAtom )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3117:3: lv_right_3_0= ruleAtom
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3106:1: (lv_right_3_0= ruleAtom )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3107:3: lv_right_3_0= ruleAtom
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getMultiplicativeExpressionAccess().getRightAtomParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleAtom_in_ruleMultiplicativeExpression7568);
+            	    pushFollow(FOLLOW_ruleAtom_in_ruleMultiplicativeExpression7554);
             	    lv_right_3_0=ruleAtom();
 
             	    state._fsp--;
@@ -8897,7 +8889,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMulOp"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3141:1: entryRuleMulOp returns [String current=null] : iv_ruleMulOp= ruleMulOp EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3131:1: entryRuleMulOp returns [String current=null] : iv_ruleMulOp= ruleMulOp EOF ;
     public final String entryRuleMulOp() throws RecognitionException {
         String current = null;
 
@@ -8905,13 +8897,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3142:2: (iv_ruleMulOp= ruleMulOp EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3143:2: iv_ruleMulOp= ruleMulOp EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3132:2: (iv_ruleMulOp= ruleMulOp EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3133:2: iv_ruleMulOp= ruleMulOp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMulOpRule()); 
             }
-            pushFollow(FOLLOW_ruleMulOp_in_entryRuleMulOp7607);
+            pushFollow(FOLLOW_ruleMulOp_in_entryRuleMulOp7593);
             iv_ruleMulOp=ruleMulOp();
 
             state._fsp--;
@@ -8919,7 +8911,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleMulOp.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMulOp7618); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMulOp7604); if (state.failed) return current;
 
             }
 
@@ -8937,7 +8929,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMulOp"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3150:1: ruleMulOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '*' | kw= '/' | kw= '%' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3140:1: ruleMulOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '*' | kw= '/' | kw= '%' ) ;
     public final AntlrDatatypeRuleToken ruleMulOp() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -8946,10 +8938,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3153:28: ( (kw= '*' | kw= '/' | kw= '%' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3154:1: (kw= '*' | kw= '/' | kw= '%' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3143:28: ( (kw= '*' | kw= '/' | kw= '%' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3144:1: (kw= '*' | kw= '/' | kw= '%' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3154:1: (kw= '*' | kw= '/' | kw= '%' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3144:1: (kw= '*' | kw= '/' | kw= '%' )
             int alt37=3;
             switch ( input.LA(1) ) {
             case 63:
@@ -8977,9 +8969,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             switch (alt37) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3155:2: kw= '*'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3145:2: kw= '*'
                     {
-                    kw=(Token)match(input,63,FOLLOW_63_in_ruleMulOp7656); if (state.failed) return current;
+                    kw=(Token)match(input,63,FOLLOW_63_in_ruleMulOp7642); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -8990,9 +8982,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3162:2: kw= '/'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3152:2: kw= '/'
                     {
-                    kw=(Token)match(input,64,FOLLOW_64_in_ruleMulOp7675); if (state.failed) return current;
+                    kw=(Token)match(input,64,FOLLOW_64_in_ruleMulOp7661); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -9003,9 +8995,9 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3169:2: kw= '%'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3159:2: kw= '%'
                     {
-                    kw=(Token)match(input,65,FOLLOW_65_in_ruleMulOp7694); if (state.failed) return current;
+                    kw=(Token)match(input,65,FOLLOW_65_in_ruleMulOp7680); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -9038,7 +9030,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAtom"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3182:1: entryRuleAtom returns [EObject current=null] : iv_ruleAtom= ruleAtom EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3172:1: entryRuleAtom returns [EObject current=null] : iv_ruleAtom= ruleAtom EOF ;
     public final EObject entryRuleAtom() throws RecognitionException {
         EObject current = null;
 
@@ -9046,13 +9038,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3183:2: (iv_ruleAtom= ruleAtom EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3184:2: iv_ruleAtom= ruleAtom EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3173:2: (iv_ruleAtom= ruleAtom EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3174:2: iv_ruleAtom= ruleAtom EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAtomRule()); 
             }
-            pushFollow(FOLLOW_ruleAtom_in_entryRuleAtom7734);
+            pushFollow(FOLLOW_ruleAtom_in_entryRuleAtom7720);
             iv_ruleAtom=ruleAtom();
 
             state._fsp--;
@@ -9060,7 +9052,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAtom; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAtom7744); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAtom7730); if (state.failed) return current;
 
             }
 
@@ -9078,7 +9070,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAtom"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3191:1: ruleAtom returns [EObject current=null] : ( ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) ) | ( (lv_expression_4_0= ruleVar ) ) | ( (lv_expression_5_0= ruleCall ) ) | ( () ( (lv_value_7_0= ruleSignedInt ) ) ) | ( () ( (lv_value_9_0= ruleSignedFloat ) ) ) | ( () ( (lv_value_11_0= ruleBool ) ) ) | ( () ( (lv_value_13_0= ruleVector ) ) ) | ( () ( (lv_value_15_0= RULE_STRING ) ) ) ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3181:1: ruleAtom returns [EObject current=null] : ( ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) ) | ( (lv_expression_4_0= ruleVar ) ) | ( (lv_expression_5_0= ruleCall ) ) | ( () ( (lv_value_7_0= ruleSignedInt ) ) ) | ( () ( (lv_value_9_0= ruleSignedFloat ) ) ) | ( () ( (lv_value_11_0= ruleBool ) ) ) | ( () ( (lv_value_13_0= ruleVector ) ) ) | ( () ( (lv_value_15_0= RULE_STRING ) ) ) ) ;
     public final EObject ruleAtom() throws RecognitionException {
         EObject current = null;
 
@@ -9103,21 +9095,21 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3194:28: ( ( ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) ) | ( (lv_expression_4_0= ruleVar ) ) | ( (lv_expression_5_0= ruleCall ) ) | ( () ( (lv_value_7_0= ruleSignedInt ) ) ) | ( () ( (lv_value_9_0= ruleSignedFloat ) ) ) | ( () ( (lv_value_11_0= ruleBool ) ) ) | ( () ( (lv_value_13_0= ruleVector ) ) ) | ( () ( (lv_value_15_0= RULE_STRING ) ) ) ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3195:1: ( ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) ) | ( (lv_expression_4_0= ruleVar ) ) | ( (lv_expression_5_0= ruleCall ) ) | ( () ( (lv_value_7_0= ruleSignedInt ) ) ) | ( () ( (lv_value_9_0= ruleSignedFloat ) ) ) | ( () ( (lv_value_11_0= ruleBool ) ) ) | ( () ( (lv_value_13_0= ruleVector ) ) ) | ( () ( (lv_value_15_0= RULE_STRING ) ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3184:28: ( ( ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) ) | ( (lv_expression_4_0= ruleVar ) ) | ( (lv_expression_5_0= ruleCall ) ) | ( () ( (lv_value_7_0= ruleSignedInt ) ) ) | ( () ( (lv_value_9_0= ruleSignedFloat ) ) ) | ( () ( (lv_value_11_0= ruleBool ) ) ) | ( () ( (lv_value_13_0= ruleVector ) ) ) | ( () ( (lv_value_15_0= RULE_STRING ) ) ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3185:1: ( ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) ) | ( (lv_expression_4_0= ruleVar ) ) | ( (lv_expression_5_0= ruleCall ) ) | ( () ( (lv_value_7_0= ruleSignedInt ) ) ) | ( () ( (lv_value_9_0= ruleSignedFloat ) ) ) | ( () ( (lv_value_11_0= ruleBool ) ) ) | ( () ( (lv_value_13_0= ruleVector ) ) ) | ( () ( (lv_value_15_0= RULE_STRING ) ) ) )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3195:1: ( ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) ) | ( (lv_expression_4_0= ruleVar ) ) | ( (lv_expression_5_0= ruleCall ) ) | ( () ( (lv_value_7_0= ruleSignedInt ) ) ) | ( () ( (lv_value_9_0= ruleSignedFloat ) ) ) | ( () ( (lv_value_11_0= ruleBool ) ) ) | ( () ( (lv_value_13_0= ruleVector ) ) ) | ( () ( (lv_value_15_0= RULE_STRING ) ) ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3185:1: ( ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) ) | ( (lv_expression_4_0= ruleVar ) ) | ( (lv_expression_5_0= ruleCall ) ) | ( () ( (lv_value_7_0= ruleSignedInt ) ) ) | ( () ( (lv_value_9_0= ruleSignedFloat ) ) ) | ( () ( (lv_value_11_0= ruleBool ) ) ) | ( () ( (lv_value_13_0= ruleVector ) ) ) | ( () ( (lv_value_15_0= RULE_STRING ) ) ) )
             int alt38=8;
             alt38 = dfa38.predict(input);
             switch (alt38) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3195:2: ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3185:2: ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3195:2: ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3195:3: () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3185:2: ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3185:3: () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3195:3: ()
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3196:5: 
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3185:3: ()
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3186:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -9129,27 +9121,27 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3201:2: (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3201:4: otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')'
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3191:2: (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3191:4: otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')'
                     {
-                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleAtom7792); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleAtom7778); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getAtomAccess().getLeftParenthesisKeyword_0_1_0());
                           
                     }
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3205:1: ( (lv_expression_2_0= ruleExpression ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3206:1: (lv_expression_2_0= ruleExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3195:1: ( (lv_expression_2_0= ruleExpression ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3196:1: (lv_expression_2_0= ruleExpression )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3206:1: (lv_expression_2_0= ruleExpression )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3207:3: lv_expression_2_0= ruleExpression
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3196:1: (lv_expression_2_0= ruleExpression )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3197:3: lv_expression_2_0= ruleExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getAtomAccess().getExpressionExpressionParserRuleCall_0_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleExpression_in_ruleAtom7813);
+                    pushFollow(FOLLOW_ruleExpression_in_ruleAtom7799);
                     lv_expression_2_0=ruleExpression();
 
                     state._fsp--;
@@ -9173,7 +9165,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleAtom7825); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleAtom7811); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getAtomAccess().getRightParenthesisKeyword_0_1_2());
@@ -9189,20 +9181,20 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3228:6: ( (lv_expression_4_0= ruleVar ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3218:6: ( (lv_expression_4_0= ruleVar ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3228:6: ( (lv_expression_4_0= ruleVar ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3229:1: (lv_expression_4_0= ruleVar )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3218:6: ( (lv_expression_4_0= ruleVar ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3219:1: (lv_expression_4_0= ruleVar )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3229:1: (lv_expression_4_0= ruleVar )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3230:3: lv_expression_4_0= ruleVar
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3219:1: (lv_expression_4_0= ruleVar )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3220:3: lv_expression_4_0= ruleVar
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getAtomAccess().getExpressionVarParserRuleCall_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleVar_in_ruleAtom7854);
+                    pushFollow(FOLLOW_ruleVar_in_ruleAtom7840);
                     lv_expression_4_0=ruleVar();
 
                     state._fsp--;
@@ -9230,20 +9222,20 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3247:6: ( (lv_expression_5_0= ruleCall ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3237:6: ( (lv_expression_5_0= ruleCall ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3247:6: ( (lv_expression_5_0= ruleCall ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3248:1: (lv_expression_5_0= ruleCall )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3237:6: ( (lv_expression_5_0= ruleCall ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3238:1: (lv_expression_5_0= ruleCall )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3248:1: (lv_expression_5_0= ruleCall )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3249:3: lv_expression_5_0= ruleCall
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3238:1: (lv_expression_5_0= ruleCall )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3239:3: lv_expression_5_0= ruleCall
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getAtomAccess().getExpressionCallParserRuleCall_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleCall_in_ruleAtom7881);
+                    pushFollow(FOLLOW_ruleCall_in_ruleAtom7867);
                     lv_expression_5_0=ruleCall();
 
                     state._fsp--;
@@ -9271,13 +9263,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3266:6: ( () ( (lv_value_7_0= ruleSignedInt ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3256:6: ( () ( (lv_value_7_0= ruleSignedInt ) ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3266:6: ( () ( (lv_value_7_0= ruleSignedInt ) ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3266:7: () ( (lv_value_7_0= ruleSignedInt ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3256:6: ( () ( (lv_value_7_0= ruleSignedInt ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3256:7: () ( (lv_value_7_0= ruleSignedInt ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3266:7: ()
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3267:5: 
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3256:7: ()
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3257:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -9289,18 +9281,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3272:2: ( (lv_value_7_0= ruleSignedInt ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3273:1: (lv_value_7_0= ruleSignedInt )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3262:2: ( (lv_value_7_0= ruleSignedInt ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3263:1: (lv_value_7_0= ruleSignedInt )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3273:1: (lv_value_7_0= ruleSignedInt )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3274:3: lv_value_7_0= ruleSignedInt
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3263:1: (lv_value_7_0= ruleSignedInt )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3264:3: lv_value_7_0= ruleSignedInt
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getAtomAccess().getValueSignedIntParserRuleCall_3_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleSignedInt_in_ruleAtom7918);
+                    pushFollow(FOLLOW_ruleSignedInt_in_ruleAtom7904);
                     lv_value_7_0=ruleSignedInt();
 
                     state._fsp--;
@@ -9331,13 +9323,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3291:6: ( () ( (lv_value_9_0= ruleSignedFloat ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3281:6: ( () ( (lv_value_9_0= ruleSignedFloat ) ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3291:6: ( () ( (lv_value_9_0= ruleSignedFloat ) ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3291:7: () ( (lv_value_9_0= ruleSignedFloat ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3281:6: ( () ( (lv_value_9_0= ruleSignedFloat ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3281:7: () ( (lv_value_9_0= ruleSignedFloat ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3291:7: ()
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3292:5: 
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3281:7: ()
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3282:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -9349,18 +9341,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3297:2: ( (lv_value_9_0= ruleSignedFloat ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3298:1: (lv_value_9_0= ruleSignedFloat )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3287:2: ( (lv_value_9_0= ruleSignedFloat ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3288:1: (lv_value_9_0= ruleSignedFloat )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3298:1: (lv_value_9_0= ruleSignedFloat )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3299:3: lv_value_9_0= ruleSignedFloat
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3288:1: (lv_value_9_0= ruleSignedFloat )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3289:3: lv_value_9_0= ruleSignedFloat
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getAtomAccess().getValueSignedFloatParserRuleCall_4_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleSignedFloat_in_ruleAtom7956);
+                    pushFollow(FOLLOW_ruleSignedFloat_in_ruleAtom7942);
                     lv_value_9_0=ruleSignedFloat();
 
                     state._fsp--;
@@ -9391,13 +9383,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3316:6: ( () ( (lv_value_11_0= ruleBool ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3306:6: ( () ( (lv_value_11_0= ruleBool ) ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3316:6: ( () ( (lv_value_11_0= ruleBool ) ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3316:7: () ( (lv_value_11_0= ruleBool ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3306:6: ( () ( (lv_value_11_0= ruleBool ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3306:7: () ( (lv_value_11_0= ruleBool ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3316:7: ()
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3317:5: 
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3306:7: ()
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3307:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -9409,18 +9401,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3322:2: ( (lv_value_11_0= ruleBool ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3323:1: (lv_value_11_0= ruleBool )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3312:2: ( (lv_value_11_0= ruleBool ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3313:1: (lv_value_11_0= ruleBool )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3323:1: (lv_value_11_0= ruleBool )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3324:3: lv_value_11_0= ruleBool
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3313:1: (lv_value_11_0= ruleBool )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3314:3: lv_value_11_0= ruleBool
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getAtomAccess().getValueBoolParserRuleCall_5_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleBool_in_ruleAtom7994);
+                    pushFollow(FOLLOW_ruleBool_in_ruleAtom7980);
                     lv_value_11_0=ruleBool();
 
                     state._fsp--;
@@ -9451,13 +9443,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3341:6: ( () ( (lv_value_13_0= ruleVector ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3331:6: ( () ( (lv_value_13_0= ruleVector ) ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3341:6: ( () ( (lv_value_13_0= ruleVector ) ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3341:7: () ( (lv_value_13_0= ruleVector ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3331:6: ( () ( (lv_value_13_0= ruleVector ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3331:7: () ( (lv_value_13_0= ruleVector ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3341:7: ()
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3342:5: 
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3331:7: ()
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3332:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -9469,18 +9461,18 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3347:2: ( (lv_value_13_0= ruleVector ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3348:1: (lv_value_13_0= ruleVector )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3337:2: ( (lv_value_13_0= ruleVector ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3338:1: (lv_value_13_0= ruleVector )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3348:1: (lv_value_13_0= ruleVector )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3349:3: lv_value_13_0= ruleVector
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3338:1: (lv_value_13_0= ruleVector )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3339:3: lv_value_13_0= ruleVector
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getAtomAccess().getValueVectorParserRuleCall_6_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleVector_in_ruleAtom8032);
+                    pushFollow(FOLLOW_ruleVector_in_ruleAtom8018);
                     lv_value_13_0=ruleVector();
 
                     state._fsp--;
@@ -9511,13 +9503,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3366:6: ( () ( (lv_value_15_0= RULE_STRING ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3356:6: ( () ( (lv_value_15_0= RULE_STRING ) ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3366:6: ( () ( (lv_value_15_0= RULE_STRING ) ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3366:7: () ( (lv_value_15_0= RULE_STRING ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3356:6: ( () ( (lv_value_15_0= RULE_STRING ) ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3356:7: () ( (lv_value_15_0= RULE_STRING ) )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3366:7: ()
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3367:5: 
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3356:7: ()
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3357:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -9529,13 +9521,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3372:2: ( (lv_value_15_0= RULE_STRING ) )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3373:1: (lv_value_15_0= RULE_STRING )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3362:2: ( (lv_value_15_0= RULE_STRING ) )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3363:1: (lv_value_15_0= RULE_STRING )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3373:1: (lv_value_15_0= RULE_STRING )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3374:3: lv_value_15_0= RULE_STRING
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3363:1: (lv_value_15_0= RULE_STRING )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3364:3: lv_value_15_0= RULE_STRING
                     {
-                    lv_value_15_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleAtom8066); if (state.failed) return current;
+                    lv_value_15_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleAtom8052); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_value_15_0, grammarAccess.getAtomAccess().getValueSTRINGTerminalRuleCall_7_1_0()); 
@@ -9588,7 +9580,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCall"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3398:1: entryRuleCall returns [EObject current=null] : iv_ruleCall= ruleCall EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3388:1: entryRuleCall returns [EObject current=null] : iv_ruleCall= ruleCall EOF ;
     public final EObject entryRuleCall() throws RecognitionException {
         EObject current = null;
 
@@ -9596,13 +9588,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3399:2: (iv_ruleCall= ruleCall EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3400:2: iv_ruleCall= ruleCall EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3389:2: (iv_ruleCall= ruleCall EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3390:2: iv_ruleCall= ruleCall EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCallRule()); 
             }
-            pushFollow(FOLLOW_ruleCall_in_entryRuleCall8108);
+            pushFollow(FOLLOW_ruleCall_in_entryRuleCall8094);
             iv_ruleCall=ruleCall();
 
             state._fsp--;
@@ -9610,7 +9602,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCall; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCall8118); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCall8104); if (state.failed) return current;
 
             }
 
@@ -9628,7 +9620,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCall"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3407:1: ruleCall returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '(' ( (lv_args_2_0= ruleArguments ) )? otherlv_3= ')' ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3397:1: ruleCall returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '(' ( (lv_args_2_0= ruleArguments ) )? otherlv_3= ')' ) ;
     public final EObject ruleCall() throws RecognitionException {
         EObject current = null;
 
@@ -9641,17 +9633,17 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3410:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '(' ( (lv_args_2_0= ruleArguments ) )? otherlv_3= ')' ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3411:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '(' ( (lv_args_2_0= ruleArguments ) )? otherlv_3= ')' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3400:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '(' ( (lv_args_2_0= ruleArguments ) )? otherlv_3= ')' ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3401:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '(' ( (lv_args_2_0= ruleArguments ) )? otherlv_3= ')' )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3411:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '(' ( (lv_args_2_0= ruleArguments ) )? otherlv_3= ')' )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3411:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= '(' ( (lv_args_2_0= ruleArguments ) )? otherlv_3= ')'
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3401:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '(' ( (lv_args_2_0= ruleArguments ) )? otherlv_3= ')' )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3401:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= '(' ( (lv_args_2_0= ruleArguments ) )? otherlv_3= ')'
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3411:2: ( (otherlv_0= RULE_ID ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3412:1: (otherlv_0= RULE_ID )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3401:2: ( (otherlv_0= RULE_ID ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3402:1: (otherlv_0= RULE_ID )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3412:1: (otherlv_0= RULE_ID )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3413:3: otherlv_0= RULE_ID
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3402:1: (otherlv_0= RULE_ID )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3403:3: otherlv_0= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -9660,7 +9652,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
               	        }
                       
             }
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCall8163); if (state.failed) return current;
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCall8149); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		newLeafNode(otherlv_0, grammarAccess.getCallAccess().getFunctionFunDeclarationCrossReference_0_0()); 
@@ -9672,13 +9664,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleCall8175); if (state.failed) return current;
+            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleCall8161); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getCallAccess().getLeftParenthesisKeyword_1());
                   
             }
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3428:1: ( (lv_args_2_0= ruleArguments ) )?
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3418:1: ( (lv_args_2_0= ruleArguments ) )?
             int alt39=2;
             int LA39_0 = input.LA(1);
 
@@ -9687,17 +9679,17 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             }
             switch (alt39) {
                 case 1 :
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3429:1: (lv_args_2_0= ruleArguments )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3419:1: (lv_args_2_0= ruleArguments )
                     {
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3429:1: (lv_args_2_0= ruleArguments )
-                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3430:3: lv_args_2_0= ruleArguments
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3419:1: (lv_args_2_0= ruleArguments )
+                    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3420:3: lv_args_2_0= ruleArguments
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCallAccess().getArgsArgumentsParserRuleCall_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleArguments_in_ruleCall8196);
+                    pushFollow(FOLLOW_ruleArguments_in_ruleCall8182);
                     lv_args_2_0=ruleArguments();
 
                     state._fsp--;
@@ -9724,7 +9716,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleCall8209); if (state.failed) return current;
+            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleCall8195); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getCallAccess().getRightParenthesisKeyword_3());
@@ -9753,7 +9745,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArguments"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3458:1: entryRuleArguments returns [EObject current=null] : iv_ruleArguments= ruleArguments EOF ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3448:1: entryRuleArguments returns [EObject current=null] : iv_ruleArguments= ruleArguments EOF ;
     public final EObject entryRuleArguments() throws RecognitionException {
         EObject current = null;
 
@@ -9761,13 +9753,13 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3459:2: (iv_ruleArguments= ruleArguments EOF )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3460:2: iv_ruleArguments= ruleArguments EOF
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3449:2: (iv_ruleArguments= ruleArguments EOF )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3450:2: iv_ruleArguments= ruleArguments EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getArgumentsRule()); 
             }
-            pushFollow(FOLLOW_ruleArguments_in_entryRuleArguments8245);
+            pushFollow(FOLLOW_ruleArguments_in_entryRuleArguments8231);
             iv_ruleArguments=ruleArguments();
 
             state._fsp--;
@@ -9775,7 +9767,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleArguments; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArguments8255); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArguments8241); if (state.failed) return current;
 
             }
 
@@ -9793,7 +9785,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArguments"
-    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3467:1: ruleArguments returns [EObject current=null] : ( ( (lv_expressions_0_0= ruleExpression ) ) (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )* ) ;
+    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3457:1: ruleArguments returns [EObject current=null] : ( ( (lv_expressions_0_0= ruleExpression ) ) (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )* ) ;
     public final EObject ruleArguments() throws RecognitionException {
         EObject current = null;
 
@@ -9806,24 +9798,24 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3470:28: ( ( ( (lv_expressions_0_0= ruleExpression ) ) (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )* ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3471:1: ( ( (lv_expressions_0_0= ruleExpression ) ) (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3460:28: ( ( ( (lv_expressions_0_0= ruleExpression ) ) (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )* ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3461:1: ( ( (lv_expressions_0_0= ruleExpression ) ) (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )* )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3471:1: ( ( (lv_expressions_0_0= ruleExpression ) ) (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )* )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3471:2: ( (lv_expressions_0_0= ruleExpression ) ) (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3461:1: ( ( (lv_expressions_0_0= ruleExpression ) ) (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )* )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3461:2: ( (lv_expressions_0_0= ruleExpression ) ) (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )*
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3471:2: ( (lv_expressions_0_0= ruleExpression ) )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3472:1: (lv_expressions_0_0= ruleExpression )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3461:2: ( (lv_expressions_0_0= ruleExpression ) )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3462:1: (lv_expressions_0_0= ruleExpression )
             {
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3472:1: (lv_expressions_0_0= ruleExpression )
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3473:3: lv_expressions_0_0= ruleExpression
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3462:1: (lv_expressions_0_0= ruleExpression )
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3463:3: lv_expressions_0_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getArgumentsAccess().getExpressionsExpressionParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleArguments8301);
+            pushFollow(FOLLOW_ruleExpression_in_ruleArguments8287);
             lv_expressions_0_0=ruleExpression();
 
             state._fsp--;
@@ -9847,7 +9839,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3489:2: (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )*
+            // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3479:2: (otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) ) )*
             loop40:
             do {
                 int alt40=2;
@@ -9860,26 +9852,26 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
                 switch (alt40) {
             	case 1 :
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3489:4: otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3479:4: otherlv_1= ',' ( (lv_expressions_2_0= ruleExpression ) )
             	    {
-            	    otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleArguments8314); if (state.failed) return current;
+            	    otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleArguments8300); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_1, grammarAccess.getArgumentsAccess().getCommaKeyword_1_0());
             	          
             	    }
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3493:1: ( (lv_expressions_2_0= ruleExpression ) )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3494:1: (lv_expressions_2_0= ruleExpression )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3483:1: ( (lv_expressions_2_0= ruleExpression ) )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3484:1: (lv_expressions_2_0= ruleExpression )
             	    {
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3494:1: (lv_expressions_2_0= ruleExpression )
-            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3495:3: lv_expressions_2_0= ruleExpression
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3484:1: (lv_expressions_2_0= ruleExpression )
+            	    // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:3485:3: lv_expressions_2_0= ruleExpression
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getArgumentsAccess().getExpressionsExpressionParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleExpression_in_ruleArguments8335);
+            	    pushFollow(FOLLOW_ruleExpression_in_ruleArguments8321);
             	    lv_expressions_2_0=ruleExpression();
 
             	    state._fsp--;
@@ -9935,10 +9927,10 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred1_InternalXS
     public final void synpred1_InternalXS_fragment() throws RecognitionException {   
-        // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1849:4: ( 'else' )
-        // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1849:6: 'else'
+        // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1839:4: ( 'else' )
+        // ../aom.scripting.xs/src-gen/aom/scripting/xs/parser/antlr/internal/InternalXS.g:1839:6: 'else'
         {
-        match(input,43,FOLLOW_43_in_synpred1_InternalXS4648); if (state.failed) return ;
+        match(input,43,FOLLOW_43_in_synpred1_InternalXS4634); if (state.failed) return ;
 
         }
     }
@@ -10083,7 +10075,7 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
             this.transition = DFA38_transition;
         }
         public String getDescription() {
-            return "3195:1: ( ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) ) | ( (lv_expression_4_0= ruleVar ) ) | ( (lv_expression_5_0= ruleCall ) ) | ( () ( (lv_value_7_0= ruleSignedInt ) ) ) | ( () ( (lv_value_9_0= ruleSignedFloat ) ) ) | ( () ( (lv_value_11_0= ruleBool ) ) ) | ( () ( (lv_value_13_0= ruleVector ) ) ) | ( () ( (lv_value_15_0= RULE_STRING ) ) ) )";
+            return "3185:1: ( ( () (otherlv_1= '(' ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ')' ) ) | ( (lv_expression_4_0= ruleVar ) ) | ( (lv_expression_5_0= ruleCall ) ) | ( () ( (lv_value_7_0= ruleSignedInt ) ) ) | ( () ( (lv_value_9_0= ruleSignedFloat ) ) ) | ( () ( (lv_value_11_0= ruleBool ) ) ) | ( () ( (lv_value_13_0= ruleVector ) ) ) | ( () ( (lv_value_15_0= RULE_STRING ) ) ) )";
         }
     }
  
@@ -10167,222 +10159,222 @@ public class InternalXSParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleRuleDeclaration2027 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_23_in_ruleRuleDeclaration2064 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleRuleDeclaration2081 = new BitSet(new long[]{0x000000007F000000L});
-    public static final BitSet FOLLOW_24_in_ruleRuleDeclaration2151 = new BitSet(new long[]{0x000001007F000000L});
-    public static final BitSet FOLLOW_25_in_ruleRuleDeclaration2180 = new BitSet(new long[]{0x000001007F000000L});
-    public static final BitSet FOLLOW_26_in_ruleRuleDeclaration2268 = new BitSet(new long[]{0x000001007F000000L});
-    public static final BitSet FOLLOW_27_in_ruleRuleDeclaration2353 = new BitSet(new long[]{0x000001007F000000L});
-    public static final BitSet FOLLOW_28_in_ruleRuleDeclaration2433 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRuleDeclaration2450 = new BitSet(new long[]{0x000001007F000000L});
-    public static final BitSet FOLLOW_29_in_ruleRuleDeclaration2523 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleRuleDeclaration2540 = new BitSet(new long[]{0x000001007F000000L});
-    public static final BitSet FOLLOW_30_in_ruleRuleDeclaration2613 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleRuleDeclaration2630 = new BitSet(new long[]{0x000001007F000000L});
-    public static final BitSet FOLLOW_ruleCompoundStatement_in_ruleRuleDeclaration2703 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVarModifier_in_entryRuleVarModifier2739 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVarModifier2749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleVarModifier2836 = new BitSet(new long[]{0x0000000380000002L});
-    public static final BitSet FOLLOW_32_in_ruleVarModifier2921 = new BitSet(new long[]{0x0000000380000002L});
-    public static final BitSet FOLLOW_33_in_ruleVarModifier3006 = new BitSet(new long[]{0x0000000380000002L});
-    public static final BitSet FOLLOW_ruleFunModifier_in_entryRuleFunModifier3094 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFunModifier3104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleFunModifier3191 = new BitSet(new long[]{0x0000000480000002L});
-    public static final BitSet FOLLOW_34_in_ruleFunModifier3276 = new BitSet(new long[]{0x0000000480000002L});
-    public static final BitSet FOLLOW_ruleVarTypeSpecifier_in_entryRuleVarTypeSpecifier3365 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVarTypeSpecifier3376 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleVarTypeSpecifier3414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleVarTypeSpecifier3433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleVarTypeSpecifier3452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleVarTypeSpecifier3471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleVarTypeSpecifier3490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunTypeSpecifier_in_entryRuleFunTypeSpecifier3531 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFunTypeSpecifier3542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleFunTypeSpecifier3580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVarTypeSpecifier_in_ruleFunTypeSpecifier3608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParams_in_entryRuleParams3653 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleParams3663 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleParams3706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVarDeclaration_in_ruleParams3747 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_19_in_ruleParams3760 = new BitSet(new long[]{0x0000007B80020000L});
-    public static final BitSet FOLLOW_ruleVarDeclaration_in_ruleParams3781 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_ruleCompoundStatement_in_entryRuleCompoundStatement3820 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCompoundStatement3830 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleCompoundStatement3876 = new BitSet(new long[]{0x001C777B8007B870L});
-    public static final BitSet FOLLOW_ruleVarDeclarationOrStatement_in_ruleCompoundStatement3897 = new BitSet(new long[]{0x001C777B8007B870L});
-    public static final BitSet FOLLOW_41_in_ruleCompoundStatement3910 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVarDeclarationOrStatement_in_entryRuleVarDeclarationOrStatement3946 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVarDeclarationOrStatement3956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVarDeclaration_in_ruleVarDeclarationOrStatement4004 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleVarDeclarationOrStatement4015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleVarDeclarationOrStatement4044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_entryRuleStatement4079 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStatement4089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpressionStatement_in_ruleStatement4136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompoundStatement_in_ruleStatement4163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIfElseStatement_in_ruleStatement4190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWhileStatement_in_ruleStatement4217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleForStatement_in_ruleStatement4244 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSwitchStatement_in_ruleStatement4271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReturnStatement_in_ruleStatement4298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContinueStatement_in_ruleStatement4325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBreakStatement_in_ruleStatement4352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpressionStatement_in_entryRuleExpressionStatement4387 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExpressionStatement4397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleExpressionStatement4444 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleExpressionStatement4456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_ruleExpressionStatement4485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIfElseStatement_in_entryRuleIfElseStatement4522 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIfElseStatement4532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleIfElseStatement4569 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleIfElseStatement4581 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleIfElseStatement4602 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleIfElseStatement4614 = new BitSet(new long[]{0x001C757B8007B870L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleIfElseStatement4635 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_43_in_ruleIfElseStatement4656 = new BitSet(new long[]{0x001C757B8007B870L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleIfElseStatement4678 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWhileStatement_in_entryRuleWhileStatement4716 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleWhileStatement4726 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleWhileStatement4763 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleWhileStatement4775 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleWhileStatement4796 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleWhileStatement4808 = new BitSet(new long[]{0x001C757B8007B870L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleWhileStatement4829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleForStatement_in_entryRuleForStatement4865 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleForStatement4875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruleForStatement4912 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleForStatement4924 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleForVarDeclaration_in_ruleForStatement4945 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleForStatement4957 = new BitSet(new long[]{0x7800000000000000L});
-    public static final BitSet FOLLOW_ruleRelOp_in_ruleForStatement4978 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleForStatement4999 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleForStatement5011 = new BitSet(new long[]{0x001C757B8007B870L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleForStatement5032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSwitchStatement_in_entryRuleSwitchStatement5068 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSwitchStatement5078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_ruleSwitchStatement5115 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleSwitchStatement5127 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSwitchStatement5147 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleSwitchStatement5159 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleSwitchStatement5171 = new BitSet(new long[]{0x0002820000000000L});
-    public static final BitSet FOLLOW_ruleSwitchCase_in_ruleSwitchStatement5192 = new BitSet(new long[]{0x0002820000000000L});
-    public static final BitSet FOLLOW_ruleSwitchDefault_in_ruleSwitchStatement5214 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleSwitchStatement5227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSwitchCase_in_entryRuleSwitchCase5263 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSwitchCase5273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleSwitchCase5310 = new BitSet(new long[]{0x0000000000003010L});
-    public static final BitSet FOLLOW_ruleSignedInt_in_ruleSwitchCase5331 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_ruleSwitchCase5343 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleSwitchCase5355 = new BitSet(new long[]{0x001C757B8007B870L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleSwitchCase5376 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleSwitchCase5388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSwitchDefault_in_entryRuleSwitchDefault5424 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSwitchDefault5434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleSwitchDefault5471 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_ruleSwitchDefault5483 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleSwitchDefault5495 = new BitSet(new long[]{0x001C757B8007B870L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleSwitchDefault5516 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleSwitchDefault5528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReturnStatement_in_entryRuleReturnStatement5564 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleReturnStatement5574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleReturnStatement5620 = new BitSet(new long[]{0x0000000000040800L});
-    public static final BitSet FOLLOW_18_in_ruleReturnStatement5633 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleReturnStatement5654 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleReturnStatement5666 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleReturnStatement5680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContinueStatement_in_entryRuleContinueStatement5716 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContinueStatement5726 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_ruleContinueStatement5772 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleContinueStatement5784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBreakStatement_in_entryRuleBreakStatement5820 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBreakStatement5830 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleBreakStatement5876 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleBreakStatement5888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePostFixOp_in_entryRulePostFixOp5925 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePostFixOp5936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rulePostFixOp5974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_rulePostFixOp5993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_entryRuleExpression6033 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExpression6043 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVar_in_ruleExpression6100 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleExpression6112 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleExpression6133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleExpression_in_ruleExpression6162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExpression6198 = new BitSet(new long[]{0x0060000000000000L});
-    public static final BitSet FOLLOW_rulePostFixOp_in_ruleExpression6219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVar_in_entryRuleVar6256 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVar6266 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleVar6310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleExpression_in_entryRuleSimpleExpression6345 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSimpleExpression6355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAndExpression_in_ruleSimpleExpression6402 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_55_in_ruleSimpleExpression6429 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleAndExpression_in_ruleSimpleExpression6463 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_ruleAndExpression_in_entryRuleAndExpression6501 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAndExpression6511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEqualsExpression_in_ruleAndExpression6558 = new BitSet(new long[]{0x0100000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleAndExpression6585 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleEqualsExpression_in_ruleAndExpression6619 = new BitSet(new long[]{0x0100000000000002L});
-    public static final BitSet FOLLOW_ruleEqualsExpression_in_entryRuleEqualsExpression6657 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEqualsExpression6667 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComparisonExpression_in_ruleEqualsExpression6714 = new BitSet(new long[]{0x0600000000000002L});
-    public static final BitSet FOLLOW_ruleEqOp_in_ruleEqualsExpression6744 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleComparisonExpression_in_ruleEqualsExpression6765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEqOp_in_entryRuleEqOp6804 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEqOp6815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_ruleEqOp6853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_ruleEqOp6872 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComparisonExpression_in_entryRuleComparisonExpression6912 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComparisonExpression6922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAdditiveExpression_in_ruleComparisonExpression6969 = new BitSet(new long[]{0x7800000000000002L});
-    public static final BitSet FOLLOW_ruleRelOp_in_ruleComparisonExpression6999 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleAdditiveExpression_in_ruleComparisonExpression7020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelOp_in_entryRuleRelOp7059 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRelOp7070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_ruleRelOp7108 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_ruleRelOp7127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_ruleRelOp7146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_ruleRelOp7165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAdditiveExpression_in_entryRuleAdditiveExpression7205 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAdditiveExpression7215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplicativeExpression_in_ruleAdditiveExpression7262 = new BitSet(new long[]{0x0000000000003002L});
-    public static final BitSet FOLLOW_ruleAddOp_in_ruleAdditiveExpression7292 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleMultiplicativeExpression_in_ruleAdditiveExpression7313 = new BitSet(new long[]{0x0000000000003002L});
-    public static final BitSet FOLLOW_ruleAddOp_in_entryRuleAddOp7352 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAddOp7363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_ruleAddOp7401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleAddOp7420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplicativeExpression_in_entryRuleMultiplicativeExpression7460 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMultiplicativeExpression7470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtom_in_ruleMultiplicativeExpression7517 = new BitSet(new long[]{0x8000000000000002L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleMulOp_in_ruleMultiplicativeExpression7547 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleAtom_in_ruleMultiplicativeExpression7568 = new BitSet(new long[]{0x8000000000000002L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleMulOp_in_entryRuleMulOp7607 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMulOp7618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleMulOp7656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_ruleMulOp7675 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_ruleMulOp7694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtom_in_entryRuleAtom7734 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAtom7744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleAtom7792 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleAtom7813 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleAtom7825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVar_in_ruleAtom7854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCall_in_ruleAtom7881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSignedInt_in_ruleAtom7918 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSignedFloat_in_ruleAtom7956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBool_in_ruleAtom7994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVector_in_ruleAtom8032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleAtom8066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCall_in_entryRuleCall8108 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCall8118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCall8163 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleCall8175 = new BitSet(new long[]{0x000000000017B070L});
-    public static final BitSet FOLLOW_ruleArguments_in_ruleCall8196 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleCall8209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArguments_in_entryRuleArguments8245 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArguments8255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleArguments8301 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_19_in_ruleArguments8314 = new BitSet(new long[]{0x000000000007B070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleArguments8335 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_43_in_synpred1_InternalXS4648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleRuleDeclaration2150 = new BitSet(new long[]{0x000001007F000000L});
+    public static final BitSet FOLLOW_25_in_ruleRuleDeclaration2181 = new BitSet(new long[]{0x000001007F000000L});
+    public static final BitSet FOLLOW_26_in_ruleRuleDeclaration2254 = new BitSet(new long[]{0x000001007F000000L});
+    public static final BitSet FOLLOW_27_in_ruleRuleDeclaration2339 = new BitSet(new long[]{0x000001007F000000L});
+    public static final BitSet FOLLOW_28_in_ruleRuleDeclaration2419 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRuleDeclaration2436 = new BitSet(new long[]{0x000001007F000000L});
+    public static final BitSet FOLLOW_29_in_ruleRuleDeclaration2509 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleRuleDeclaration2526 = new BitSet(new long[]{0x000001007F000000L});
+    public static final BitSet FOLLOW_30_in_ruleRuleDeclaration2599 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleRuleDeclaration2616 = new BitSet(new long[]{0x000001007F000000L});
+    public static final BitSet FOLLOW_ruleCompoundStatement_in_ruleRuleDeclaration2689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVarModifier_in_entryRuleVarModifier2725 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVarModifier2735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleVarModifier2822 = new BitSet(new long[]{0x0000000380000002L});
+    public static final BitSet FOLLOW_32_in_ruleVarModifier2907 = new BitSet(new long[]{0x0000000380000002L});
+    public static final BitSet FOLLOW_33_in_ruleVarModifier2992 = new BitSet(new long[]{0x0000000380000002L});
+    public static final BitSet FOLLOW_ruleFunModifier_in_entryRuleFunModifier3080 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFunModifier3090 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleFunModifier3177 = new BitSet(new long[]{0x0000000480000002L});
+    public static final BitSet FOLLOW_34_in_ruleFunModifier3262 = new BitSet(new long[]{0x0000000480000002L});
+    public static final BitSet FOLLOW_ruleVarTypeSpecifier_in_entryRuleVarTypeSpecifier3351 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVarTypeSpecifier3362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleVarTypeSpecifier3400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleVarTypeSpecifier3419 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleVarTypeSpecifier3438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleVarTypeSpecifier3457 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleVarTypeSpecifier3476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunTypeSpecifier_in_entryRuleFunTypeSpecifier3517 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFunTypeSpecifier3528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleFunTypeSpecifier3566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVarTypeSpecifier_in_ruleFunTypeSpecifier3594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParams_in_entryRuleParams3639 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleParams3649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleParams3692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVarDeclaration_in_ruleParams3733 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_ruleParams3746 = new BitSet(new long[]{0x0000007B80020000L});
+    public static final BitSet FOLLOW_ruleVarDeclaration_in_ruleParams3767 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_ruleCompoundStatement_in_entryRuleCompoundStatement3806 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCompoundStatement3816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleCompoundStatement3862 = new BitSet(new long[]{0x001C777B8007B870L});
+    public static final BitSet FOLLOW_ruleVarDeclarationOrStatement_in_ruleCompoundStatement3883 = new BitSet(new long[]{0x001C777B8007B870L});
+    public static final BitSet FOLLOW_41_in_ruleCompoundStatement3896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVarDeclarationOrStatement_in_entryRuleVarDeclarationOrStatement3932 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVarDeclarationOrStatement3942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVarDeclaration_in_ruleVarDeclarationOrStatement3990 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_ruleVarDeclarationOrStatement4001 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_ruleVarDeclarationOrStatement4030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_entryRuleStatement4065 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStatement4075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpressionStatement_in_ruleStatement4122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompoundStatement_in_ruleStatement4149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIfElseStatement_in_ruleStatement4176 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWhileStatement_in_ruleStatement4203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleForStatement_in_ruleStatement4230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSwitchStatement_in_ruleStatement4257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReturnStatement_in_ruleStatement4284 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContinueStatement_in_ruleStatement4311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBreakStatement_in_ruleStatement4338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpressionStatement_in_entryRuleExpressionStatement4373 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExpressionStatement4383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleExpressionStatement4430 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_ruleExpressionStatement4442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_ruleExpressionStatement4471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIfElseStatement_in_entryRuleIfElseStatement4508 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIfElseStatement4518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleIfElseStatement4555 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleIfElseStatement4567 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleIfElseStatement4588 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleIfElseStatement4600 = new BitSet(new long[]{0x001C757B8007B870L});
+    public static final BitSet FOLLOW_ruleStatement_in_ruleIfElseStatement4621 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_43_in_ruleIfElseStatement4642 = new BitSet(new long[]{0x001C757B8007B870L});
+    public static final BitSet FOLLOW_ruleStatement_in_ruleIfElseStatement4664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWhileStatement_in_entryRuleWhileStatement4702 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleWhileStatement4712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_ruleWhileStatement4749 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleWhileStatement4761 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleWhileStatement4782 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleWhileStatement4794 = new BitSet(new long[]{0x001C757B8007B870L});
+    public static final BitSet FOLLOW_ruleStatement_in_ruleWhileStatement4815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleForStatement_in_entryRuleForStatement4851 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleForStatement4861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_ruleForStatement4898 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleForStatement4910 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleForVarDeclaration_in_ruleForStatement4931 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_ruleForStatement4943 = new BitSet(new long[]{0x7800000000000000L});
+    public static final BitSet FOLLOW_ruleRelOp_in_ruleForStatement4964 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleForStatement4985 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleForStatement4997 = new BitSet(new long[]{0x001C757B8007B870L});
+    public static final BitSet FOLLOW_ruleStatement_in_ruleForStatement5018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSwitchStatement_in_entryRuleSwitchStatement5054 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSwitchStatement5064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_ruleSwitchStatement5101 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleSwitchStatement5113 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSwitchStatement5133 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleSwitchStatement5145 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleSwitchStatement5157 = new BitSet(new long[]{0x0002820000000000L});
+    public static final BitSet FOLLOW_ruleSwitchCase_in_ruleSwitchStatement5178 = new BitSet(new long[]{0x0002820000000000L});
+    public static final BitSet FOLLOW_ruleSwitchDefault_in_ruleSwitchStatement5200 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleSwitchStatement5213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSwitchCase_in_entryRuleSwitchCase5249 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSwitchCase5259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_ruleSwitchCase5296 = new BitSet(new long[]{0x0000000000003010L});
+    public static final BitSet FOLLOW_ruleSignedInt_in_ruleSwitchCase5317 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_ruleSwitchCase5329 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleSwitchCase5341 = new BitSet(new long[]{0x001C757B8007B870L});
+    public static final BitSet FOLLOW_ruleStatement_in_ruleSwitchCase5362 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleSwitchCase5374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSwitchDefault_in_entryRuleSwitchDefault5410 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSwitchDefault5420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleSwitchDefault5457 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_ruleSwitchDefault5469 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleSwitchDefault5481 = new BitSet(new long[]{0x001C757B8007B870L});
+    public static final BitSet FOLLOW_ruleStatement_in_ruleSwitchDefault5502 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleSwitchDefault5514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReturnStatement_in_entryRuleReturnStatement5550 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleReturnStatement5560 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleReturnStatement5606 = new BitSet(new long[]{0x0000000000040800L});
+    public static final BitSet FOLLOW_18_in_ruleReturnStatement5619 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleReturnStatement5640 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleReturnStatement5652 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_ruleReturnStatement5666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContinueStatement_in_entryRuleContinueStatement5702 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContinueStatement5712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_ruleContinueStatement5758 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_ruleContinueStatement5770 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBreakStatement_in_entryRuleBreakStatement5806 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBreakStatement5816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_ruleBreakStatement5862 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_ruleBreakStatement5874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePostFixOp_in_entryRulePostFixOp5911 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePostFixOp5922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_rulePostFixOp5960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_rulePostFixOp5979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_entryRuleExpression6019 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExpression6029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVar_in_ruleExpression6086 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleExpression6098 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleExpression6119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleExpression_in_ruleExpression6148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExpression6184 = new BitSet(new long[]{0x0060000000000000L});
+    public static final BitSet FOLLOW_rulePostFixOp_in_ruleExpression6205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVar_in_entryRuleVar6242 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVar6252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleVar6296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleExpression_in_entryRuleSimpleExpression6331 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSimpleExpression6341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAndExpression_in_ruleSimpleExpression6388 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_55_in_ruleSimpleExpression6415 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleAndExpression_in_ruleSimpleExpression6449 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_ruleAndExpression_in_entryRuleAndExpression6487 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAndExpression6497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEqualsExpression_in_ruleAndExpression6544 = new BitSet(new long[]{0x0100000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleAndExpression6571 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleEqualsExpression_in_ruleAndExpression6605 = new BitSet(new long[]{0x0100000000000002L});
+    public static final BitSet FOLLOW_ruleEqualsExpression_in_entryRuleEqualsExpression6643 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEqualsExpression6653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComparisonExpression_in_ruleEqualsExpression6700 = new BitSet(new long[]{0x0600000000000002L});
+    public static final BitSet FOLLOW_ruleEqOp_in_ruleEqualsExpression6730 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleComparisonExpression_in_ruleEqualsExpression6751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEqOp_in_entryRuleEqOp6790 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEqOp6801 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_ruleEqOp6839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_ruleEqOp6858 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComparisonExpression_in_entryRuleComparisonExpression6898 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComparisonExpression6908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAdditiveExpression_in_ruleComparisonExpression6955 = new BitSet(new long[]{0x7800000000000002L});
+    public static final BitSet FOLLOW_ruleRelOp_in_ruleComparisonExpression6985 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleAdditiveExpression_in_ruleComparisonExpression7006 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelOp_in_entryRuleRelOp7045 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRelOp7056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_ruleRelOp7094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_ruleRelOp7113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_ruleRelOp7132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_ruleRelOp7151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAdditiveExpression_in_entryRuleAdditiveExpression7191 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAdditiveExpression7201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplicativeExpression_in_ruleAdditiveExpression7248 = new BitSet(new long[]{0x0000000000003002L});
+    public static final BitSet FOLLOW_ruleAddOp_in_ruleAdditiveExpression7278 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleMultiplicativeExpression_in_ruleAdditiveExpression7299 = new BitSet(new long[]{0x0000000000003002L});
+    public static final BitSet FOLLOW_ruleAddOp_in_entryRuleAddOp7338 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAddOp7349 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_ruleAddOp7387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleAddOp7406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplicativeExpression_in_entryRuleMultiplicativeExpression7446 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMultiplicativeExpression7456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtom_in_ruleMultiplicativeExpression7503 = new BitSet(new long[]{0x8000000000000002L,0x0000000000000003L});
+    public static final BitSet FOLLOW_ruleMulOp_in_ruleMultiplicativeExpression7533 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleAtom_in_ruleMultiplicativeExpression7554 = new BitSet(new long[]{0x8000000000000002L,0x0000000000000003L});
+    public static final BitSet FOLLOW_ruleMulOp_in_entryRuleMulOp7593 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMulOp7604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_ruleMulOp7642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_ruleMulOp7661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleMulOp7680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtom_in_entryRuleAtom7720 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAtom7730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleAtom7778 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleAtom7799 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleAtom7811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVar_in_ruleAtom7840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCall_in_ruleAtom7867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSignedInt_in_ruleAtom7904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSignedFloat_in_ruleAtom7942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBool_in_ruleAtom7980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVector_in_ruleAtom8018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleAtom8052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCall_in_entryRuleCall8094 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCall8104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCall8149 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleCall8161 = new BitSet(new long[]{0x000000000017B070L});
+    public static final BitSet FOLLOW_ruleArguments_in_ruleCall8182 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleCall8195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArguments_in_entryRuleArguments8231 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArguments8241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleArguments8287 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_ruleArguments8300 = new BitSet(new long[]{0x000000000007B070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleArguments8321 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_43_in_synpred1_InternalXS4634 = new BitSet(new long[]{0x0000000000000002L});
 
 }

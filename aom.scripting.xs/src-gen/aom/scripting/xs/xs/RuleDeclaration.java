@@ -11,7 +11,7 @@ package aom.scripting.xs.xs;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.RuleDeclaration#getStatus <em>Status</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.RuleDeclaration#isActive <em>Active</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.RuleDeclaration#isRunImmediately <em>Run Immediately</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.RuleDeclaration#isHighFrequency <em>High Frequency</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.RuleDeclaration#getGroup <em>Group</em>}</li>
@@ -28,30 +28,30 @@ package aom.scripting.xs.xs;
 public interface RuleDeclaration extends Declaration
 {
   /**
-   * Returns the value of the '<em><b>Status</b></em>' attribute.
+   * Returns the value of the '<em><b>Active</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Status</em>' attribute isn't clear,
+   * If the meaning of the '<em>Active</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Status</em>' attribute.
-   * @see #setStatus(String)
-   * @see aom.scripting.xs.xs.XsPackage#getRuleDeclaration_Status()
+   * @return the value of the '<em>Active</em>' attribute.
+   * @see #setActive(boolean)
+   * @see aom.scripting.xs.xs.XsPackage#getRuleDeclaration_Active()
    * @model
    * @generated
    */
-  String getStatus();
+  boolean isActive();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.RuleDeclaration#getStatus <em>Status</em>}' attribute.
+   * Sets the value of the '{@link aom.scripting.xs.xs.RuleDeclaration#isActive <em>Active</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Status</em>' attribute.
-   * @see #getStatus()
+   * @param value the new value of the '<em>Active</em>' attribute.
+   * @see #isActive()
    * @generated
    */
-  void setStatus(String value);
+  void setActive(boolean value);
 
   /**
    * Returns the value of the '<em><b>Run Immediately</b></em>' attribute.

@@ -488,10 +488,10 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cGroup.eContents().get(2);
-		private final Assignment cStatusAssignment_2_0 = (Assignment)cUnorderedGroup_2.eContents().get(0);
-		private final Alternatives cStatusAlternatives_2_0_0 = (Alternatives)cStatusAssignment_2_0.eContents().get(0);
-		private final Keyword cStatusActiveKeyword_2_0_0_0 = (Keyword)cStatusAlternatives_2_0_0.eContents().get(0);
-		private final Keyword cStatusInactiveKeyword_2_0_0_1 = (Keyword)cStatusAlternatives_2_0_0.eContents().get(1);
+		private final Alternatives cAlternatives_2_0 = (Alternatives)cUnorderedGroup_2.eContents().get(0);
+		private final Assignment cActiveAssignment_2_0_0 = (Assignment)cAlternatives_2_0.eContents().get(0);
+		private final Keyword cActiveActiveKeyword_2_0_0_0 = (Keyword)cActiveAssignment_2_0_0.eContents().get(0);
+		private final Keyword cInactiveKeyword_2_0_1 = (Keyword)cAlternatives_2_0.eContents().get(1);
 		private final Assignment cRunImmediatelyAssignment_2_1 = (Assignment)cUnorderedGroup_2.eContents().get(1);
 		private final Keyword cRunImmediatelyRunImmediatelyKeyword_2_1_0 = (Keyword)cRunImmediatelyAssignment_2_1.eContents().get(0);
 		private final Assignment cHighFrequencyAssignment_2_2 = (Assignment)cUnorderedGroup_2.eContents().get(2);
@@ -512,14 +512,16 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cStatementsCompoundStatementParserRuleCall_3_0 = (RuleCall)cStatementsAssignment_3.eContents().get(0);
 		
 		//RuleDeclaration:
-		//	"rule" name=ID (status=("active" | "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"?
-		//	& ("group" group=ID)? & ("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?)
-		//	statements=CompoundStatement;
+		//	"rule" name=ID ((active?="active" //status=('active' | 'inactive')
+		//	//TODO test
+		//	| "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? & ("group" group=ID)? &
+		//	("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?) statements=CompoundStatement;
 		public ParserRule getRule() { return rule; }
 
-		//"rule" name=ID (status=("active" | "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? &
-		//("group" group=ID)? & ("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?)
-		//statements=CompoundStatement
+		//"rule" name=ID ((active?="active" //status=('active' | 'inactive')
+		////TODO test
+		//| "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? & ("group" group=ID)? &
+		//("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?) statements=CompoundStatement
 		public Group getGroup() { return cGroup; }
 
 		//"rule"
@@ -531,21 +533,25 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//status=("active" | "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? & ("group"
-		//group=ID)? & ("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?
+		//(active?="active" //status=('active' | 'inactive')
+		////TODO test
+		//| "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? & ("group" group=ID)? &
+		//("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?
 		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
 
-		//status=("active" | "inactive")
-		public Assignment getStatusAssignment_2_0() { return cStatusAssignment_2_0; }
+		//active?="active" //status=('active' | 'inactive')
+		////TODO test
+		//| "inactive"
+		public Alternatives getAlternatives_2_0() { return cAlternatives_2_0; }
 
-		//"active" | "inactive"
-		public Alternatives getStatusAlternatives_2_0_0() { return cStatusAlternatives_2_0_0; }
+		//active?="active"
+		public Assignment getActiveAssignment_2_0_0() { return cActiveAssignment_2_0_0; }
 
 		//"active"
-		public Keyword getStatusActiveKeyword_2_0_0_0() { return cStatusActiveKeyword_2_0_0_0; }
+		public Keyword getActiveActiveKeyword_2_0_0_0() { return cActiveActiveKeyword_2_0_0_0; }
 
 		//"inactive"
-		public Keyword getStatusInactiveKeyword_2_0_0_1() { return cStatusInactiveKeyword_2_0_0_1; }
+		public Keyword getInactiveKeyword_2_0_1() { return cInactiveKeyword_2_0_1; }
 
 		//runImmediately?="runImmediately"?
 		public Assignment getRunImmediatelyAssignment_2_1() { return cRunImmediatelyAssignment_2_1; }
@@ -2239,9 +2245,10 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RuleDeclaration:
-	//	"rule" name=ID (status=("active" | "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"?
-	//	& ("group" group=ID)? & ("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?)
-	//	statements=CompoundStatement;
+	//	"rule" name=ID ((active?="active" //status=('active' | 'inactive')
+	//	//TODO test
+	//	| "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? & ("group" group=ID)? &
+	//	("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?) statements=CompoundStatement;
 	public RuleDeclarationElements getRuleDeclarationAccess() {
 		return (pRuleDeclaration != null) ? pRuleDeclaration : (pRuleDeclaration = new RuleDeclarationElements());
 	}
