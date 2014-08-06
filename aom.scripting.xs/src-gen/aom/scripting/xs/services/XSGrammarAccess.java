@@ -24,7 +24,7 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDeclarationsDeclarationParserRuleCall_0 = (RuleCall)cDeclarationsAssignment.eContents().get(0);
 		
 		/// *
-		//  * NOT supported
+		//  * NOT supported by XS
 		//  * - power a^n
 		//  * - ternary b ? x : y;
 		//  * - prefix: ++i
@@ -512,16 +512,14 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cStatementsCompoundStatementParserRuleCall_3_0 = (RuleCall)cStatementsAssignment_3.eContents().get(0);
 		
 		//RuleDeclaration:
-		//	"rule" name=ID ((active?="active" //status=('active' | 'inactive')
-		//	//TODO test
-		//	| "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? & ("group" group=ID)? &
-		//	("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?) statements=CompoundStatement;
+		//	"rule" name=ID ((active?="active" | "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"?
+		//	& ("group" group=ID)? & ("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?)
+		//	statements=CompoundStatement;
 		public ParserRule getRule() { return rule; }
 
-		//"rule" name=ID ((active?="active" //status=('active' | 'inactive')
-		////TODO test
-		//| "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? & ("group" group=ID)? &
-		//("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?) statements=CompoundStatement
+		//"rule" name=ID ((active?="active" | "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? &
+		//("group" group=ID)? & ("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?)
+		//statements=CompoundStatement
 		public Group getGroup() { return cGroup; }
 
 		//"rule"
@@ -533,15 +531,11 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//(active?="active" //status=('active' | 'inactive')
-		////TODO test
-		//| "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? & ("group" group=ID)? &
-		//("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?
+		//(active?="active" | "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? & ("group"
+		//group=ID)? & ("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?
 		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
 
-		//active?="active" //status=('active' | 'inactive')
-		////TODO test
-		//| "inactive"
+		//active?="active" | "inactive"
 		public Alternatives getAlternatives_2_0() { return cAlternatives_2_0; }
 
 		//active?="active"
@@ -2087,7 +2081,7 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	/// *
-	//  * NOT supported
+	//  * NOT supported by XS
 	//  * - power a^n
 	//  * - ternary b ? x : y;
 	//  * - prefix: ++i
@@ -2244,10 +2238,9 @@ public class XSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RuleDeclaration:
-	//	"rule" name=ID ((active?="active" //status=('active' | 'inactive')
-	//	//TODO test
-	//	| "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"? & ("group" group=ID)? &
-	//	("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?) statements=CompoundStatement;
+	//	"rule" name=ID ((active?="active" | "inactive") & runImmediately?="runImmediately"? & highFrequency?="highFrequency"?
+	//	& ("group" group=ID)? & ("minInterval" minInterval=INT)? & ("maxInterval" maxInterval=INT)?)
+	//	statements=CompoundStatement;
 	public RuleDeclarationElements getRuleDeclarationAccess() {
 		return (pRuleDeclaration != null) ? pRuleDeclaration : (pRuleDeclaration = new RuleDeclarationElements());
 	}
