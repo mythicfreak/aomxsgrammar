@@ -1,31 +1,34 @@
 package aom.scripting.xs.serializer;
 
 import aom.scripting.xs.services.XSGrammarAccess;
-import aom.scripting.xs.xs.AdditiveExpression;
-import aom.scripting.xs.xs.AndExpression;
+import aom.scripting.xs.xs.And;
 import aom.scripting.xs.xs.Arguments;
 import aom.scripting.xs.xs.AssignmentExpression;
+import aom.scripting.xs.xs.BoolType;
 import aom.scripting.xs.xs.BreakStatement;
 import aom.scripting.xs.xs.Call;
-import aom.scripting.xs.xs.ComparisonExpression;
+import aom.scripting.xs.xs.Comparison;
 import aom.scripting.xs.xs.CompoundStatement;
 import aom.scripting.xs.xs.ConstantNum;
 import aom.scripting.xs.xs.ContinueStatement;
 import aom.scripting.xs.xs.EmptyExpressionStatement;
-import aom.scripting.xs.xs.EqualsExpression;
+import aom.scripting.xs.xs.Equals;
 import aom.scripting.xs.xs.Expression;
 import aom.scripting.xs.xs.ExpressionStatement;
+import aom.scripting.xs.xs.Factor;
+import aom.scripting.xs.xs.FloatType;
 import aom.scripting.xs.xs.ForStatement;
 import aom.scripting.xs.xs.FunDeclaration;
 import aom.scripting.xs.xs.FunModifier;
 import aom.scripting.xs.xs.IfElseStatement;
 import aom.scripting.xs.xs.IncludeStatement;
+import aom.scripting.xs.xs.IntType;
 import aom.scripting.xs.xs.LiteralBool;
 import aom.scripting.xs.xs.LiteralFloat;
 import aom.scripting.xs.xs.LiteralInt;
 import aom.scripting.xs.xs.LiteralString;
 import aom.scripting.xs.xs.LiteralVector;
-import aom.scripting.xs.xs.MultiplicativeExpression;
+import aom.scripting.xs.xs.Or;
 import aom.scripting.xs.xs.Params;
 import aom.scripting.xs.xs.PostfixExpression;
 import aom.scripting.xs.xs.PrimaryExpression;
@@ -33,14 +36,17 @@ import aom.scripting.xs.xs.Program;
 import aom.scripting.xs.xs.ReturnStatement;
 import aom.scripting.xs.xs.RuleDeclaration;
 import aom.scripting.xs.xs.SignedNum;
-import aom.scripting.xs.xs.SimpleExpression;
+import aom.scripting.xs.xs.StringType;
 import aom.scripting.xs.xs.SwitchCase;
 import aom.scripting.xs.xs.SwitchDefault;
 import aom.scripting.xs.xs.SwitchStatement;
+import aom.scripting.xs.xs.Term;
 import aom.scripting.xs.xs.Var;
 import aom.scripting.xs.xs.VarDeclaration;
 import aom.scripting.xs.xs.VarModifier;
 import aom.scripting.xs.xs.Vector;
+import aom.scripting.xs.xs.VectorType;
+import aom.scripting.xs.xs.VoidType;
 import aom.scripting.xs.xs.WhileStatement;
 import aom.scripting.xs.xs.XsPackage;
 import com.google.inject.Inject;
@@ -65,27 +71,12 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == XsPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case XsPackage.ADDITIVE_EXPRESSION:
-				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getAdditiveExpressionLeftAction_1_0() ||
-				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
-				   context == grammarAccess.getComparisonExpressionRule() ||
-				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0() ||
-				   context == grammarAccess.getEqualsExpressionRule() ||
-				   context == grammarAccess.getEqualsExpressionAccess().getEqualsExpressionLeftAction_1_0() ||
-				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
-					sequence_AdditiveExpression(context, (AdditiveExpression) semanticObject); 
-					return; 
-				}
-				else break;
-			case XsPackage.AND_EXPRESSION:
+			case XsPackage.AND:
 				if(context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
 				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
-					sequence_AndExpression(context, (AndExpression) semanticObject); 
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
+					sequence_AndExpression(context, (And) semanticObject); 
 					return; 
 				}
 				else break;
@@ -98,6 +89,14 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case XsPackage.ASSIGNMENT_EXPRESSION:
 				if(context == grammarAccess.getExpressionRule()) {
 					sequence_Expression(context, (AssignmentExpression) semanticObject); 
+					return; 
+				}
+				else break;
+			case XsPackage.BOOL_TYPE:
+				if(context == grammarAccess.getBoolTypeRule() ||
+				   context == grammarAccess.getFunTypeSpecifierRule() ||
+				   context == grammarAccess.getVarTypeSpecifierRule()) {
+					sequence_BoolType(context, (BoolType) semanticObject); 
 					return; 
 				}
 				else break;
@@ -115,15 +114,15 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case XsPackage.COMPARISON_EXPRESSION:
+			case XsPackage.COMPARISON:
 				if(context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
 				   context == grammarAccess.getComparisonExpressionRule() ||
 				   context == grammarAccess.getEqualsExpressionRule() ||
-				   context == grammarAccess.getEqualsExpressionAccess().getEqualsExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getEqualsExpressionAccess().getEqualsLeftAction_1_0() ||
 				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
-					sequence_ComparisonExpression(context, (ComparisonExpression) semanticObject); 
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
+					sequence_ComparisonExpression(context, (Comparison) semanticObject); 
 					return; 
 				}
 				else break;
@@ -158,30 +157,30 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case XsPackage.EQUALS_EXPRESSION:
+			case XsPackage.EQUALS:
 				if(context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
 				   context == grammarAccess.getEqualsExpressionRule() ||
 				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
-					sequence_EqualsExpression(context, (EqualsExpression) semanticObject); 
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
+					sequence_EqualsExpression(context, (Equals) semanticObject); 
 					return; 
 				}
 				else break;
 			case XsPackage.EXPRESSION:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getAdditiveExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getTermLeftAction_1_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
 				   context == grammarAccess.getAtomRule() ||
 				   context == grammarAccess.getComparisonExpressionRule() ||
-				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonLeftAction_1_0() ||
 				   context == grammarAccess.getEqualsExpressionRule() ||
-				   context == grammarAccess.getEqualsExpressionAccess().getEqualsExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getEqualsExpressionAccess().getEqualsLeftAction_1_0() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getMultiplicativeExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getFactorLeftAction_1_0() ||
 				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
 					sequence_Atom(context, (Expression) semanticObject); 
 					return; 
 				}
@@ -195,6 +194,31 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getStatementRule() ||
 				   context == grammarAccess.getVarDeclarationOrStatementRule()) {
 					sequence_ExpressionStatement(context, (ExpressionStatement) semanticObject); 
+					return; 
+				}
+				else break;
+			case XsPackage.FACTOR:
+				if(context == grammarAccess.getAdditiveExpressionRule() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getTermLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionRule() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionRule() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonLeftAction_1_0() ||
+				   context == grammarAccess.getEqualsExpressionRule() ||
+				   context == grammarAccess.getEqualsExpressionAccess().getEqualsLeftAction_1_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionRule() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getFactorLeftAction_1_0() ||
+				   context == grammarAccess.getSimpleExpressionRule() ||
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
+					sequence_MultiplicativeExpression(context, (Factor) semanticObject); 
+					return; 
+				}
+				else break;
+			case XsPackage.FLOAT_TYPE:
+				if(context == grammarAccess.getFloatTypeRule() ||
+				   context == grammarAccess.getFunTypeSpecifierRule() ||
+				   context == grammarAccess.getVarTypeSpecifierRule()) {
+					sequence_FloatType(context, (FloatType) semanticObject); 
 					return; 
 				}
 				else break;
@@ -234,110 +258,108 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case XsPackage.INT_TYPE:
+				if(context == grammarAccess.getFunTypeSpecifierRule() ||
+				   context == grammarAccess.getIntTypeRule() ||
+				   context == grammarAccess.getVarTypeSpecifierRule()) {
+					sequence_IntType(context, (IntType) semanticObject); 
+					return; 
+				}
+				else break;
 			case XsPackage.LITERAL_BOOL:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getAdditiveExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getTermLeftAction_1_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
 				   context == grammarAccess.getAtomRule() ||
 				   context == grammarAccess.getComparisonExpressionRule() ||
-				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonLeftAction_1_0() ||
 				   context == grammarAccess.getEqualsExpressionRule() ||
-				   context == grammarAccess.getEqualsExpressionAccess().getEqualsExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getEqualsExpressionAccess().getEqualsLeftAction_1_0() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getMultiplicativeExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getFactorLeftAction_1_0() ||
 				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
 					sequence_Atom(context, (LiteralBool) semanticObject); 
 					return; 
 				}
 				else break;
 			case XsPackage.LITERAL_FLOAT:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getAdditiveExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getTermLeftAction_1_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
 				   context == grammarAccess.getAtomRule() ||
 				   context == grammarAccess.getComparisonExpressionRule() ||
-				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonLeftAction_1_0() ||
 				   context == grammarAccess.getEqualsExpressionRule() ||
-				   context == grammarAccess.getEqualsExpressionAccess().getEqualsExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getEqualsExpressionAccess().getEqualsLeftAction_1_0() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getMultiplicativeExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getFactorLeftAction_1_0() ||
 				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
 					sequence_Atom(context, (LiteralFloat) semanticObject); 
 					return; 
 				}
 				else break;
 			case XsPackage.LITERAL_INT:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getAdditiveExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getTermLeftAction_1_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
 				   context == grammarAccess.getAtomRule() ||
 				   context == grammarAccess.getComparisonExpressionRule() ||
-				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonLeftAction_1_0() ||
 				   context == grammarAccess.getEqualsExpressionRule() ||
-				   context == grammarAccess.getEqualsExpressionAccess().getEqualsExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getEqualsExpressionAccess().getEqualsLeftAction_1_0() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getMultiplicativeExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getFactorLeftAction_1_0() ||
 				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
 					sequence_Atom(context, (LiteralInt) semanticObject); 
 					return; 
 				}
 				else break;
 			case XsPackage.LITERAL_STRING:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getAdditiveExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getTermLeftAction_1_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
 				   context == grammarAccess.getAtomRule() ||
 				   context == grammarAccess.getComparisonExpressionRule() ||
-				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonLeftAction_1_0() ||
 				   context == grammarAccess.getEqualsExpressionRule() ||
-				   context == grammarAccess.getEqualsExpressionAccess().getEqualsExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getEqualsExpressionAccess().getEqualsLeftAction_1_0() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getMultiplicativeExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getFactorLeftAction_1_0() ||
 				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
 					sequence_Atom(context, (LiteralString) semanticObject); 
 					return; 
 				}
 				else break;
 			case XsPackage.LITERAL_VECTOR:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getAdditiveExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getTermLeftAction_1_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
 				   context == grammarAccess.getAtomRule() ||
 				   context == grammarAccess.getComparisonExpressionRule() ||
-				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonLeftAction_1_0() ||
 				   context == grammarAccess.getEqualsExpressionRule() ||
-				   context == grammarAccess.getEqualsExpressionAccess().getEqualsExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getEqualsExpressionAccess().getEqualsLeftAction_1_0() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getMultiplicativeExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getFactorLeftAction_1_0() ||
 				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
 					sequence_Atom(context, (LiteralVector) semanticObject); 
 					return; 
 				}
 				else break;
-			case XsPackage.MULTIPLICATIVE_EXPRESSION:
-				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getAdditiveExpressionLeftAction_1_0() ||
-				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
-				   context == grammarAccess.getComparisonExpressionRule() ||
-				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0() ||
-				   context == grammarAccess.getEqualsExpressionRule() ||
-				   context == grammarAccess.getEqualsExpressionAccess().getEqualsExpressionLeftAction_1_0() ||
-				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getMultiplicativeExpressionLeftAction_1_0() ||
-				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
-					sequence_MultiplicativeExpression(context, (MultiplicativeExpression) semanticObject); 
+			case XsPackage.OR:
+				if(context == grammarAccess.getSimpleExpressionRule() ||
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
+					sequence_SimpleExpression(context, (Or) semanticObject); 
 					return; 
 				}
 				else break;
@@ -355,18 +377,18 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case XsPackage.PRIMARY_EXPRESSION:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getAdditiveExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getTermLeftAction_1_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
 				   context == grammarAccess.getAtomRule() ||
 				   context == grammarAccess.getComparisonExpressionRule() ||
-				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonLeftAction_1_0() ||
 				   context == grammarAccess.getEqualsExpressionRule() ||
-				   context == grammarAccess.getEqualsExpressionAccess().getEqualsExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getEqualsExpressionAccess().getEqualsLeftAction_1_0() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getMultiplicativeExpressionLeftAction_1_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getFactorLeftAction_1_0() ||
 				   context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
 					sequence_Atom(context, (PrimaryExpression) semanticObject); 
 					return; 
 				}
@@ -398,10 +420,11 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case XsPackage.SIMPLE_EXPRESSION:
-				if(context == grammarAccess.getSimpleExpressionRule() ||
-				   context == grammarAccess.getSimpleExpressionAccess().getSimpleExpressionLeftAction_1_0()) {
-					sequence_SimpleExpression(context, (SimpleExpression) semanticObject); 
+			case XsPackage.STRING_TYPE:
+				if(context == grammarAccess.getFunTypeSpecifierRule() ||
+				   context == grammarAccess.getStringTypeRule() ||
+				   context == grammarAccess.getVarTypeSpecifierRule()) {
+					sequence_StringType(context, (StringType) semanticObject); 
 					return; 
 				}
 				else break;
@@ -422,6 +445,21 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getSwitchStatementRule() ||
 				   context == grammarAccess.getVarDeclarationOrStatementRule()) {
 					sequence_SwitchStatement(context, (SwitchStatement) semanticObject); 
+					return; 
+				}
+				else break;
+			case XsPackage.TERM:
+				if(context == grammarAccess.getAdditiveExpressionRule() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getTermLeftAction_1_0() ||
+				   context == grammarAccess.getAndExpressionRule() ||
+				   context == grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionRule() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonLeftAction_1_0() ||
+				   context == grammarAccess.getEqualsExpressionRule() ||
+				   context == grammarAccess.getEqualsExpressionAccess().getEqualsLeftAction_1_0() ||
+				   context == grammarAccess.getSimpleExpressionRule() ||
+				   context == grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0()) {
+					sequence_AdditiveExpression(context, (Term) semanticObject); 
 					return; 
 				}
 				else break;
@@ -455,6 +493,21 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case XsPackage.VECTOR_TYPE:
+				if(context == grammarAccess.getFunTypeSpecifierRule() ||
+				   context == grammarAccess.getVarTypeSpecifierRule() ||
+				   context == grammarAccess.getVectorTypeRule()) {
+					sequence_VectorType(context, (VectorType) semanticObject); 
+					return; 
+				}
+				else break;
+			case XsPackage.VOID_TYPE:
+				if(context == grammarAccess.getFunTypeSpecifierRule() ||
+				   context == grammarAccess.getVoidTypeRule()) {
+					sequence_VoidType(context, (VoidType) semanticObject); 
+					return; 
+				}
+				else break;
 			case XsPackage.WHILE_STATEMENT:
 				if(context == grammarAccess.getStatementRule() ||
 				   context == grammarAccess.getVarDeclarationOrStatementRule() ||
@@ -469,18 +522,18 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (left=AdditiveExpression_AdditiveExpression_1_0 op=AddOp right=MultiplicativeExpression)
+	 *     (left=AdditiveExpression_Term_1_0 op=AddOp right=MultiplicativeExpression)
 	 */
-	protected void sequence_AdditiveExpression(EObject context, AdditiveExpression semanticObject) {
+	protected void sequence_AdditiveExpression(EObject context, Term semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (left=AndExpression_AndExpression_1_0 op='&&' right=EqualsExpression)
+	 *     (left=AndExpression_And_1_0 op='&&' right=EqualsExpression)
 	 */
-	protected void sequence_AndExpression(EObject context, AndExpression semanticObject) {
+	protected void sequence_AndExpression(EObject context, And semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -566,6 +619,15 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     {BoolType}
+	 */
+	protected void sequence_BoolType(EObject context, BoolType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     {BreakStatement}
 	 */
 	protected void sequence_BreakStatement(EObject context, BreakStatement semanticObject) {
@@ -584,9 +646,9 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (left=ComparisonExpression_ComparisonExpression_1_0 op=RelOp right=AdditiveExpression)
+	 *     (left=ComparisonExpression_Comparison_1_0 op=RelOp right=AdditiveExpression)
 	 */
-	protected void sequence_ComparisonExpression(EObject context, ComparisonExpression semanticObject) {
+	protected void sequence_ComparisonExpression(EObject context, Comparison semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -627,9 +689,9 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (left=EqualsExpression_EqualsExpression_1_0 op=EqOp right=ComparisonExpression)
+	 *     (left=EqualsExpression_Equals_1_0 op=EqOp right=ComparisonExpression)
 	 */
-	protected void sequence_EqualsExpression(EObject context, EqualsExpression semanticObject) {
+	protected void sequence_EqualsExpression(EObject context, Equals semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -699,6 +761,15 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (postfixVar=[VarDeclaration|ID] op=PostFixOp)
 	 */
 	protected void sequence_Expression(EObject context, PostfixExpression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     {FloatType}
+	 */
+	protected void sequence_FloatType(EObject context, FloatType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -782,6 +853,15 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     {IntType}
+	 */
+	protected void sequence_IntType(EObject context, IntType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     {SignedNum}
 	 */
 	protected void sequence_LiteralOrConstantNum(EObject context, SignedNum semanticObject) {
@@ -791,9 +871,9 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (left=MultiplicativeExpression_MultiplicativeExpression_1_0 op=MulOp right=Atom)
+	 *     (left=MultiplicativeExpression_Factor_1_0 op=MulOp right=Atom)
 	 */
-	protected void sequence_MultiplicativeExpression(EObject context, MultiplicativeExpression semanticObject) {
+	protected void sequence_MultiplicativeExpression(EObject context, Factor semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -845,9 +925,18 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (left=SimpleExpression_SimpleExpression_1_0 op='||' right=AndExpression)
+	 *     (left=SimpleExpression_Or_1_0 op='||' right=AndExpression)
 	 */
-	protected void sequence_SimpleExpression(EObject context, SimpleExpression semanticObject) {
+	protected void sequence_SimpleExpression(EObject context, Or semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     {StringType}
+	 */
+	protected void sequence_StringType(EObject context, StringType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -948,6 +1037,15 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     {VectorType}
+	 */
+	protected void sequence_VectorType(EObject context, VectorType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (x=LiteralOrConstantNum y=LiteralOrConstantNum z=LiteralOrConstantNum)
 	 */
 	protected void sequence_Vector(EObject context, Vector semanticObject) {
@@ -965,6 +1063,15 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getVectorAccess().getYLiteralOrConstantNumParserRuleCall_4_0(), semanticObject.getY());
 		feeder.accept(grammarAccess.getVectorAccess().getZLiteralOrConstantNumParserRuleCall_6_0(), semanticObject.getZ());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     {VoidType}
+	 */
+	protected void sequence_VoidType(EObject context, VoidType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

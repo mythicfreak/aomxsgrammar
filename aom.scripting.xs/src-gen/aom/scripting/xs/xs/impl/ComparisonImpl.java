@@ -2,8 +2,8 @@
  */
 package aom.scripting.xs.xs.impl;
 
+import aom.scripting.xs.xs.Comparison;
 import aom.scripting.xs.xs.Expression;
-import aom.scripting.xs.xs.MultiplicativeExpression;
 import aom.scripting.xs.xs.XsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -16,20 +16,20 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Multiplicative Expression</b></em>'.
+ * An implementation of the model object '<em><b>Comparison</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.MultiplicativeExpressionImpl#getLeft <em>Left</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.impl.MultiplicativeExpressionImpl#getOp <em>Op</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.impl.MultiplicativeExpressionImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.ComparisonImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.ComparisonImpl#getOp <em>Op</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.ComparisonImpl#getRight <em>Right</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class MultiplicativeExpressionImpl extends ExpressionImpl implements MultiplicativeExpression
+public class ComparisonImpl extends ExpressionImpl implements Comparison
 {
   /**
    * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
@@ -76,7 +76,7 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
    * <!-- end-user-doc -->
    * @generated
    */
-  protected MultiplicativeExpressionImpl()
+  protected ComparisonImpl()
   {
     super();
   }
@@ -89,7 +89,7 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
   @Override
   protected EClass eStaticClass()
   {
-    return XsPackage.Literals.MULTIPLICATIVE_EXPRESSION;
+    return XsPackage.Literals.COMPARISON;
   }
 
   /**
@@ -113,7 +113,7 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
     left = newLeft;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.MULTIPLICATIVE_EXPRESSION__LEFT, oldLeft, newLeft);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.COMPARISON__LEFT, oldLeft, newLeft);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -130,14 +130,14 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
     {
       NotificationChain msgs = null;
       if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.MULTIPLICATIVE_EXPRESSION__LEFT, null, msgs);
+        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.COMPARISON__LEFT, null, msgs);
       if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.MULTIPLICATIVE_EXPRESSION__LEFT, null, msgs);
+        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.COMPARISON__LEFT, null, msgs);
       msgs = basicSetLeft(newLeft, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.MULTIPLICATIVE_EXPRESSION__LEFT, newLeft, newLeft));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.COMPARISON__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -160,7 +160,7 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
     String oldOp = op;
     op = newOp;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.MULTIPLICATIVE_EXPRESSION__OP, oldOp, op));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.COMPARISON__OP, oldOp, op));
   }
 
   /**
@@ -184,7 +184,7 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
     right = newRight;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.MULTIPLICATIVE_EXPRESSION__RIGHT, oldRight, newRight);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.COMPARISON__RIGHT, oldRight, newRight);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -201,14 +201,14 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
     {
       NotificationChain msgs = null;
       if (right != null)
-        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.MULTIPLICATIVE_EXPRESSION__RIGHT, null, msgs);
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.COMPARISON__RIGHT, null, msgs);
       if (newRight != null)
-        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.MULTIPLICATIVE_EXPRESSION__RIGHT, null, msgs);
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.COMPARISON__RIGHT, null, msgs);
       msgs = basicSetRight(newRight, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.MULTIPLICATIVE_EXPRESSION__RIGHT, newRight, newRight));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.COMPARISON__RIGHT, newRight, newRight));
   }
 
   /**
@@ -221,9 +221,9 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
   {
     switch (featureID)
     {
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__LEFT:
+      case XsPackage.COMPARISON__LEFT:
         return basicSetLeft(null, msgs);
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__RIGHT:
+      case XsPackage.COMPARISON__RIGHT:
         return basicSetRight(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -239,11 +239,11 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
   {
     switch (featureID)
     {
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__LEFT:
+      case XsPackage.COMPARISON__LEFT:
         return getLeft();
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__OP:
+      case XsPackage.COMPARISON__OP:
         return getOp();
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__RIGHT:
+      case XsPackage.COMPARISON__RIGHT:
         return getRight();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -259,13 +259,13 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
   {
     switch (featureID)
     {
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__LEFT:
+      case XsPackage.COMPARISON__LEFT:
         setLeft((Expression)newValue);
         return;
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__OP:
+      case XsPackage.COMPARISON__OP:
         setOp((String)newValue);
         return;
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__RIGHT:
+      case XsPackage.COMPARISON__RIGHT:
         setRight((Expression)newValue);
         return;
     }
@@ -282,13 +282,13 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
   {
     switch (featureID)
     {
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__LEFT:
+      case XsPackage.COMPARISON__LEFT:
         setLeft((Expression)null);
         return;
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__OP:
+      case XsPackage.COMPARISON__OP:
         setOp(OP_EDEFAULT);
         return;
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__RIGHT:
+      case XsPackage.COMPARISON__RIGHT:
         setRight((Expression)null);
         return;
     }
@@ -305,11 +305,11 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
   {
     switch (featureID)
     {
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__LEFT:
+      case XsPackage.COMPARISON__LEFT:
         return left != null;
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__OP:
+      case XsPackage.COMPARISON__OP:
         return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
-      case XsPackage.MULTIPLICATIVE_EXPRESSION__RIGHT:
+      case XsPackage.COMPARISON__RIGHT:
         return right != null;
     }
     return super.eIsSet(featureID);
@@ -332,4 +332,4 @@ public class MultiplicativeExpressionImpl extends ExpressionImpl implements Mult
     return result.toString();
   }
 
-} //MultiplicativeExpressionImpl
+} //ComparisonImpl

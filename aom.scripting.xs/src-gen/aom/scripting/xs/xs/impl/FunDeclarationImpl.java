@@ -5,6 +5,7 @@ package aom.scripting.xs.xs.impl;
 import aom.scripting.xs.xs.CompoundStatement;
 import aom.scripting.xs.xs.FunDeclaration;
 import aom.scripting.xs.xs.FunModifier;
+import aom.scripting.xs.xs.FunTypeSpecifier;
 import aom.scripting.xs.xs.Params;
 import aom.scripting.xs.xs.XsPackage;
 
@@ -45,24 +46,14 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
   protected FunModifier modifier;
 
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getType()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected String type = TYPE_EDEFAULT;
+  protected FunTypeSpecifier type;
 
   /**
    * The cached value of the '{@link #getParamlist() <em>Paramlist</em>}' containment reference.
@@ -158,7 +149,7 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType()
+  public FunTypeSpecifier getType()
   {
     return type;
   }
@@ -168,12 +159,37 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(String newType)
+  public NotificationChain basicSetType(FunTypeSpecifier newType, NotificationChain msgs)
   {
-    String oldType = type;
+    FunTypeSpecifier oldType = type;
     type = newType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.FUN_DECLARATION__TYPE, oldType, type));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.FUN_DECLARATION__TYPE, oldType, newType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(FunTypeSpecifier newType)
+  {
+    if (newType != type)
+    {
+      NotificationChain msgs = null;
+      if (type != null)
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.FUN_DECLARATION__TYPE, null, msgs);
+      if (newType != null)
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.FUN_DECLARATION__TYPE, null, msgs);
+      msgs = basicSetType(newType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.FUN_DECLARATION__TYPE, newType, newType));
   }
 
   /**
@@ -284,6 +300,8 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
     {
       case XsPackage.FUN_DECLARATION__MODIFIER:
         return basicSetModifier(null, msgs);
+      case XsPackage.FUN_DECLARATION__TYPE:
+        return basicSetType(null, msgs);
       case XsPackage.FUN_DECLARATION__PARAMLIST:
         return basicSetParamlist(null, msgs);
       case XsPackage.FUN_DECLARATION__STATEMENTS:
@@ -328,7 +346,7 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
         setModifier((FunModifier)newValue);
         return;
       case XsPackage.FUN_DECLARATION__TYPE:
-        setType((String)newValue);
+        setType((FunTypeSpecifier)newValue);
         return;
       case XsPackage.FUN_DECLARATION__PARAMLIST:
         setParamlist((Params)newValue);
@@ -354,7 +372,7 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
         setModifier((FunModifier)null);
         return;
       case XsPackage.FUN_DECLARATION__TYPE:
-        setType(TYPE_EDEFAULT);
+        setType((FunTypeSpecifier)null);
         return;
       case XsPackage.FUN_DECLARATION__PARAMLIST:
         setParamlist((Params)null);
@@ -379,30 +397,13 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
       case XsPackage.FUN_DECLARATION__MODIFIER:
         return modifier != null;
       case XsPackage.FUN_DECLARATION__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+        return type != null;
       case XsPackage.FUN_DECLARATION__PARAMLIST:
         return paramlist != null;
       case XsPackage.FUN_DECLARATION__STATEMENTS:
         return statements != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
-    result.append(')');
-    return result.toString();
   }
 
 } //FunDeclarationImpl

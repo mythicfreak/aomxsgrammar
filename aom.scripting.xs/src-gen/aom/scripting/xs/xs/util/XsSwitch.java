@@ -155,6 +155,74 @@ public class XsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case XsPackage.INT_TYPE:
+      {
+        IntType intType = (IntType)theEObject;
+        T result = caseIntType(intType);
+        if (result == null) result = caseVarTypeSpecifier(intType);
+        if (result == null) result = caseFunTypeSpecifier(intType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XsPackage.FLOAT_TYPE:
+      {
+        FloatType floatType = (FloatType)theEObject;
+        T result = caseFloatType(floatType);
+        if (result == null) result = caseVarTypeSpecifier(floatType);
+        if (result == null) result = caseFunTypeSpecifier(floatType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XsPackage.BOOL_TYPE:
+      {
+        BoolType boolType = (BoolType)theEObject;
+        T result = caseBoolType(boolType);
+        if (result == null) result = caseVarTypeSpecifier(boolType);
+        if (result == null) result = caseFunTypeSpecifier(boolType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XsPackage.VECTOR_TYPE:
+      {
+        VectorType vectorType = (VectorType)theEObject;
+        T result = caseVectorType(vectorType);
+        if (result == null) result = caseVarTypeSpecifier(vectorType);
+        if (result == null) result = caseFunTypeSpecifier(vectorType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XsPackage.STRING_TYPE:
+      {
+        StringType stringType = (StringType)theEObject;
+        T result = caseStringType(stringType);
+        if (result == null) result = caseVarTypeSpecifier(stringType);
+        if (result == null) result = caseFunTypeSpecifier(stringType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XsPackage.VOID_TYPE:
+      {
+        VoidType voidType = (VoidType)theEObject;
+        T result = caseVoidType(voidType);
+        if (result == null) result = caseFunTypeSpecifier(voidType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XsPackage.VAR_TYPE_SPECIFIER:
+      {
+        VarTypeSpecifier varTypeSpecifier = (VarTypeSpecifier)theEObject;
+        T result = caseVarTypeSpecifier(varTypeSpecifier);
+        if (result == null) result = caseFunTypeSpecifier(varTypeSpecifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XsPackage.FUN_TYPE_SPECIFIER:
+      {
+        FunTypeSpecifier funTypeSpecifier = (FunTypeSpecifier)theEObject;
+        T result = caseFunTypeSpecifier(funTypeSpecifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case XsPackage.PARAMS:
       {
         Params params = (Params)theEObject;
@@ -334,51 +402,51 @@ public class XsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XsPackage.SIMPLE_EXPRESSION:
+      case XsPackage.OR:
       {
-        SimpleExpression simpleExpression = (SimpleExpression)theEObject;
-        T result = caseSimpleExpression(simpleExpression);
-        if (result == null) result = caseExpression(simpleExpression);
+        Or or = (Or)theEObject;
+        T result = caseOr(or);
+        if (result == null) result = caseExpression(or);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XsPackage.AND_EXPRESSION:
+      case XsPackage.AND:
       {
-        AndExpression andExpression = (AndExpression)theEObject;
-        T result = caseAndExpression(andExpression);
-        if (result == null) result = caseExpression(andExpression);
+        And and = (And)theEObject;
+        T result = caseAnd(and);
+        if (result == null) result = caseExpression(and);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XsPackage.EQUALS_EXPRESSION:
+      case XsPackage.EQUALS:
       {
-        EqualsExpression equalsExpression = (EqualsExpression)theEObject;
-        T result = caseEqualsExpression(equalsExpression);
-        if (result == null) result = caseExpression(equalsExpression);
+        Equals equals = (Equals)theEObject;
+        T result = caseEquals(equals);
+        if (result == null) result = caseExpression(equals);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XsPackage.COMPARISON_EXPRESSION:
+      case XsPackage.COMPARISON:
       {
-        ComparisonExpression comparisonExpression = (ComparisonExpression)theEObject;
-        T result = caseComparisonExpression(comparisonExpression);
-        if (result == null) result = caseExpression(comparisonExpression);
+        Comparison comparison = (Comparison)theEObject;
+        T result = caseComparison(comparison);
+        if (result == null) result = caseExpression(comparison);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XsPackage.ADDITIVE_EXPRESSION:
+      case XsPackage.TERM:
       {
-        AdditiveExpression additiveExpression = (AdditiveExpression)theEObject;
-        T result = caseAdditiveExpression(additiveExpression);
-        if (result == null) result = caseExpression(additiveExpression);
+        Term term = (Term)theEObject;
+        T result = caseTerm(term);
+        if (result == null) result = caseExpression(term);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XsPackage.MULTIPLICATIVE_EXPRESSION:
+      case XsPackage.FACTOR:
       {
-        MultiplicativeExpression multiplicativeExpression = (MultiplicativeExpression)theEObject;
-        T result = caseMultiplicativeExpression(multiplicativeExpression);
-        if (result == null) result = caseExpression(multiplicativeExpression);
+        Factor factor = (Factor)theEObject;
+        T result = caseFactor(factor);
+        if (result == null) result = caseExpression(factor);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -606,6 +674,134 @@ public class XsSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFunModifier(FunModifier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Int Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Int Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntType(IntType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Float Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Float Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFloatType(FloatType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bool Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bool Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBoolType(BoolType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Vector Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Vector Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVectorType(VectorType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>String Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>String Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStringType(StringType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Void Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Void Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVoidType(VoidType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Var Type Specifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Var Type Specifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVarTypeSpecifier(VarTypeSpecifier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Fun Type Specifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fun Type Specifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFunTypeSpecifier(FunTypeSpecifier object)
   {
     return null;
   }
@@ -963,97 +1159,97 @@ public class XsSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Simple Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Or</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Simple Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Or</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSimpleExpression(SimpleExpression object)
+  public T caseOr(Or object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>And Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>And</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>And Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>And</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAndExpression(AndExpression object)
+  public T caseAnd(And object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Equals Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Equals</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Equals Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Equals</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseEqualsExpression(EqualsExpression object)
+  public T caseEquals(Equals object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Comparison Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Comparison</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Comparison Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Comparison</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseComparisonExpression(ComparisonExpression object)
+  public T caseComparison(Comparison object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Additive Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Term</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Additive Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Term</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAdditiveExpression(AdditiveExpression object)
+  public T caseTerm(Term object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Multiplicative Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Factor</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Multiplicative Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Factor</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseMultiplicativeExpression(MultiplicativeExpression object)
+  public T caseFactor(Factor object)
   {
     return null;
   }

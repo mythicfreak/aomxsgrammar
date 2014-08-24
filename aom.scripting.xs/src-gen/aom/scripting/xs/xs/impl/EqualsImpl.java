@@ -2,7 +2,7 @@
  */
 package aom.scripting.xs.xs.impl;
 
-import aom.scripting.xs.xs.EqualsExpression;
+import aom.scripting.xs.xs.Equals;
 import aom.scripting.xs.xs.Expression;
 import aom.scripting.xs.xs.XsPackage;
 
@@ -16,20 +16,20 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Equals Expression</b></em>'.
+ * An implementation of the model object '<em><b>Equals</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.EqualsExpressionImpl#getLeft <em>Left</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.impl.EqualsExpressionImpl#getOp <em>Op</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.impl.EqualsExpressionImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.EqualsImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.EqualsImpl#getOp <em>Op</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.EqualsImpl#getRight <em>Right</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpression
+public class EqualsImpl extends ExpressionImpl implements Equals
 {
   /**
    * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
@@ -76,7 +76,7 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
    * <!-- end-user-doc -->
    * @generated
    */
-  protected EqualsExpressionImpl()
+  protected EqualsImpl()
   {
     super();
   }
@@ -89,7 +89,7 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
   @Override
   protected EClass eStaticClass()
   {
-    return XsPackage.Literals.EQUALS_EXPRESSION;
+    return XsPackage.Literals.EQUALS;
   }
 
   /**
@@ -113,7 +113,7 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
     left = newLeft;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.EQUALS_EXPRESSION__LEFT, oldLeft, newLeft);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.EQUALS__LEFT, oldLeft, newLeft);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -130,14 +130,14 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
     {
       NotificationChain msgs = null;
       if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.EQUALS_EXPRESSION__LEFT, null, msgs);
+        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.EQUALS__LEFT, null, msgs);
       if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.EQUALS_EXPRESSION__LEFT, null, msgs);
+        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.EQUALS__LEFT, null, msgs);
       msgs = basicSetLeft(newLeft, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.EQUALS_EXPRESSION__LEFT, newLeft, newLeft));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.EQUALS__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -160,7 +160,7 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
     String oldOp = op;
     op = newOp;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.EQUALS_EXPRESSION__OP, oldOp, op));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.EQUALS__OP, oldOp, op));
   }
 
   /**
@@ -184,7 +184,7 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
     right = newRight;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.EQUALS_EXPRESSION__RIGHT, oldRight, newRight);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.EQUALS__RIGHT, oldRight, newRight);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -201,14 +201,14 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
     {
       NotificationChain msgs = null;
       if (right != null)
-        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.EQUALS_EXPRESSION__RIGHT, null, msgs);
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.EQUALS__RIGHT, null, msgs);
       if (newRight != null)
-        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.EQUALS_EXPRESSION__RIGHT, null, msgs);
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.EQUALS__RIGHT, null, msgs);
       msgs = basicSetRight(newRight, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.EQUALS_EXPRESSION__RIGHT, newRight, newRight));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.EQUALS__RIGHT, newRight, newRight));
   }
 
   /**
@@ -221,9 +221,9 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
   {
     switch (featureID)
     {
-      case XsPackage.EQUALS_EXPRESSION__LEFT:
+      case XsPackage.EQUALS__LEFT:
         return basicSetLeft(null, msgs);
-      case XsPackage.EQUALS_EXPRESSION__RIGHT:
+      case XsPackage.EQUALS__RIGHT:
         return basicSetRight(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -239,11 +239,11 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
   {
     switch (featureID)
     {
-      case XsPackage.EQUALS_EXPRESSION__LEFT:
+      case XsPackage.EQUALS__LEFT:
         return getLeft();
-      case XsPackage.EQUALS_EXPRESSION__OP:
+      case XsPackage.EQUALS__OP:
         return getOp();
-      case XsPackage.EQUALS_EXPRESSION__RIGHT:
+      case XsPackage.EQUALS__RIGHT:
         return getRight();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -259,13 +259,13 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
   {
     switch (featureID)
     {
-      case XsPackage.EQUALS_EXPRESSION__LEFT:
+      case XsPackage.EQUALS__LEFT:
         setLeft((Expression)newValue);
         return;
-      case XsPackage.EQUALS_EXPRESSION__OP:
+      case XsPackage.EQUALS__OP:
         setOp((String)newValue);
         return;
-      case XsPackage.EQUALS_EXPRESSION__RIGHT:
+      case XsPackage.EQUALS__RIGHT:
         setRight((Expression)newValue);
         return;
     }
@@ -282,13 +282,13 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
   {
     switch (featureID)
     {
-      case XsPackage.EQUALS_EXPRESSION__LEFT:
+      case XsPackage.EQUALS__LEFT:
         setLeft((Expression)null);
         return;
-      case XsPackage.EQUALS_EXPRESSION__OP:
+      case XsPackage.EQUALS__OP:
         setOp(OP_EDEFAULT);
         return;
-      case XsPackage.EQUALS_EXPRESSION__RIGHT:
+      case XsPackage.EQUALS__RIGHT:
         setRight((Expression)null);
         return;
     }
@@ -305,11 +305,11 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
   {
     switch (featureID)
     {
-      case XsPackage.EQUALS_EXPRESSION__LEFT:
+      case XsPackage.EQUALS__LEFT:
         return left != null;
-      case XsPackage.EQUALS_EXPRESSION__OP:
+      case XsPackage.EQUALS__OP:
         return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
-      case XsPackage.EQUALS_EXPRESSION__RIGHT:
+      case XsPackage.EQUALS__RIGHT:
         return right != null;
     }
     return super.eIsSet(featureID);
@@ -332,4 +332,4 @@ public class EqualsExpressionImpl extends ExpressionImpl implements EqualsExpres
     return result.toString();
   }
 
-} //EqualsExpressionImpl
+} //EqualsImpl

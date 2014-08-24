@@ -7,6 +7,9 @@ import aom.scripting.xs.xs.Call
 import aom.scripting.xs.xs.FunDeclaration
 import aom.scripting.xs.xs.XsPackage
 import org.eclipse.xtext.validation.Check
+import de.itemis.xtext.typesystem.ITypesystem
+import org.eclipse.emf.ecore.EObject
+import com.google.inject.Inject
 
 /**
  * Custom validation rules. 
@@ -25,6 +28,15 @@ class XSValidator extends AbstractXSValidator {
 //					INVALID_NAME)
 //		}
 //	}
+	
+	@Inject
+	private ITypesystem ts;
+
+	@Check
+	def checkTypesystemRules( EObject x ) {
+		//System.out.println("Checking type of " + x.toString())
+		ts.checkTypesystemConstraints(x, this);
+	}
 
 	@Check
 	def checkParameterCount(Call function){ //TODO allow less params, but perform type checks

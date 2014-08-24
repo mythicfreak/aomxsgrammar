@@ -5,23 +5,23 @@ package aom.scripting.xs.xs;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Multiplicative Expression</b></em>'.
+ * A representation of the model object '<em><b>Comparison</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.MultiplicativeExpression#getLeft <em>Left</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.MultiplicativeExpression#getOp <em>Op</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.MultiplicativeExpression#getRight <em>Right</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.Comparison#getLeft <em>Left</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.Comparison#getOp <em>Op</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.Comparison#getRight <em>Right</em>}</li>
  * </ul>
  * </p>
  *
- * @see aom.scripting.xs.xs.XsPackage#getMultiplicativeExpression()
+ * @see aom.scripting.xs.xs.XsPackage#getComparison()
  * @model
  * @generated
  */
-public interface MultiplicativeExpression extends Expression
+public interface Comparison extends Expression
 {
   /**
    * Returns the value of the '<em><b>Left</b></em>' containment reference.
@@ -33,14 +33,14 @@ public interface MultiplicativeExpression extends Expression
    * <!-- end-user-doc -->
    * @return the value of the '<em>Left</em>' containment reference.
    * @see #setLeft(Expression)
-   * @see aom.scripting.xs.xs.XsPackage#getMultiplicativeExpression_Left()
+   * @see aom.scripting.xs.xs.XsPackage#getComparison_Left()
    * @model containment="true"
    * @generated
    */
   Expression getLeft();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.MultiplicativeExpression#getLeft <em>Left</em>}' containment reference.
+   * Sets the value of the '{@link aom.scripting.xs.xs.Comparison#getLeft <em>Left</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Left</em>' containment reference.
@@ -59,14 +59,14 @@ public interface MultiplicativeExpression extends Expression
    * <!-- end-user-doc -->
    * @return the value of the '<em>Op</em>' attribute.
    * @see #setOp(String)
-   * @see aom.scripting.xs.xs.XsPackage#getMultiplicativeExpression_Op()
+   * @see aom.scripting.xs.xs.XsPackage#getComparison_Op()
    * @model
    * @generated
    */
   String getOp();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.MultiplicativeExpression#getOp <em>Op</em>}' attribute.
+   * Sets the value of the '{@link aom.scripting.xs.xs.Comparison#getOp <em>Op</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Op</em>' attribute.
@@ -85,14 +85,14 @@ public interface MultiplicativeExpression extends Expression
    * <!-- end-user-doc -->
    * @return the value of the '<em>Right</em>' containment reference.
    * @see #setRight(Expression)
-   * @see aom.scripting.xs.xs.XsPackage#getMultiplicativeExpression_Right()
+   * @see aom.scripting.xs.xs.XsPackage#getComparison_Right()
    * @model containment="true"
    * @generated
    */
   Expression getRight();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.MultiplicativeExpression#getRight <em>Right</em>}' containment reference.
+   * Sets the value of the '{@link aom.scripting.xs.xs.Comparison#getRight <em>Right</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Right</em>' containment reference.
@@ -101,4 +101,4 @@ public interface MultiplicativeExpression extends Expression
    */
   void setRight(Expression value);
 
-} // MultiplicativeExpression
+} // Comparison

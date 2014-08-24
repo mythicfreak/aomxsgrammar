@@ -5,23 +5,23 @@ package aom.scripting.xs.xs;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>And Expression</b></em>'.
+ * A representation of the model object '<em><b>And</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.AndExpression#getLeft <em>Left</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.AndExpression#getOp <em>Op</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.AndExpression#getRight <em>Right</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.And#getLeft <em>Left</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.And#getOp <em>Op</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.And#getRight <em>Right</em>}</li>
  * </ul>
  * </p>
  *
- * @see aom.scripting.xs.xs.XsPackage#getAndExpression()
+ * @see aom.scripting.xs.xs.XsPackage#getAnd()
  * @model
  * @generated
  */
-public interface AndExpression extends Expression
+public interface And extends Expression
 {
   /**
    * Returns the value of the '<em><b>Left</b></em>' containment reference.
@@ -33,14 +33,14 @@ public interface AndExpression extends Expression
    * <!-- end-user-doc -->
    * @return the value of the '<em>Left</em>' containment reference.
    * @see #setLeft(Expression)
-   * @see aom.scripting.xs.xs.XsPackage#getAndExpression_Left()
+   * @see aom.scripting.xs.xs.XsPackage#getAnd_Left()
    * @model containment="true"
    * @generated
    */
   Expression getLeft();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.AndExpression#getLeft <em>Left</em>}' containment reference.
+   * Sets the value of the '{@link aom.scripting.xs.xs.And#getLeft <em>Left</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Left</em>' containment reference.
@@ -59,14 +59,14 @@ public interface AndExpression extends Expression
    * <!-- end-user-doc -->
    * @return the value of the '<em>Op</em>' attribute.
    * @see #setOp(String)
-   * @see aom.scripting.xs.xs.XsPackage#getAndExpression_Op()
+   * @see aom.scripting.xs.xs.XsPackage#getAnd_Op()
    * @model
    * @generated
    */
   String getOp();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.AndExpression#getOp <em>Op</em>}' attribute.
+   * Sets the value of the '{@link aom.scripting.xs.xs.And#getOp <em>Op</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Op</em>' attribute.
@@ -85,14 +85,14 @@ public interface AndExpression extends Expression
    * <!-- end-user-doc -->
    * @return the value of the '<em>Right</em>' containment reference.
    * @see #setRight(Expression)
-   * @see aom.scripting.xs.xs.XsPackage#getAndExpression_Right()
+   * @see aom.scripting.xs.xs.XsPackage#getAnd_Right()
    * @model containment="true"
    * @generated
    */
   Expression getRight();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.AndExpression#getRight <em>Right</em>}' containment reference.
+   * Sets the value of the '{@link aom.scripting.xs.xs.And#getRight <em>Right</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Right</em>' containment reference.
@@ -101,4 +101,4 @@ public interface AndExpression extends Expression
    */
   void setRight(Expression value);
 
-} // AndExpression
+} // And

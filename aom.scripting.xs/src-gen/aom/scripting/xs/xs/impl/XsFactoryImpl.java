@@ -75,6 +75,14 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
       case XsPackage.RULE_DECLARATION: return createRuleDeclaration();
       case XsPackage.VAR_MODIFIER: return createVarModifier();
       case XsPackage.FUN_MODIFIER: return createFunModifier();
+      case XsPackage.INT_TYPE: return createIntType();
+      case XsPackage.FLOAT_TYPE: return createFloatType();
+      case XsPackage.BOOL_TYPE: return createBoolType();
+      case XsPackage.VECTOR_TYPE: return createVectorType();
+      case XsPackage.STRING_TYPE: return createStringType();
+      case XsPackage.VOID_TYPE: return createVoidType();
+      case XsPackage.VAR_TYPE_SPECIFIER: return createVarTypeSpecifier();
+      case XsPackage.FUN_TYPE_SPECIFIER: return createFunTypeSpecifier();
       case XsPackage.PARAMS: return createParams();
       case XsPackage.COMPOUND_STATEMENT: return createCompoundStatement();
       case XsPackage.VAR_DECLARATION_OR_STATEMENT: return createVarDeclarationOrStatement();
@@ -97,12 +105,12 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
       case XsPackage.EMPTY_EXPRESSION_STATEMENT: return createEmptyExpressionStatement();
       case XsPackage.ASSIGNMENT_EXPRESSION: return createAssignmentExpression();
       case XsPackage.POSTFIX_EXPRESSION: return createPostfixExpression();
-      case XsPackage.SIMPLE_EXPRESSION: return createSimpleExpression();
-      case XsPackage.AND_EXPRESSION: return createAndExpression();
-      case XsPackage.EQUALS_EXPRESSION: return createEqualsExpression();
-      case XsPackage.COMPARISON_EXPRESSION: return createComparisonExpression();
-      case XsPackage.ADDITIVE_EXPRESSION: return createAdditiveExpression();
-      case XsPackage.MULTIPLICATIVE_EXPRESSION: return createMultiplicativeExpression();
+      case XsPackage.OR: return createOr();
+      case XsPackage.AND: return createAnd();
+      case XsPackage.EQUALS: return createEquals();
+      case XsPackage.COMPARISON: return createComparison();
+      case XsPackage.TERM: return createTerm();
+      case XsPackage.FACTOR: return createFactor();
       case XsPackage.PRIMARY_EXPRESSION: return createPrimaryExpression();
       case XsPackage.LITERAL_INT: return createLiteralInt();
       case XsPackage.LITERAL_FLOAT: return createLiteralFloat();
@@ -233,6 +241,94 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
   {
     FunModifierImpl funModifier = new FunModifierImpl();
     return funModifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IntType createIntType()
+  {
+    IntTypeImpl intType = new IntTypeImpl();
+    return intType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FloatType createFloatType()
+  {
+    FloatTypeImpl floatType = new FloatTypeImpl();
+    return floatType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BoolType createBoolType()
+  {
+    BoolTypeImpl boolType = new BoolTypeImpl();
+    return boolType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VectorType createVectorType()
+  {
+    VectorTypeImpl vectorType = new VectorTypeImpl();
+    return vectorType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StringType createStringType()
+  {
+    StringTypeImpl stringType = new StringTypeImpl();
+    return stringType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VoidType createVoidType()
+  {
+    VoidTypeImpl voidType = new VoidTypeImpl();
+    return voidType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VarTypeSpecifier createVarTypeSpecifier()
+  {
+    VarTypeSpecifierImpl varTypeSpecifier = new VarTypeSpecifierImpl();
+    return varTypeSpecifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FunTypeSpecifier createFunTypeSpecifier()
+  {
+    FunTypeSpecifierImpl funTypeSpecifier = new FunTypeSpecifierImpl();
+    return funTypeSpecifier;
   }
 
   /**
@@ -482,10 +578,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SimpleExpression createSimpleExpression()
+  public Or createOr()
   {
-    SimpleExpressionImpl simpleExpression = new SimpleExpressionImpl();
-    return simpleExpression;
+    OrImpl or = new OrImpl();
+    return or;
   }
 
   /**
@@ -493,10 +589,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AndExpression createAndExpression()
+  public And createAnd()
   {
-    AndExpressionImpl andExpression = new AndExpressionImpl();
-    return andExpression;
+    AndImpl and = new AndImpl();
+    return and;
   }
 
   /**
@@ -504,10 +600,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public EqualsExpression createEqualsExpression()
+  public Equals createEquals()
   {
-    EqualsExpressionImpl equalsExpression = new EqualsExpressionImpl();
-    return equalsExpression;
+    EqualsImpl equals = new EqualsImpl();
+    return equals;
   }
 
   /**
@@ -515,10 +611,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ComparisonExpression createComparisonExpression()
+  public Comparison createComparison()
   {
-    ComparisonExpressionImpl comparisonExpression = new ComparisonExpressionImpl();
-    return comparisonExpression;
+    ComparisonImpl comparison = new ComparisonImpl();
+    return comparison;
   }
 
   /**
@@ -526,10 +622,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AdditiveExpression createAdditiveExpression()
+  public Term createTerm()
   {
-    AdditiveExpressionImpl additiveExpression = new AdditiveExpressionImpl();
-    return additiveExpression;
+    TermImpl term = new TermImpl();
+    return term;
   }
 
   /**
@@ -537,10 +633,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public MultiplicativeExpression createMultiplicativeExpression()
+  public Factor createFactor()
   {
-    MultiplicativeExpressionImpl multiplicativeExpression = new MultiplicativeExpressionImpl();
-    return multiplicativeExpression;
+    FactorImpl factor = new FactorImpl();
+    return factor;
   }
 
   /**

@@ -2,8 +2,8 @@
  */
 package aom.scripting.xs.xs.impl;
 
+import aom.scripting.xs.xs.And;
 import aom.scripting.xs.xs.Expression;
-import aom.scripting.xs.xs.SimpleExpression;
 import aom.scripting.xs.xs.XsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -16,20 +16,20 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Simple Expression</b></em>'.
+ * An implementation of the model object '<em><b>And</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.SimpleExpressionImpl#getLeft <em>Left</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.impl.SimpleExpressionImpl#getOp <em>Op</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.impl.SimpleExpressionImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.AndImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.AndImpl#getOp <em>Op</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.AndImpl#getRight <em>Right</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpression
+public class AndImpl extends ExpressionImpl implements And
 {
   /**
    * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
@@ -76,7 +76,7 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SimpleExpressionImpl()
+  protected AndImpl()
   {
     super();
   }
@@ -89,7 +89,7 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
   @Override
   protected EClass eStaticClass()
   {
-    return XsPackage.Literals.SIMPLE_EXPRESSION;
+    return XsPackage.Literals.AND;
   }
 
   /**
@@ -113,7 +113,7 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
     left = newLeft;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.SIMPLE_EXPRESSION__LEFT, oldLeft, newLeft);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.AND__LEFT, oldLeft, newLeft);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -130,14 +130,14 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
     {
       NotificationChain msgs = null;
       if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.SIMPLE_EXPRESSION__LEFT, null, msgs);
+        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.AND__LEFT, null, msgs);
       if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.SIMPLE_EXPRESSION__LEFT, null, msgs);
+        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.AND__LEFT, null, msgs);
       msgs = basicSetLeft(newLeft, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.SIMPLE_EXPRESSION__LEFT, newLeft, newLeft));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.AND__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -160,7 +160,7 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
     String oldOp = op;
     op = newOp;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.SIMPLE_EXPRESSION__OP, oldOp, op));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.AND__OP, oldOp, op));
   }
 
   /**
@@ -184,7 +184,7 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
     right = newRight;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.SIMPLE_EXPRESSION__RIGHT, oldRight, newRight);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.AND__RIGHT, oldRight, newRight);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -201,14 +201,14 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
     {
       NotificationChain msgs = null;
       if (right != null)
-        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.SIMPLE_EXPRESSION__RIGHT, null, msgs);
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.AND__RIGHT, null, msgs);
       if (newRight != null)
-        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.SIMPLE_EXPRESSION__RIGHT, null, msgs);
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.AND__RIGHT, null, msgs);
       msgs = basicSetRight(newRight, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.SIMPLE_EXPRESSION__RIGHT, newRight, newRight));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.AND__RIGHT, newRight, newRight));
   }
 
   /**
@@ -221,9 +221,9 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
   {
     switch (featureID)
     {
-      case XsPackage.SIMPLE_EXPRESSION__LEFT:
+      case XsPackage.AND__LEFT:
         return basicSetLeft(null, msgs);
-      case XsPackage.SIMPLE_EXPRESSION__RIGHT:
+      case XsPackage.AND__RIGHT:
         return basicSetRight(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -239,11 +239,11 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
   {
     switch (featureID)
     {
-      case XsPackage.SIMPLE_EXPRESSION__LEFT:
+      case XsPackage.AND__LEFT:
         return getLeft();
-      case XsPackage.SIMPLE_EXPRESSION__OP:
+      case XsPackage.AND__OP:
         return getOp();
-      case XsPackage.SIMPLE_EXPRESSION__RIGHT:
+      case XsPackage.AND__RIGHT:
         return getRight();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -259,13 +259,13 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
   {
     switch (featureID)
     {
-      case XsPackage.SIMPLE_EXPRESSION__LEFT:
+      case XsPackage.AND__LEFT:
         setLeft((Expression)newValue);
         return;
-      case XsPackage.SIMPLE_EXPRESSION__OP:
+      case XsPackage.AND__OP:
         setOp((String)newValue);
         return;
-      case XsPackage.SIMPLE_EXPRESSION__RIGHT:
+      case XsPackage.AND__RIGHT:
         setRight((Expression)newValue);
         return;
     }
@@ -282,13 +282,13 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
   {
     switch (featureID)
     {
-      case XsPackage.SIMPLE_EXPRESSION__LEFT:
+      case XsPackage.AND__LEFT:
         setLeft((Expression)null);
         return;
-      case XsPackage.SIMPLE_EXPRESSION__OP:
+      case XsPackage.AND__OP:
         setOp(OP_EDEFAULT);
         return;
-      case XsPackage.SIMPLE_EXPRESSION__RIGHT:
+      case XsPackage.AND__RIGHT:
         setRight((Expression)null);
         return;
     }
@@ -305,11 +305,11 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
   {
     switch (featureID)
     {
-      case XsPackage.SIMPLE_EXPRESSION__LEFT:
+      case XsPackage.AND__LEFT:
         return left != null;
-      case XsPackage.SIMPLE_EXPRESSION__OP:
+      case XsPackage.AND__OP:
         return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
-      case XsPackage.SIMPLE_EXPRESSION__RIGHT:
+      case XsPackage.AND__RIGHT:
         return right != null;
     }
     return super.eIsSet(featureID);
@@ -332,4 +332,4 @@ public class SimpleExpressionImpl extends ExpressionImpl implements SimpleExpres
     return result.toString();
   }
 
-} //SimpleExpressionImpl
+} //AndImpl

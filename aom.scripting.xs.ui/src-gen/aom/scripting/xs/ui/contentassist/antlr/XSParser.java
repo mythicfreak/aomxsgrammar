@@ -38,7 +38,6 @@ public class XSParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getDeclarationAccess().getAlternatives(), "rule__Declaration__Alternatives");
-					put(grammarAccess.getSignAccess().getAlternatives(), "rule__Sign__Alternatives");
 					put(grammarAccess.getSignedNumAccess().getAlternatives(), "rule__SignedNum__Alternatives");
 					put(grammarAccess.getLiteralOrConstantNumAccess().getAlternatives(), "rule__LiteralOrConstantNum__Alternatives");
 					put(grammarAccess.getBoolAccess().getAlternatives(), "rule__Bool__Alternatives");
@@ -70,6 +69,12 @@ public class XSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRuleDeclarationAccess().getGroup_2_3(), "rule__RuleDeclaration__Group_2_3__0");
 					put(grammarAccess.getRuleDeclarationAccess().getGroup_2_4(), "rule__RuleDeclaration__Group_2_4__0");
 					put(grammarAccess.getRuleDeclarationAccess().getGroup_2_5(), "rule__RuleDeclaration__Group_2_5__0");
+					put(grammarAccess.getIntTypeAccess().getGroup(), "rule__IntType__Group__0");
+					put(grammarAccess.getFloatTypeAccess().getGroup(), "rule__FloatType__Group__0");
+					put(grammarAccess.getBoolTypeAccess().getGroup(), "rule__BoolType__Group__0");
+					put(grammarAccess.getVectorTypeAccess().getGroup(), "rule__VectorType__Group__0");
+					put(grammarAccess.getStringTypeAccess().getGroup(), "rule__StringType__Group__0");
+					put(grammarAccess.getVoidTypeAccess().getGroup(), "rule__VoidType__Group__0");
 					put(grammarAccess.getParamsAccess().getGroup_1(), "rule__Params__Group_1__0");
 					put(grammarAccess.getParamsAccess().getGroup_1_1(), "rule__Params__Group_1_1__0");
 					put(grammarAccess.getCompoundStatementAccess().getGroup(), "rule__CompoundStatement__Group__0");

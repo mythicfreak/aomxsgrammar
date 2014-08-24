@@ -122,6 +122,78 @@ public interface XsFactory extends EFactory
   FunModifier createFunModifier();
 
   /**
+   * Returns a new object of class '<em>Int Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Type</em>'.
+   * @generated
+   */
+  IntType createIntType();
+
+  /**
+   * Returns a new object of class '<em>Float Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Float Type</em>'.
+   * @generated
+   */
+  FloatType createFloatType();
+
+  /**
+   * Returns a new object of class '<em>Bool Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bool Type</em>'.
+   * @generated
+   */
+  BoolType createBoolType();
+
+  /**
+   * Returns a new object of class '<em>Vector Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Vector Type</em>'.
+   * @generated
+   */
+  VectorType createVectorType();
+
+  /**
+   * Returns a new object of class '<em>String Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>String Type</em>'.
+   * @generated
+   */
+  StringType createStringType();
+
+  /**
+   * Returns a new object of class '<em>Void Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Void Type</em>'.
+   * @generated
+   */
+  VoidType createVoidType();
+
+  /**
+   * Returns a new object of class '<em>Var Type Specifier</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Var Type Specifier</em>'.
+   * @generated
+   */
+  VarTypeSpecifier createVarTypeSpecifier();
+
+  /**
+   * Returns a new object of class '<em>Fun Type Specifier</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fun Type Specifier</em>'.
+   * @generated
+   */
+  FunTypeSpecifier createFunTypeSpecifier();
+
+  /**
    * Returns a new object of class '<em>Params</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -320,58 +392,58 @@ public interface XsFactory extends EFactory
   PostfixExpression createPostfixExpression();
 
   /**
-   * Returns a new object of class '<em>Simple Expression</em>'.
+   * Returns a new object of class '<em>Or</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Simple Expression</em>'.
+   * @return a new object of class '<em>Or</em>'.
    * @generated
    */
-  SimpleExpression createSimpleExpression();
+  Or createOr();
 
   /**
-   * Returns a new object of class '<em>And Expression</em>'.
+   * Returns a new object of class '<em>And</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>And Expression</em>'.
+   * @return a new object of class '<em>And</em>'.
    * @generated
    */
-  AndExpression createAndExpression();
+  And createAnd();
 
   /**
-   * Returns a new object of class '<em>Equals Expression</em>'.
+   * Returns a new object of class '<em>Equals</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Equals Expression</em>'.
+   * @return a new object of class '<em>Equals</em>'.
    * @generated
    */
-  EqualsExpression createEqualsExpression();
+  Equals createEquals();
 
   /**
-   * Returns a new object of class '<em>Comparison Expression</em>'.
+   * Returns a new object of class '<em>Comparison</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Comparison Expression</em>'.
+   * @return a new object of class '<em>Comparison</em>'.
    * @generated
    */
-  ComparisonExpression createComparisonExpression();
+  Comparison createComparison();
 
   /**
-   * Returns a new object of class '<em>Additive Expression</em>'.
+   * Returns a new object of class '<em>Term</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Additive Expression</em>'.
+   * @return a new object of class '<em>Term</em>'.
    * @generated
    */
-  AdditiveExpression createAdditiveExpression();
+  Term createTerm();
 
   /**
-   * Returns a new object of class '<em>Multiplicative Expression</em>'.
+   * Returns a new object of class '<em>Factor</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Multiplicative Expression</em>'.
+   * @return a new object of class '<em>Factor</em>'.
    * @generated
    */
-  MultiplicativeExpression createMultiplicativeExpression();
+  Factor createFactor();
 
   /**
    * Returns a new object of class '<em>Primary Expression</em>'.

@@ -30,8 +30,8 @@ Declaration
 	;
 
 Sign
-	: '+' //TODO plus allowed?
-	| '-'
+	: '-'
+//  | '+' //not allowed!
 	;
 	
 SignedInt returns ecore::EInt
@@ -65,7 +65,7 @@ Vector
 	: 'vector' '(' x=LiteralOrConstantNum ',' y=LiteralOrConstantNum ',' z=LiteralOrConstantNum ')' //only literals or constants, else xsArray...
 	;
 
-VarDeclaration //TODO full expression allowed? calls?
+VarDeclaration //TODO only literals and constant vars
 	: modifier=VarModifier type=VarTypeSpecifier name=ID '=' value=Expression //no semicolon to enable reuse
 	;
 	
@@ -101,16 +101,40 @@ FunModifier
 	: static?='static'? & mutable?='mutable'?
 	;
 
+IntType
+	: {IntType} 'int'
+	;
+	
+FloatType
+	: {FloatType} 'float'
+	;
+	
+BoolType
+	: {BoolType} 'bool'
+	;
+	
+VectorType
+	: {VectorType} 'vector'
+	;
+	
+StringType
+	: {StringType} 'string'
+	;
+	
+VoidType
+	: {VoidType} 'void'
+	;
+	
 VarTypeSpecifier
-	: 'int'
-	| 'float'
-	| 'bool'
-	| 'vector'
-	| 'string'
+	: IntType
+	| FloatType
+	| BoolType
+	| VectorType
+	| StringType
 	;
 	
 FunTypeSpecifier
-	: 'void'
+	: VoidType
 	| VarTypeSpecifier
 	;
 	
@@ -197,15 +221,15 @@ Var
 	;
 	
 SimpleExpression returns Expression
-	: AndExpression ({SimpleExpression.left=current} op='||' right=AndExpression)*
+	: AndExpression ({Or.left=current} op='||' right=AndExpression)*
 	;
 	
 AndExpression returns Expression
-	: EqualsExpression ({AndExpression.left=current} op='&&' right=EqualsExpression)*
+	: EqualsExpression ({And.left=current} op='&&' right=EqualsExpression)*
 	;
 
 EqualsExpression returns Expression
-	: ComparisonExpression ({EqualsExpression.left=current} op=EqOp right=ComparisonExpression)?
+	: ComparisonExpression ({Equals.left=current} op=EqOp right=ComparisonExpression)?
 	;
 	
 EqOp
@@ -214,7 +238,7 @@ EqOp
 	;
 
 ComparisonExpression returns Expression
-	: AdditiveExpression ({ComparisonExpression.left=current} op=RelOp right=AdditiveExpression)?
+	: AdditiveExpression ({Comparison.left=current} op=RelOp right=AdditiveExpression)?
 	;
 
 RelOp
@@ -225,7 +249,7 @@ RelOp
 	;
 
 AdditiveExpression returns Expression
-	: MultiplicativeExpression ({AdditiveExpression.left=current} op=AddOp right=MultiplicativeExpression)*
+	: MultiplicativeExpression ({Term.left=current} op=AddOp right=MultiplicativeExpression)*
 	;
 
 AddOp
@@ -234,7 +258,7 @@ AddOp
 	;
 	
 MultiplicativeExpression returns Expression
-	: Atom ({MultiplicativeExpression.left=current} op=MulOp right=Atom)*
+	: Atom ({Factor.left=current} op=MulOp right=Atom)*
 	;
 	
 MulOp

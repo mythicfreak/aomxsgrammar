@@ -2,8 +2,8 @@
  */
 package aom.scripting.xs.xs.impl;
 
-import aom.scripting.xs.xs.AdditiveExpression;
 import aom.scripting.xs.xs.Expression;
+import aom.scripting.xs.xs.Term;
 import aom.scripting.xs.xs.XsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -16,20 +16,20 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Additive Expression</b></em>'.
+ * An implementation of the model object '<em><b>Term</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.AdditiveExpressionImpl#getLeft <em>Left</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.impl.AdditiveExpressionImpl#getOp <em>Op</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.impl.AdditiveExpressionImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.TermImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.TermImpl#getOp <em>Op</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.TermImpl#getRight <em>Right</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveExpression
+public class TermImpl extends ExpressionImpl implements Term
 {
   /**
    * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
@@ -76,7 +76,7 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AdditiveExpressionImpl()
+  protected TermImpl()
   {
     super();
   }
@@ -89,7 +89,7 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
   @Override
   protected EClass eStaticClass()
   {
-    return XsPackage.Literals.ADDITIVE_EXPRESSION;
+    return XsPackage.Literals.TERM;
   }
 
   /**
@@ -113,7 +113,7 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
     left = newLeft;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.ADDITIVE_EXPRESSION__LEFT, oldLeft, newLeft);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.TERM__LEFT, oldLeft, newLeft);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -130,14 +130,14 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
     {
       NotificationChain msgs = null;
       if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.ADDITIVE_EXPRESSION__LEFT, null, msgs);
+        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.TERM__LEFT, null, msgs);
       if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.ADDITIVE_EXPRESSION__LEFT, null, msgs);
+        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.TERM__LEFT, null, msgs);
       msgs = basicSetLeft(newLeft, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.ADDITIVE_EXPRESSION__LEFT, newLeft, newLeft));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.TERM__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -160,7 +160,7 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
     String oldOp = op;
     op = newOp;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.ADDITIVE_EXPRESSION__OP, oldOp, op));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.TERM__OP, oldOp, op));
   }
 
   /**
@@ -184,7 +184,7 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
     right = newRight;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.ADDITIVE_EXPRESSION__RIGHT, oldRight, newRight);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.TERM__RIGHT, oldRight, newRight);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -201,14 +201,14 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
     {
       NotificationChain msgs = null;
       if (right != null)
-        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.ADDITIVE_EXPRESSION__RIGHT, null, msgs);
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.TERM__RIGHT, null, msgs);
       if (newRight != null)
-        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.ADDITIVE_EXPRESSION__RIGHT, null, msgs);
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.TERM__RIGHT, null, msgs);
       msgs = basicSetRight(newRight, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.ADDITIVE_EXPRESSION__RIGHT, newRight, newRight));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.TERM__RIGHT, newRight, newRight));
   }
 
   /**
@@ -221,9 +221,9 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
   {
     switch (featureID)
     {
-      case XsPackage.ADDITIVE_EXPRESSION__LEFT:
+      case XsPackage.TERM__LEFT:
         return basicSetLeft(null, msgs);
-      case XsPackage.ADDITIVE_EXPRESSION__RIGHT:
+      case XsPackage.TERM__RIGHT:
         return basicSetRight(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -239,11 +239,11 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
   {
     switch (featureID)
     {
-      case XsPackage.ADDITIVE_EXPRESSION__LEFT:
+      case XsPackage.TERM__LEFT:
         return getLeft();
-      case XsPackage.ADDITIVE_EXPRESSION__OP:
+      case XsPackage.TERM__OP:
         return getOp();
-      case XsPackage.ADDITIVE_EXPRESSION__RIGHT:
+      case XsPackage.TERM__RIGHT:
         return getRight();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -259,13 +259,13 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
   {
     switch (featureID)
     {
-      case XsPackage.ADDITIVE_EXPRESSION__LEFT:
+      case XsPackage.TERM__LEFT:
         setLeft((Expression)newValue);
         return;
-      case XsPackage.ADDITIVE_EXPRESSION__OP:
+      case XsPackage.TERM__OP:
         setOp((String)newValue);
         return;
-      case XsPackage.ADDITIVE_EXPRESSION__RIGHT:
+      case XsPackage.TERM__RIGHT:
         setRight((Expression)newValue);
         return;
     }
@@ -282,13 +282,13 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
   {
     switch (featureID)
     {
-      case XsPackage.ADDITIVE_EXPRESSION__LEFT:
+      case XsPackage.TERM__LEFT:
         setLeft((Expression)null);
         return;
-      case XsPackage.ADDITIVE_EXPRESSION__OP:
+      case XsPackage.TERM__OP:
         setOp(OP_EDEFAULT);
         return;
-      case XsPackage.ADDITIVE_EXPRESSION__RIGHT:
+      case XsPackage.TERM__RIGHT:
         setRight((Expression)null);
         return;
     }
@@ -305,11 +305,11 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
   {
     switch (featureID)
     {
-      case XsPackage.ADDITIVE_EXPRESSION__LEFT:
+      case XsPackage.TERM__LEFT:
         return left != null;
-      case XsPackage.ADDITIVE_EXPRESSION__OP:
+      case XsPackage.TERM__OP:
         return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
-      case XsPackage.ADDITIVE_EXPRESSION__RIGHT:
+      case XsPackage.TERM__RIGHT:
         return right != null;
     }
     return super.eIsSet(featureID);
@@ -332,4 +332,4 @@ public class AdditiveExpressionImpl extends ExpressionImpl implements AdditiveEx
     return result.toString();
   }
 
-} //AdditiveExpressionImpl
+} //TermImpl

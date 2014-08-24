@@ -234,7 +234,7 @@ public interface XsPackage extends EPackage
   int VAR_DECLARATION__MODIFIER = DECLARATION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -289,7 +289,7 @@ public interface XsPackage extends EPackage
   int FUN_DECLARATION__MODIFIER = DECLARATION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -527,6 +527,158 @@ public interface XsPackage extends EPackage
   int FUN_MODIFIER_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.FunTypeSpecifierImpl <em>Fun Type Specifier</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.FunTypeSpecifierImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFunTypeSpecifier()
+   * @generated
+   */
+  int FUN_TYPE_SPECIFIER = 18;
+
+  /**
+   * The number of structural features of the '<em>Fun Type Specifier</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUN_TYPE_SPECIFIER_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.VarTypeSpecifierImpl <em>Var Type Specifier</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.VarTypeSpecifierImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVarTypeSpecifier()
+   * @generated
+   */
+  int VAR_TYPE_SPECIFIER = 17;
+
+  /**
+   * The number of structural features of the '<em>Var Type Specifier</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_TYPE_SPECIFIER_FEATURE_COUNT = FUN_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.IntTypeImpl <em>Int Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.IntTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIntType()
+   * @generated
+   */
+  int INT_TYPE = 11;
+
+  /**
+   * The number of structural features of the '<em>Int Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.FloatTypeImpl <em>Float Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.FloatTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFloatType()
+   * @generated
+   */
+  int FLOAT_TYPE = 12;
+
+  /**
+   * The number of structural features of the '<em>Float Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLOAT_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.BoolTypeImpl <em>Bool Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.BoolTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getBoolType()
+   * @generated
+   */
+  int BOOL_TYPE = 13;
+
+  /**
+   * The number of structural features of the '<em>Bool Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOL_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.VectorTypeImpl <em>Vector Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.VectorTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVectorType()
+   * @generated
+   */
+  int VECTOR_TYPE = 14;
+
+  /**
+   * The number of structural features of the '<em>Vector Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VECTOR_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.StringTypeImpl <em>String Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.StringTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getStringType()
+   * @generated
+   */
+  int STRING_TYPE = 15;
+
+  /**
+   * The number of structural features of the '<em>String Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.VoidTypeImpl <em>Void Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.VoidTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVoidType()
+   * @generated
+   */
+  int VOID_TYPE = 16;
+
+  /**
+   * The number of structural features of the '<em>Void Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VOID_TYPE_FEATURE_COUNT = FUN_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.ParamsImpl <em>Params</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -534,7 +686,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getParams()
    * @generated
    */
-  int PARAMS = 11;
+  int PARAMS = 19;
 
   /**
    * The feature id for the '<em><b>Param</b></em>' attribute.
@@ -571,7 +723,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVarDeclarationOrStatement()
    * @generated
    */
-  int VAR_DECLARATION_OR_STATEMENT = 13;
+  int VAR_DECLARATION_OR_STATEMENT = 21;
 
   /**
    * The number of structural features of the '<em>Var Declaration Or Statement</em>' class.
@@ -590,7 +742,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getStatement()
    * @generated
    */
-  int STATEMENT = 14;
+  int STATEMENT = 22;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -609,7 +761,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getCompoundStatement()
    * @generated
    */
-  int COMPOUND_STATEMENT = 12;
+  int COMPOUND_STATEMENT = 20;
 
   /**
    * The feature id for the '<em><b>Contents</b></em>' containment reference list.
@@ -637,7 +789,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getExpressionStatement()
    * @generated
    */
-  int EXPRESSION_STATEMENT = 15;
+  int EXPRESSION_STATEMENT = 23;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -665,7 +817,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIfElseStatement()
    * @generated
    */
-  int IF_ELSE_STATEMENT = 16;
+  int IF_ELSE_STATEMENT = 24;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -711,7 +863,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getWhileStatement()
    * @generated
    */
-  int WHILE_STATEMENT = 17;
+  int WHILE_STATEMENT = 25;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -748,7 +900,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getForStatement()
    * @generated
    */
-  int FOR_STATEMENT = 18;
+  int FOR_STATEMENT = 26;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' containment reference.
@@ -803,7 +955,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getSwitchStatement()
    * @generated
    */
-  int SWITCH_STATEMENT = 19;
+  int SWITCH_STATEMENT = 27;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' reference.
@@ -849,7 +1001,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getSwitchCase()
    * @generated
    */
-  int SWITCH_CASE = 20;
+  int SWITCH_CASE = 28;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' containment reference.
@@ -886,7 +1038,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getSwitchDefault()
    * @generated
    */
-  int SWITCH_DEFAULT = 21;
+  int SWITCH_DEFAULT = 29;
 
   /**
    * The feature id for the '<em><b>Statement</b></em>' containment reference.
@@ -914,7 +1066,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getReturnStatement()
    * @generated
    */
-  int RETURN_STATEMENT = 22;
+  int RETURN_STATEMENT = 30;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -942,7 +1094,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getContinueStatement()
    * @generated
    */
-  int CONTINUE_STATEMENT = 23;
+  int CONTINUE_STATEMENT = 31;
 
   /**
    * The number of structural features of the '<em>Continue Statement</em>' class.
@@ -961,7 +1113,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getBreakStatement()
    * @generated
    */
-  int BREAK_STATEMENT = 24;
+  int BREAK_STATEMENT = 32;
 
   /**
    * The number of structural features of the '<em>Break Statement</em>' class.
@@ -980,7 +1132,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 25;
+  int EXPRESSION = 33;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1008,7 +1160,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVar()
    * @generated
    */
-  int VAR = 26;
+  int VAR = 34;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' reference.
@@ -1036,7 +1188,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getCall()
    * @generated
    */
-  int CALL = 27;
+  int CALL = 35;
 
   /**
    * The feature id for the '<em><b>Function</b></em>' reference.
@@ -1073,7 +1225,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getArguments()
    * @generated
    */
-  int ARGUMENTS = 28;
+  int ARGUMENTS = 36;
 
   /**
    * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
@@ -1101,7 +1253,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getSignedNum()
    * @generated
    */
-  int SIGNED_NUM = 29;
+  int SIGNED_NUM = 37;
 
   /**
    * The number of structural features of the '<em>Signed Num</em>' class.
@@ -1120,7 +1272,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getEmptyExpressionStatement()
    * @generated
    */
-  int EMPTY_EXPRESSION_STATEMENT = 30;
+  int EMPTY_EXPRESSION_STATEMENT = 38;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1148,7 +1300,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getAssignmentExpression()
    * @generated
    */
-  int ASSIGNMENT_EXPRESSION = 31;
+  int ASSIGNMENT_EXPRESSION = 39;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1185,7 +1337,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getPostfixExpression()
    * @generated
    */
-  int POSTFIX_EXPRESSION = 32;
+  int POSTFIX_EXPRESSION = 40;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1224,14 +1376,14 @@ public interface XsPackage extends EPackage
   int POSTFIX_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.SimpleExpressionImpl <em>Simple Expression</em>}' class.
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.OrImpl <em>Or</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.SimpleExpressionImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getSimpleExpression()
+   * @see aom.scripting.xs.xs.impl.OrImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getOr()
    * @generated
    */
-  int SIMPLE_EXPRESSION = 33;
+  int OR = 41;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1240,7 +1392,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SIMPLE_EXPRESSION__EXPRESSION = EXPRESSION__EXPRESSION;
+  int OR__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1249,7 +1401,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SIMPLE_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+  int OR__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1258,7 +1410,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SIMPLE_EXPRESSION__OP = EXPRESSION_FEATURE_COUNT + 1;
+  int OR__OP = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -1267,26 +1419,26 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SIMPLE_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+  int OR__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Simple Expression</em>' class.
+   * The number of structural features of the '<em>Or</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SIMPLE_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+  int OR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.AndExpressionImpl <em>And Expression</em>}' class.
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.AndImpl <em>And</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.AndExpressionImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getAndExpression()
+   * @see aom.scripting.xs.xs.impl.AndImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getAnd()
    * @generated
    */
-  int AND_EXPRESSION = 34;
+  int AND = 42;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1295,7 +1447,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AND_EXPRESSION__EXPRESSION = EXPRESSION__EXPRESSION;
+  int AND__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1304,7 +1456,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AND_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+  int AND__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1313,7 +1465,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AND_EXPRESSION__OP = EXPRESSION_FEATURE_COUNT + 1;
+  int AND__OP = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -1322,26 +1474,26 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AND_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+  int AND__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>And Expression</em>' class.
+   * The number of structural features of the '<em>And</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AND_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+  int AND_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.EqualsExpressionImpl <em>Equals Expression</em>}' class.
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.EqualsImpl <em>Equals</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.EqualsExpressionImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getEqualsExpression()
+   * @see aom.scripting.xs.xs.impl.EqualsImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getEquals()
    * @generated
    */
-  int EQUALS_EXPRESSION = 35;
+  int EQUALS = 43;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1350,7 +1502,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EQUALS_EXPRESSION__EXPRESSION = EXPRESSION__EXPRESSION;
+  int EQUALS__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1359,7 +1511,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EQUALS_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+  int EQUALS__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1368,7 +1520,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EQUALS_EXPRESSION__OP = EXPRESSION_FEATURE_COUNT + 1;
+  int EQUALS__OP = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -1377,26 +1529,26 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EQUALS_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+  int EQUALS__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Equals Expression</em>' class.
+   * The number of structural features of the '<em>Equals</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EQUALS_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+  int EQUALS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.ComparisonExpressionImpl <em>Comparison Expression</em>}' class.
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.ComparisonImpl <em>Comparison</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.ComparisonExpressionImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getComparisonExpression()
+   * @see aom.scripting.xs.xs.impl.ComparisonImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getComparison()
    * @generated
    */
-  int COMPARISON_EXPRESSION = 36;
+  int COMPARISON = 44;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1405,7 +1557,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPARISON_EXPRESSION__EXPRESSION = EXPRESSION__EXPRESSION;
+  int COMPARISON__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1414,7 +1566,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPARISON_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+  int COMPARISON__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1423,7 +1575,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPARISON_EXPRESSION__OP = EXPRESSION_FEATURE_COUNT + 1;
+  int COMPARISON__OP = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -1432,26 +1584,26 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPARISON_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+  int COMPARISON__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Comparison Expression</em>' class.
+   * The number of structural features of the '<em>Comparison</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPARISON_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+  int COMPARISON_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.AdditiveExpressionImpl <em>Additive Expression</em>}' class.
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.TermImpl <em>Term</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.AdditiveExpressionImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getAdditiveExpression()
+   * @see aom.scripting.xs.xs.impl.TermImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getTerm()
    * @generated
    */
-  int ADDITIVE_EXPRESSION = 37;
+  int TERM = 45;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1460,7 +1612,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDITIVE_EXPRESSION__EXPRESSION = EXPRESSION__EXPRESSION;
+  int TERM__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1469,7 +1621,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDITIVE_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+  int TERM__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1478,7 +1630,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDITIVE_EXPRESSION__OP = EXPRESSION_FEATURE_COUNT + 1;
+  int TERM__OP = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -1487,26 +1639,26 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDITIVE_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+  int TERM__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Additive Expression</em>' class.
+   * The number of structural features of the '<em>Term</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ADDITIVE_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+  int TERM_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.MultiplicativeExpressionImpl <em>Multiplicative Expression</em>}' class.
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.FactorImpl <em>Factor</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.MultiplicativeExpressionImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getMultiplicativeExpression()
+   * @see aom.scripting.xs.xs.impl.FactorImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFactor()
    * @generated
    */
-  int MULTIPLICATIVE_EXPRESSION = 38;
+  int FACTOR = 46;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1515,7 +1667,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTIPLICATIVE_EXPRESSION__EXPRESSION = EXPRESSION__EXPRESSION;
+  int FACTOR__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1524,7 +1676,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTIPLICATIVE_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+  int FACTOR__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1533,7 +1685,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTIPLICATIVE_EXPRESSION__OP = EXPRESSION_FEATURE_COUNT + 1;
+  int FACTOR__OP = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -1542,16 +1694,16 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTIPLICATIVE_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+  int FACTOR__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Multiplicative Expression</em>' class.
+   * The number of structural features of the '<em>Factor</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULTIPLICATIVE_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+  int FACTOR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.PrimaryExpressionImpl <em>Primary Expression</em>}' class.
@@ -1561,7 +1713,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getPrimaryExpression()
    * @generated
    */
-  int PRIMARY_EXPRESSION = 39;
+  int PRIMARY_EXPRESSION = 47;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1589,7 +1741,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralInt()
    * @generated
    */
-  int LITERAL_INT = 40;
+  int LITERAL_INT = 48;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1626,7 +1778,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralFloat()
    * @generated
    */
-  int LITERAL_FLOAT = 41;
+  int LITERAL_FLOAT = 49;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1663,7 +1815,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralBool()
    * @generated
    */
-  int LITERAL_BOOL = 42;
+  int LITERAL_BOOL = 50;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1700,7 +1852,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralVector()
    * @generated
    */
-  int LITERAL_VECTOR = 43;
+  int LITERAL_VECTOR = 51;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1737,7 +1889,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralString()
    * @generated
    */
-  int LITERAL_STRING = 44;
+  int LITERAL_STRING = 52;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1905,15 +2057,15 @@ public interface XsPackage extends EPackage
   EReference getVarDeclaration_Modifier();
 
   /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.VarDeclaration#getType <em>Type</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.VarDeclaration#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
+   * @return the meta object for the containment reference '<em>Type</em>'.
    * @see aom.scripting.xs.xs.VarDeclaration#getType()
    * @see #getVarDeclaration()
    * @generated
    */
-  EAttribute getVarDeclaration_Type();
+  EReference getVarDeclaration_Type();
 
   /**
    * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.VarDeclaration#getValue <em>Value</em>}'.
@@ -1948,15 +2100,15 @@ public interface XsPackage extends EPackage
   EReference getFunDeclaration_Modifier();
 
   /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.FunDeclaration#getType <em>Type</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.FunDeclaration#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
+   * @return the meta object for the containment reference '<em>Type</em>'.
    * @see aom.scripting.xs.xs.FunDeclaration#getType()
    * @see #getFunDeclaration()
    * @generated
    */
-  EAttribute getFunDeclaration_Type();
+  EReference getFunDeclaration_Type();
 
   /**
    * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.FunDeclaration#getParamlist <em>Paramlist</em>}'.
@@ -2151,6 +2303,86 @@ public interface XsPackage extends EPackage
    * @generated
    */
   EAttribute getFunModifier_Mutable();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.IntType <em>Int Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Int Type</em>'.
+   * @see aom.scripting.xs.xs.IntType
+   * @generated
+   */
+  EClass getIntType();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.FloatType <em>Float Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Float Type</em>'.
+   * @see aom.scripting.xs.xs.FloatType
+   * @generated
+   */
+  EClass getFloatType();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.BoolType <em>Bool Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bool Type</em>'.
+   * @see aom.scripting.xs.xs.BoolType
+   * @generated
+   */
+  EClass getBoolType();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.VectorType <em>Vector Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Vector Type</em>'.
+   * @see aom.scripting.xs.xs.VectorType
+   * @generated
+   */
+  EClass getVectorType();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.StringType <em>String Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>String Type</em>'.
+   * @see aom.scripting.xs.xs.StringType
+   * @generated
+   */
+  EClass getStringType();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.VoidType <em>Void Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Void Type</em>'.
+   * @see aom.scripting.xs.xs.VoidType
+   * @generated
+   */
+  EClass getVoidType();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.VarTypeSpecifier <em>Var Type Specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Var Type Specifier</em>'.
+   * @see aom.scripting.xs.xs.VarTypeSpecifier
+   * @generated
+   */
+  EClass getVarTypeSpecifier();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.FunTypeSpecifier <em>Fun Type Specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fun Type Specifier</em>'.
+   * @see aom.scripting.xs.xs.FunTypeSpecifier
+   * @generated
+   */
+  EClass getFunTypeSpecifier();
 
   /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.Params <em>Params</em>}'.
@@ -2681,262 +2913,262 @@ public interface XsPackage extends EPackage
   EAttribute getPostfixExpression_Op();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.SimpleExpression <em>Simple Expression</em>}'.
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.Or <em>Or</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Simple Expression</em>'.
-   * @see aom.scripting.xs.xs.SimpleExpression
+   * @return the meta object for class '<em>Or</em>'.
+   * @see aom.scripting.xs.xs.Or
    * @generated
    */
-  EClass getSimpleExpression();
+  EClass getOr();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.SimpleExpression#getLeft <em>Left</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Or#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see aom.scripting.xs.xs.SimpleExpression#getLeft()
-   * @see #getSimpleExpression()
+   * @see aom.scripting.xs.xs.Or#getLeft()
+   * @see #getOr()
    * @generated
    */
-  EReference getSimpleExpression_Left();
+  EReference getOr_Left();
 
   /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.SimpleExpression#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.Or#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see aom.scripting.xs.xs.SimpleExpression#getOp()
-   * @see #getSimpleExpression()
+   * @see aom.scripting.xs.xs.Or#getOp()
+   * @see #getOr()
    * @generated
    */
-  EAttribute getSimpleExpression_Op();
+  EAttribute getOr_Op();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.SimpleExpression#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Or#getRight <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see aom.scripting.xs.xs.SimpleExpression#getRight()
-   * @see #getSimpleExpression()
+   * @see aom.scripting.xs.xs.Or#getRight()
+   * @see #getOr()
    * @generated
    */
-  EReference getSimpleExpression_Right();
+  EReference getOr_Right();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.AndExpression <em>And Expression</em>}'.
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.And <em>And</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>And Expression</em>'.
-   * @see aom.scripting.xs.xs.AndExpression
+   * @return the meta object for class '<em>And</em>'.
+   * @see aom.scripting.xs.xs.And
    * @generated
    */
-  EClass getAndExpression();
+  EClass getAnd();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.AndExpression#getLeft <em>Left</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.And#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see aom.scripting.xs.xs.AndExpression#getLeft()
-   * @see #getAndExpression()
+   * @see aom.scripting.xs.xs.And#getLeft()
+   * @see #getAnd()
    * @generated
    */
-  EReference getAndExpression_Left();
+  EReference getAnd_Left();
 
   /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.AndExpression#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.And#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see aom.scripting.xs.xs.AndExpression#getOp()
-   * @see #getAndExpression()
+   * @see aom.scripting.xs.xs.And#getOp()
+   * @see #getAnd()
    * @generated
    */
-  EAttribute getAndExpression_Op();
+  EAttribute getAnd_Op();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.AndExpression#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.And#getRight <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see aom.scripting.xs.xs.AndExpression#getRight()
-   * @see #getAndExpression()
+   * @see aom.scripting.xs.xs.And#getRight()
+   * @see #getAnd()
    * @generated
    */
-  EReference getAndExpression_Right();
+  EReference getAnd_Right();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.EqualsExpression <em>Equals Expression</em>}'.
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.Equals <em>Equals</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Equals Expression</em>'.
-   * @see aom.scripting.xs.xs.EqualsExpression
+   * @return the meta object for class '<em>Equals</em>'.
+   * @see aom.scripting.xs.xs.Equals
    * @generated
    */
-  EClass getEqualsExpression();
+  EClass getEquals();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.EqualsExpression#getLeft <em>Left</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Equals#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see aom.scripting.xs.xs.EqualsExpression#getLeft()
-   * @see #getEqualsExpression()
+   * @see aom.scripting.xs.xs.Equals#getLeft()
+   * @see #getEquals()
    * @generated
    */
-  EReference getEqualsExpression_Left();
+  EReference getEquals_Left();
 
   /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.EqualsExpression#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.Equals#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see aom.scripting.xs.xs.EqualsExpression#getOp()
-   * @see #getEqualsExpression()
+   * @see aom.scripting.xs.xs.Equals#getOp()
+   * @see #getEquals()
    * @generated
    */
-  EAttribute getEqualsExpression_Op();
+  EAttribute getEquals_Op();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.EqualsExpression#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Equals#getRight <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see aom.scripting.xs.xs.EqualsExpression#getRight()
-   * @see #getEqualsExpression()
+   * @see aom.scripting.xs.xs.Equals#getRight()
+   * @see #getEquals()
    * @generated
    */
-  EReference getEqualsExpression_Right();
+  EReference getEquals_Right();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.ComparisonExpression <em>Comparison Expression</em>}'.
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.Comparison <em>Comparison</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Comparison Expression</em>'.
-   * @see aom.scripting.xs.xs.ComparisonExpression
+   * @return the meta object for class '<em>Comparison</em>'.
+   * @see aom.scripting.xs.xs.Comparison
    * @generated
    */
-  EClass getComparisonExpression();
+  EClass getComparison();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.ComparisonExpression#getLeft <em>Left</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Comparison#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see aom.scripting.xs.xs.ComparisonExpression#getLeft()
-   * @see #getComparisonExpression()
+   * @see aom.scripting.xs.xs.Comparison#getLeft()
+   * @see #getComparison()
    * @generated
    */
-  EReference getComparisonExpression_Left();
+  EReference getComparison_Left();
 
   /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.ComparisonExpression#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.Comparison#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see aom.scripting.xs.xs.ComparisonExpression#getOp()
-   * @see #getComparisonExpression()
+   * @see aom.scripting.xs.xs.Comparison#getOp()
+   * @see #getComparison()
    * @generated
    */
-  EAttribute getComparisonExpression_Op();
+  EAttribute getComparison_Op();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.ComparisonExpression#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Comparison#getRight <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see aom.scripting.xs.xs.ComparisonExpression#getRight()
-   * @see #getComparisonExpression()
+   * @see aom.scripting.xs.xs.Comparison#getRight()
+   * @see #getComparison()
    * @generated
    */
-  EReference getComparisonExpression_Right();
+  EReference getComparison_Right();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.AdditiveExpression <em>Additive Expression</em>}'.
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.Term <em>Term</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Additive Expression</em>'.
-   * @see aom.scripting.xs.xs.AdditiveExpression
+   * @return the meta object for class '<em>Term</em>'.
+   * @see aom.scripting.xs.xs.Term
    * @generated
    */
-  EClass getAdditiveExpression();
+  EClass getTerm();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.AdditiveExpression#getLeft <em>Left</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Term#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see aom.scripting.xs.xs.AdditiveExpression#getLeft()
-   * @see #getAdditiveExpression()
+   * @see aom.scripting.xs.xs.Term#getLeft()
+   * @see #getTerm()
    * @generated
    */
-  EReference getAdditiveExpression_Left();
+  EReference getTerm_Left();
 
   /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.AdditiveExpression#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.Term#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see aom.scripting.xs.xs.AdditiveExpression#getOp()
-   * @see #getAdditiveExpression()
+   * @see aom.scripting.xs.xs.Term#getOp()
+   * @see #getTerm()
    * @generated
    */
-  EAttribute getAdditiveExpression_Op();
+  EAttribute getTerm_Op();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.AdditiveExpression#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Term#getRight <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see aom.scripting.xs.xs.AdditiveExpression#getRight()
-   * @see #getAdditiveExpression()
+   * @see aom.scripting.xs.xs.Term#getRight()
+   * @see #getTerm()
    * @generated
    */
-  EReference getAdditiveExpression_Right();
+  EReference getTerm_Right();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.MultiplicativeExpression <em>Multiplicative Expression</em>}'.
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.Factor <em>Factor</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Multiplicative Expression</em>'.
-   * @see aom.scripting.xs.xs.MultiplicativeExpression
+   * @return the meta object for class '<em>Factor</em>'.
+   * @see aom.scripting.xs.xs.Factor
    * @generated
    */
-  EClass getMultiplicativeExpression();
+  EClass getFactor();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.MultiplicativeExpression#getLeft <em>Left</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Factor#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see aom.scripting.xs.xs.MultiplicativeExpression#getLeft()
-   * @see #getMultiplicativeExpression()
+   * @see aom.scripting.xs.xs.Factor#getLeft()
+   * @see #getFactor()
    * @generated
    */
-  EReference getMultiplicativeExpression_Left();
+  EReference getFactor_Left();
 
   /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.MultiplicativeExpression#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.Factor#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see aom.scripting.xs.xs.MultiplicativeExpression#getOp()
-   * @see #getMultiplicativeExpression()
+   * @see aom.scripting.xs.xs.Factor#getOp()
+   * @see #getFactor()
    * @generated
    */
-  EAttribute getMultiplicativeExpression_Op();
+  EAttribute getFactor_Op();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.MultiplicativeExpression#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Factor#getRight <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see aom.scripting.xs.xs.MultiplicativeExpression#getRight()
-   * @see #getMultiplicativeExpression()
+   * @see aom.scripting.xs.xs.Factor#getRight()
+   * @see #getFactor()
    * @generated
    */
-  EReference getMultiplicativeExpression_Right();
+  EReference getFactor_Right();
 
   /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.PrimaryExpression <em>Primary Expression</em>}'.
@@ -3193,12 +3425,12 @@ public interface XsPackage extends EPackage
     EReference VAR_DECLARATION__MODIFIER = eINSTANCE.getVarDeclaration_Modifier();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute VAR_DECLARATION__TYPE = eINSTANCE.getVarDeclaration_Type();
+    EReference VAR_DECLARATION__TYPE = eINSTANCE.getVarDeclaration_Type();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
@@ -3227,12 +3459,12 @@ public interface XsPackage extends EPackage
     EReference FUN_DECLARATION__MODIFIER = eINSTANCE.getFunDeclaration_Modifier();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FUN_DECLARATION__TYPE = eINSTANCE.getFunDeclaration_Type();
+    EReference FUN_DECLARATION__TYPE = eINSTANCE.getFunDeclaration_Type();
 
     /**
      * The meta object literal for the '<em><b>Paramlist</b></em>' containment reference feature.
@@ -3385,6 +3617,86 @@ public interface XsPackage extends EPackage
      * @generated
      */
     EAttribute FUN_MODIFIER__MUTABLE = eINSTANCE.getFunModifier_Mutable();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.IntTypeImpl <em>Int Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.IntTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIntType()
+     * @generated
+     */
+    EClass INT_TYPE = eINSTANCE.getIntType();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.FloatTypeImpl <em>Float Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.FloatTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFloatType()
+     * @generated
+     */
+    EClass FLOAT_TYPE = eINSTANCE.getFloatType();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.BoolTypeImpl <em>Bool Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.BoolTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getBoolType()
+     * @generated
+     */
+    EClass BOOL_TYPE = eINSTANCE.getBoolType();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VectorTypeImpl <em>Vector Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.VectorTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVectorType()
+     * @generated
+     */
+    EClass VECTOR_TYPE = eINSTANCE.getVectorType();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.StringTypeImpl <em>String Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.StringTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getStringType()
+     * @generated
+     */
+    EClass STRING_TYPE = eINSTANCE.getStringType();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VoidTypeImpl <em>Void Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.VoidTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVoidType()
+     * @generated
+     */
+    EClass VOID_TYPE = eINSTANCE.getVoidType();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VarTypeSpecifierImpl <em>Var Type Specifier</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.VarTypeSpecifierImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVarTypeSpecifier()
+     * @generated
+     */
+    EClass VAR_TYPE_SPECIFIER = eINSTANCE.getVarTypeSpecifier();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.FunTypeSpecifierImpl <em>Fun Type Specifier</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.FunTypeSpecifierImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFunTypeSpecifier()
+     * @generated
+     */
+    EClass FUN_TYPE_SPECIFIER = eINSTANCE.getFunTypeSpecifier();
 
     /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.ParamsImpl <em>Params</em>}' class.
@@ -3831,14 +4143,14 @@ public interface XsPackage extends EPackage
     EAttribute POSTFIX_EXPRESSION__OP = eINSTANCE.getPostfixExpression_Op();
 
     /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.SimpleExpressionImpl <em>Simple Expression</em>}' class.
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.OrImpl <em>Or</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.SimpleExpressionImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getSimpleExpression()
+     * @see aom.scripting.xs.xs.impl.OrImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getOr()
      * @generated
      */
-    EClass SIMPLE_EXPRESSION = eINSTANCE.getSimpleExpression();
+    EClass OR = eINSTANCE.getOr();
 
     /**
      * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
@@ -3846,7 +4158,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SIMPLE_EXPRESSION__LEFT = eINSTANCE.getSimpleExpression_Left();
+    EReference OR__LEFT = eINSTANCE.getOr_Left();
 
     /**
      * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
@@ -3854,7 +4166,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SIMPLE_EXPRESSION__OP = eINSTANCE.getSimpleExpression_Op();
+    EAttribute OR__OP = eINSTANCE.getOr_Op();
 
     /**
      * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
@@ -3862,17 +4174,17 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SIMPLE_EXPRESSION__RIGHT = eINSTANCE.getSimpleExpression_Right();
+    EReference OR__RIGHT = eINSTANCE.getOr_Right();
 
     /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.AndExpressionImpl <em>And Expression</em>}' class.
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.AndImpl <em>And</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.AndExpressionImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getAndExpression()
+     * @see aom.scripting.xs.xs.impl.AndImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getAnd()
      * @generated
      */
-    EClass AND_EXPRESSION = eINSTANCE.getAndExpression();
+    EClass AND = eINSTANCE.getAnd();
 
     /**
      * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
@@ -3880,7 +4192,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference AND_EXPRESSION__LEFT = eINSTANCE.getAndExpression_Left();
+    EReference AND__LEFT = eINSTANCE.getAnd_Left();
 
     /**
      * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
@@ -3888,7 +4200,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute AND_EXPRESSION__OP = eINSTANCE.getAndExpression_Op();
+    EAttribute AND__OP = eINSTANCE.getAnd_Op();
 
     /**
      * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
@@ -3896,17 +4208,17 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference AND_EXPRESSION__RIGHT = eINSTANCE.getAndExpression_Right();
+    EReference AND__RIGHT = eINSTANCE.getAnd_Right();
 
     /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.EqualsExpressionImpl <em>Equals Expression</em>}' class.
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.EqualsImpl <em>Equals</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.EqualsExpressionImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getEqualsExpression()
+     * @see aom.scripting.xs.xs.impl.EqualsImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getEquals()
      * @generated
      */
-    EClass EQUALS_EXPRESSION = eINSTANCE.getEqualsExpression();
+    EClass EQUALS = eINSTANCE.getEquals();
 
     /**
      * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
@@ -3914,7 +4226,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference EQUALS_EXPRESSION__LEFT = eINSTANCE.getEqualsExpression_Left();
+    EReference EQUALS__LEFT = eINSTANCE.getEquals_Left();
 
     /**
      * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
@@ -3922,7 +4234,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EQUALS_EXPRESSION__OP = eINSTANCE.getEqualsExpression_Op();
+    EAttribute EQUALS__OP = eINSTANCE.getEquals_Op();
 
     /**
      * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
@@ -3930,17 +4242,17 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference EQUALS_EXPRESSION__RIGHT = eINSTANCE.getEqualsExpression_Right();
+    EReference EQUALS__RIGHT = eINSTANCE.getEquals_Right();
 
     /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.ComparisonExpressionImpl <em>Comparison Expression</em>}' class.
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.ComparisonImpl <em>Comparison</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.ComparisonExpressionImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getComparisonExpression()
+     * @see aom.scripting.xs.xs.impl.ComparisonImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getComparison()
      * @generated
      */
-    EClass COMPARISON_EXPRESSION = eINSTANCE.getComparisonExpression();
+    EClass COMPARISON = eINSTANCE.getComparison();
 
     /**
      * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
@@ -3948,7 +4260,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMPARISON_EXPRESSION__LEFT = eINSTANCE.getComparisonExpression_Left();
+    EReference COMPARISON__LEFT = eINSTANCE.getComparison_Left();
 
     /**
      * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
@@ -3956,7 +4268,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COMPARISON_EXPRESSION__OP = eINSTANCE.getComparisonExpression_Op();
+    EAttribute COMPARISON__OP = eINSTANCE.getComparison_Op();
 
     /**
      * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
@@ -3964,17 +4276,17 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMPARISON_EXPRESSION__RIGHT = eINSTANCE.getComparisonExpression_Right();
+    EReference COMPARISON__RIGHT = eINSTANCE.getComparison_Right();
 
     /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.AdditiveExpressionImpl <em>Additive Expression</em>}' class.
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.TermImpl <em>Term</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.AdditiveExpressionImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getAdditiveExpression()
+     * @see aom.scripting.xs.xs.impl.TermImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getTerm()
      * @generated
      */
-    EClass ADDITIVE_EXPRESSION = eINSTANCE.getAdditiveExpression();
+    EClass TERM = eINSTANCE.getTerm();
 
     /**
      * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
@@ -3982,7 +4294,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ADDITIVE_EXPRESSION__LEFT = eINSTANCE.getAdditiveExpression_Left();
+    EReference TERM__LEFT = eINSTANCE.getTerm_Left();
 
     /**
      * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
@@ -3990,7 +4302,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ADDITIVE_EXPRESSION__OP = eINSTANCE.getAdditiveExpression_Op();
+    EAttribute TERM__OP = eINSTANCE.getTerm_Op();
 
     /**
      * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
@@ -3998,17 +4310,17 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ADDITIVE_EXPRESSION__RIGHT = eINSTANCE.getAdditiveExpression_Right();
+    EReference TERM__RIGHT = eINSTANCE.getTerm_Right();
 
     /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.MultiplicativeExpressionImpl <em>Multiplicative Expression</em>}' class.
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.FactorImpl <em>Factor</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.MultiplicativeExpressionImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getMultiplicativeExpression()
+     * @see aom.scripting.xs.xs.impl.FactorImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFactor()
      * @generated
      */
-    EClass MULTIPLICATIVE_EXPRESSION = eINSTANCE.getMultiplicativeExpression();
+    EClass FACTOR = eINSTANCE.getFactor();
 
     /**
      * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
@@ -4016,7 +4328,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MULTIPLICATIVE_EXPRESSION__LEFT = eINSTANCE.getMultiplicativeExpression_Left();
+    EReference FACTOR__LEFT = eINSTANCE.getFactor_Left();
 
     /**
      * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
@@ -4024,7 +4336,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MULTIPLICATIVE_EXPRESSION__OP = eINSTANCE.getMultiplicativeExpression_Op();
+    EAttribute FACTOR__OP = eINSTANCE.getFactor_Op();
 
     /**
      * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
@@ -4032,7 +4344,7 @@ public interface XsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MULTIPLICATIVE_EXPRESSION__RIGHT = eINSTANCE.getMultiplicativeExpression_Right();
+    EReference FACTOR__RIGHT = eINSTANCE.getFactor_Right();
 
     /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.PrimaryExpressionImpl <em>Primary Expression</em>}' class.
