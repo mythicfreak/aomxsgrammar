@@ -33,12 +33,12 @@ public interface Vector extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>X</em>' containment reference.
-   * @see #setX(LiteralOrConstantNum)
+   * @see #setX(LiteralNumOrVar)
    * @see aom.scripting.xs.xs.XsPackage#getVector_X()
    * @model containment="true"
    * @generated
    */
-  LiteralOrConstantNum getX();
+  LiteralNumOrVar getX();
 
   /**
    * Sets the value of the '{@link aom.scripting.xs.xs.Vector#getX <em>X</em>}' containment reference.
@@ -48,7 +48,7 @@ public interface Vector extends EObject
    * @see #getX()
    * @generated
    */
-  void setX(LiteralOrConstantNum value);
+  void setX(LiteralNumOrVar value);
 
   /**
    * Returns the value of the '<em><b>Y</b></em>' containment reference.
@@ -59,12 +59,12 @@ public interface Vector extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Y</em>' containment reference.
-   * @see #setY(LiteralOrConstantNum)
+   * @see #setY(LiteralNumOrVar)
    * @see aom.scripting.xs.xs.XsPackage#getVector_Y()
    * @model containment="true"
    * @generated
    */
-  LiteralOrConstantNum getY();
+  LiteralNumOrVar getY();
 
   /**
    * Sets the value of the '{@link aom.scripting.xs.xs.Vector#getY <em>Y</em>}' containment reference.
@@ -74,7 +74,7 @@ public interface Vector extends EObject
    * @see #getY()
    * @generated
    */
-  void setY(LiteralOrConstantNum value);
+  void setY(LiteralNumOrVar value);
 
   /**
    * Returns the value of the '<em><b>Z</b></em>' containment reference.
@@ -85,12 +85,12 @@ public interface Vector extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Z</em>' containment reference.
-   * @see #setZ(LiteralOrConstantNum)
+   * @see #setZ(LiteralNumOrVar)
    * @see aom.scripting.xs.xs.XsPackage#getVector_Z()
    * @model containment="true"
    * @generated
    */
-  LiteralOrConstantNum getZ();
+  LiteralNumOrVar getZ();
 
   /**
    * Sets the value of the '{@link aom.scripting.xs.xs.Vector#getZ <em>Z</em>}' containment reference.
@@ -100,6 +100,6 @@ public interface Vector extends EObject
    * @see #getZ()
    * @generated
    */
-  void setZ(LiteralOrConstantNum value);
+  void setZ(LiteralNumOrVar value);
 
 } // Vector

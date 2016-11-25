@@ -2,28 +2,28 @@
  */
 package aom.scripting.xs.xs.impl;
 
-import aom.scripting.xs.xs.SignedNum;
+import aom.scripting.xs.xs.LiteralNum;
 import aom.scripting.xs.xs.XsPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Signed Num</b></em>'.
+ * An implementation of the model object '<em><b>Literal Num</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class SignedNumImpl extends LiteralOrConstantNumImpl implements SignedNum
+public class LiteralNumImpl extends LiteralImpl implements LiteralNum
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SignedNumImpl()
+  protected LiteralNumImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class SignedNumImpl extends LiteralOrConstantNumImpl implements SignedNum
   @Override
   protected EClass eStaticClass()
   {
-    return XsPackage.Literals.SIGNED_NUM;
+    return XsPackage.Literals.LITERAL_NUM;
   }
 
-} //SignedNumImpl
+} //LiteralNumImpl

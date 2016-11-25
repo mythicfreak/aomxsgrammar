@@ -10,10 +10,8 @@ import aom.scripting.xs.xs.BreakStatement;
 import aom.scripting.xs.xs.Call;
 import aom.scripting.xs.xs.Comparison;
 import aom.scripting.xs.xs.CompoundStatement;
-import aom.scripting.xs.xs.ConstantNum;
 import aom.scripting.xs.xs.ContinueStatement;
 import aom.scripting.xs.xs.Declaration;
-import aom.scripting.xs.xs.EmptyExpressionStatement;
 import aom.scripting.xs.xs.Equals;
 import aom.scripting.xs.xs.Expression;
 import aom.scripting.xs.xs.ExpressionStatement;
@@ -23,23 +21,26 @@ import aom.scripting.xs.xs.ForStatement;
 import aom.scripting.xs.xs.FunDeclaration;
 import aom.scripting.xs.xs.FunModifier;
 import aom.scripting.xs.xs.FunTypeSpecifier;
+import aom.scripting.xs.xs.GlobalVarDeclaration;
 import aom.scripting.xs.xs.IfElseStatement;
 import aom.scripting.xs.xs.IncludeStatement;
 import aom.scripting.xs.xs.IntType;
+import aom.scripting.xs.xs.Literal;
 import aom.scripting.xs.xs.LiteralBool;
 import aom.scripting.xs.xs.LiteralFloat;
 import aom.scripting.xs.xs.LiteralInt;
-import aom.scripting.xs.xs.LiteralOrConstantNum;
+import aom.scripting.xs.xs.LiteralNum;
+import aom.scripting.xs.xs.LiteralNumOrVar;
+import aom.scripting.xs.xs.LiteralOrVar;
 import aom.scripting.xs.xs.LiteralString;
 import aom.scripting.xs.xs.LiteralVector;
 import aom.scripting.xs.xs.Or;
 import aom.scripting.xs.xs.Params;
-import aom.scripting.xs.xs.PostfixExpression;
+import aom.scripting.xs.xs.PostfixStatement;
 import aom.scripting.xs.xs.PrimaryExpression;
 import aom.scripting.xs.xs.Program;
 import aom.scripting.xs.xs.ReturnStatement;
 import aom.scripting.xs.xs.RuleDeclaration;
-import aom.scripting.xs.xs.SignedNum;
 import aom.scripting.xs.xs.Statement;
 import aom.scripting.xs.xs.StringType;
 import aom.scripting.xs.xs.SwitchCase;
@@ -92,21 +93,7 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass constantNumEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass literalOrConstantNumEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass vectorEClass = null;
+  private EClass includeStatementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -120,27 +107,6 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass funDeclarationEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass includeStatementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass ruleDeclarationEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass varModifierEClass = null;
 
   /**
@@ -148,56 +114,7 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass funModifierEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass intTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass floatTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass boolTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass vectorTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass stringTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass voidTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass varTypeSpecifierEClass = null;
+  private EClass funDeclarationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -212,6 +129,27 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * @generated
    */
   private EClass paramsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ruleDeclarationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass funModifierEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass varTypeSpecifierEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -240,6 +178,13 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * @generated
    */
   private EClass expressionStatementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfixStatementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -323,6 +268,34 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass literalOrVarEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass literalEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass literalNumEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass literalNumOrVarEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass callEClass = null;
 
   /**
@@ -337,14 +310,56 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass signedNumEClass = null;
+  private EClass intTypeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass emptyExpressionStatementEClass = null;
+  private EClass floatTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass boolTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass vectorTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stringTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass voidTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass vectorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass globalVarDeclarationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -352,13 +367,6 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * @generated
    */
   private EClass assignmentExpressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass postfixExpressionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -414,6 +422,20 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass literalVectorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass literalStringEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass literalIntEClass = null;
 
   /**
@@ -429,20 +451,6 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * @generated
    */
   private EClass literalBoolEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass literalVectorEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass literalStringEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -542,9 +550,9 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDeclaration_Name()
+  public EClass getIncludeStatement()
   {
-    return (EAttribute)declarationEClass.getEStructuralFeatures().get(0);
+    return includeStatementEClass;
   }
 
   /**
@@ -552,69 +560,9 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getConstantNum()
+  public EAttribute getIncludeStatement_FilePath()
   {
-    return constantNumEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getConstantNum_Var()
-  {
-    return (EReference)constantNumEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLiteralOrConstantNum()
-  {
-    return literalOrConstantNumEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getVector()
-  {
-    return vectorEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getVector_X()
-  {
-    return (EReference)vectorEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getVector_Y()
-  {
-    return (EReference)vectorEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getVector_Z()
-  {
-    return (EReference)vectorEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)includeStatementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -632,7 +580,7 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getVarDeclaration_Modifier()
+  public EReference getVarDeclaration_Type()
   {
     return (EReference)varDeclarationEClass.getEStructuralFeatures().get(0);
   }
@@ -642,9 +590,9 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getVarDeclaration_Type()
+  public EAttribute getVarDeclaration_Name()
   {
-    return (EReference)varDeclarationEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)varDeclarationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -655,6 +603,36 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
   public EReference getVarDeclaration_Value()
   {
     return (EReference)varDeclarationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVarModifier()
+  {
+    return varModifierEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVarModifier_Const()
+  {
+    return (EAttribute)varModifierEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVarModifier_Extern()
+  {
+    return (EAttribute)varModifierEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -692,9 +670,9 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFunDeclaration_Paramlist()
+  public EAttribute getFunDeclaration_Name()
   {
-    return (EReference)funDeclarationEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)funDeclarationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -702,7 +680,7 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFunDeclaration_Statements()
+  public EReference getFunDeclaration_Paramlist()
   {
     return (EReference)funDeclarationEClass.getEStructuralFeatures().get(3);
   }
@@ -712,229 +690,9 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getIncludeStatement()
+  public EReference getFunDeclaration_Statements()
   {
-    return includeStatementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRuleDeclaration()
-  {
-    return ruleDeclarationEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRuleDeclaration_Active()
-  {
-    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRuleDeclaration_RunImmediately()
-  {
-    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRuleDeclaration_HighFrequency()
-  {
-    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRuleDeclaration_Group()
-  {
-    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRuleDeclaration_MinInterval()
-  {
-    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRuleDeclaration_MaxInterval()
-  {
-    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRuleDeclaration_Statements()
-  {
-    return (EReference)ruleDeclarationEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getVarModifier()
-  {
-    return varModifierEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getVarModifier_Static()
-  {
-    return (EAttribute)varModifierEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getVarModifier_Const()
-  {
-    return (EAttribute)varModifierEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getVarModifier_Extern()
-  {
-    return (EAttribute)varModifierEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFunModifier()
-  {
-    return funModifierEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getFunModifier_Static()
-  {
-    return (EAttribute)funModifierEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getFunModifier_Mutable()
-  {
-    return (EAttribute)funModifierEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getIntType()
-  {
-    return intTypeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFloatType()
-  {
-    return floatTypeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getBoolType()
-  {
-    return boolTypeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getVectorType()
-  {
-    return vectorTypeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getStringType()
-  {
-    return stringTypeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getVoidType()
-  {
-    return voidTypeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getVarTypeSpecifier()
-  {
-    return varTypeSpecifierEClass;
+    return (EReference)funDeclarationEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -962,9 +720,9 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getParams_Param()
+  public EReference getParams_Params()
   {
-    return (EAttribute)paramsEClass.getEStructuralFeatures().get(0);
+    return (EReference)paramsEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -972,9 +730,119 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getParams_Params()
+  public EClass getRuleDeclaration()
   {
-    return (EReference)paramsEClass.getEStructuralFeatures().get(1);
+    return ruleDeclarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRuleDeclaration_Name()
+  {
+    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRuleDeclaration_Active()
+  {
+    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRuleDeclaration_RunImmediately()
+  {
+    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRuleDeclaration_HighFrequency()
+  {
+    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRuleDeclaration_Group()
+  {
+    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRuleDeclaration_MinInterval()
+  {
+    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRuleDeclaration_MaxInterval()
+  {
+    return (EAttribute)ruleDeclarationEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRuleDeclaration_Statements()
+  {
+    return (EReference)ruleDeclarationEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFunModifier()
+  {
+    return funModifierEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFunModifier_Mutable()
+  {
+    return (EAttribute)funModifierEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVarTypeSpecifier()
+  {
+    return varTypeSpecifierEClass;
   }
 
   /**
@@ -1042,6 +910,36 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getPostfixStatement()
+  {
+    return postfixStatementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPostfixStatement_Var()
+  {
+    return (EReference)postfixStatementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPostfixStatement_Op()
+  {
+    return (EAttribute)postfixStatementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getIfElseStatement()
   {
     return ifElseStatementEClass;
@@ -1062,7 +960,7 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIfElseStatement_IfStatement()
+  public EReference getIfElseStatement_ThenStatement()
   {
     return (EReference)ifElseStatementEClass.getEStructuralFeatures().get(1);
   }
@@ -1322,9 +1220,49 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getVar_Name()
+  public EReference getVar_Declaration()
   {
     return (EReference)varEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLiteralOrVar()
+  {
+    return literalOrVarEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLiteral()
+  {
+    return literalEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLiteralNum()
+  {
+    return literalNumEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLiteralNumOrVar()
+  {
+    return literalNumOrVarEClass;
   }
 
   /**
@@ -1382,9 +1320,9 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSignedNum()
+  public EClass getIntType()
   {
-    return signedNumEClass;
+    return intTypeEClass;
   }
 
   /**
@@ -1392,9 +1330,109 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getEmptyExpressionStatement()
+  public EClass getFloatType()
   {
-    return emptyExpressionStatementEClass;
+    return floatTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBoolType()
+  {
+    return boolTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVectorType()
+  {
+    return vectorTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStringType()
+  {
+    return stringTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVoidType()
+  {
+    return voidTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVector()
+  {
+    return vectorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getVector_X()
+  {
+    return (EReference)vectorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getVector_Y()
+  {
+    return (EReference)vectorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getVector_Z()
+  {
+    return (EReference)vectorEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGlobalVarDeclaration()
+  {
+    return globalVarDeclarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGlobalVarDeclaration_Modifier()
+  {
+    return (EReference)globalVarDeclarationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1415,36 +1453,6 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
   public EReference getAssignmentExpression_Var()
   {
     return (EReference)assignmentExpressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPostfixExpression()
-  {
-    return postfixExpressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPostfixExpression_PostfixVar()
-  {
-    return (EReference)postfixExpressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPostfixExpression_Op()
-  {
-    return (EAttribute)postfixExpressionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1702,6 +1710,46 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getLiteralVector()
+  {
+    return literalVectorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLiteralVector_Value()
+  {
+    return (EReference)literalVectorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLiteralString()
+  {
+    return literalStringEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLiteralString_Value()
+  {
+    return (EAttribute)literalStringEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLiteralInt()
   {
     return literalIntEClass;
@@ -1762,46 +1810,6 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getLiteralVector()
-  {
-    return literalVectorEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLiteralVector_Value()
-  {
-    return (EReference)literalVectorEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLiteralString()
-  {
-    return literalStringEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getLiteralString_Value()
-  {
-    return (EAttribute)literalStringEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public XsFactory getXsFactory()
   {
     return (XsFactory)getEFactoryInstance();
@@ -1831,32 +1839,33 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     createEReference(programEClass, PROGRAM__DECLARATIONS);
 
     declarationEClass = createEClass(DECLARATION);
-    createEAttribute(declarationEClass, DECLARATION__NAME);
 
-    constantNumEClass = createEClass(CONSTANT_NUM);
-    createEReference(constantNumEClass, CONSTANT_NUM__VAR);
-
-    literalOrConstantNumEClass = createEClass(LITERAL_OR_CONSTANT_NUM);
-
-    vectorEClass = createEClass(VECTOR);
-    createEReference(vectorEClass, VECTOR__X);
-    createEReference(vectorEClass, VECTOR__Y);
-    createEReference(vectorEClass, VECTOR__Z);
+    includeStatementEClass = createEClass(INCLUDE_STATEMENT);
+    createEAttribute(includeStatementEClass, INCLUDE_STATEMENT__FILE_PATH);
 
     varDeclarationEClass = createEClass(VAR_DECLARATION);
-    createEReference(varDeclarationEClass, VAR_DECLARATION__MODIFIER);
     createEReference(varDeclarationEClass, VAR_DECLARATION__TYPE);
+    createEAttribute(varDeclarationEClass, VAR_DECLARATION__NAME);
     createEReference(varDeclarationEClass, VAR_DECLARATION__VALUE);
+
+    varModifierEClass = createEClass(VAR_MODIFIER);
+    createEAttribute(varModifierEClass, VAR_MODIFIER__CONST);
+    createEAttribute(varModifierEClass, VAR_MODIFIER__EXTERN);
 
     funDeclarationEClass = createEClass(FUN_DECLARATION);
     createEReference(funDeclarationEClass, FUN_DECLARATION__MODIFIER);
     createEReference(funDeclarationEClass, FUN_DECLARATION__TYPE);
+    createEAttribute(funDeclarationEClass, FUN_DECLARATION__NAME);
     createEReference(funDeclarationEClass, FUN_DECLARATION__PARAMLIST);
     createEReference(funDeclarationEClass, FUN_DECLARATION__STATEMENTS);
 
-    includeStatementEClass = createEClass(INCLUDE_STATEMENT);
+    funTypeSpecifierEClass = createEClass(FUN_TYPE_SPECIFIER);
+
+    paramsEClass = createEClass(PARAMS);
+    createEReference(paramsEClass, PARAMS__PARAMS);
 
     ruleDeclarationEClass = createEClass(RULE_DECLARATION);
+    createEAttribute(ruleDeclarationEClass, RULE_DECLARATION__NAME);
     createEAttribute(ruleDeclarationEClass, RULE_DECLARATION__ACTIVE);
     createEAttribute(ruleDeclarationEClass, RULE_DECLARATION__RUN_IMMEDIATELY);
     createEAttribute(ruleDeclarationEClass, RULE_DECLARATION__HIGH_FREQUENCY);
@@ -1865,34 +1874,10 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     createEAttribute(ruleDeclarationEClass, RULE_DECLARATION__MAX_INTERVAL);
     createEReference(ruleDeclarationEClass, RULE_DECLARATION__STATEMENTS);
 
-    varModifierEClass = createEClass(VAR_MODIFIER);
-    createEAttribute(varModifierEClass, VAR_MODIFIER__STATIC);
-    createEAttribute(varModifierEClass, VAR_MODIFIER__CONST);
-    createEAttribute(varModifierEClass, VAR_MODIFIER__EXTERN);
-
     funModifierEClass = createEClass(FUN_MODIFIER);
-    createEAttribute(funModifierEClass, FUN_MODIFIER__STATIC);
     createEAttribute(funModifierEClass, FUN_MODIFIER__MUTABLE);
 
-    intTypeEClass = createEClass(INT_TYPE);
-
-    floatTypeEClass = createEClass(FLOAT_TYPE);
-
-    boolTypeEClass = createEClass(BOOL_TYPE);
-
-    vectorTypeEClass = createEClass(VECTOR_TYPE);
-
-    stringTypeEClass = createEClass(STRING_TYPE);
-
-    voidTypeEClass = createEClass(VOID_TYPE);
-
     varTypeSpecifierEClass = createEClass(VAR_TYPE_SPECIFIER);
-
-    funTypeSpecifierEClass = createEClass(FUN_TYPE_SPECIFIER);
-
-    paramsEClass = createEClass(PARAMS);
-    createEAttribute(paramsEClass, PARAMS__PARAM);
-    createEReference(paramsEClass, PARAMS__PARAMS);
 
     compoundStatementEClass = createEClass(COMPOUND_STATEMENT);
     createEReference(compoundStatementEClass, COMPOUND_STATEMENT__CONTENTS);
@@ -1904,9 +1889,13 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     expressionStatementEClass = createEClass(EXPRESSION_STATEMENT);
     createEReference(expressionStatementEClass, EXPRESSION_STATEMENT__EXPRESSION);
 
+    postfixStatementEClass = createEClass(POSTFIX_STATEMENT);
+    createEReference(postfixStatementEClass, POSTFIX_STATEMENT__VAR);
+    createEAttribute(postfixStatementEClass, POSTFIX_STATEMENT__OP);
+
     ifElseStatementEClass = createEClass(IF_ELSE_STATEMENT);
     createEReference(ifElseStatementEClass, IF_ELSE_STATEMENT__CONDITION);
-    createEReference(ifElseStatementEClass, IF_ELSE_STATEMENT__IF_STATEMENT);
+    createEReference(ifElseStatementEClass, IF_ELSE_STATEMENT__THEN_STATEMENT);
     createEReference(ifElseStatementEClass, IF_ELSE_STATEMENT__ELSE_STATEMENT);
 
     whileStatementEClass = createEClass(WHILE_STATEMENT);
@@ -1942,7 +1931,15 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     createEReference(expressionEClass, EXPRESSION__EXPRESSION);
 
     varEClass = createEClass(VAR);
-    createEReference(varEClass, VAR__NAME);
+    createEReference(varEClass, VAR__DECLARATION);
+
+    literalOrVarEClass = createEClass(LITERAL_OR_VAR);
+
+    literalEClass = createEClass(LITERAL);
+
+    literalNumEClass = createEClass(LITERAL_NUM);
+
+    literalNumOrVarEClass = createEClass(LITERAL_NUM_OR_VAR);
 
     callEClass = createEClass(CALL);
     createEReference(callEClass, CALL__FUNCTION);
@@ -1951,16 +1948,28 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     argumentsEClass = createEClass(ARGUMENTS);
     createEReference(argumentsEClass, ARGUMENTS__EXPRESSIONS);
 
-    signedNumEClass = createEClass(SIGNED_NUM);
+    intTypeEClass = createEClass(INT_TYPE);
 
-    emptyExpressionStatementEClass = createEClass(EMPTY_EXPRESSION_STATEMENT);
+    floatTypeEClass = createEClass(FLOAT_TYPE);
+
+    boolTypeEClass = createEClass(BOOL_TYPE);
+
+    vectorTypeEClass = createEClass(VECTOR_TYPE);
+
+    stringTypeEClass = createEClass(STRING_TYPE);
+
+    voidTypeEClass = createEClass(VOID_TYPE);
+
+    vectorEClass = createEClass(VECTOR);
+    createEReference(vectorEClass, VECTOR__X);
+    createEReference(vectorEClass, VECTOR__Y);
+    createEReference(vectorEClass, VECTOR__Z);
+
+    globalVarDeclarationEClass = createEClass(GLOBAL_VAR_DECLARATION);
+    createEReference(globalVarDeclarationEClass, GLOBAL_VAR_DECLARATION__MODIFIER);
 
     assignmentExpressionEClass = createEClass(ASSIGNMENT_EXPRESSION);
     createEReference(assignmentExpressionEClass, ASSIGNMENT_EXPRESSION__VAR);
-
-    postfixExpressionEClass = createEClass(POSTFIX_EXPRESSION);
-    createEReference(postfixExpressionEClass, POSTFIX_EXPRESSION__POSTFIX_VAR);
-    createEAttribute(postfixExpressionEClass, POSTFIX_EXPRESSION__OP);
 
     orEClass = createEClass(OR);
     createEReference(orEClass, OR__LEFT);
@@ -1994,6 +2003,12 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
 
     primaryExpressionEClass = createEClass(PRIMARY_EXPRESSION);
 
+    literalVectorEClass = createEClass(LITERAL_VECTOR);
+    createEReference(literalVectorEClass, LITERAL_VECTOR__VALUE);
+
+    literalStringEClass = createEClass(LITERAL_STRING);
+    createEAttribute(literalStringEClass, LITERAL_STRING__VALUE);
+
     literalIntEClass = createEClass(LITERAL_INT);
     createEAttribute(literalIntEClass, LITERAL_INT__VALUE);
 
@@ -2002,12 +2017,6 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
 
     literalBoolEClass = createEClass(LITERAL_BOOL);
     createEAttribute(literalBoolEClass, LITERAL_BOOL__VALUE);
-
-    literalVectorEClass = createEClass(LITERAL_VECTOR);
-    createEReference(literalVectorEClass, LITERAL_VECTOR__VALUE);
-
-    literalStringEClass = createEClass(LITERAL_STRING);
-    createEAttribute(literalStringEClass, LITERAL_STRING__VALUE);
   }
 
   /**
@@ -2039,22 +2048,16 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    constantNumEClass.getESuperTypes().add(this.getLiteralOrConstantNum());
+    includeStatementEClass.getESuperTypes().add(this.getDeclaration());
     varDeclarationEClass.getESuperTypes().add(this.getDeclaration());
     varDeclarationEClass.getESuperTypes().add(this.getVarDeclarationOrStatement());
     funDeclarationEClass.getESuperTypes().add(this.getDeclaration());
-    includeStatementEClass.getESuperTypes().add(this.getDeclaration());
     ruleDeclarationEClass.getESuperTypes().add(this.getDeclaration());
-    intTypeEClass.getESuperTypes().add(this.getVarTypeSpecifier());
-    floatTypeEClass.getESuperTypes().add(this.getVarTypeSpecifier());
-    boolTypeEClass.getESuperTypes().add(this.getVarTypeSpecifier());
-    vectorTypeEClass.getESuperTypes().add(this.getVarTypeSpecifier());
-    stringTypeEClass.getESuperTypes().add(this.getVarTypeSpecifier());
-    voidTypeEClass.getESuperTypes().add(this.getFunTypeSpecifier());
     varTypeSpecifierEClass.getESuperTypes().add(this.getFunTypeSpecifier());
     compoundStatementEClass.getESuperTypes().add(this.getStatement());
     statementEClass.getESuperTypes().add(this.getVarDeclarationOrStatement());
     expressionStatementEClass.getESuperTypes().add(this.getStatement());
+    postfixStatementEClass.getESuperTypes().add(this.getStatement());
     ifElseStatementEClass.getESuperTypes().add(this.getStatement());
     whileStatementEClass.getESuperTypes().add(this.getStatement());
     forStatementEClass.getESuperTypes().add(this.getStatement());
@@ -2062,10 +2065,21 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     returnStatementEClass.getESuperTypes().add(this.getStatement());
     continueStatementEClass.getESuperTypes().add(this.getStatement());
     breakStatementEClass.getESuperTypes().add(this.getStatement());
-    signedNumEClass.getESuperTypes().add(this.getLiteralOrConstantNum());
-    emptyExpressionStatementEClass.getESuperTypes().add(this.getExpressionStatement());
+    varEClass.getESuperTypes().add(this.getLiteralOrVar());
+    varEClass.getESuperTypes().add(this.getLiteralNumOrVar());
+    literalOrVarEClass.getESuperTypes().add(this.getExpression());
+    literalEClass.getESuperTypes().add(this.getLiteralOrVar());
+    literalNumEClass.getESuperTypes().add(this.getLiteral());
+    literalNumEClass.getESuperTypes().add(this.getLiteralNumOrVar());
+    callEClass.getESuperTypes().add(this.getExpression());
+    intTypeEClass.getESuperTypes().add(this.getVarTypeSpecifier());
+    floatTypeEClass.getESuperTypes().add(this.getVarTypeSpecifier());
+    boolTypeEClass.getESuperTypes().add(this.getVarTypeSpecifier());
+    vectorTypeEClass.getESuperTypes().add(this.getVarTypeSpecifier());
+    stringTypeEClass.getESuperTypes().add(this.getVarTypeSpecifier());
+    voidTypeEClass.getESuperTypes().add(this.getFunTypeSpecifier());
+    globalVarDeclarationEClass.getESuperTypes().add(this.getVarDeclaration());
     assignmentExpressionEClass.getESuperTypes().add(this.getExpression());
-    postfixExpressionEClass.getESuperTypes().add(this.getExpression());
     orEClass.getESuperTypes().add(this.getExpression());
     andEClass.getESuperTypes().add(this.getExpression());
     equalsEClass.getESuperTypes().add(this.getExpression());
@@ -2073,43 +2087,44 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     termEClass.getESuperTypes().add(this.getExpression());
     factorEClass.getESuperTypes().add(this.getExpression());
     primaryExpressionEClass.getESuperTypes().add(this.getExpression());
-    literalIntEClass.getESuperTypes().add(this.getExpression());
-    literalFloatEClass.getESuperTypes().add(this.getExpression());
-    literalBoolEClass.getESuperTypes().add(this.getExpression());
-    literalVectorEClass.getESuperTypes().add(this.getExpression());
-    literalStringEClass.getESuperTypes().add(this.getExpression());
+    literalVectorEClass.getESuperTypes().add(this.getLiteral());
+    literalStringEClass.getESuperTypes().add(this.getLiteral());
+    literalIntEClass.getESuperTypes().add(this.getLiteralNum());
+    literalFloatEClass.getESuperTypes().add(this.getLiteralNum());
+    literalBoolEClass.getESuperTypes().add(this.getLiteralNum());
 
     // Initialize classes and features; add operations and parameters
     initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getProgram_Declarations(), this.getDeclaration(), null, "declarations", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(declarationEClass, Declaration.class, "Declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, Declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(constantNumEClass, ConstantNum.class, "ConstantNum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstantNum_Var(), this.getVarDeclaration(), null, "var", null, 0, 1, ConstantNum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(literalOrConstantNumEClass, LiteralOrConstantNum.class, "LiteralOrConstantNum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(vectorEClass, Vector.class, "Vector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getVector_X(), this.getLiteralOrConstantNum(), null, "x", null, 0, 1, Vector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getVector_Y(), this.getLiteralOrConstantNum(), null, "y", null, 0, 1, Vector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getVector_Z(), this.getLiteralOrConstantNum(), null, "z", null, 0, 1, Vector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(includeStatementEClass, IncludeStatement.class, "IncludeStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIncludeStatement_FilePath(), ecorePackage.getEString(), "filePath", null, 0, 1, IncludeStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(varDeclarationEClass, VarDeclaration.class, "VarDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getVarDeclaration_Modifier(), this.getVarModifier(), null, "modifier", null, 0, 1, VarDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVarDeclaration_Type(), this.getVarTypeSpecifier(), null, "type", null, 0, 1, VarDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getVarDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, VarDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVarDeclaration_Value(), this.getExpression(), null, "value", null, 0, 1, VarDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(varModifierEClass, VarModifier.class, "VarModifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getVarModifier_Const(), ecorePackage.getEBoolean(), "const", null, 0, 1, VarModifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getVarModifier_Extern(), ecorePackage.getEBoolean(), "extern", null, 0, 1, VarModifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(funDeclarationEClass, FunDeclaration.class, "FunDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFunDeclaration_Modifier(), this.getFunModifier(), null, "modifier", null, 0, 1, FunDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFunDeclaration_Type(), this.getFunTypeSpecifier(), null, "type", null, 0, 1, FunDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFunDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, FunDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFunDeclaration_Paramlist(), this.getParams(), null, "paramlist", null, 0, 1, FunDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFunDeclaration_Statements(), this.getCompoundStatement(), null, "statements", null, 0, 1, FunDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(includeStatementEClass, IncludeStatement.class, "IncludeStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(funTypeSpecifierEClass, FunTypeSpecifier.class, "FunTypeSpecifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(paramsEClass, Params.class, "Params", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getParams_Params(), this.getVarDeclaration(), null, "params", null, 0, -1, Params.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(ruleDeclarationEClass, RuleDeclaration.class, "RuleDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRuleDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, RuleDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRuleDeclaration_Active(), ecorePackage.getEBoolean(), "active", null, 0, 1, RuleDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRuleDeclaration_RunImmediately(), ecorePackage.getEBoolean(), "runImmediately", null, 0, 1, RuleDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRuleDeclaration_HighFrequency(), ecorePackage.getEBoolean(), "highFrequency", null, 0, 1, RuleDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2118,34 +2133,10 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     initEAttribute(getRuleDeclaration_MaxInterval(), ecorePackage.getEInt(), "maxInterval", null, 0, 1, RuleDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRuleDeclaration_Statements(), this.getCompoundStatement(), null, "statements", null, 0, 1, RuleDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(varModifierEClass, VarModifier.class, "VarModifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getVarModifier_Static(), ecorePackage.getEBoolean(), "static", null, 0, 1, VarModifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getVarModifier_Const(), ecorePackage.getEBoolean(), "const", null, 0, 1, VarModifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getVarModifier_Extern(), ecorePackage.getEBoolean(), "extern", null, 0, 1, VarModifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(funModifierEClass, FunModifier.class, "FunModifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFunModifier_Static(), ecorePackage.getEBoolean(), "static", null, 0, 1, FunModifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFunModifier_Mutable(), ecorePackage.getEBoolean(), "mutable", null, 0, 1, FunModifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(intTypeEClass, IntType.class, "IntType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(floatTypeEClass, FloatType.class, "FloatType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(boolTypeEClass, BoolType.class, "BoolType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(vectorTypeEClass, VectorType.class, "VectorType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(stringTypeEClass, StringType.class, "StringType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(voidTypeEClass, VoidType.class, "VoidType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
     initEClass(varTypeSpecifierEClass, VarTypeSpecifier.class, "VarTypeSpecifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(funTypeSpecifierEClass, FunTypeSpecifier.class, "FunTypeSpecifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(paramsEClass, Params.class, "Params", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getParams_Param(), ecorePackage.getEString(), "param", null, 0, 1, Params.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParams_Params(), this.getVarDeclaration(), null, "params", null, 0, -1, Params.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(compoundStatementEClass, CompoundStatement.class, "CompoundStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCompoundStatement_Contents(), this.getVarDeclarationOrStatement(), null, "contents", null, 0, -1, CompoundStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2157,9 +2148,13 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     initEClass(expressionStatementEClass, ExpressionStatement.class, "ExpressionStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExpressionStatement_Expression(), this.getExpression(), null, "expression", null, 0, 1, ExpressionStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(postfixStatementEClass, PostfixStatement.class, "PostfixStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPostfixStatement_Var(), this.getVarDeclaration(), null, "var", null, 0, 1, PostfixStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPostfixStatement_Op(), ecorePackage.getEString(), "op", null, 0, 1, PostfixStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(ifElseStatementEClass, IfElseStatement.class, "IfElseStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getIfElseStatement_Condition(), this.getExpression(), null, "condition", null, 0, 1, IfElseStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIfElseStatement_IfStatement(), this.getStatement(), null, "ifStatement", null, 0, 1, IfElseStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIfElseStatement_ThenStatement(), this.getStatement(), null, "thenStatement", null, 0, 1, IfElseStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIfElseStatement_ElseStatement(), this.getStatement(), null, "elseStatement", null, 0, 1, IfElseStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(whileStatementEClass, WhileStatement.class, "WhileStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2178,7 +2173,7 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     initEReference(getSwitchStatement_Default(), this.getSwitchDefault(), null, "default", null, 0, 1, SwitchStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(switchCaseEClass, SwitchCase.class, "SwitchCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getSwitchCase_Var(), this.getLiteralOrConstantNum(), null, "var", null, 0, 1, SwitchCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSwitchCase_Var(), this.getLiteralNumOrVar(), null, "var", null, 0, 1, SwitchCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSwitchCase_Statement(), this.getStatement(), null, "statement", null, 0, 1, SwitchCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(switchDefaultEClass, SwitchDefault.class, "SwitchDefault", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2192,10 +2187,18 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     initEClass(breakStatementEClass, BreakStatement.class, "BreakStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExpression_Expression(), ecorePackage.getEObject(), null, "expression", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpression_Expression(), this.getExpression(), null, "expression", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(varEClass, Var.class, "Var", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getVar_Name(), this.getVarDeclaration(), null, "name", null, 0, 1, Var.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getVar_Declaration(), this.getVarDeclaration(), null, "declaration", null, 0, 1, Var.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(literalOrVarEClass, LiteralOrVar.class, "LiteralOrVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(literalNumEClass, LiteralNum.class, "LiteralNum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(literalNumOrVarEClass, LiteralNumOrVar.class, "LiteralNumOrVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(callEClass, Call.class, "Call", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCall_Function(), this.getFunDeclaration(), null, "function", null, 0, 1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2204,16 +2207,28 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
     initEClass(argumentsEClass, Arguments.class, "Arguments", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getArguments_Expressions(), this.getExpression(), null, "expressions", null, 0, -1, Arguments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(signedNumEClass, SignedNum.class, "SignedNum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(intTypeEClass, IntType.class, "IntType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(emptyExpressionStatementEClass, EmptyExpressionStatement.class, "EmptyExpressionStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(floatTypeEClass, FloatType.class, "FloatType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(boolTypeEClass, BoolType.class, "BoolType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(vectorTypeEClass, VectorType.class, "VectorType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(stringTypeEClass, StringType.class, "StringType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(voidTypeEClass, VoidType.class, "VoidType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(vectorEClass, Vector.class, "Vector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getVector_X(), this.getLiteralNumOrVar(), null, "x", null, 0, 1, Vector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getVector_Y(), this.getLiteralNumOrVar(), null, "y", null, 0, 1, Vector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getVector_Z(), this.getLiteralNumOrVar(), null, "z", null, 0, 1, Vector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(globalVarDeclarationEClass, GlobalVarDeclaration.class, "GlobalVarDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGlobalVarDeclaration_Modifier(), this.getVarModifier(), null, "modifier", null, 0, 1, GlobalVarDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(assignmentExpressionEClass, AssignmentExpression.class, "AssignmentExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAssignmentExpression_Var(), this.getVar(), null, "var", null, 0, 1, AssignmentExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(postfixExpressionEClass, PostfixExpression.class, "PostfixExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPostfixExpression_PostfixVar(), this.getVarDeclaration(), null, "postfixVar", null, 0, 1, PostfixExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPostfixExpression_Op(), ecorePackage.getEString(), "op", null, 0, 1, PostfixExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(orEClass, Or.class, "Or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getOr_Left(), this.getExpression(), null, "left", null, 0, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2247,6 +2262,12 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
 
     initEClass(primaryExpressionEClass, PrimaryExpression.class, "PrimaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(literalVectorEClass, LiteralVector.class, "LiteralVector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLiteralVector_Value(), this.getVector(), null, "value", null, 0, 1, LiteralVector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(literalStringEClass, LiteralString.class, "LiteralString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLiteralString_Value(), ecorePackage.getEString(), "value", null, 0, 1, LiteralString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(literalIntEClass, LiteralInt.class, "LiteralInt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLiteralInt_Value(), ecorePackage.getEInt(), "value", null, 0, 1, LiteralInt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2255,12 +2276,6 @@ public class XsPackageImpl extends EPackageImpl implements XsPackage
 
     initEClass(literalBoolEClass, LiteralBool.class, "LiteralBool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLiteralBool_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, LiteralBool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(literalVectorEClass, LiteralVector.class, "LiteralVector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLiteralVector_Value(), this.getVector(), null, "value", null, 0, 1, LiteralVector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(literalStringEClass, LiteralString.class, "LiteralString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLiteralString_Value(), ecorePackage.getEString(), "value", null, 0, 1, LiteralString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

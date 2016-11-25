@@ -3,13 +3,156 @@
  */
 package aom.scripting.xs.scoping
 
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EReference
+import org.eclipse.xtext.EcoreUtil2
+import org.eclipse.xtext.scoping.IScope
+import org.eclipse.xtext.naming.QualifiedName
+import java.util.Arrays
+import org.eclipse.xtext.resource.EObjectDescription
+import org.eclipse.xtext.naming.IQualifiedNameProvider
+import aom.scripting.xs.xs.Program
+import aom.scripting.xs.xs.IncludeStatement
+import com.google.inject.Inject
+import org.eclipse.xtext.scoping.IGlobalScopeProvider
+import org.eclipse.xtext.resource.IResourceDescription
+import org.eclipse.xtext.resource.IContainer
+import com.google.inject.Provider
+import org.eclipse.xtext.scoping.impl.LoadOnDemandResourceDescriptions
+import org.eclipse.emf.common.util.URI
+import aom.scripting.xs.xs.GlobalVarDeclaration
+import aom.scripting.xs.xs.FunDeclaration
+import aom.scripting.xs.xs.RuleDeclaration
+import aom.scripting.xs.xs.Declaration
+import aom.scripting.xs.xs.VarDeclaration
+import org.eclipse.xtext.resource.IResourceDescriptionsProvider
+import java.util.Collections
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.xtext.resource.IEObjectDescription
+import aom.scripting.xs.xs.XsPackage
+import aom.scripting.xs.xs.impl.XsPackageImpl
+
 /**
  * This class contains custom scoping description.
  * 
  * see : http://www.eclipse.org/Xtext/documentation.html#scoping
  * on how and when to use it 
- *
+ * 
  */
 class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider {
+
+	override getScope(EObject context, EReference reference) {
+		return new XSScope(this, context, reference)
+	}
+
+	@Inject
+	private IQualifiedNameProvider qualifiedNameProvider;
+
+	@Inject
+	private IResourceDescriptionsProvider resourceDescriptionsProvider;
+
+	public def static getExportedObjects(IResourceDescriptionsProvider resourceDescriptionsProvider, Resource eResource,
+		String file) {
+		val f = Arrays.asList(file.split("/"));
+		return resourceDescriptionsProvider.getResourceDescriptions(eResource.resourceSet).allResourceDescriptions.
+			findFirst [ rd |
+				rd.URI.segmentsList.drop(2).toList == f
+			]?.getExportedObjects();
+	}
+
+	static class XSScope implements IScope {
+		XSScopeProvider p;
+		EObject upToObject;
+		EReference upToReference;
+		Program rootElement;
+
+		new(XSScopeProvider p, EObject upToObject, EReference upToReference) {
+			this.p = p;
+			this.upToObject = upToObject;
+			this.upToReference = upToReference;
+			rootElement = EcoreUtil2.getRootContainer(upToObject) as Program;
+		}
+
+		def EObjectDescription desc(EObject obj) {
+			return new EObjectDescription(p.qualifiedNameProvider.getFullyQualifiedName(obj), obj, null);
+		}
+
+		def IEObjectDescription getFromFile(String file, QualifiedName name) {
+			val eos = getExportedObjects(p.resourceDescriptionsProvider, rootElement.eResource, file);
+			if (eos != null) {
+				for (eo : eos) {
+					if (eo.EClass == XsPackage.eINSTANCE.includeStatement) {
+						val transitive = getFromFile(eo.name.getSegment(1), name); // second segment is the path
+						if (transitive != null)
+							return transitive;
+					} else if (eo.name.equalsIgnoreCase(name)) {
+						return eo;
+					}
+				}
+			}
+			return null;
+		}
+
+		override getSingleElement(QualifiedName name) {
+			// check base library - here done via a project that has this file and just declares all methods and constants
+			val std = getFromFile("__std__.xs", name);
+			if (std != null)
+				return std;
+
+			val containingDeclaration = EcoreUtil2.getContainerOfType(upToObject, Declaration)
+			for (decl : rootElement.declarations) {
+				switch (decl) {
+					IncludeStatement: {
+						val r = getFromFile(decl.filePath, name);
+						if (r != null)
+							return r;
+					}
+					GlobalVarDeclaration: {
+						if (decl.name.equalsIgnoreCase(name.firstSegment))
+							return desc(decl);
+					}
+					FunDeclaration: {
+						if (decl.name.equalsIgnoreCase(name.firstSegment))
+							return desc(decl);
+					}
+					RuleDeclaration: {
+						if (decl.name.equalsIgnoreCase(name.firstSegment))
+							return desc(decl);
+					}
+				}
+				if (decl == containingDeclaration) { // i.e. current function or trigger
+					val iter = decl.eAllContents;
+					while (iter.hasNext) {
+						val c = iter.next;
+						if (c == upToObject)
+							return null;
+						if (c instanceof VarDeclaration &&
+							(c as VarDeclaration).name.equalsIgnoreCase(name.firstSegment))
+							return desc(c);
+					};
+					return null;
+				}
+			}
+			return null;
+		}
+
+		override getSingleElement(EObject object) {
+			return new EObjectDescription(p.qualifiedNameProvider.getFullyQualifiedName(object), object, null)
+		}
+
+		override getElements(QualifiedName name) {
+			return Arrays.asList(getSingleElement(name))
+		}
+
+		override getElements(EObject object) {
+			return Arrays.asList(getSingleElement(object))
+		}
+
+		override getAllElements() {
+			// not neccessary (maybe for content assist though)
+			return Collections.emptySet
+		}
+
+	}
 
 }

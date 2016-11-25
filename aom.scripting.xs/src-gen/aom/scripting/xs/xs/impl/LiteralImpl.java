@@ -2,28 +2,28 @@
  */
 package aom.scripting.xs.xs.impl;
 
-import aom.scripting.xs.xs.EmptyExpressionStatement;
+import aom.scripting.xs.xs.Literal;
 import aom.scripting.xs.xs.XsPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Empty Expression Statement</b></em>'.
+ * An implementation of the model object '<em><b>Literal</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class EmptyExpressionStatementImpl extends ExpressionStatementImpl implements EmptyExpressionStatement
+public class LiteralImpl extends LiteralOrVarImpl implements Literal
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected EmptyExpressionStatementImpl()
+  protected LiteralImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class EmptyExpressionStatementImpl extends ExpressionStatementImpl implem
   @Override
   protected EClass eStaticClass()
   {
-    return XsPackage.Literals.EMPTY_EXPRESSION_STATEMENT;
+    return XsPackage.Literals.LITERAL;
   }
 
-} //EmptyExpressionStatementImpl
+} //LiteralImpl

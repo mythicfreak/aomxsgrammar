@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#getName <em>Name</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#isActive <em>Active</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#isRunImmediately <em>Run Immediately</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#isHighFrequency <em>High Frequency</em>}</li>
@@ -35,6 +36,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclaration
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #isActive() <em>Active</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -184,6 +205,29 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   protected EClass eStaticClass()
   {
     return XsPackage.Literals.RULE_DECLARATION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.RULE_DECLARATION__NAME, oldName, name));
   }
 
   /**
@@ -398,6 +442,8 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
+      case XsPackage.RULE_DECLARATION__NAME:
+        return getName();
       case XsPackage.RULE_DECLARATION__ACTIVE:
         return isActive();
       case XsPackage.RULE_DECLARATION__RUN_IMMEDIATELY:
@@ -426,6 +472,9 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
+      case XsPackage.RULE_DECLARATION__NAME:
+        setName((String)newValue);
+        return;
       case XsPackage.RULE_DECLARATION__ACTIVE:
         setActive((Boolean)newValue);
         return;
@@ -461,6 +510,9 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
+      case XsPackage.RULE_DECLARATION__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case XsPackage.RULE_DECLARATION__ACTIVE:
         setActive(ACTIVE_EDEFAULT);
         return;
@@ -496,6 +548,8 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
+      case XsPackage.RULE_DECLARATION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case XsPackage.RULE_DECLARATION__ACTIVE:
         return active != ACTIVE_EDEFAULT;
       case XsPackage.RULE_DECLARATION__RUN_IMMEDIATELY:
@@ -525,7 +579,9 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (active: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", active: ");
     result.append(active);
     result.append(", runImmediately: ");
     result.append(runImmediately);

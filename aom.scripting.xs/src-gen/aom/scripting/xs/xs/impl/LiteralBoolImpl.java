@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class LiteralBoolImpl extends ExpressionImpl implements LiteralBool
+public class LiteralBoolImpl extends LiteralNumImpl implements LiteralBool
 {
   /**
    * The default value of the '{@link #isValue() <em>Value</em>}' attribute.

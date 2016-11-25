@@ -2,7 +2,7 @@
  */
 package aom.scripting.xs.xs.impl;
 
-import aom.scripting.xs.xs.LiteralOrConstantNum;
+import aom.scripting.xs.xs.LiteralNumOrVar;
 import aom.scripting.xs.xs.Statement;
 import aom.scripting.xs.xs.SwitchCase;
 import aom.scripting.xs.xs.XsPackage;
@@ -40,7 +40,7 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
    * @generated
    * @ordered
    */
-  protected LiteralOrConstantNum var;
+  protected LiteralNumOrVar var;
 
   /**
    * The cached value of the '{@link #getStatement() <em>Statement</em>}' containment reference.
@@ -78,7 +78,7 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralOrConstantNum getVar()
+  public LiteralNumOrVar getVar()
   {
     return var;
   }
@@ -88,9 +88,9 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVar(LiteralOrConstantNum newVar, NotificationChain msgs)
+  public NotificationChain basicSetVar(LiteralNumOrVar newVar, NotificationChain msgs)
   {
-    LiteralOrConstantNum oldVar = var;
+    LiteralNumOrVar oldVar = var;
     var = newVar;
     if (eNotificationRequired())
     {
@@ -105,7 +105,7 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVar(LiteralOrConstantNum newVar)
+  public void setVar(LiteralNumOrVar newVar)
   {
     if (newVar != var)
     {
@@ -216,7 +216,7 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
     switch (featureID)
     {
       case XsPackage.SWITCH_CASE__VAR:
-        setVar((LiteralOrConstantNum)newValue);
+        setVar((LiteralNumOrVar)newValue);
         return;
       case XsPackage.SWITCH_CASE__STATEMENT:
         setStatement((Statement)newValue);
@@ -236,7 +236,7 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
     switch (featureID)
     {
       case XsPackage.SWITCH_CASE__VAR:
-        setVar((LiteralOrConstantNum)null);
+        setVar((LiteralNumOrVar)null);
         return;
       case XsPackage.SWITCH_CASE__STATEMENT:
         setStatement((Statement)null);

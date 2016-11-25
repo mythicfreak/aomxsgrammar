@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.FunModifierImpl#isStatic <em>Static</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.FunModifierImpl#isMutable <em>Mutable</em>}</li>
  * </ul>
  * </p>
@@ -28,26 +27,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class FunModifierImpl extends MinimalEObjectImpl.Container implements FunModifier
 {
-  /**
-   * The default value of the '{@link #isStatic() <em>Static</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isStatic()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean STATIC_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isStatic() <em>Static</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isStatic()
-   * @generated
-   * @ordered
-   */
-  protected boolean static_ = STATIC_EDEFAULT;
-
   /**
    * The default value of the '{@link #isMutable() <em>Mutable</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -94,29 +73,6 @@ public class FunModifierImpl extends MinimalEObjectImpl.Container implements Fun
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isStatic()
-  {
-    return static_;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStatic(boolean newStatic)
-  {
-    boolean oldStatic = static_;
-    static_ = newStatic;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.FUN_MODIFIER__STATIC, oldStatic, static_));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public boolean isMutable()
   {
     return mutable;
@@ -145,8 +101,6 @@ public class FunModifierImpl extends MinimalEObjectImpl.Container implements Fun
   {
     switch (featureID)
     {
-      case XsPackage.FUN_MODIFIER__STATIC:
-        return isStatic();
       case XsPackage.FUN_MODIFIER__MUTABLE:
         return isMutable();
     }
@@ -163,9 +117,6 @@ public class FunModifierImpl extends MinimalEObjectImpl.Container implements Fun
   {
     switch (featureID)
     {
-      case XsPackage.FUN_MODIFIER__STATIC:
-        setStatic((Boolean)newValue);
-        return;
       case XsPackage.FUN_MODIFIER__MUTABLE:
         setMutable((Boolean)newValue);
         return;
@@ -183,9 +134,6 @@ public class FunModifierImpl extends MinimalEObjectImpl.Container implements Fun
   {
     switch (featureID)
     {
-      case XsPackage.FUN_MODIFIER__STATIC:
-        setStatic(STATIC_EDEFAULT);
-        return;
       case XsPackage.FUN_MODIFIER__MUTABLE:
         setMutable(MUTABLE_EDEFAULT);
         return;
@@ -203,8 +151,6 @@ public class FunModifierImpl extends MinimalEObjectImpl.Container implements Fun
   {
     switch (featureID)
     {
-      case XsPackage.FUN_MODIFIER__STATIC:
-        return static_ != STATIC_EDEFAULT;
       case XsPackage.FUN_MODIFIER__MUTABLE:
         return mutable != MUTABLE_EDEFAULT;
     }
@@ -222,9 +168,7 @@ public class FunModifierImpl extends MinimalEObjectImpl.Container implements Fun
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (static: ");
-    result.append(static_);
-    result.append(", mutable: ");
+    result.append(" (mutable: ");
     result.append(mutable);
     result.append(')');
     return result.toString();

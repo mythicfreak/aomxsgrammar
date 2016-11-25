@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.Params#getParam <em>Param</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.Params#getParams <em>Params</em>}</li>
  * </ul>
  * </p>
@@ -25,32 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Params extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Param</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Param</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Param</em>' attribute.
-   * @see #setParam(String)
-   * @see aom.scripting.xs.xs.XsPackage#getParams_Param()
-   * @model
-   * @generated
-   */
-  String getParam();
-
-  /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.Params#getParam <em>Param</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Param</em>' attribute.
-   * @see #getParam()
-   * @generated
-   */
-  void setParam(String value);
-
   /**
    * Returns the value of the '<em><b>Params</b></em>' containment reference list.
    * The list contents are of type {@link aom.scripting.xs.xs.VarDeclaration}.

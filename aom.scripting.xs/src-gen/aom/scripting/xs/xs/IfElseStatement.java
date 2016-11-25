@@ -12,7 +12,7 @@ package aom.scripting.xs.xs;
  * The following features are supported:
  * <ul>
  *   <li>{@link aom.scripting.xs.xs.IfElseStatement#getCondition <em>Condition</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.IfElseStatement#getIfStatement <em>If Statement</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.IfElseStatement#getThenStatement <em>Then Statement</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.IfElseStatement#getElseStatement <em>Else Statement</em>}</li>
  * </ul>
  * </p>
@@ -50,30 +50,30 @@ public interface IfElseStatement extends Statement
   void setCondition(Expression value);
 
   /**
-   * Returns the value of the '<em><b>If Statement</b></em>' containment reference.
+   * Returns the value of the '<em><b>Then Statement</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>If Statement</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Then Statement</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>If Statement</em>' containment reference.
-   * @see #setIfStatement(Statement)
-   * @see aom.scripting.xs.xs.XsPackage#getIfElseStatement_IfStatement()
+   * @return the value of the '<em>Then Statement</em>' containment reference.
+   * @see #setThenStatement(Statement)
+   * @see aom.scripting.xs.xs.XsPackage#getIfElseStatement_ThenStatement()
    * @model containment="true"
    * @generated
    */
-  Statement getIfStatement();
+  Statement getThenStatement();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.IfElseStatement#getIfStatement <em>If Statement</em>}' containment reference.
+   * Sets the value of the '{@link aom.scripting.xs.xs.IfElseStatement#getThenStatement <em>Then Statement</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>If Statement</em>' containment reference.
-   * @see #getIfStatement()
+   * @param value the new value of the '<em>Then Statement</em>' containment reference.
+   * @see #getThenStatement()
    * @generated
    */
-  void setIfStatement(Statement value);
+  void setThenStatement(Statement value);
 
   /**
    * Returns the value of the '<em><b>Else Statement</b></em>' containment reference.

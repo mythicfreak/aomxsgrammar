@@ -3,6 +3,12 @@
 */
 package aom.scripting.xs;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.naming.DefaultDeclarativeQualifiedNameProvider;
+import org.eclipse.xtext.naming.IQualifiedNameProvider;
+import org.eclipse.xtext.naming.QualifiedName;
+import org.eclipse.xtext.naming.SimpleNameProvider;
+
 /**
  * Initialization support for running Xtext languages 
  * without equinox extension registry
@@ -12,5 +18,6 @@ public class XSStandaloneSetup extends XSStandaloneSetupGenerated{
 	public static void doSetup() {
 		new XSStandaloneSetup().createInjectorAndDoEMFRegistration();
 	}
+	
 }
 

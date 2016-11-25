@@ -5,15 +5,19 @@ package aom.scripting.xs.validation
 
 import aom.scripting.xs.xs.Call
 import aom.scripting.xs.xs.FunDeclaration
+import aom.scripting.xs.xs.AssignmentExpression
+import aom.scripting.xs.xs.GlobalVarDeclaration
 import aom.scripting.xs.xs.XsPackage
 import org.eclipse.xtext.validation.Check
-import de.itemis.xtext.typesystem.ITypesystem
+//import de.itemis.xtext.typesystem.ITypesystem
 import org.eclipse.emf.ecore.EObject
 import com.google.inject.Inject
+import aom.scripting.xs.xs.LiteralInt
+import aom.scripting.xs.xs.LiteralString
 
 /**
  * Custom validation rules. 
- *
+ * 
  * see http://www.eclipse.org/Xtext/documentation.html#validation
  */
 class XSValidator extends AbstractXSValidator {
@@ -28,21 +32,40 @@ class XSValidator extends AbstractXSValidator {
 //					INVALID_NAME)
 //		}
 //	}
+//	@Inject
+//	private ITypesystem ts;
+	@Check
+	def checkTypesystemRules(EObject x) {
+		// System.out.println("Checking type of " + x.toString())
+//		ts.checkTypesystemConstraints(x, this);
+	}
+
+	@Check
+	def checkParameterCount(Call function) { // TODO perform type checks
+		val declaration = function.eCrossReferences().get(0) as FunDeclaration;
+		if (function.args.expressions.size() > declaration.paramlist.params.size()) {
+			error("Too many arguments", XsPackage.Literals.CALL__FUNCTION);
+		}
+	}
+
+	@Check
+	def checkConstAssign(AssignmentExpression assign) {
+		val v = assign.^var.declaration
+		if (v instanceof GlobalVarDeclaration && (v as GlobalVarDeclaration).modifier?.const) {
+			error("Assignment to constant", XsPackage.Literals.ASSIGNMENT_EXPRESSION__VAR);
+		}
+	}
+
+	@Check
+	def checkIntDigits(LiteralInt intLiteral) {
+		if (intLiteral.value > 999999999 || intLiteral.value < -999999999)
+			error("Too many digits", XsPackage.Literals.LITERAL_INT__VALUE);
+	}
 	
-	@Inject
-	private ITypesystem ts;
-
 	@Check
-	def checkTypesystemRules( EObject x ) {
-		//System.out.println("Checking type of " + x.toString())
-		ts.checkTypesystemConstraints(x, this);
+	def checkStringLength(LiteralString string) {
+		if (string.value.length > 127)
+			error("String too long", XsPackage.Literals.LITERAL_STRING__VALUE);
 	}
-
-	@Check
-	def checkParameterCount(Call function){ //TODO allow less params, but perform type checks
-	    val declaration = function.eCrossReferences().get(0) as FunDeclaration;
-	    if(function.args.expressions.size() != declaration.paramlist.params.size()) {
-	       error("Bad Parameter Count", XsPackage.Literals.CALL__FUNCTION);
-	    }
-	}
+	
 }

@@ -3,16 +3,38 @@
  */
 package aom.scripting.xs;
 
-import de.itemis.xtext.typesystem.ITypesystem;
-import aom.scripting.xs.typesystem.XsTypesystem;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.naming.DefaultDeclarativeQualifiedNameProvider;
+import org.eclipse.xtext.naming.IQualifiedNameProvider;
+import org.eclipse.xtext.naming.QualifiedName;
+import org.eclipse.xtext.resource.IDefaultResourceDescriptionStrategy;
+import org.eclipse.xtext.resource.IResourceDescription;
+import org.eclipse.xtext.scoping.IScopeProvider;
+
+import aom.scripting.xs.scoping.XSResourceDescriptionStrategy;
+import aom.scripting.xs.scoping.XSScopeProvider;
+
+//import de.itemis.xtext.typesystem.ITypesystem;
+//import aom.scripting.xs.typesystem.XsTypesystem;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class XSRuntimeModule extends aom.scripting.xs.AbstractXSRuntimeModule {
-	public Class<? extends ITypesystem> bindITypestem() {
-		return XsTypesystem.class;
+	
+//	public Class<? extends ITypesystem> bindITypestem() {
+//		return XsTypesystem.class;
+//	}
+	
+	@Override
+	public Class<? extends IScopeProvider> bindIScopeProvider() {
+		return XSScopeProvider.class;
 	}
+	
+	public Class<? extends IDefaultResourceDescriptionStrategy> bindIDefaultResourceDescriptionStrategy() {
+		return XSResourceDescriptionStrategy.class;
+	}
+	
 }
 
 

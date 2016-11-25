@@ -3,38 +3,39 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/aom.scripting.xs/src-gen" editDirectory="/aom.scripting.xs.edit/src"
     editorDirectory="/aom.scripting.xs.editor/src" modelPluginID="aom.scripting.xs"
     forceOverwrite="true" modelName="XS" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    complianceLevel="5.0" copyrightFields="false" editPluginID="aom.scripting.xs.edit"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="aom.scripting.xs.edit"
     editorPluginID="aom.scripting.xs.editor" runtimeVersion="2.10">
   <genPackages prefix="Xs" basePackage="aom.scripting.xs" disposableProviderFactory="true"
       fileExtensions="xs" ecorePackage="XS.ecore#/">
     <genClasses ecoreClass="XS.ecore#//Program">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Program/declarations"/>
     </genClasses>
-    <genClasses ecoreClass="XS.ecore#//Declaration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//Declaration/name"/>
-    </genClasses>
-    <genClasses ecoreClass="XS.ecore#//ConstantNum">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XS.ecore#//ConstantNum/var"/>
-    </genClasses>
-    <genClasses ecoreClass="XS.ecore#//LiteralOrConstantNum"/>
-    <genClasses ecoreClass="XS.ecore#//Vector">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Vector/x"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Vector/y"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Vector/z"/>
+    <genClasses ecoreClass="XS.ecore#//Declaration"/>
+    <genClasses ecoreClass="XS.ecore#//IncludeStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//IncludeStatement/filePath"/>
     </genClasses>
     <genClasses ecoreClass="XS.ecore#//VarDeclaration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//VarDeclaration/modifier"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//VarDeclaration/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//VarDeclaration/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//VarDeclaration/value"/>
+    </genClasses>
+    <genClasses ecoreClass="XS.ecore#//VarModifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//VarModifier/const"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//VarModifier/extern"/>
     </genClasses>
     <genClasses ecoreClass="XS.ecore#//FunDeclaration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//FunDeclaration/modifier"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//FunDeclaration/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//FunDeclaration/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//FunDeclaration/paramlist"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//FunDeclaration/statements"/>
     </genClasses>
-    <genClasses ecoreClass="XS.ecore#//IncludeStatement"/>
+    <genClasses ecoreClass="XS.ecore#//FunTypeSpecifier"/>
+    <genClasses ecoreClass="XS.ecore#//Params">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Params/params"/>
+    </genClasses>
     <genClasses ecoreClass="XS.ecore#//RuleDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//RuleDeclaration/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//RuleDeclaration/active"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//RuleDeclaration/runImmediately"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//RuleDeclaration/highFrequency"/>
@@ -43,27 +44,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//RuleDeclaration/maxInterval"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//RuleDeclaration/statements"/>
     </genClasses>
-    <genClasses ecoreClass="XS.ecore#//VarModifier">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//VarModifier/static"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//VarModifier/const"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//VarModifier/extern"/>
-    </genClasses>
     <genClasses ecoreClass="XS.ecore#//FunModifier">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//FunModifier/static"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//FunModifier/mutable"/>
     </genClasses>
-    <genClasses ecoreClass="XS.ecore#//IntType"/>
-    <genClasses ecoreClass="XS.ecore#//FloatType"/>
-    <genClasses ecoreClass="XS.ecore#//BoolType"/>
-    <genClasses ecoreClass="XS.ecore#//VectorType"/>
-    <genClasses ecoreClass="XS.ecore#//StringType"/>
-    <genClasses ecoreClass="XS.ecore#//VoidType"/>
     <genClasses ecoreClass="XS.ecore#//VarTypeSpecifier"/>
-    <genClasses ecoreClass="XS.ecore#//FunTypeSpecifier"/>
-    <genClasses ecoreClass="XS.ecore#//Params">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//Params/param"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Params/params"/>
-    </genClasses>
     <genClasses ecoreClass="XS.ecore#//CompoundStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//CompoundStatement/contents"/>
     </genClasses>
@@ -72,9 +56,13 @@
     <genClasses ecoreClass="XS.ecore#//ExpressionStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//ExpressionStatement/expression"/>
     </genClasses>
+    <genClasses ecoreClass="XS.ecore#//PostfixStatement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XS.ecore#//PostfixStatement/var"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//PostfixStatement/op"/>
+    </genClasses>
     <genClasses ecoreClass="XS.ecore#//IfElseStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//IfElseStatement/condition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//IfElseStatement/ifStatement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//IfElseStatement/thenStatement"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//IfElseStatement/elseStatement"/>
     </genClasses>
     <genClasses ecoreClass="XS.ecore#//WhileStatement">
@@ -108,8 +96,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Expression/expression"/>
     </genClasses>
     <genClasses ecoreClass="XS.ecore#//Var">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XS.ecore#//Var/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XS.ecore#//Var/declaration"/>
     </genClasses>
+    <genClasses ecoreClass="XS.ecore#//LiteralOrVar"/>
+    <genClasses ecoreClass="XS.ecore#//Literal"/>
+    <genClasses ecoreClass="XS.ecore#//LiteralNum"/>
+    <genClasses ecoreClass="XS.ecore#//LiteralNumOrVar"/>
     <genClasses ecoreClass="XS.ecore#//Call">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XS.ecore#//Call/function"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Call/args"/>
@@ -117,14 +109,22 @@
     <genClasses ecoreClass="XS.ecore#//Arguments">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Arguments/expressions"/>
     </genClasses>
-    <genClasses ecoreClass="XS.ecore#//SignedNum"/>
-    <genClasses ecoreClass="XS.ecore#//EmptyExpressionStatement"/>
+    <genClasses ecoreClass="XS.ecore#//IntType"/>
+    <genClasses ecoreClass="XS.ecore#//FloatType"/>
+    <genClasses ecoreClass="XS.ecore#//BoolType"/>
+    <genClasses ecoreClass="XS.ecore#//VectorType"/>
+    <genClasses ecoreClass="XS.ecore#//StringType"/>
+    <genClasses ecoreClass="XS.ecore#//VoidType"/>
+    <genClasses ecoreClass="XS.ecore#//Vector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Vector/x"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Vector/y"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Vector/z"/>
+    </genClasses>
+    <genClasses ecoreClass="XS.ecore#//GlobalVarDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//GlobalVarDeclaration/modifier"/>
+    </genClasses>
     <genClasses ecoreClass="XS.ecore#//AssignmentExpression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//AssignmentExpression/var"/>
-    </genClasses>
-    <genClasses ecoreClass="XS.ecore#//PostfixExpression">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XS.ecore#//PostfixExpression/postfixVar"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//PostfixExpression/op"/>
     </genClasses>
     <genClasses ecoreClass="XS.ecore#//Or">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Or/left"/>
@@ -157,6 +157,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//Factor/right"/>
     </genClasses>
     <genClasses ecoreClass="XS.ecore#//PrimaryExpression"/>
+    <genClasses ecoreClass="XS.ecore#//LiteralVector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//LiteralVector/value"/>
+    </genClasses>
+    <genClasses ecoreClass="XS.ecore#//LiteralString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//LiteralString/value"/>
+    </genClasses>
     <genClasses ecoreClass="XS.ecore#//LiteralInt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//LiteralInt/value"/>
     </genClasses>
@@ -165,12 +171,6 @@
     </genClasses>
     <genClasses ecoreClass="XS.ecore#//LiteralBool">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//LiteralBool/value"/>
-    </genClasses>
-    <genClasses ecoreClass="XS.ecore#//LiteralVector">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XS.ecore#//LiteralVector/value"/>
-    </genClasses>
-    <genClasses ecoreClass="XS.ecore#//LiteralString">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XS.ecore#//LiteralString/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

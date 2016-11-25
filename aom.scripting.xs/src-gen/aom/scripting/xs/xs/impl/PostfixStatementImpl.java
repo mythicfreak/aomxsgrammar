@@ -2,7 +2,7 @@
  */
 package aom.scripting.xs.xs.impl;
 
-import aom.scripting.xs.xs.ConstantNum;
+import aom.scripting.xs.xs.PostfixStatement;
 import aom.scripting.xs.xs.VarDeclaration;
 import aom.scripting.xs.xs.XsPackage;
 
@@ -15,18 +15,19 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Constant Num</b></em>'.
+ * An implementation of the model object '<em><b>Postfix Statement</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.ConstantNumImpl#getVar <em>Var</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.PostfixStatementImpl#getVar <em>Var</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.PostfixStatementImpl#getOp <em>Op</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ConstantNumImpl extends LiteralOrConstantNumImpl implements ConstantNum
+public class PostfixStatementImpl extends StatementImpl implements PostfixStatement
 {
   /**
    * The cached value of the '{@link #getVar() <em>Var</em>}' reference.
@@ -39,11 +40,31 @@ public class ConstantNumImpl extends LiteralOrConstantNumImpl implements Constan
   protected VarDeclaration var;
 
   /**
+   * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOp()
+   * @generated
+   * @ordered
+   */
+  protected static final String OP_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getOp() <em>Op</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOp()
+   * @generated
+   * @ordered
+   */
+  protected String op = OP_EDEFAULT;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ConstantNumImpl()
+  protected PostfixStatementImpl()
   {
     super();
   }
@@ -56,7 +77,7 @@ public class ConstantNumImpl extends LiteralOrConstantNumImpl implements Constan
   @Override
   protected EClass eStaticClass()
   {
-    return XsPackage.Literals.CONSTANT_NUM;
+    return XsPackage.Literals.POSTFIX_STATEMENT;
   }
 
   /**
@@ -73,7 +94,7 @@ public class ConstantNumImpl extends LiteralOrConstantNumImpl implements Constan
       if (var != oldVar)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, XsPackage.CONSTANT_NUM__VAR, oldVar, var));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, XsPackage.POSTFIX_STATEMENT__VAR, oldVar, var));
       }
     }
     return var;
@@ -99,7 +120,30 @@ public class ConstantNumImpl extends LiteralOrConstantNumImpl implements Constan
     VarDeclaration oldVar = var;
     var = newVar;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.CONSTANT_NUM__VAR, oldVar, var));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.POSTFIX_STATEMENT__VAR, oldVar, var));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getOp()
+  {
+    return op;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOp(String newOp)
+  {
+    String oldOp = op;
+    op = newOp;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.POSTFIX_STATEMENT__OP, oldOp, op));
   }
 
   /**
@@ -112,9 +156,11 @@ public class ConstantNumImpl extends LiteralOrConstantNumImpl implements Constan
   {
     switch (featureID)
     {
-      case XsPackage.CONSTANT_NUM__VAR:
+      case XsPackage.POSTFIX_STATEMENT__VAR:
         if (resolve) return getVar();
         return basicGetVar();
+      case XsPackage.POSTFIX_STATEMENT__OP:
+        return getOp();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -129,8 +175,11 @@ public class ConstantNumImpl extends LiteralOrConstantNumImpl implements Constan
   {
     switch (featureID)
     {
-      case XsPackage.CONSTANT_NUM__VAR:
+      case XsPackage.POSTFIX_STATEMENT__VAR:
         setVar((VarDeclaration)newValue);
+        return;
+      case XsPackage.POSTFIX_STATEMENT__OP:
+        setOp((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -146,8 +195,11 @@ public class ConstantNumImpl extends LiteralOrConstantNumImpl implements Constan
   {
     switch (featureID)
     {
-      case XsPackage.CONSTANT_NUM__VAR:
+      case XsPackage.POSTFIX_STATEMENT__VAR:
         setVar((VarDeclaration)null);
+        return;
+      case XsPackage.POSTFIX_STATEMENT__OP:
+        setOp(OP_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -163,10 +215,29 @@ public class ConstantNumImpl extends LiteralOrConstantNumImpl implements Constan
   {
     switch (featureID)
     {
-      case XsPackage.CONSTANT_NUM__VAR:
+      case XsPackage.POSTFIX_STATEMENT__VAR:
         return var != null;
+      case XsPackage.POSTFIX_STATEMENT__OP:
+        return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
     }
     return super.eIsSet(featureID);
   }
 
-} //ConstantNumImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (op: ");
+    result.append(op);
+    result.append(')');
+    return result.toString();
+  }
+
+} //PostfixStatementImpl

@@ -2,7 +2,6 @@
  */
 package aom.scripting.xs.xs;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Call extends EObject
+public interface Call extends Expression
 {
   /**
    * Returns the value of the '<em><b>Function</b></em>' reference.

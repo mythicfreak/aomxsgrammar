@@ -13,6 +13,7 @@ package aom.scripting.xs.xs;
  * <ul>
  *   <li>{@link aom.scripting.xs.xs.FunDeclaration#getModifier <em>Modifier</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.FunDeclaration#getType <em>Type</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.FunDeclaration#getName <em>Name</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.FunDeclaration#getParamlist <em>Paramlist</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.FunDeclaration#getStatements <em>Statements</em>}</li>
  * </ul>
@@ -75,6 +76,32 @@ public interface FunDeclaration extends Declaration
    * @generated
    */
   void setType(FunTypeSpecifier value);
+
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see aom.scripting.xs.xs.XsPackage#getFunDeclaration_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link aom.scripting.xs.xs.FunDeclaration#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Paramlist</b></em>' containment reference.

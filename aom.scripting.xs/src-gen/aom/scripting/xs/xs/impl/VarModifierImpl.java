@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.VarModifierImpl#isStatic <em>Static</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.VarModifierImpl#isConst <em>Const</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.VarModifierImpl#isExtern <em>Extern</em>}</li>
  * </ul>
@@ -29,26 +28,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class VarModifierImpl extends MinimalEObjectImpl.Container implements VarModifier
 {
-  /**
-   * The default value of the '{@link #isStatic() <em>Static</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isStatic()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean STATIC_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isStatic() <em>Static</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isStatic()
-   * @generated
-   * @ordered
-   */
-  protected boolean static_ = STATIC_EDEFAULT;
-
   /**
    * The default value of the '{@link #isConst() <em>Const</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -115,29 +94,6 @@ public class VarModifierImpl extends MinimalEObjectImpl.Container implements Var
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isStatic()
-  {
-    return static_;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStatic(boolean newStatic)
-  {
-    boolean oldStatic = static_;
-    static_ = newStatic;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.VAR_MODIFIER__STATIC, oldStatic, static_));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public boolean isConst()
   {
     return const_;
@@ -189,8 +145,6 @@ public class VarModifierImpl extends MinimalEObjectImpl.Container implements Var
   {
     switch (featureID)
     {
-      case XsPackage.VAR_MODIFIER__STATIC:
-        return isStatic();
       case XsPackage.VAR_MODIFIER__CONST:
         return isConst();
       case XsPackage.VAR_MODIFIER__EXTERN:
@@ -209,9 +163,6 @@ public class VarModifierImpl extends MinimalEObjectImpl.Container implements Var
   {
     switch (featureID)
     {
-      case XsPackage.VAR_MODIFIER__STATIC:
-        setStatic((Boolean)newValue);
-        return;
       case XsPackage.VAR_MODIFIER__CONST:
         setConst((Boolean)newValue);
         return;
@@ -232,9 +183,6 @@ public class VarModifierImpl extends MinimalEObjectImpl.Container implements Var
   {
     switch (featureID)
     {
-      case XsPackage.VAR_MODIFIER__STATIC:
-        setStatic(STATIC_EDEFAULT);
-        return;
       case XsPackage.VAR_MODIFIER__CONST:
         setConst(CONST_EDEFAULT);
         return;
@@ -255,8 +203,6 @@ public class VarModifierImpl extends MinimalEObjectImpl.Container implements Var
   {
     switch (featureID)
     {
-      case XsPackage.VAR_MODIFIER__STATIC:
-        return static_ != STATIC_EDEFAULT;
       case XsPackage.VAR_MODIFIER__CONST:
         return const_ != CONST_EDEFAULT;
       case XsPackage.VAR_MODIFIER__EXTERN:
@@ -276,9 +222,7 @@ public class VarModifierImpl extends MinimalEObjectImpl.Container implements Var
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (static: ");
-    result.append(static_);
-    result.append(", const: ");
+    result.append(" (const: ");
     result.append(const_);
     result.append(", extern: ");
     result.append(extern);

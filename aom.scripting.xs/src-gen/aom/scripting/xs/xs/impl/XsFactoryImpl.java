@@ -66,28 +66,20 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
     {
       case XsPackage.PROGRAM: return createProgram();
       case XsPackage.DECLARATION: return createDeclaration();
-      case XsPackage.CONSTANT_NUM: return createConstantNum();
-      case XsPackage.LITERAL_OR_CONSTANT_NUM: return createLiteralOrConstantNum();
-      case XsPackage.VECTOR: return createVector();
-      case XsPackage.VAR_DECLARATION: return createVarDeclaration();
-      case XsPackage.FUN_DECLARATION: return createFunDeclaration();
       case XsPackage.INCLUDE_STATEMENT: return createIncludeStatement();
-      case XsPackage.RULE_DECLARATION: return createRuleDeclaration();
+      case XsPackage.VAR_DECLARATION: return createVarDeclaration();
       case XsPackage.VAR_MODIFIER: return createVarModifier();
-      case XsPackage.FUN_MODIFIER: return createFunModifier();
-      case XsPackage.INT_TYPE: return createIntType();
-      case XsPackage.FLOAT_TYPE: return createFloatType();
-      case XsPackage.BOOL_TYPE: return createBoolType();
-      case XsPackage.VECTOR_TYPE: return createVectorType();
-      case XsPackage.STRING_TYPE: return createStringType();
-      case XsPackage.VOID_TYPE: return createVoidType();
-      case XsPackage.VAR_TYPE_SPECIFIER: return createVarTypeSpecifier();
+      case XsPackage.FUN_DECLARATION: return createFunDeclaration();
       case XsPackage.FUN_TYPE_SPECIFIER: return createFunTypeSpecifier();
       case XsPackage.PARAMS: return createParams();
+      case XsPackage.RULE_DECLARATION: return createRuleDeclaration();
+      case XsPackage.FUN_MODIFIER: return createFunModifier();
+      case XsPackage.VAR_TYPE_SPECIFIER: return createVarTypeSpecifier();
       case XsPackage.COMPOUND_STATEMENT: return createCompoundStatement();
       case XsPackage.VAR_DECLARATION_OR_STATEMENT: return createVarDeclarationOrStatement();
       case XsPackage.STATEMENT: return createStatement();
       case XsPackage.EXPRESSION_STATEMENT: return createExpressionStatement();
+      case XsPackage.POSTFIX_STATEMENT: return createPostfixStatement();
       case XsPackage.IF_ELSE_STATEMENT: return createIfElseStatement();
       case XsPackage.WHILE_STATEMENT: return createWhileStatement();
       case XsPackage.FOR_STATEMENT: return createForStatement();
@@ -99,12 +91,21 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
       case XsPackage.BREAK_STATEMENT: return createBreakStatement();
       case XsPackage.EXPRESSION: return createExpression();
       case XsPackage.VAR: return createVar();
+      case XsPackage.LITERAL_OR_VAR: return createLiteralOrVar();
+      case XsPackage.LITERAL: return createLiteral();
+      case XsPackage.LITERAL_NUM: return createLiteralNum();
+      case XsPackage.LITERAL_NUM_OR_VAR: return createLiteralNumOrVar();
       case XsPackage.CALL: return createCall();
       case XsPackage.ARGUMENTS: return createArguments();
-      case XsPackage.SIGNED_NUM: return createSignedNum();
-      case XsPackage.EMPTY_EXPRESSION_STATEMENT: return createEmptyExpressionStatement();
+      case XsPackage.INT_TYPE: return createIntType();
+      case XsPackage.FLOAT_TYPE: return createFloatType();
+      case XsPackage.BOOL_TYPE: return createBoolType();
+      case XsPackage.VECTOR_TYPE: return createVectorType();
+      case XsPackage.STRING_TYPE: return createStringType();
+      case XsPackage.VOID_TYPE: return createVoidType();
+      case XsPackage.VECTOR: return createVector();
+      case XsPackage.GLOBAL_VAR_DECLARATION: return createGlobalVarDeclaration();
       case XsPackage.ASSIGNMENT_EXPRESSION: return createAssignmentExpression();
-      case XsPackage.POSTFIX_EXPRESSION: return createPostfixExpression();
       case XsPackage.OR: return createOr();
       case XsPackage.AND: return createAnd();
       case XsPackage.EQUALS: return createEquals();
@@ -112,11 +113,11 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
       case XsPackage.TERM: return createTerm();
       case XsPackage.FACTOR: return createFactor();
       case XsPackage.PRIMARY_EXPRESSION: return createPrimaryExpression();
+      case XsPackage.LITERAL_VECTOR: return createLiteralVector();
+      case XsPackage.LITERAL_STRING: return createLiteralString();
       case XsPackage.LITERAL_INT: return createLiteralInt();
       case XsPackage.LITERAL_FLOAT: return createLiteralFloat();
       case XsPackage.LITERAL_BOOL: return createLiteralBool();
-      case XsPackage.LITERAL_VECTOR: return createLiteralVector();
-      case XsPackage.LITERAL_STRING: return createLiteralString();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -149,32 +150,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ConstantNum createConstantNum()
+  public IncludeStatement createIncludeStatement()
   {
-    ConstantNumImpl constantNum = new ConstantNumImpl();
-    return constantNum;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LiteralOrConstantNum createLiteralOrConstantNum()
-  {
-    LiteralOrConstantNumImpl literalOrConstantNum = new LiteralOrConstantNumImpl();
-    return literalOrConstantNum;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Vector createVector()
-  {
-    VectorImpl vector = new VectorImpl();
-    return vector;
+    IncludeStatementImpl includeStatement = new IncludeStatementImpl();
+    return includeStatement;
   }
 
   /**
@@ -193,39 +172,6 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FunDeclaration createFunDeclaration()
-  {
-    FunDeclarationImpl funDeclaration = new FunDeclarationImpl();
-    return funDeclaration;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IncludeStatement createIncludeStatement()
-  {
-    IncludeStatementImpl includeStatement = new IncludeStatementImpl();
-    return includeStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RuleDeclaration createRuleDeclaration()
-  {
-    RuleDeclarationImpl ruleDeclaration = new RuleDeclarationImpl();
-    return ruleDeclaration;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public VarModifier createVarModifier()
   {
     VarModifierImpl varModifier = new VarModifierImpl();
@@ -237,87 +183,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FunModifier createFunModifier()
+  public FunDeclaration createFunDeclaration()
   {
-    FunModifierImpl funModifier = new FunModifierImpl();
-    return funModifier;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntType createIntType()
-  {
-    IntTypeImpl intType = new IntTypeImpl();
-    return intType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FloatType createFloatType()
-  {
-    FloatTypeImpl floatType = new FloatTypeImpl();
-    return floatType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BoolType createBoolType()
-  {
-    BoolTypeImpl boolType = new BoolTypeImpl();
-    return boolType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VectorType createVectorType()
-  {
-    VectorTypeImpl vectorType = new VectorTypeImpl();
-    return vectorType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public StringType createStringType()
-  {
-    StringTypeImpl stringType = new StringTypeImpl();
-    return stringType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VoidType createVoidType()
-  {
-    VoidTypeImpl voidType = new VoidTypeImpl();
-    return voidType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VarTypeSpecifier createVarTypeSpecifier()
-  {
-    VarTypeSpecifierImpl varTypeSpecifier = new VarTypeSpecifierImpl();
-    return varTypeSpecifier;
+    FunDeclarationImpl funDeclaration = new FunDeclarationImpl();
+    return funDeclaration;
   }
 
   /**
@@ -340,6 +209,39 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
   {
     ParamsImpl params = new ParamsImpl();
     return params;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RuleDeclaration createRuleDeclaration()
+  {
+    RuleDeclarationImpl ruleDeclaration = new RuleDeclarationImpl();
+    return ruleDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FunModifier createFunModifier()
+  {
+    FunModifierImpl funModifier = new FunModifierImpl();
+    return funModifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VarTypeSpecifier createVarTypeSpecifier()
+  {
+    VarTypeSpecifierImpl varTypeSpecifier = new VarTypeSpecifierImpl();
+    return varTypeSpecifier;
   }
 
   /**
@@ -384,6 +286,17 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
   {
     ExpressionStatementImpl expressionStatement = new ExpressionStatementImpl();
     return expressionStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PostfixStatement createPostfixStatement()
+  {
+    PostfixStatementImpl postfixStatement = new PostfixStatementImpl();
+    return postfixStatement;
   }
 
   /**
@@ -512,6 +425,50 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public LiteralOrVar createLiteralOrVar()
+  {
+    LiteralOrVarImpl literalOrVar = new LiteralOrVarImpl();
+    return literalOrVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Literal createLiteral()
+  {
+    LiteralImpl literal = new LiteralImpl();
+    return literal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LiteralNum createLiteralNum()
+  {
+    LiteralNumImpl literalNum = new LiteralNumImpl();
+    return literalNum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LiteralNumOrVar createLiteralNumOrVar()
+  {
+    LiteralNumOrVarImpl literalNumOrVar = new LiteralNumOrVarImpl();
+    return literalNumOrVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Call createCall()
   {
     CallImpl call = new CallImpl();
@@ -534,10 +491,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SignedNum createSignedNum()
+  public IntType createIntType()
   {
-    SignedNumImpl signedNum = new SignedNumImpl();
-    return signedNum;
+    IntTypeImpl intType = new IntTypeImpl();
+    return intType;
   }
 
   /**
@@ -545,10 +502,76 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public EmptyExpressionStatement createEmptyExpressionStatement()
+  public FloatType createFloatType()
   {
-    EmptyExpressionStatementImpl emptyExpressionStatement = new EmptyExpressionStatementImpl();
-    return emptyExpressionStatement;
+    FloatTypeImpl floatType = new FloatTypeImpl();
+    return floatType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BoolType createBoolType()
+  {
+    BoolTypeImpl boolType = new BoolTypeImpl();
+    return boolType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VectorType createVectorType()
+  {
+    VectorTypeImpl vectorType = new VectorTypeImpl();
+    return vectorType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StringType createStringType()
+  {
+    StringTypeImpl stringType = new StringTypeImpl();
+    return stringType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VoidType createVoidType()
+  {
+    VoidTypeImpl voidType = new VoidTypeImpl();
+    return voidType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Vector createVector()
+  {
+    VectorImpl vector = new VectorImpl();
+    return vector;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GlobalVarDeclaration createGlobalVarDeclaration()
+  {
+    GlobalVarDeclarationImpl globalVarDeclaration = new GlobalVarDeclarationImpl();
+    return globalVarDeclaration;
   }
 
   /**
@@ -560,17 +583,6 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
   {
     AssignmentExpressionImpl assignmentExpression = new AssignmentExpressionImpl();
     return assignmentExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PostfixExpression createPostfixExpression()
-  {
-    PostfixExpressionImpl postfixExpression = new PostfixExpressionImpl();
-    return postfixExpression;
   }
 
   /**
@@ -655,6 +667,28 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public LiteralVector createLiteralVector()
+  {
+    LiteralVectorImpl literalVector = new LiteralVectorImpl();
+    return literalVector;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LiteralString createLiteralString()
+  {
+    LiteralStringImpl literalString = new LiteralStringImpl();
+    return literalString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public LiteralInt createLiteralInt()
   {
     LiteralIntImpl literalInt = new LiteralIntImpl();
@@ -681,28 +715,6 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
   {
     LiteralBoolImpl literalBool = new LiteralBoolImpl();
     return literalBool;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LiteralVector createLiteralVector()
-  {
-    LiteralVectorImpl literalVector = new LiteralVectorImpl();
-    return literalVector;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LiteralString createLiteralString()
-  {
-    LiteralStringImpl literalString = new LiteralStringImpl();
-    return literalString;
   }
 
   /**

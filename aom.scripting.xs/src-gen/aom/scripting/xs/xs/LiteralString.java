@@ -19,7 +19,7 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface LiteralString extends Expression
+public interface LiteralString extends Literal
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

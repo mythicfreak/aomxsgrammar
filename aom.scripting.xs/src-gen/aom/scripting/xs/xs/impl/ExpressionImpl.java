@@ -9,7 +9,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -38,7 +37,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * @generated
    * @ordered
    */
-  protected EObject expression;
+  protected Expression expression;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,7 +65,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getExpression()
+  public Expression getExpression()
   {
     return expression;
   }
@@ -76,9 +75,9 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetExpression(EObject newExpression, NotificationChain msgs)
+  public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs)
   {
-    EObject oldExpression = expression;
+    Expression oldExpression = expression;
     expression = newExpression;
     if (eNotificationRequired())
     {
@@ -93,7 +92,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setExpression(EObject newExpression)
+  public void setExpression(Expression newExpression)
   {
     if (newExpression != expression)
     {
@@ -152,7 +151,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
     switch (featureID)
     {
       case XsPackage.EXPRESSION__EXPRESSION:
-        setExpression((EObject)newValue);
+        setExpression((Expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -169,7 +168,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
     switch (featureID)
     {
       case XsPackage.EXPRESSION__EXPRESSION:
-        setExpression((EObject)null);
+        setExpression((Expression)null);
         return;
     }
     super.eUnset(featureID);

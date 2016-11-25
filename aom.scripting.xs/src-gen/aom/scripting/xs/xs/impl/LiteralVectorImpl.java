@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class LiteralVectorImpl extends ExpressionImpl implements LiteralVector
+public class LiteralVectorImpl extends LiteralImpl implements LiteralVector
 {
   /**
    * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.

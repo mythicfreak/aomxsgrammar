@@ -32,12 +32,12 @@ public interface SwitchCase extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Var</em>' containment reference.
-   * @see #setVar(LiteralOrConstantNum)
+   * @see #setVar(LiteralNumOrVar)
    * @see aom.scripting.xs.xs.XsPackage#getSwitchCase_Var()
    * @model containment="true"
    * @generated
    */
-  LiteralOrConstantNum getVar();
+  LiteralNumOrVar getVar();
 
   /**
    * Sets the value of the '{@link aom.scripting.xs.xs.SwitchCase#getVar <em>Var</em>}' containment reference.
@@ -47,7 +47,7 @@ public interface SwitchCase extends EObject
    * @see #getVar()
    * @generated
    */
-  void setVar(LiteralOrConstantNum value);
+  void setVar(LiteralNumOrVar value);
 
   /**
    * Returns the value of the '<em><b>Statement</b></em>' containment reference.

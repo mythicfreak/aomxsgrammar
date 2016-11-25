@@ -2,7 +2,7 @@
  */
 package aom.scripting.xs.xs.impl;
 
-import aom.scripting.xs.xs.LiteralOrConstantNum;
+import aom.scripting.xs.xs.LiteralNumOrVar;
 import aom.scripting.xs.xs.Vector;
 import aom.scripting.xs.xs.XsPackage;
 
@@ -40,7 +40,7 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * @generated
    * @ordered
    */
-  protected LiteralOrConstantNum x;
+  protected LiteralNumOrVar x;
 
   /**
    * The cached value of the '{@link #getY() <em>Y</em>}' containment reference.
@@ -50,7 +50,7 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * @generated
    * @ordered
    */
-  protected LiteralOrConstantNum y;
+  protected LiteralNumOrVar y;
 
   /**
    * The cached value of the '{@link #getZ() <em>Z</em>}' containment reference.
@@ -60,7 +60,7 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * @generated
    * @ordered
    */
-  protected LiteralOrConstantNum z;
+  protected LiteralNumOrVar z;
 
   /**
    * <!-- begin-user-doc -->
@@ -88,7 +88,7 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralOrConstantNum getX()
+  public LiteralNumOrVar getX()
   {
     return x;
   }
@@ -98,9 +98,9 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetX(LiteralOrConstantNum newX, NotificationChain msgs)
+  public NotificationChain basicSetX(LiteralNumOrVar newX, NotificationChain msgs)
   {
-    LiteralOrConstantNum oldX = x;
+    LiteralNumOrVar oldX = x;
     x = newX;
     if (eNotificationRequired())
     {
@@ -115,7 +115,7 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setX(LiteralOrConstantNum newX)
+  public void setX(LiteralNumOrVar newX)
   {
     if (newX != x)
     {
@@ -136,7 +136,7 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralOrConstantNum getY()
+  public LiteralNumOrVar getY()
   {
     return y;
   }
@@ -146,9 +146,9 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetY(LiteralOrConstantNum newY, NotificationChain msgs)
+  public NotificationChain basicSetY(LiteralNumOrVar newY, NotificationChain msgs)
   {
-    LiteralOrConstantNum oldY = y;
+    LiteralNumOrVar oldY = y;
     y = newY;
     if (eNotificationRequired())
     {
@@ -163,7 +163,7 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setY(LiteralOrConstantNum newY)
+  public void setY(LiteralNumOrVar newY)
   {
     if (newY != y)
     {
@@ -184,7 +184,7 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralOrConstantNum getZ()
+  public LiteralNumOrVar getZ()
   {
     return z;
   }
@@ -194,9 +194,9 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetZ(LiteralOrConstantNum newZ, NotificationChain msgs)
+  public NotificationChain basicSetZ(LiteralNumOrVar newZ, NotificationChain msgs)
   {
-    LiteralOrConstantNum oldZ = z;
+    LiteralNumOrVar oldZ = z;
     z = newZ;
     if (eNotificationRequired())
     {
@@ -211,7 +211,7 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setZ(LiteralOrConstantNum newZ)
+  public void setZ(LiteralNumOrVar newZ)
   {
     if (newZ != z)
     {
@@ -278,13 +278,13 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
     switch (featureID)
     {
       case XsPackage.VECTOR__X:
-        setX((LiteralOrConstantNum)newValue);
+        setX((LiteralNumOrVar)newValue);
         return;
       case XsPackage.VECTOR__Y:
-        setY((LiteralOrConstantNum)newValue);
+        setY((LiteralNumOrVar)newValue);
         return;
       case XsPackage.VECTOR__Z:
-        setZ((LiteralOrConstantNum)newValue);
+        setZ((LiteralNumOrVar)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -301,13 +301,13 @@ public class VectorImpl extends MinimalEObjectImpl.Container implements Vector
     switch (featureID)
     {
       case XsPackage.VECTOR__X:
-        setX((LiteralOrConstantNum)null);
+        setX((LiteralNumOrVar)null);
         return;
       case XsPackage.VECTOR__Y:
-        setY((LiteralOrConstantNum)null);
+        setY((LiteralNumOrVar)null);
         return;
       case XsPackage.VECTOR__Z:
-        setZ((LiteralOrConstantNum)null);
+        setZ((LiteralNumOrVar)null);
         return;
     }
     super.eUnset(featureID);

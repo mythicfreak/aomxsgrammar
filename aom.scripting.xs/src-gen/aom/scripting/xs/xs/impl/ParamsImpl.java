@@ -8,7 +8,6 @@ import aom.scripting.xs.xs.XsPackage;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -16,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -29,7 +27,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.ParamsImpl#getParam <em>Param</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.ParamsImpl#getParams <em>Params</em>}</li>
  * </ul>
  * </p>
@@ -38,26 +35,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
 {
-  /**
-   * The default value of the '{@link #getParam() <em>Param</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getParam()
-   * @generated
-   * @ordered
-   */
-  protected static final String PARAM_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getParam() <em>Param</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getParam()
-   * @generated
-   * @ordered
-   */
-  protected String param = PARAM_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getParams() <em>Params</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -87,29 +64,6 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
   protected EClass eStaticClass()
   {
     return XsPackage.Literals.PARAMS;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getParam()
-  {
-    return param;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setParam(String newParam)
-  {
-    String oldParam = param;
-    param = newParam;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.PARAMS__PARAM, oldParam, param));
   }
 
   /**
@@ -152,8 +106,6 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
   {
     switch (featureID)
     {
-      case XsPackage.PARAMS__PARAM:
-        return getParam();
       case XsPackage.PARAMS__PARAMS:
         return getParams();
     }
@@ -171,9 +123,6 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
   {
     switch (featureID)
     {
-      case XsPackage.PARAMS__PARAM:
-        setParam((String)newValue);
-        return;
       case XsPackage.PARAMS__PARAMS:
         getParams().clear();
         getParams().addAll((Collection<? extends VarDeclaration>)newValue);
@@ -192,9 +141,6 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
   {
     switch (featureID)
     {
-      case XsPackage.PARAMS__PARAM:
-        setParam(PARAM_EDEFAULT);
-        return;
       case XsPackage.PARAMS__PARAMS:
         getParams().clear();
         return;
@@ -212,29 +158,10 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
   {
     switch (featureID)
     {
-      case XsPackage.PARAMS__PARAM:
-        return PARAM_EDEFAULT == null ? param != null : !PARAM_EDEFAULT.equals(param);
       case XsPackage.PARAMS__PARAMS:
         return params != null && !params.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (param: ");
-    result.append(param);
-    result.append(')');
-    return result.toString();
   }
 
 } //ParamsImpl

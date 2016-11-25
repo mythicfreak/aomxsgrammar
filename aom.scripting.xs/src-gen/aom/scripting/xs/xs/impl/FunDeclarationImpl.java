@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link aom.scripting.xs.xs.impl.FunDeclarationImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.FunDeclarationImpl#getType <em>Type</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.FunDeclarationImpl#getName <em>Name</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.FunDeclarationImpl#getParamlist <em>Paramlist</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.FunDeclarationImpl#getStatements <em>Statements</em>}</li>
  * </ul>
@@ -54,6 +55,26 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
    * @ordered
    */
   protected FunTypeSpecifier type;
+
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getParamlist() <em>Paramlist</em>}' containment reference.
@@ -197,6 +218,29 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.FUN_DECLARATION__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Params getParamlist()
   {
     return paramlist;
@@ -324,6 +368,8 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
         return getModifier();
       case XsPackage.FUN_DECLARATION__TYPE:
         return getType();
+      case XsPackage.FUN_DECLARATION__NAME:
+        return getName();
       case XsPackage.FUN_DECLARATION__PARAMLIST:
         return getParamlist();
       case XsPackage.FUN_DECLARATION__STATEMENTS:
@@ -347,6 +393,9 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
         return;
       case XsPackage.FUN_DECLARATION__TYPE:
         setType((FunTypeSpecifier)newValue);
+        return;
+      case XsPackage.FUN_DECLARATION__NAME:
+        setName((String)newValue);
         return;
       case XsPackage.FUN_DECLARATION__PARAMLIST:
         setParamlist((Params)newValue);
@@ -374,6 +423,9 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
       case XsPackage.FUN_DECLARATION__TYPE:
         setType((FunTypeSpecifier)null);
         return;
+      case XsPackage.FUN_DECLARATION__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case XsPackage.FUN_DECLARATION__PARAMLIST:
         setParamlist((Params)null);
         return;
@@ -398,12 +450,31 @@ public class FunDeclarationImpl extends DeclarationImpl implements FunDeclaratio
         return modifier != null;
       case XsPackage.FUN_DECLARATION__TYPE:
         return type != null;
+      case XsPackage.FUN_DECLARATION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case XsPackage.FUN_DECLARATION__PARAMLIST:
         return paramlist != null;
       case XsPackage.FUN_DECLARATION__STATEMENTS:
         return statements != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //FunDeclarationImpl

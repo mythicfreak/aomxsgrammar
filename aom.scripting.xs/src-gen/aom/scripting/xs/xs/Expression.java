@@ -31,12 +31,12 @@ public interface Expression extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Expression</em>' containment reference.
-   * @see #setExpression(EObject)
+   * @see #setExpression(Expression)
    * @see aom.scripting.xs.xs.XsPackage#getExpression_Expression()
    * @model containment="true"
    * @generated
    */
-  EObject getExpression();
+  Expression getExpression();
 
   /**
    * Sets the value of the '{@link aom.scripting.xs.xs.Expression#getExpression <em>Expression</em>}' containment reference.
@@ -46,6 +46,6 @@ public interface Expression extends EObject
    * @see #getExpression()
    * @generated
    */
-  void setExpression(EObject value);
+  void setExpression(Expression value);
 
 } // Expression

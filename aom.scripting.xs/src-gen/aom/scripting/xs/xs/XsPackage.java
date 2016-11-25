@@ -95,115 +95,41 @@ public interface XsPackage extends EPackage
   int DECLARATION = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DECLARATION__NAME = 0;
-
-  /**
    * The number of structural features of the '<em>Declaration</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DECLARATION_FEATURE_COUNT = 1;
+  int DECLARATION_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralOrConstantNumImpl <em>Literal Or Constant Num</em>}' class.
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.IncludeStatementImpl <em>Include Statement</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.LiteralOrConstantNumImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralOrConstantNum()
+   * @see aom.scripting.xs.xs.impl.IncludeStatementImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIncludeStatement()
    * @generated
    */
-  int LITERAL_OR_CONSTANT_NUM = 3;
+  int INCLUDE_STATEMENT = 2;
 
   /**
-   * The number of structural features of the '<em>Literal Or Constant Num</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_OR_CONSTANT_NUM_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.ConstantNumImpl <em>Constant Num</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.ConstantNumImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getConstantNum()
-   * @generated
-   */
-  int CONSTANT_NUM = 2;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' reference.
+   * The feature id for the '<em><b>File Path</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONSTANT_NUM__VAR = LITERAL_OR_CONSTANT_NUM_FEATURE_COUNT + 0;
+  int INCLUDE_STATEMENT__FILE_PATH = DECLARATION_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Constant Num</em>' class.
+   * The number of structural features of the '<em>Include Statement</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONSTANT_NUM_FEATURE_COUNT = LITERAL_OR_CONSTANT_NUM_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.VectorImpl <em>Vector</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.VectorImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVector()
-   * @generated
-   */
-  int VECTOR = 4;
-
-  /**
-   * The feature id for the '<em><b>X</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VECTOR__X = 0;
-
-  /**
-   * The feature id for the '<em><b>Y</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VECTOR__Y = 1;
-
-  /**
-   * The feature id for the '<em><b>Z</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VECTOR__Z = 2;
-
-  /**
-   * The number of structural features of the '<em>Vector</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VECTOR_FEATURE_COUNT = 3;
+  int INCLUDE_STATEMENT_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.VarDeclarationImpl <em>Var Declaration</em>}' class.
@@ -213,25 +139,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVarDeclaration()
    * @generated
    */
-  int VAR_DECLARATION = 5;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_DECLARATION__NAME = DECLARATION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Modifier</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_DECLARATION__MODIFIER = DECLARATION_FEATURE_COUNT + 0;
+  int VAR_DECLARATION = 3;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -240,7 +148,16 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VAR_DECLARATION__TYPE = DECLARATION_FEATURE_COUNT + 1;
+  int VAR_DECLARATION__TYPE = DECLARATION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_DECLARATION__NAME = DECLARATION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -261,6 +178,43 @@ public interface XsPackage extends EPackage
   int VAR_DECLARATION_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 3;
 
   /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.VarModifierImpl <em>Var Modifier</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.VarModifierImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVarModifier()
+   * @generated
+   */
+  int VAR_MODIFIER = 4;
+
+  /**
+   * The feature id for the '<em><b>Const</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_MODIFIER__CONST = 0;
+
+  /**
+   * The feature id for the '<em><b>Extern</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_MODIFIER__EXTERN = 1;
+
+  /**
+   * The number of structural features of the '<em>Var Modifier</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_MODIFIER_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.FunDeclarationImpl <em>Fun Declaration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -268,16 +222,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFunDeclaration()
    * @generated
    */
-  int FUN_DECLARATION = 6;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUN_DECLARATION__NAME = DECLARATION__NAME;
+  int FUN_DECLARATION = 5;
 
   /**
    * The feature id for the '<em><b>Modifier</b></em>' containment reference.
@@ -298,13 +243,22 @@ public interface XsPackage extends EPackage
   int FUN_DECLARATION__TYPE = DECLARATION_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUN_DECLARATION__NAME = DECLARATION_FEATURE_COUNT + 2;
+
+  /**
    * The feature id for the '<em><b>Paramlist</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FUN_DECLARATION__PARAMLIST = DECLARATION_FEATURE_COUNT + 2;
+  int FUN_DECLARATION__PARAMLIST = DECLARATION_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference.
@@ -313,7 +267,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUN_DECLARATION__STATEMENTS = DECLARATION_FEATURE_COUNT + 3;
+  int FUN_DECLARATION__STATEMENTS = DECLARATION_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Fun Declaration</em>' class.
@@ -322,35 +276,54 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUN_DECLARATION_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 4;
+  int FUN_DECLARATION_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 5;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.IncludeStatementImpl <em>Include Statement</em>}' class.
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.FunTypeSpecifierImpl <em>Fun Type Specifier</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.IncludeStatementImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIncludeStatement()
+   * @see aom.scripting.xs.xs.impl.FunTypeSpecifierImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFunTypeSpecifier()
    * @generated
    */
-  int INCLUDE_STATEMENT = 7;
+  int FUN_TYPE_SPECIFIER = 6;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INCLUDE_STATEMENT__NAME = DECLARATION__NAME;
-
-  /**
-   * The number of structural features of the '<em>Include Statement</em>' class.
+   * The number of structural features of the '<em>Fun Type Specifier</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INCLUDE_STATEMENT_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 0;
+  int FUN_TYPE_SPECIFIER_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.ParamsImpl <em>Params</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.ParamsImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getParams()
+   * @generated
+   */
+  int PARAMS = 7;
+
+  /**
+   * The feature id for the '<em><b>Params</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMS__PARAMS = 0;
+
+  /**
+   * The number of structural features of the '<em>Params</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMS_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl <em>Rule Declaration</em>}' class.
@@ -369,7 +342,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RULE_DECLARATION__NAME = DECLARATION__NAME;
+  int RULE_DECLARATION__NAME = DECLARATION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Active</b></em>' attribute.
@@ -378,7 +351,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RULE_DECLARATION__ACTIVE = DECLARATION_FEATURE_COUNT + 0;
+  int RULE_DECLARATION__ACTIVE = DECLARATION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Run Immediately</b></em>' attribute.
@@ -387,7 +360,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RULE_DECLARATION__RUN_IMMEDIATELY = DECLARATION_FEATURE_COUNT + 1;
+  int RULE_DECLARATION__RUN_IMMEDIATELY = DECLARATION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>High Frequency</b></em>' attribute.
@@ -396,7 +369,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RULE_DECLARATION__HIGH_FREQUENCY = DECLARATION_FEATURE_COUNT + 2;
+  int RULE_DECLARATION__HIGH_FREQUENCY = DECLARATION_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Group</b></em>' attribute.
@@ -405,7 +378,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RULE_DECLARATION__GROUP = DECLARATION_FEATURE_COUNT + 3;
+  int RULE_DECLARATION__GROUP = DECLARATION_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Min Interval</b></em>' attribute.
@@ -414,7 +387,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RULE_DECLARATION__MIN_INTERVAL = DECLARATION_FEATURE_COUNT + 4;
+  int RULE_DECLARATION__MIN_INTERVAL = DECLARATION_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Max Interval</b></em>' attribute.
@@ -423,7 +396,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RULE_DECLARATION__MAX_INTERVAL = DECLARATION_FEATURE_COUNT + 5;
+  int RULE_DECLARATION__MAX_INTERVAL = DECLARATION_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference.
@@ -432,7 +405,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RULE_DECLARATION__STATEMENTS = DECLARATION_FEATURE_COUNT + 6;
+  int RULE_DECLARATION__STATEMENTS = DECLARATION_FEATURE_COUNT + 7;
 
   /**
    * The number of structural features of the '<em>Rule Declaration</em>' class.
@@ -441,53 +414,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RULE_DECLARATION_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 7;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.VarModifierImpl <em>Var Modifier</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.VarModifierImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVarModifier()
-   * @generated
-   */
-  int VAR_MODIFIER = 9;
-
-  /**
-   * The feature id for the '<em><b>Static</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_MODIFIER__STATIC = 0;
-
-  /**
-   * The feature id for the '<em><b>Const</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_MODIFIER__CONST = 1;
-
-  /**
-   * The feature id for the '<em><b>Extern</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_MODIFIER__EXTERN = 2;
-
-  /**
-   * The number of structural features of the '<em>Var Modifier</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_MODIFIER_FEATURE_COUNT = 3;
+  int RULE_DECLARATION_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 8;
 
   /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.FunModifierImpl <em>Fun Modifier</em>}' class.
@@ -497,16 +424,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFunModifier()
    * @generated
    */
-  int FUN_MODIFIER = 10;
-
-  /**
-   * The feature id for the '<em><b>Static</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUN_MODIFIER__STATIC = 0;
+  int FUN_MODIFIER = 9;
 
   /**
    * The feature id for the '<em><b>Mutable</b></em>' attribute.
@@ -515,7 +433,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUN_MODIFIER__MUTABLE = 1;
+  int FUN_MODIFIER__MUTABLE = 0;
 
   /**
    * The number of structural features of the '<em>Fun Modifier</em>' class.
@@ -524,26 +442,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUN_MODIFIER_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.FunTypeSpecifierImpl <em>Fun Type Specifier</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.FunTypeSpecifierImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFunTypeSpecifier()
-   * @generated
-   */
-  int FUN_TYPE_SPECIFIER = 18;
-
-  /**
-   * The number of structural features of the '<em>Fun Type Specifier</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUN_TYPE_SPECIFIER_FEATURE_COUNT = 0;
+  int FUN_MODIFIER_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.VarTypeSpecifierImpl <em>Var Type Specifier</em>}' class.
@@ -553,7 +452,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVarTypeSpecifier()
    * @generated
    */
-  int VAR_TYPE_SPECIFIER = 17;
+  int VAR_TYPE_SPECIFIER = 10;
 
   /**
    * The number of structural features of the '<em>Var Type Specifier</em>' class.
@@ -565,157 +464,6 @@ public interface XsPackage extends EPackage
   int VAR_TYPE_SPECIFIER_FEATURE_COUNT = FUN_TYPE_SPECIFIER_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.IntTypeImpl <em>Int Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.IntTypeImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIntType()
-   * @generated
-   */
-  int INT_TYPE = 11;
-
-  /**
-   * The number of structural features of the '<em>Int Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.FloatTypeImpl <em>Float Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.FloatTypeImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFloatType()
-   * @generated
-   */
-  int FLOAT_TYPE = 12;
-
-  /**
-   * The number of structural features of the '<em>Float Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLOAT_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.BoolTypeImpl <em>Bool Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.BoolTypeImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getBoolType()
-   * @generated
-   */
-  int BOOL_TYPE = 13;
-
-  /**
-   * The number of structural features of the '<em>Bool Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOL_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.VectorTypeImpl <em>Vector Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.VectorTypeImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVectorType()
-   * @generated
-   */
-  int VECTOR_TYPE = 14;
-
-  /**
-   * The number of structural features of the '<em>Vector Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VECTOR_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.StringTypeImpl <em>String Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.StringTypeImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getStringType()
-   * @generated
-   */
-  int STRING_TYPE = 15;
-
-  /**
-   * The number of structural features of the '<em>String Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.VoidTypeImpl <em>Void Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.VoidTypeImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVoidType()
-   * @generated
-   */
-  int VOID_TYPE = 16;
-
-  /**
-   * The number of structural features of the '<em>Void Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VOID_TYPE_FEATURE_COUNT = FUN_TYPE_SPECIFIER_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.ParamsImpl <em>Params</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.ParamsImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getParams()
-   * @generated
-   */
-  int PARAMS = 19;
-
-  /**
-   * The feature id for the '<em><b>Param</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMS__PARAM = 0;
-
-  /**
-   * The feature id for the '<em><b>Params</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMS__PARAMS = 1;
-
-  /**
-   * The number of structural features of the '<em>Params</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMS_FEATURE_COUNT = 2;
-
-  /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.VarDeclarationOrStatementImpl <em>Var Declaration Or Statement</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -723,7 +471,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVarDeclarationOrStatement()
    * @generated
    */
-  int VAR_DECLARATION_OR_STATEMENT = 21;
+  int VAR_DECLARATION_OR_STATEMENT = 12;
 
   /**
    * The number of structural features of the '<em>Var Declaration Or Statement</em>' class.
@@ -742,7 +490,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getStatement()
    * @generated
    */
-  int STATEMENT = 22;
+  int STATEMENT = 13;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -761,7 +509,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getCompoundStatement()
    * @generated
    */
-  int COMPOUND_STATEMENT = 20;
+  int COMPOUND_STATEMENT = 11;
 
   /**
    * The feature id for the '<em><b>Contents</b></em>' containment reference list.
@@ -789,7 +537,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getExpressionStatement()
    * @generated
    */
-  int EXPRESSION_STATEMENT = 23;
+  int EXPRESSION_STATEMENT = 14;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -810,6 +558,43 @@ public interface XsPackage extends EPackage
   int EXPRESSION_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.PostfixStatementImpl <em>Postfix Statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.PostfixStatementImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getPostfixStatement()
+   * @generated
+   */
+  int POSTFIX_STATEMENT = 15;
+
+  /**
+   * The feature id for the '<em><b>Var</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_STATEMENT__VAR = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_STATEMENT__OP = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Postfix Statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.IfElseStatementImpl <em>If Else Statement</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -817,7 +602,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIfElseStatement()
    * @generated
    */
-  int IF_ELSE_STATEMENT = 24;
+  int IF_ELSE_STATEMENT = 16;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -829,13 +614,13 @@ public interface XsPackage extends EPackage
   int IF_ELSE_STATEMENT__CONDITION = STATEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>If Statement</b></em>' containment reference.
+   * The feature id for the '<em><b>Then Statement</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IF_ELSE_STATEMENT__IF_STATEMENT = STATEMENT_FEATURE_COUNT + 1;
+  int IF_ELSE_STATEMENT__THEN_STATEMENT = STATEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Else Statement</b></em>' containment reference.
@@ -863,7 +648,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getWhileStatement()
    * @generated
    */
-  int WHILE_STATEMENT = 25;
+  int WHILE_STATEMENT = 17;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -900,7 +685,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getForStatement()
    * @generated
    */
-  int FOR_STATEMENT = 26;
+  int FOR_STATEMENT = 18;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' containment reference.
@@ -955,7 +740,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getSwitchStatement()
    * @generated
    */
-  int SWITCH_STATEMENT = 27;
+  int SWITCH_STATEMENT = 19;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' reference.
@@ -1001,7 +786,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getSwitchCase()
    * @generated
    */
-  int SWITCH_CASE = 28;
+  int SWITCH_CASE = 20;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' containment reference.
@@ -1038,7 +823,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getSwitchDefault()
    * @generated
    */
-  int SWITCH_DEFAULT = 29;
+  int SWITCH_DEFAULT = 21;
 
   /**
    * The feature id for the '<em><b>Statement</b></em>' containment reference.
@@ -1066,7 +851,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getReturnStatement()
    * @generated
    */
-  int RETURN_STATEMENT = 30;
+  int RETURN_STATEMENT = 22;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1094,7 +879,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getContinueStatement()
    * @generated
    */
-  int CONTINUE_STATEMENT = 31;
+  int CONTINUE_STATEMENT = 23;
 
   /**
    * The number of structural features of the '<em>Continue Statement</em>' class.
@@ -1113,7 +898,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getBreakStatement()
    * @generated
    */
-  int BREAK_STATEMENT = 32;
+  int BREAK_STATEMENT = 24;
 
   /**
    * The number of structural features of the '<em>Break Statement</em>' class.
@@ -1132,7 +917,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 33;
+  int EXPRESSION = 25;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1153,6 +938,34 @@ public interface XsPackage extends EPackage
   int EXPRESSION_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralOrVarImpl <em>Literal Or Var</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.LiteralOrVarImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralOrVar()
+   * @generated
+   */
+  int LITERAL_OR_VAR = 27;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_OR_VAR__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The number of structural features of the '<em>Literal Or Var</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_OR_VAR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.VarImpl <em>Var</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1160,16 +973,25 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVar()
    * @generated
    */
-  int VAR = 34;
+  int VAR = 26;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' reference.
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VAR__NAME = 0;
+  int VAR__EXPRESSION = LITERAL_OR_VAR__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Declaration</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR__DECLARATION = LITERAL_OR_VAR_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Var</em>' class.
@@ -1178,7 +1000,82 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VAR_FEATURE_COUNT = 1;
+  int VAR_FEATURE_COUNT = LITERAL_OR_VAR_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralImpl <em>Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.LiteralImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteral()
+   * @generated
+   */
+  int LITERAL = 28;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__EXPRESSION = LITERAL_OR_VAR__EXPRESSION;
+
+  /**
+   * The number of structural features of the '<em>Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_FEATURE_COUNT = LITERAL_OR_VAR_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralNumImpl <em>Literal Num</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.LiteralNumImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralNum()
+   * @generated
+   */
+  int LITERAL_NUM = 29;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_NUM__EXPRESSION = LITERAL__EXPRESSION;
+
+  /**
+   * The number of structural features of the '<em>Literal Num</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_NUM_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralNumOrVarImpl <em>Literal Num Or Var</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.LiteralNumOrVarImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralNumOrVar()
+   * @generated
+   */
+  int LITERAL_NUM_OR_VAR = 30;
+
+  /**
+   * The number of structural features of the '<em>Literal Num Or Var</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_NUM_OR_VAR_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.CallImpl <em>Call</em>}' class.
@@ -1188,7 +1085,16 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getCall()
    * @generated
    */
-  int CALL = 35;
+  int CALL = 31;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALL__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Function</b></em>' reference.
@@ -1197,7 +1103,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALL__FUNCTION = 0;
+  int CALL__FUNCTION = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Args</b></em>' containment reference.
@@ -1206,7 +1112,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALL__ARGS = 1;
+  int CALL__ARGS = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Call</em>' class.
@@ -1215,7 +1121,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALL_FEATURE_COUNT = 2;
+  int CALL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.ArgumentsImpl <em>Arguments</em>}' class.
@@ -1225,7 +1131,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getArguments()
    * @generated
    */
-  int ARGUMENTS = 36;
+  int ARGUMENTS = 32;
 
   /**
    * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
@@ -1246,51 +1152,219 @@ public interface XsPackage extends EPackage
   int ARGUMENTS_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.SignedNumImpl <em>Signed Num</em>}' class.
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.IntTypeImpl <em>Int Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.SignedNumImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getSignedNum()
+   * @see aom.scripting.xs.xs.impl.IntTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIntType()
    * @generated
    */
-  int SIGNED_NUM = 37;
+  int INT_TYPE = 33;
 
   /**
-   * The number of structural features of the '<em>Signed Num</em>' class.
+   * The number of structural features of the '<em>Int Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SIGNED_NUM_FEATURE_COUNT = LITERAL_OR_CONSTANT_NUM_FEATURE_COUNT + 0;
+  int INT_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.EmptyExpressionStatementImpl <em>Empty Expression Statement</em>}' class.
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.FloatTypeImpl <em>Float Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.EmptyExpressionStatementImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getEmptyExpressionStatement()
+   * @see aom.scripting.xs.xs.impl.FloatTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFloatType()
    * @generated
    */
-  int EMPTY_EXPRESSION_STATEMENT = 38;
+  int FLOAT_TYPE = 34;
 
   /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EMPTY_EXPRESSION_STATEMENT__EXPRESSION = EXPRESSION_STATEMENT__EXPRESSION;
-
-  /**
-   * The number of structural features of the '<em>Empty Expression Statement</em>' class.
+   * The number of structural features of the '<em>Float Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EMPTY_EXPRESSION_STATEMENT_FEATURE_COUNT = EXPRESSION_STATEMENT_FEATURE_COUNT + 0;
+  int FLOAT_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.BoolTypeImpl <em>Bool Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.BoolTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getBoolType()
+   * @generated
+   */
+  int BOOL_TYPE = 35;
+
+  /**
+   * The number of structural features of the '<em>Bool Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOL_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.VectorTypeImpl <em>Vector Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.VectorTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVectorType()
+   * @generated
+   */
+  int VECTOR_TYPE = 36;
+
+  /**
+   * The number of structural features of the '<em>Vector Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VECTOR_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.StringTypeImpl <em>String Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.StringTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getStringType()
+   * @generated
+   */
+  int STRING_TYPE = 37;
+
+  /**
+   * The number of structural features of the '<em>String Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_TYPE_FEATURE_COUNT = VAR_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.VoidTypeImpl <em>Void Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.VoidTypeImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVoidType()
+   * @generated
+   */
+  int VOID_TYPE = 38;
+
+  /**
+   * The number of structural features of the '<em>Void Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VOID_TYPE_FEATURE_COUNT = FUN_TYPE_SPECIFIER_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.VectorImpl <em>Vector</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.VectorImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVector()
+   * @generated
+   */
+  int VECTOR = 39;
+
+  /**
+   * The feature id for the '<em><b>X</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VECTOR__X = 0;
+
+  /**
+   * The feature id for the '<em><b>Y</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VECTOR__Y = 1;
+
+  /**
+   * The feature id for the '<em><b>Z</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VECTOR__Z = 2;
+
+  /**
+   * The number of structural features of the '<em>Vector</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VECTOR_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.GlobalVarDeclarationImpl <em>Global Var Declaration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.GlobalVarDeclarationImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getGlobalVarDeclaration()
+   * @generated
+   */
+  int GLOBAL_VAR_DECLARATION = 40;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GLOBAL_VAR_DECLARATION__TYPE = VAR_DECLARATION__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GLOBAL_VAR_DECLARATION__NAME = VAR_DECLARATION__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GLOBAL_VAR_DECLARATION__VALUE = VAR_DECLARATION__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Modifier</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GLOBAL_VAR_DECLARATION__MODIFIER = VAR_DECLARATION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Global Var Declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GLOBAL_VAR_DECLARATION_FEATURE_COUNT = VAR_DECLARATION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.AssignmentExpressionImpl <em>Assignment Expression</em>}' class.
@@ -1300,7 +1374,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getAssignmentExpression()
    * @generated
    */
-  int ASSIGNMENT_EXPRESSION = 39;
+  int ASSIGNMENT_EXPRESSION = 41;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1330,52 +1404,6 @@ public interface XsPackage extends EPackage
   int ASSIGNMENT_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.PostfixExpressionImpl <em>Postfix Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.PostfixExpressionImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getPostfixExpression()
-   * @generated
-   */
-  int POSTFIX_EXPRESSION = 40;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_EXPRESSION__EXPRESSION = EXPRESSION__EXPRESSION;
-
-  /**
-   * The feature id for the '<em><b>Postfix Var</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_EXPRESSION__POSTFIX_VAR = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_EXPRESSION__OP = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Postfix Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.OrImpl <em>Or</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1383,7 +1411,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getOr()
    * @generated
    */
-  int OR = 41;
+  int OR = 42;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1438,7 +1466,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getAnd()
    * @generated
    */
-  int AND = 42;
+  int AND = 43;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1493,7 +1521,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getEquals()
    * @generated
    */
-  int EQUALS = 43;
+  int EQUALS = 44;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1548,7 +1576,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getComparison()
    * @generated
    */
-  int COMPARISON = 44;
+  int COMPARISON = 45;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1603,7 +1631,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getTerm()
    * @generated
    */
-  int TERM = 45;
+  int TERM = 46;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1658,7 +1686,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFactor()
    * @generated
    */
-  int FACTOR = 46;
+  int FACTOR = 47;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1713,7 +1741,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getPrimaryExpression()
    * @generated
    */
-  int PRIMARY_EXPRESSION = 47;
+  int PRIMARY_EXPRESSION = 48;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1734,117 +1762,6 @@ public interface XsPackage extends EPackage
   int PRIMARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralIntImpl <em>Literal Int</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.LiteralIntImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralInt()
-   * @generated
-   */
-  int LITERAL_INT = 48;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_INT__EXPRESSION = EXPRESSION__EXPRESSION;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_INT__VALUE = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Literal Int</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_INT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralFloatImpl <em>Literal Float</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.LiteralFloatImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralFloat()
-   * @generated
-   */
-  int LITERAL_FLOAT = 49;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_FLOAT__EXPRESSION = EXPRESSION__EXPRESSION;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_FLOAT__VALUE = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Literal Float</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_FLOAT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralBoolImpl <em>Literal Bool</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see aom.scripting.xs.xs.impl.LiteralBoolImpl
-   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralBool()
-   * @generated
-   */
-  int LITERAL_BOOL = 50;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_BOOL__EXPRESSION = EXPRESSION__EXPRESSION;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_BOOL__VALUE = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Literal Bool</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_BOOL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralVectorImpl <em>Literal Vector</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1852,7 +1769,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralVector()
    * @generated
    */
-  int LITERAL_VECTOR = 51;
+  int LITERAL_VECTOR = 49;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1861,7 +1778,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LITERAL_VECTOR__EXPRESSION = EXPRESSION__EXPRESSION;
+  int LITERAL_VECTOR__EXPRESSION = LITERAL__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1870,7 +1787,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LITERAL_VECTOR__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+  int LITERAL_VECTOR__VALUE = LITERAL_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Literal Vector</em>' class.
@@ -1879,7 +1796,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LITERAL_VECTOR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int LITERAL_VECTOR_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralStringImpl <em>Literal String</em>}' class.
@@ -1889,7 +1806,7 @@ public interface XsPackage extends EPackage
    * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralString()
    * @generated
    */
-  int LITERAL_STRING = 52;
+  int LITERAL_STRING = 50;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1898,7 +1815,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LITERAL_STRING__EXPRESSION = EXPRESSION__EXPRESSION;
+  int LITERAL_STRING__EXPRESSION = LITERAL__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1907,7 +1824,7 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LITERAL_STRING__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+  int LITERAL_STRING__VALUE = LITERAL_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Literal String</em>' class.
@@ -1916,7 +1833,118 @@ public interface XsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LITERAL_STRING_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int LITERAL_STRING_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralIntImpl <em>Literal Int</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.LiteralIntImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralInt()
+   * @generated
+   */
+  int LITERAL_INT = 51;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_INT__EXPRESSION = LITERAL_NUM__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_INT__VALUE = LITERAL_NUM_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Literal Int</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_INT_FEATURE_COUNT = LITERAL_NUM_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralFloatImpl <em>Literal Float</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.LiteralFloatImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralFloat()
+   * @generated
+   */
+  int LITERAL_FLOAT = 52;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_FLOAT__EXPRESSION = LITERAL_NUM__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_FLOAT__VALUE = LITERAL_NUM_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Literal Float</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_FLOAT_FEATURE_COUNT = LITERAL_NUM_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link aom.scripting.xs.xs.impl.LiteralBoolImpl <em>Literal Bool</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see aom.scripting.xs.xs.impl.LiteralBoolImpl
+   * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralBool()
+   * @generated
+   */
+  int LITERAL_BOOL = 53;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_BOOL__EXPRESSION = LITERAL_NUM__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_BOOL__VALUE = LITERAL_NUM_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Literal Bool</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_BOOL_FEATURE_COUNT = LITERAL_NUM_FEATURE_COUNT + 1;
 
 
   /**
@@ -1951,89 +1979,25 @@ public interface XsPackage extends EPackage
   EClass getDeclaration();
 
   /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.Declaration#getName <em>Name</em>}'.
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.IncludeStatement <em>Include Statement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see aom.scripting.xs.xs.Declaration#getName()
-   * @see #getDeclaration()
+   * @return the meta object for class '<em>Include Statement</em>'.
+   * @see aom.scripting.xs.xs.IncludeStatement
    * @generated
    */
-  EAttribute getDeclaration_Name();
+  EClass getIncludeStatement();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.ConstantNum <em>Constant Num</em>}'.
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.IncludeStatement#getFilePath <em>File Path</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Constant Num</em>'.
-   * @see aom.scripting.xs.xs.ConstantNum
+   * @return the meta object for the attribute '<em>File Path</em>'.
+   * @see aom.scripting.xs.xs.IncludeStatement#getFilePath()
+   * @see #getIncludeStatement()
    * @generated
    */
-  EClass getConstantNum();
-
-  /**
-   * Returns the meta object for the reference '{@link aom.scripting.xs.xs.ConstantNum#getVar <em>Var</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Var</em>'.
-   * @see aom.scripting.xs.xs.ConstantNum#getVar()
-   * @see #getConstantNum()
-   * @generated
-   */
-  EReference getConstantNum_Var();
-
-  /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.LiteralOrConstantNum <em>Literal Or Constant Num</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Literal Or Constant Num</em>'.
-   * @see aom.scripting.xs.xs.LiteralOrConstantNum
-   * @generated
-   */
-  EClass getLiteralOrConstantNum();
-
-  /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.Vector <em>Vector</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Vector</em>'.
-   * @see aom.scripting.xs.xs.Vector
-   * @generated
-   */
-  EClass getVector();
-
-  /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Vector#getX <em>X</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>X</em>'.
-   * @see aom.scripting.xs.xs.Vector#getX()
-   * @see #getVector()
-   * @generated
-   */
-  EReference getVector_X();
-
-  /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Vector#getY <em>Y</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Y</em>'.
-   * @see aom.scripting.xs.xs.Vector#getY()
-   * @see #getVector()
-   * @generated
-   */
-  EReference getVector_Y();
-
-  /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Vector#getZ <em>Z</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Z</em>'.
-   * @see aom.scripting.xs.xs.Vector#getZ()
-   * @see #getVector()
-   * @generated
-   */
-  EReference getVector_Z();
+  EAttribute getIncludeStatement_FilePath();
 
   /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.VarDeclaration <em>Var Declaration</em>}'.
@@ -2044,17 +2008,6 @@ public interface XsPackage extends EPackage
    * @generated
    */
   EClass getVarDeclaration();
-
-  /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.VarDeclaration#getModifier <em>Modifier</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Modifier</em>'.
-   * @see aom.scripting.xs.xs.VarDeclaration#getModifier()
-   * @see #getVarDeclaration()
-   * @generated
-   */
-  EReference getVarDeclaration_Modifier();
 
   /**
    * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.VarDeclaration#getType <em>Type</em>}'.
@@ -2068,6 +2021,17 @@ public interface XsPackage extends EPackage
   EReference getVarDeclaration_Type();
 
   /**
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.VarDeclaration#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see aom.scripting.xs.xs.VarDeclaration#getName()
+   * @see #getVarDeclaration()
+   * @generated
+   */
+  EAttribute getVarDeclaration_Name();
+
+  /**
    * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.VarDeclaration#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2077,6 +2041,38 @@ public interface XsPackage extends EPackage
    * @generated
    */
   EReference getVarDeclaration_Value();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.VarModifier <em>Var Modifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Var Modifier</em>'.
+   * @see aom.scripting.xs.xs.VarModifier
+   * @generated
+   */
+  EClass getVarModifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.VarModifier#isConst <em>Const</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Const</em>'.
+   * @see aom.scripting.xs.xs.VarModifier#isConst()
+   * @see #getVarModifier()
+   * @generated
+   */
+  EAttribute getVarModifier_Const();
+
+  /**
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.VarModifier#isExtern <em>Extern</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Extern</em>'.
+   * @see aom.scripting.xs.xs.VarModifier#isExtern()
+   * @see #getVarModifier()
+   * @generated
+   */
+  EAttribute getVarModifier_Extern();
 
   /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.FunDeclaration <em>Fun Declaration</em>}'.
@@ -2111,6 +2107,17 @@ public interface XsPackage extends EPackage
   EReference getFunDeclaration_Type();
 
   /**
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.FunDeclaration#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see aom.scripting.xs.xs.FunDeclaration#getName()
+   * @see #getFunDeclaration()
+   * @generated
+   */
+  EAttribute getFunDeclaration_Name();
+
+  /**
    * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.FunDeclaration#getParamlist <em>Paramlist</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2133,14 +2140,35 @@ public interface XsPackage extends EPackage
   EReference getFunDeclaration_Statements();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.IncludeStatement <em>Include Statement</em>}'.
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.FunTypeSpecifier <em>Fun Type Specifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Include Statement</em>'.
-   * @see aom.scripting.xs.xs.IncludeStatement
+   * @return the meta object for class '<em>Fun Type Specifier</em>'.
+   * @see aom.scripting.xs.xs.FunTypeSpecifier
    * @generated
    */
-  EClass getIncludeStatement();
+  EClass getFunTypeSpecifier();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.Params <em>Params</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Params</em>'.
+   * @see aom.scripting.xs.xs.Params
+   * @generated
+   */
+  EClass getParams();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link aom.scripting.xs.xs.Params#getParams <em>Params</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Params</em>'.
+   * @see aom.scripting.xs.xs.Params#getParams()
+   * @see #getParams()
+   * @generated
+   */
+  EReference getParams_Params();
 
   /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.RuleDeclaration <em>Rule Declaration</em>}'.
@@ -2151,6 +2179,17 @@ public interface XsPackage extends EPackage
    * @generated
    */
   EClass getRuleDeclaration();
+
+  /**
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.RuleDeclaration#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see aom.scripting.xs.xs.RuleDeclaration#getName()
+   * @see #getRuleDeclaration()
+   * @generated
+   */
+  EAttribute getRuleDeclaration_Name();
 
   /**
    * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.RuleDeclaration#isActive <em>Active</em>}'.
@@ -2230,49 +2269,6 @@ public interface XsPackage extends EPackage
   EReference getRuleDeclaration_Statements();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.VarModifier <em>Var Modifier</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Var Modifier</em>'.
-   * @see aom.scripting.xs.xs.VarModifier
-   * @generated
-   */
-  EClass getVarModifier();
-
-  /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.VarModifier#isStatic <em>Static</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Static</em>'.
-   * @see aom.scripting.xs.xs.VarModifier#isStatic()
-   * @see #getVarModifier()
-   * @generated
-   */
-  EAttribute getVarModifier_Static();
-
-  /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.VarModifier#isConst <em>Const</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Const</em>'.
-   * @see aom.scripting.xs.xs.VarModifier#isConst()
-   * @see #getVarModifier()
-   * @generated
-   */
-  EAttribute getVarModifier_Const();
-
-  /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.VarModifier#isExtern <em>Extern</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Extern</em>'.
-   * @see aom.scripting.xs.xs.VarModifier#isExtern()
-   * @see #getVarModifier()
-   * @generated
-   */
-  EAttribute getVarModifier_Extern();
-
-  /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.FunModifier <em>Fun Modifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2281,17 +2277,6 @@ public interface XsPackage extends EPackage
    * @generated
    */
   EClass getFunModifier();
-
-  /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.FunModifier#isStatic <em>Static</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Static</em>'.
-   * @see aom.scripting.xs.xs.FunModifier#isStatic()
-   * @see #getFunModifier()
-   * @generated
-   */
-  EAttribute getFunModifier_Static();
 
   /**
    * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.FunModifier#isMutable <em>Mutable</em>}'.
@@ -2305,66 +2290,6 @@ public interface XsPackage extends EPackage
   EAttribute getFunModifier_Mutable();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.IntType <em>Int Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Int Type</em>'.
-   * @see aom.scripting.xs.xs.IntType
-   * @generated
-   */
-  EClass getIntType();
-
-  /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.FloatType <em>Float Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Float Type</em>'.
-   * @see aom.scripting.xs.xs.FloatType
-   * @generated
-   */
-  EClass getFloatType();
-
-  /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.BoolType <em>Bool Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Bool Type</em>'.
-   * @see aom.scripting.xs.xs.BoolType
-   * @generated
-   */
-  EClass getBoolType();
-
-  /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.VectorType <em>Vector Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Vector Type</em>'.
-   * @see aom.scripting.xs.xs.VectorType
-   * @generated
-   */
-  EClass getVectorType();
-
-  /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.StringType <em>String Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>String Type</em>'.
-   * @see aom.scripting.xs.xs.StringType
-   * @generated
-   */
-  EClass getStringType();
-
-  /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.VoidType <em>Void Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Void Type</em>'.
-   * @see aom.scripting.xs.xs.VoidType
-   * @generated
-   */
-  EClass getVoidType();
-
-  /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.VarTypeSpecifier <em>Var Type Specifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2373,48 +2298,6 @@ public interface XsPackage extends EPackage
    * @generated
    */
   EClass getVarTypeSpecifier();
-
-  /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.FunTypeSpecifier <em>Fun Type Specifier</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Fun Type Specifier</em>'.
-   * @see aom.scripting.xs.xs.FunTypeSpecifier
-   * @generated
-   */
-  EClass getFunTypeSpecifier();
-
-  /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.Params <em>Params</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Params</em>'.
-   * @see aom.scripting.xs.xs.Params
-   * @generated
-   */
-  EClass getParams();
-
-  /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.Params#getParam <em>Param</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Param</em>'.
-   * @see aom.scripting.xs.xs.Params#getParam()
-   * @see #getParams()
-   * @generated
-   */
-  EAttribute getParams_Param();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link aom.scripting.xs.xs.Params#getParams <em>Params</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Params</em>'.
-   * @see aom.scripting.xs.xs.Params#getParams()
-   * @see #getParams()
-   * @generated
-   */
-  EReference getParams_Params();
 
   /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.CompoundStatement <em>Compound Statement</em>}'.
@@ -2479,6 +2362,38 @@ public interface XsPackage extends EPackage
   EReference getExpressionStatement_Expression();
 
   /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.PostfixStatement <em>Postfix Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Postfix Statement</em>'.
+   * @see aom.scripting.xs.xs.PostfixStatement
+   * @generated
+   */
+  EClass getPostfixStatement();
+
+  /**
+   * Returns the meta object for the reference '{@link aom.scripting.xs.xs.PostfixStatement#getVar <em>Var</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Var</em>'.
+   * @see aom.scripting.xs.xs.PostfixStatement#getVar()
+   * @see #getPostfixStatement()
+   * @generated
+   */
+  EReference getPostfixStatement_Var();
+
+  /**
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.PostfixStatement#getOp <em>Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see aom.scripting.xs.xs.PostfixStatement#getOp()
+   * @see #getPostfixStatement()
+   * @generated
+   */
+  EAttribute getPostfixStatement_Op();
+
+  /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.IfElseStatement <em>If Else Statement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2500,15 +2415,15 @@ public interface XsPackage extends EPackage
   EReference getIfElseStatement_Condition();
 
   /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.IfElseStatement#getIfStatement <em>If Statement</em>}'.
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.IfElseStatement#getThenStatement <em>Then Statement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>If Statement</em>'.
-   * @see aom.scripting.xs.xs.IfElseStatement#getIfStatement()
+   * @return the meta object for the containment reference '<em>Then Statement</em>'.
+   * @see aom.scripting.xs.xs.IfElseStatement#getThenStatement()
    * @see #getIfElseStatement()
    * @generated
    */
-  EReference getIfElseStatement_IfStatement();
+  EReference getIfElseStatement_ThenStatement();
 
   /**
    * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.IfElseStatement#getElseStatement <em>Else Statement</em>}'.
@@ -2776,15 +2691,55 @@ public interface XsPackage extends EPackage
   EClass getVar();
 
   /**
-   * Returns the meta object for the reference '{@link aom.scripting.xs.xs.Var#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link aom.scripting.xs.xs.Var#getDeclaration <em>Declaration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Name</em>'.
-   * @see aom.scripting.xs.xs.Var#getName()
+   * @return the meta object for the reference '<em>Declaration</em>'.
+   * @see aom.scripting.xs.xs.Var#getDeclaration()
    * @see #getVar()
    * @generated
    */
-  EReference getVar_Name();
+  EReference getVar_Declaration();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.LiteralOrVar <em>Literal Or Var</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Literal Or Var</em>'.
+   * @see aom.scripting.xs.xs.LiteralOrVar
+   * @generated
+   */
+  EClass getLiteralOrVar();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.Literal <em>Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Literal</em>'.
+   * @see aom.scripting.xs.xs.Literal
+   * @generated
+   */
+  EClass getLiteral();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.LiteralNum <em>Literal Num</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Literal Num</em>'.
+   * @see aom.scripting.xs.xs.LiteralNum
+   * @generated
+   */
+  EClass getLiteralNum();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.LiteralNumOrVar <em>Literal Num Or Var</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Literal Num Or Var</em>'.
+   * @see aom.scripting.xs.xs.LiteralNumOrVar
+   * @generated
+   */
+  EClass getLiteralNumOrVar();
 
   /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.Call <em>Call</em>}'.
@@ -2840,24 +2795,128 @@ public interface XsPackage extends EPackage
   EReference getArguments_Expressions();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.SignedNum <em>Signed Num</em>}'.
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.IntType <em>Int Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Signed Num</em>'.
-   * @see aom.scripting.xs.xs.SignedNum
+   * @return the meta object for class '<em>Int Type</em>'.
+   * @see aom.scripting.xs.xs.IntType
    * @generated
    */
-  EClass getSignedNum();
+  EClass getIntType();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.EmptyExpressionStatement <em>Empty Expression Statement</em>}'.
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.FloatType <em>Float Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Empty Expression Statement</em>'.
-   * @see aom.scripting.xs.xs.EmptyExpressionStatement
+   * @return the meta object for class '<em>Float Type</em>'.
+   * @see aom.scripting.xs.xs.FloatType
    * @generated
    */
-  EClass getEmptyExpressionStatement();
+  EClass getFloatType();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.BoolType <em>Bool Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bool Type</em>'.
+   * @see aom.scripting.xs.xs.BoolType
+   * @generated
+   */
+  EClass getBoolType();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.VectorType <em>Vector Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Vector Type</em>'.
+   * @see aom.scripting.xs.xs.VectorType
+   * @generated
+   */
+  EClass getVectorType();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.StringType <em>String Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>String Type</em>'.
+   * @see aom.scripting.xs.xs.StringType
+   * @generated
+   */
+  EClass getStringType();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.VoidType <em>Void Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Void Type</em>'.
+   * @see aom.scripting.xs.xs.VoidType
+   * @generated
+   */
+  EClass getVoidType();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.Vector <em>Vector</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Vector</em>'.
+   * @see aom.scripting.xs.xs.Vector
+   * @generated
+   */
+  EClass getVector();
+
+  /**
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Vector#getX <em>X</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>X</em>'.
+   * @see aom.scripting.xs.xs.Vector#getX()
+   * @see #getVector()
+   * @generated
+   */
+  EReference getVector_X();
+
+  /**
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Vector#getY <em>Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Y</em>'.
+   * @see aom.scripting.xs.xs.Vector#getY()
+   * @see #getVector()
+   * @generated
+   */
+  EReference getVector_Y();
+
+  /**
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.Vector#getZ <em>Z</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Z</em>'.
+   * @see aom.scripting.xs.xs.Vector#getZ()
+   * @see #getVector()
+   * @generated
+   */
+  EReference getVector_Z();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.GlobalVarDeclaration <em>Global Var Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Global Var Declaration</em>'.
+   * @see aom.scripting.xs.xs.GlobalVarDeclaration
+   * @generated
+   */
+  EClass getGlobalVarDeclaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.GlobalVarDeclaration#getModifier <em>Modifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Modifier</em>'.
+   * @see aom.scripting.xs.xs.GlobalVarDeclaration#getModifier()
+   * @see #getGlobalVarDeclaration()
+   * @generated
+   */
+  EReference getGlobalVarDeclaration_Modifier();
 
   /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.AssignmentExpression <em>Assignment Expression</em>}'.
@@ -2879,38 +2938,6 @@ public interface XsPackage extends EPackage
    * @generated
    */
   EReference getAssignmentExpression_Var();
-
-  /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.PostfixExpression <em>Postfix Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Postfix Expression</em>'.
-   * @see aom.scripting.xs.xs.PostfixExpression
-   * @generated
-   */
-  EClass getPostfixExpression();
-
-  /**
-   * Returns the meta object for the reference '{@link aom.scripting.xs.xs.PostfixExpression#getPostfixVar <em>Postfix Var</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Postfix Var</em>'.
-   * @see aom.scripting.xs.xs.PostfixExpression#getPostfixVar()
-   * @see #getPostfixExpression()
-   * @generated
-   */
-  EReference getPostfixExpression_PostfixVar();
-
-  /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.PostfixExpression#getOp <em>Op</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see aom.scripting.xs.xs.PostfixExpression#getOp()
-   * @see #getPostfixExpression()
-   * @generated
-   */
-  EAttribute getPostfixExpression_Op();
 
   /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.Or <em>Or</em>}'.
@@ -3181,6 +3208,48 @@ public interface XsPackage extends EPackage
   EClass getPrimaryExpression();
 
   /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.LiteralVector <em>Literal Vector</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Literal Vector</em>'.
+   * @see aom.scripting.xs.xs.LiteralVector
+   * @generated
+   */
+  EClass getLiteralVector();
+
+  /**
+   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.LiteralVector#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Value</em>'.
+   * @see aom.scripting.xs.xs.LiteralVector#getValue()
+   * @see #getLiteralVector()
+   * @generated
+   */
+  EReference getLiteralVector_Value();
+
+  /**
+   * Returns the meta object for class '{@link aom.scripting.xs.xs.LiteralString <em>Literal String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Literal String</em>'.
+   * @see aom.scripting.xs.xs.LiteralString
+   * @generated
+   */
+  EClass getLiteralString();
+
+  /**
+   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.LiteralString#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see aom.scripting.xs.xs.LiteralString#getValue()
+   * @see #getLiteralString()
+   * @generated
+   */
+  EAttribute getLiteralString_Value();
+
+  /**
    * Returns the meta object for class '{@link aom.scripting.xs.xs.LiteralInt <em>Literal Int</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3244,48 +3313,6 @@ public interface XsPackage extends EPackage
   EAttribute getLiteralBool_Value();
 
   /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.LiteralVector <em>Literal Vector</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Literal Vector</em>'.
-   * @see aom.scripting.xs.xs.LiteralVector
-   * @generated
-   */
-  EClass getLiteralVector();
-
-  /**
-   * Returns the meta object for the containment reference '{@link aom.scripting.xs.xs.LiteralVector#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Value</em>'.
-   * @see aom.scripting.xs.xs.LiteralVector#getValue()
-   * @see #getLiteralVector()
-   * @generated
-   */
-  EReference getLiteralVector_Value();
-
-  /**
-   * Returns the meta object for class '{@link aom.scripting.xs.xs.LiteralString <em>Literal String</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Literal String</em>'.
-   * @see aom.scripting.xs.xs.LiteralString
-   * @generated
-   */
-  EClass getLiteralString();
-
-  /**
-   * Returns the meta object for the attribute '{@link aom.scripting.xs.xs.LiteralString#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see aom.scripting.xs.xs.LiteralString#getValue()
-   * @see #getLiteralString()
-   * @generated
-   */
-  EAttribute getLiteralString_Value();
-
-  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3337,74 +3364,22 @@ public interface XsPackage extends EPackage
     EClass DECLARATION = eINSTANCE.getDeclaration();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.IncludeStatementImpl <em>Include Statement</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.IncludeStatementImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIncludeStatement()
      * @generated
      */
-    EAttribute DECLARATION__NAME = eINSTANCE.getDeclaration_Name();
+    EClass INCLUDE_STATEMENT = eINSTANCE.getIncludeStatement();
 
     /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.ConstantNumImpl <em>Constant Num</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.ConstantNumImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getConstantNum()
-     * @generated
-     */
-    EClass CONSTANT_NUM = eINSTANCE.getConstantNum();
-
-    /**
-     * The meta object literal for the '<em><b>Var</b></em>' reference feature.
+     * The meta object literal for the '<em><b>File Path</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONSTANT_NUM__VAR = eINSTANCE.getConstantNum_Var();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.LiteralOrConstantNumImpl <em>Literal Or Constant Num</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.LiteralOrConstantNumImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralOrConstantNum()
-     * @generated
-     */
-    EClass LITERAL_OR_CONSTANT_NUM = eINSTANCE.getLiteralOrConstantNum();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VectorImpl <em>Vector</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.VectorImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVector()
-     * @generated
-     */
-    EClass VECTOR = eINSTANCE.getVector();
-
-    /**
-     * The meta object literal for the '<em><b>X</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference VECTOR__X = eINSTANCE.getVector_X();
-
-    /**
-     * The meta object literal for the '<em><b>Y</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference VECTOR__Y = eINSTANCE.getVector_Y();
-
-    /**
-     * The meta object literal for the '<em><b>Z</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference VECTOR__Z = eINSTANCE.getVector_Z();
+    EAttribute INCLUDE_STATEMENT__FILE_PATH = eINSTANCE.getIncludeStatement_FilePath();
 
     /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VarDeclarationImpl <em>Var Declaration</em>}' class.
@@ -3417,14 +3392,6 @@ public interface XsPackage extends EPackage
     EClass VAR_DECLARATION = eINSTANCE.getVarDeclaration();
 
     /**
-     * The meta object literal for the '<em><b>Modifier</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference VAR_DECLARATION__MODIFIER = eINSTANCE.getVarDeclaration_Modifier();
-
-    /**
      * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3433,12 +3400,46 @@ public interface XsPackage extends EPackage
     EReference VAR_DECLARATION__TYPE = eINSTANCE.getVarDeclaration_Type();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VAR_DECLARATION__NAME = eINSTANCE.getVarDeclaration_Name();
+
+    /**
      * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference VAR_DECLARATION__VALUE = eINSTANCE.getVarDeclaration_Value();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VarModifierImpl <em>Var Modifier</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.VarModifierImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVarModifier()
+     * @generated
+     */
+    EClass VAR_MODIFIER = eINSTANCE.getVarModifier();
+
+    /**
+     * The meta object literal for the '<em><b>Const</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VAR_MODIFIER__CONST = eINSTANCE.getVarModifier_Const();
+
+    /**
+     * The meta object literal for the '<em><b>Extern</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VAR_MODIFIER__EXTERN = eINSTANCE.getVarModifier_Extern();
 
     /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.FunDeclarationImpl <em>Fun Declaration</em>}' class.
@@ -3467,6 +3468,14 @@ public interface XsPackage extends EPackage
     EReference FUN_DECLARATION__TYPE = eINSTANCE.getFunDeclaration_Type();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FUN_DECLARATION__NAME = eINSTANCE.getFunDeclaration_Name();
+
+    /**
      * The meta object literal for the '<em><b>Paramlist</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3483,14 +3492,32 @@ public interface XsPackage extends EPackage
     EReference FUN_DECLARATION__STATEMENTS = eINSTANCE.getFunDeclaration_Statements();
 
     /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.IncludeStatementImpl <em>Include Statement</em>}' class.
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.FunTypeSpecifierImpl <em>Fun Type Specifier</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.IncludeStatementImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIncludeStatement()
+     * @see aom.scripting.xs.xs.impl.FunTypeSpecifierImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFunTypeSpecifier()
      * @generated
      */
-    EClass INCLUDE_STATEMENT = eINSTANCE.getIncludeStatement();
+    EClass FUN_TYPE_SPECIFIER = eINSTANCE.getFunTypeSpecifier();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.ParamsImpl <em>Params</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.ParamsImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getParams()
+     * @generated
+     */
+    EClass PARAMS = eINSTANCE.getParams();
+
+    /**
+     * The meta object literal for the '<em><b>Params</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMS__PARAMS = eINSTANCE.getParams_Params();
 
     /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl <em>Rule Declaration</em>}' class.
@@ -3501,6 +3528,14 @@ public interface XsPackage extends EPackage
      * @generated
      */
     EClass RULE_DECLARATION = eINSTANCE.getRuleDeclaration();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RULE_DECLARATION__NAME = eINSTANCE.getRuleDeclaration_Name();
 
     /**
      * The meta object literal for the '<em><b>Active</b></em>' attribute feature.
@@ -3559,40 +3594,6 @@ public interface XsPackage extends EPackage
     EReference RULE_DECLARATION__STATEMENTS = eINSTANCE.getRuleDeclaration_Statements();
 
     /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VarModifierImpl <em>Var Modifier</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.VarModifierImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVarModifier()
-     * @generated
-     */
-    EClass VAR_MODIFIER = eINSTANCE.getVarModifier();
-
-    /**
-     * The meta object literal for the '<em><b>Static</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute VAR_MODIFIER__STATIC = eINSTANCE.getVarModifier_Static();
-
-    /**
-     * The meta object literal for the '<em><b>Const</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute VAR_MODIFIER__CONST = eINSTANCE.getVarModifier_Const();
-
-    /**
-     * The meta object literal for the '<em><b>Extern</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute VAR_MODIFIER__EXTERN = eINSTANCE.getVarModifier_Extern();
-
-    /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.FunModifierImpl <em>Fun Modifier</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3603,80 +3604,12 @@ public interface XsPackage extends EPackage
     EClass FUN_MODIFIER = eINSTANCE.getFunModifier();
 
     /**
-     * The meta object literal for the '<em><b>Static</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FUN_MODIFIER__STATIC = eINSTANCE.getFunModifier_Static();
-
-    /**
      * The meta object literal for the '<em><b>Mutable</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute FUN_MODIFIER__MUTABLE = eINSTANCE.getFunModifier_Mutable();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.IntTypeImpl <em>Int Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.IntTypeImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIntType()
-     * @generated
-     */
-    EClass INT_TYPE = eINSTANCE.getIntType();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.FloatTypeImpl <em>Float Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.FloatTypeImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFloatType()
-     * @generated
-     */
-    EClass FLOAT_TYPE = eINSTANCE.getFloatType();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.BoolTypeImpl <em>Bool Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.BoolTypeImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getBoolType()
-     * @generated
-     */
-    EClass BOOL_TYPE = eINSTANCE.getBoolType();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VectorTypeImpl <em>Vector Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.VectorTypeImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVectorType()
-     * @generated
-     */
-    EClass VECTOR_TYPE = eINSTANCE.getVectorType();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.StringTypeImpl <em>String Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.StringTypeImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getStringType()
-     * @generated
-     */
-    EClass STRING_TYPE = eINSTANCE.getStringType();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VoidTypeImpl <em>Void Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.VoidTypeImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVoidType()
-     * @generated
-     */
-    EClass VOID_TYPE = eINSTANCE.getVoidType();
 
     /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VarTypeSpecifierImpl <em>Var Type Specifier</em>}' class.
@@ -3687,42 +3620,6 @@ public interface XsPackage extends EPackage
      * @generated
      */
     EClass VAR_TYPE_SPECIFIER = eINSTANCE.getVarTypeSpecifier();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.FunTypeSpecifierImpl <em>Fun Type Specifier</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.FunTypeSpecifierImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFunTypeSpecifier()
-     * @generated
-     */
-    EClass FUN_TYPE_SPECIFIER = eINSTANCE.getFunTypeSpecifier();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.ParamsImpl <em>Params</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.ParamsImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getParams()
-     * @generated
-     */
-    EClass PARAMS = eINSTANCE.getParams();
-
-    /**
-     * The meta object literal for the '<em><b>Param</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMS__PARAM = eINSTANCE.getParams_Param();
-
-    /**
-     * The meta object literal for the '<em><b>Params</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMS__PARAMS = eINSTANCE.getParams_Params();
 
     /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.CompoundStatementImpl <em>Compound Statement</em>}' class.
@@ -3781,6 +3678,32 @@ public interface XsPackage extends EPackage
     EReference EXPRESSION_STATEMENT__EXPRESSION = eINSTANCE.getExpressionStatement_Expression();
 
     /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.PostfixStatementImpl <em>Postfix Statement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.PostfixStatementImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getPostfixStatement()
+     * @generated
+     */
+    EClass POSTFIX_STATEMENT = eINSTANCE.getPostfixStatement();
+
+    /**
+     * The meta object literal for the '<em><b>Var</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POSTFIX_STATEMENT__VAR = eINSTANCE.getPostfixStatement_Var();
+
+    /**
+     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POSTFIX_STATEMENT__OP = eINSTANCE.getPostfixStatement_Op();
+
+    /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.IfElseStatementImpl <em>If Else Statement</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3799,12 +3722,12 @@ public interface XsPackage extends EPackage
     EReference IF_ELSE_STATEMENT__CONDITION = eINSTANCE.getIfElseStatement_Condition();
 
     /**
-     * The meta object literal for the '<em><b>If Statement</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Then Statement</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference IF_ELSE_STATEMENT__IF_STATEMENT = eINSTANCE.getIfElseStatement_IfStatement();
+    EReference IF_ELSE_STATEMENT__THEN_STATEMENT = eINSTANCE.getIfElseStatement_ThenStatement();
 
     /**
      * The meta object literal for the '<em><b>Else Statement</b></em>' containment reference feature.
@@ -4027,12 +3950,52 @@ public interface XsPackage extends EPackage
     EClass VAR = eINSTANCE.getVar();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Declaration</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference VAR__NAME = eINSTANCE.getVar_Name();
+    EReference VAR__DECLARATION = eINSTANCE.getVar_Declaration();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.LiteralOrVarImpl <em>Literal Or Var</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.LiteralOrVarImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralOrVar()
+     * @generated
+     */
+    EClass LITERAL_OR_VAR = eINSTANCE.getLiteralOrVar();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.LiteralImpl <em>Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.LiteralImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteral()
+     * @generated
+     */
+    EClass LITERAL = eINSTANCE.getLiteral();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.LiteralNumImpl <em>Literal Num</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.LiteralNumImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralNum()
+     * @generated
+     */
+    EClass LITERAL_NUM = eINSTANCE.getLiteralNum();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.LiteralNumOrVarImpl <em>Literal Num Or Var</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.LiteralNumOrVarImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralNumOrVar()
+     * @generated
+     */
+    EClass LITERAL_NUM_OR_VAR = eINSTANCE.getLiteralNumOrVar();
 
     /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.CallImpl <em>Call</em>}' class.
@@ -4079,24 +4042,116 @@ public interface XsPackage extends EPackage
     EReference ARGUMENTS__EXPRESSIONS = eINSTANCE.getArguments_Expressions();
 
     /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.SignedNumImpl <em>Signed Num</em>}' class.
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.IntTypeImpl <em>Int Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.SignedNumImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getSignedNum()
+     * @see aom.scripting.xs.xs.impl.IntTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getIntType()
      * @generated
      */
-    EClass SIGNED_NUM = eINSTANCE.getSignedNum();
+    EClass INT_TYPE = eINSTANCE.getIntType();
 
     /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.EmptyExpressionStatementImpl <em>Empty Expression Statement</em>}' class.
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.FloatTypeImpl <em>Float Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.EmptyExpressionStatementImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getEmptyExpressionStatement()
+     * @see aom.scripting.xs.xs.impl.FloatTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getFloatType()
      * @generated
      */
-    EClass EMPTY_EXPRESSION_STATEMENT = eINSTANCE.getEmptyExpressionStatement();
+    EClass FLOAT_TYPE = eINSTANCE.getFloatType();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.BoolTypeImpl <em>Bool Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.BoolTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getBoolType()
+     * @generated
+     */
+    EClass BOOL_TYPE = eINSTANCE.getBoolType();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VectorTypeImpl <em>Vector Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.VectorTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVectorType()
+     * @generated
+     */
+    EClass VECTOR_TYPE = eINSTANCE.getVectorType();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.StringTypeImpl <em>String Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.StringTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getStringType()
+     * @generated
+     */
+    EClass STRING_TYPE = eINSTANCE.getStringType();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VoidTypeImpl <em>Void Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.VoidTypeImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVoidType()
+     * @generated
+     */
+    EClass VOID_TYPE = eINSTANCE.getVoidType();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.VectorImpl <em>Vector</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.VectorImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getVector()
+     * @generated
+     */
+    EClass VECTOR = eINSTANCE.getVector();
+
+    /**
+     * The meta object literal for the '<em><b>X</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VECTOR__X = eINSTANCE.getVector_X();
+
+    /**
+     * The meta object literal for the '<em><b>Y</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VECTOR__Y = eINSTANCE.getVector_Y();
+
+    /**
+     * The meta object literal for the '<em><b>Z</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VECTOR__Z = eINSTANCE.getVector_Z();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.GlobalVarDeclarationImpl <em>Global Var Declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.GlobalVarDeclarationImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getGlobalVarDeclaration()
+     * @generated
+     */
+    EClass GLOBAL_VAR_DECLARATION = eINSTANCE.getGlobalVarDeclaration();
+
+    /**
+     * The meta object literal for the '<em><b>Modifier</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GLOBAL_VAR_DECLARATION__MODIFIER = eINSTANCE.getGlobalVarDeclaration_Modifier();
 
     /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.AssignmentExpressionImpl <em>Assignment Expression</em>}' class.
@@ -4115,32 +4170,6 @@ public interface XsPackage extends EPackage
      * @generated
      */
     EReference ASSIGNMENT_EXPRESSION__VAR = eINSTANCE.getAssignmentExpression_Var();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.PostfixExpressionImpl <em>Postfix Expression</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.PostfixExpressionImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getPostfixExpression()
-     * @generated
-     */
-    EClass POSTFIX_EXPRESSION = eINSTANCE.getPostfixExpression();
-
-    /**
-     * The meta object literal for the '<em><b>Postfix Var</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference POSTFIX_EXPRESSION__POSTFIX_VAR = eINSTANCE.getPostfixExpression_PostfixVar();
-
-    /**
-     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute POSTFIX_EXPRESSION__OP = eINSTANCE.getPostfixExpression_Op();
 
     /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.OrImpl <em>Or</em>}' class.
@@ -4357,6 +4386,42 @@ public interface XsPackage extends EPackage
     EClass PRIMARY_EXPRESSION = eINSTANCE.getPrimaryExpression();
 
     /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.LiteralVectorImpl <em>Literal Vector</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.LiteralVectorImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralVector()
+     * @generated
+     */
+    EClass LITERAL_VECTOR = eINSTANCE.getLiteralVector();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LITERAL_VECTOR__VALUE = eINSTANCE.getLiteralVector_Value();
+
+    /**
+     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.LiteralStringImpl <em>Literal String</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see aom.scripting.xs.xs.impl.LiteralStringImpl
+     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralString()
+     * @generated
+     */
+    EClass LITERAL_STRING = eINSTANCE.getLiteralString();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LITERAL_STRING__VALUE = eINSTANCE.getLiteralString_Value();
+
+    /**
      * The meta object literal for the '{@link aom.scripting.xs.xs.impl.LiteralIntImpl <em>Literal Int</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4409,42 +4474,6 @@ public interface XsPackage extends EPackage
      * @generated
      */
     EAttribute LITERAL_BOOL__VALUE = eINSTANCE.getLiteralBool_Value();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.LiteralVectorImpl <em>Literal Vector</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.LiteralVectorImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralVector()
-     * @generated
-     */
-    EClass LITERAL_VECTOR = eINSTANCE.getLiteralVector();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LITERAL_VECTOR__VALUE = eINSTANCE.getLiteralVector_Value();
-
-    /**
-     * The meta object literal for the '{@link aom.scripting.xs.xs.impl.LiteralStringImpl <em>Literal String</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see aom.scripting.xs.xs.impl.LiteralStringImpl
-     * @see aom.scripting.xs.xs.impl.XsPackageImpl#getLiteralString()
-     * @generated
-     */
-    EClass LITERAL_STRING = eINSTANCE.getLiteralString();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LITERAL_STRING__VALUE = eINSTANCE.getLiteralString_Value();
 
   }
 

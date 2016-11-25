@@ -1,4 +1,5 @@
-grammar aom.scripting.xs.XS with org.eclipse.xtext.common.Terminals //xbase.Xbase
+grammar aom.scripting.xs.XS
+	hidden(WS, ML_COMMENT, SL_COMMENT)
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
@@ -16,6 +17,15 @@ generate xs "http://aom.eso.com/xs"
   * - long, double?
   * - bitwise and/or
   * - +=, -=, ...
+  * 
+  * other notes:
+  *  - operator precedence is weird
+  *  - only three scopes: global, file, local; file scope is only used for non-exported global variables
+  *  - return() requires parentheses (except if not returning anything), and is optional
+  *  - function arguments require default values
+  *  - vector() only works for constant arguments
+  *  - functions must be defined before they are used like in C, forward declarations are done with 'mutable <header> {}'
+  *  - switch cases don't require a 'break'
   */
 
 Program
@@ -23,62 +33,48 @@ Program
 	;
 	
 Declaration
-	: VarDeclaration ';'
+	: GlobalVarDeclaration
 	| FunDeclaration
-	| IncludeStatement ';'
+	| IncludeStatement
 	| RuleDeclaration
 	;
 
-Sign
-	: '-'
-//  | '+' //not allowed!
+IncludeStatement
+	: 'include' filePath=STRING ';' // paths are relative to main directory (e.g. ai2 or trigger2), not to current directory
 	;
 	
-SignedInt returns ecore::EInt
-	: Sign? INT
-	;
-		
-SignedFloat returns ecore::EFloat
-	: Sign? INT '.' INT
+VarDeclaration
+	: type=VarTypeSpecifier name=ID '=' value=Expression //no semicolon to enable reuse
 	;
 	
-SignedNum
-	: SignedInt
-	| SignedFloat
+GlobalVarDeclaration returns VarDeclaration
+	: {GlobalVarDeclaration} modifier=VarModifier type=VarTypeSpecifier name=ID '=' value=LiteralOrVar ';'
 	;
 	
-ConstantNum //TODO check const modifier and type
-	: var=[VarDeclaration]
+VarModifier
+	: {VarModifier} (const?='const'? & extern?='extern'?)
 	;
 	
-LiteralOrConstantNum
-	: {SignedNum} SignedNum
-	| ConstantNum
-	;
-	
-Bool returns ecore::EBoolean
-	: 'true'
-	| 'false'
-	;
-	
-Vector
-	: 'vector' '(' x=LiteralOrConstantNum ',' y=LiteralOrConstantNum ',' z=LiteralOrConstantNum ')' //only literals or constants, else xsArray...
-	;
-
-VarDeclaration //TODO only literals and constant vars
-	: modifier=VarModifier type=VarTypeSpecifier name=ID '=' value=Expression //no semicolon to enable reuse
+ParameterDeclaration returns VarDeclaration
+	: type=VarTypeSpecifier name=ID '=' value=LiteralOrVar
 	;
 	
 ForVarDeclaration returns VarDeclaration
-	: name=ID '=' value=Expression //type='float'
+	: name=ID '=' value=Expression //type='int'
 	;
 
 FunDeclaration
 	: modifier=FunModifier type=FunTypeSpecifier name=ID '(' paramlist=Params? ')' statements=CompoundStatement
 	;
 	
-IncludeStatement
-	: 'include' name=STRING
+FunTypeSpecifier
+	: VoidType
+	| VarTypeSpecifier
+	;
+	
+Params
+	: {Params} 'void'
+	| params += ParameterDeclaration (',' params += ParameterDeclaration)*
 	;
 	
 RuleDeclaration
@@ -93,54 +89,16 @@ RuleDeclaration
 		statements=CompoundStatement
 	;
 
-VarModifier
-	: static?='static'? & const?='const'? & extern?='extern'?
-	;
-	
 FunModifier
-	: static?='static'? & mutable?='mutable'?
+	: {FunModifier} mutable?='mutable'?
 	;
 
-IntType
-	: {IntType} 'int'
-	;
-	
-FloatType
-	: {FloatType} 'float'
-	;
-	
-BoolType
-	: {BoolType} 'bool'
-	;
-	
-VectorType
-	: {VectorType} 'vector'
-	;
-	
-StringType
-	: {StringType} 'string'
-	;
-	
-VoidType
-	: {VoidType} 'void'
-	;
-	
 VarTypeSpecifier
 	: IntType
 	| FloatType
 	| BoolType
 	| VectorType
 	| StringType
-	;
-	
-FunTypeSpecifier
-	: VoidType
-	| VarTypeSpecifier
-	;
-	
-Params
-	: param = 'void'
-	| params += VarDeclaration (',' params += VarDeclaration)*
 	;
 	
 CompoundStatement
@@ -154,6 +112,7 @@ VarDeclarationOrStatement
 		
 Statement
 	: ExpressionStatement
+    | PostfixStatement
     | CompoundStatement
 	| IfElseStatement
 	| WhileStatement
@@ -165,12 +124,15 @@ Statement
 	;
 	
 ExpressionStatement //typically 1 line, ends in semicolon
-	: expression = Expression ';' 
-	| {EmptyExpressionStatement} ';'
+	: expression = Expression ';'
+	;
+	
+PostfixStatement
+	: var=[VarDeclaration] op=PostFixOp ';'
 	;
 	
 IfElseStatement
-	: 'if' '(' condition = Expression ')' ifStatement = Statement (=>'else' elseStatement=Statement)?
+	: 'if' '(' condition = Expression ')' thenStatement = Statement (=>'else' elseStatement=Statement)?
 	;
 	
 WhileStatement
@@ -185,12 +147,12 @@ SwitchStatement
 	: 'switch' '(' var=[VarDeclaration] ')' '{' cases+=SwitchCase* default=SwitchDefault? '}'
 	;
 	
-SwitchCase //TODO check if strings, floats, ... allowed
-	: 'case' var=LiteralOrConstantNum ':' '{' statement=Statement'}'
+SwitchCase // TODO check if strings, floats, ... allowed
+	: 'case' '(' var=LiteralNumOrVar ')' ':' statement=Statement
 	;
 	
 SwitchDefault
-	: 'default' ':' '{' statement=Statement '}'
+	: 'default' ':' statement=Statement
 	;
 
 ReturnStatement
@@ -213,11 +175,10 @@ PostFixOp
 Expression
 	: {AssignmentExpression} (var = Var '=' expression = Expression)
 	| expression = SimpleExpression
-	| {PostfixExpression} postfixVar = [VarDeclaration] op=PostFixOp //only as separate Expression, not mixed with SimpleExpression
 	;
 	
 Var
-	: name=[VarDeclaration]
+	: declaration=[VarDeclaration]
 	;
 	
 SimpleExpression returns Expression
@@ -269,13 +230,30 @@ MulOp
 	
 Atom returns Expression
 	: {PrimaryExpression} ('(' expression = Expression ')')
-	| expression = Var
-	| expression = Call
-	| {LiteralInt} value=SignedInt
-	| {LiteralFloat} value=SignedFloat
-	| {LiteralBool} value=Bool
+	| Call
+	| LiteralOrVar
+	;
+
+LiteralOrVar
+	: Var
+	| Literal
+	;
+
+Literal
+	: LiteralNum
 	| {LiteralVector} value=Vector
 	| {LiteralString} value=STRING //TODO concatenation != addition
+	;
+
+LiteralNum
+	: {LiteralInt} value=SignedInt
+	| {LiteralFloat} value=SignedFloat
+	| {LiteralBool} value=Bool // booleans are treated like ints
+	;
+	
+LiteralNumOrVar
+	: LiteralNum
+	| Var
 	;
 	
 Call
@@ -285,3 +263,73 @@ Call
 Arguments
 	: expressions += Expression (',' expressions += Expression)* //TODO link with params
 	;
+
+IntType
+	: {IntType} 'int'
+	;
+	
+FloatType
+	: {FloatType} 'float'
+	;
+	
+BoolType
+	: {BoolType} 'bool'
+	;
+	
+VectorType
+	: {VectorType} 'vector'
+	;
+	
+StringType
+	: {StringType} 'string'
+	;
+	
+VoidType
+	: {VoidType} 'void'
+	;
+	
+Sign
+	: '-'
+//  | '+' //not allowed!
+	;
+	
+SignedInt returns ecore::EInt
+	: Sign? INT // TODO check that this is <= 9 digits
+	;
+	
+SignedFloat returns ecore::EFloat
+	: Sign? INT '.' INT
+	;
+	
+Bool returns ecore::EBoolean
+	: 'true'
+	| 'false'
+	;
+	
+Vector
+	: 'vector' '(' x=LiteralNumOrVar ',' y=LiteralNumOrVar ',' z=LiteralNumOrVar ')' //only literals or constants, else use xsVectorSet
+	;
+	
+	
+terminal ID: 
+    ('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+ 
+terminal INT returns ecore::EInt: 
+    ('0'..'9')+;
+ 
+terminal STRING: 
+    '"' ( '\\"' | !('"'|'\n') )* '"';
+    // XS strings use invalid escaping: the backslash only escapes double quotes and nothing else,
+    // i.e. '\"' is '"', but '\\' is not '\', it's either '\\' or '\"' depending on where in the string it is.
+ 
+terminal ML_COMMENT: 
+    '/*' -> '*/';
+ 
+terminal SL_COMMENT: 
+    '//' !('\n'|'\r')* ('\r'? '\n')?;
+ 
+terminal WS: 
+    (' '|'\t'|'\r'|'\n')+;
+ 
+terminal ANY_OTHER: 
+    .;

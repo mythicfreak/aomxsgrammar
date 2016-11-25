@@ -19,7 +19,7 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface LiteralVector extends Expression
+public interface LiteralVector extends Literal
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' containment reference.
