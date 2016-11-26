@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class VoidTypeImpl extends FunTypeSpecifierImpl implements VoidType
+public class VoidTypeImpl extends TypeImpl implements VoidType
 {
   /**
    * <!-- begin-user-doc -->

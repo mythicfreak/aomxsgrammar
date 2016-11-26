@@ -7,6 +7,8 @@ import aom.scripting.xs.xs.XsPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Statement</b></em>'.
@@ -16,7 +18,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class StatementImpl extends VarDeclarationOrStatementImpl implements Statement
+public class StatementImpl extends MinimalEObjectImpl.Container implements Statement
 {
   /**
    * <!-- begin-user-doc -->

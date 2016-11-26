@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class BoolTypeImpl extends VarTypeSpecifierImpl implements BoolType
+public class BoolTypeImpl extends TypeImpl implements BoolType
 {
   /**
    * <!-- begin-user-doc -->

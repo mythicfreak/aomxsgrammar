@@ -13,6 +13,6 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface Literal extends LiteralOrVar
+public interface Literal extends Expression
 {
 } // Literal

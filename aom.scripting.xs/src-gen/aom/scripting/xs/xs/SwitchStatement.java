@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.SwitchStatement#getVar <em>Var</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.SwitchStatement#getExpression <em>Expression</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.SwitchStatement#getCases <em>Cases</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.SwitchStatement#getDefault <em>Default</em>}</li>
  * </ul>
@@ -25,30 +25,30 @@ import org.eclipse.emf.common.util.EList;
 public interface SwitchStatement extends Statement
 {
   /**
-   * Returns the value of the '<em><b>Var</b></em>' reference.
+   * Returns the value of the '<em><b>Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Var</em>' reference isn't clear,
+   * If the meaning of the '<em>Expression</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Var</em>' reference.
-   * @see #setVar(VarDeclaration)
-   * @see aom.scripting.xs.xs.XsPackage#getSwitchStatement_Var()
-   * @model
+   * @return the value of the '<em>Expression</em>' containment reference.
+   * @see #setExpression(Expression)
+   * @see aom.scripting.xs.xs.XsPackage#getSwitchStatement_Expression()
+   * @model containment="true"
    * @generated
    */
-  VarDeclaration getVar();
+  Expression getExpression();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.SwitchStatement#getVar <em>Var</em>}' reference.
+   * Sets the value of the '{@link aom.scripting.xs.xs.SwitchStatement#getExpression <em>Expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Var</em>' reference.
-   * @see #getVar()
+   * @param value the new value of the '<em>Expression</em>' containment reference.
+   * @see #getExpression()
    * @generated
    */
-  void setVar(VarDeclaration value);
+  void setExpression(Expression value);
 
   /**
    * Returns the value of the '<em><b>Cases</b></em>' containment reference list.

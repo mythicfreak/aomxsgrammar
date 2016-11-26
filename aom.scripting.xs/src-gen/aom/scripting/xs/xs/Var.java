@@ -19,7 +19,7 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface Var extends LiteralOrVar, LiteralNumOrVar
+public interface Var extends Expression
 {
   /**
    * Returns the value of the '<em><b>Declaration</b></em>' reference.

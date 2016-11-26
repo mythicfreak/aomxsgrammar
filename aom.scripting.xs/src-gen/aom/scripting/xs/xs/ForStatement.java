@@ -13,7 +13,7 @@ package aom.scripting.xs.xs;
  * <ul>
  *   <li>{@link aom.scripting.xs.xs.ForStatement#getVar <em>Var</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.ForStatement#getOp <em>Op</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.ForStatement#getExpression <em>Expression</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.ForStatement#getEnd <em>End</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.ForStatement#getStatement <em>Statement</em>}</li>
  * </ul>
  * </p>
@@ -33,12 +33,12 @@ public interface ForStatement extends Statement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Var</em>' containment reference.
-   * @see #setVar(VarDeclaration)
+   * @see #setVar(ForVarDeclaration)
    * @see aom.scripting.xs.xs.XsPackage#getForStatement_Var()
    * @model containment="true"
    * @generated
    */
-  VarDeclaration getVar();
+  ForVarDeclaration getVar();
 
   /**
    * Sets the value of the '{@link aom.scripting.xs.xs.ForStatement#getVar <em>Var</em>}' containment reference.
@@ -48,7 +48,7 @@ public interface ForStatement extends Statement
    * @see #getVar()
    * @generated
    */
-  void setVar(VarDeclaration value);
+  void setVar(ForVarDeclaration value);
 
   /**
    * Returns the value of the '<em><b>Op</b></em>' attribute.
@@ -77,30 +77,30 @@ public interface ForStatement extends Statement
   void setOp(String value);
 
   /**
-   * Returns the value of the '<em><b>Expression</b></em>' containment reference.
+   * Returns the value of the '<em><b>End</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Expression</em>' containment reference isn't clear,
+   * If the meaning of the '<em>End</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Expression</em>' containment reference.
-   * @see #setExpression(Expression)
-   * @see aom.scripting.xs.xs.XsPackage#getForStatement_Expression()
+   * @return the value of the '<em>End</em>' containment reference.
+   * @see #setEnd(Expression)
+   * @see aom.scripting.xs.xs.XsPackage#getForStatement_End()
    * @model containment="true"
    * @generated
    */
-  Expression getExpression();
+  Expression getEnd();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.ForStatement#getExpression <em>Expression</em>}' containment reference.
+   * Sets the value of the '{@link aom.scripting.xs.xs.ForStatement#getEnd <em>End</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Expression</em>' containment reference.
-   * @see #getExpression()
+   * @param value the new value of the '<em>End</em>' containment reference.
+   * @see #getEnd()
    * @generated
    */
-  void setExpression(Expression value);
+  void setEnd(Expression value);
 
   /**
    * Returns the value of the '<em><b>Statement</b></em>' containment reference.

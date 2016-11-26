@@ -19,7 +19,7 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface LiteralFloat extends LiteralNum
+public interface LiteralFloat extends Literal
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

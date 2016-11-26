@@ -4,36 +4,32 @@
 package aom.scripting.xs.serializer;
 
 import aom.scripting.xs.services.XSGrammarAccess;
-import aom.scripting.xs.xs.And;
-import aom.scripting.xs.xs.Arguments;
-import aom.scripting.xs.xs.AssignmentExpression;
+import aom.scripting.xs.xs.AndExpression;
+import aom.scripting.xs.xs.Assign;
+import aom.scripting.xs.xs.Block;
 import aom.scripting.xs.xs.BoolType;
 import aom.scripting.xs.xs.BreakStatement;
 import aom.scripting.xs.xs.Call;
-import aom.scripting.xs.xs.Comparison;
-import aom.scripting.xs.xs.CompoundStatement;
+import aom.scripting.xs.xs.ComparisonExpression;
 import aom.scripting.xs.xs.ContinueStatement;
-import aom.scripting.xs.xs.Equals;
-import aom.scripting.xs.xs.Expression;
-import aom.scripting.xs.xs.ExpressionStatement;
+import aom.scripting.xs.xs.EqualsExpression;
 import aom.scripting.xs.xs.Factor;
 import aom.scripting.xs.xs.FloatType;
 import aom.scripting.xs.xs.ForStatement;
-import aom.scripting.xs.xs.FunDeclaration;
-import aom.scripting.xs.xs.FunModifier;
+import aom.scripting.xs.xs.ForVarDeclaration;
+import aom.scripting.xs.xs.FunctionDeclaration;
 import aom.scripting.xs.xs.GlobalVarDeclaration;
 import aom.scripting.xs.xs.IfElseStatement;
-import aom.scripting.xs.xs.IncludeStatement;
+import aom.scripting.xs.xs.IncludeDeclaration;
 import aom.scripting.xs.xs.IntType;
 import aom.scripting.xs.xs.LiteralBool;
 import aom.scripting.xs.xs.LiteralFloat;
 import aom.scripting.xs.xs.LiteralInt;
 import aom.scripting.xs.xs.LiteralString;
-import aom.scripting.xs.xs.LiteralVector;
-import aom.scripting.xs.xs.Or;
-import aom.scripting.xs.xs.Params;
+import aom.scripting.xs.xs.LocalVarDeclaration;
+import aom.scripting.xs.xs.OrExpression;
+import aom.scripting.xs.xs.ParameterDeclaration;
 import aom.scripting.xs.xs.PostfixStatement;
-import aom.scripting.xs.xs.PrimaryExpression;
 import aom.scripting.xs.xs.Program;
 import aom.scripting.xs.xs.ReturnStatement;
 import aom.scripting.xs.xs.RuleDeclaration;
@@ -43,9 +39,7 @@ import aom.scripting.xs.xs.SwitchDefault;
 import aom.scripting.xs.xs.SwitchStatement;
 import aom.scripting.xs.xs.Term;
 import aom.scripting.xs.xs.Var;
-import aom.scripting.xs.xs.VarDeclaration;
-import aom.scripting.xs.xs.VarModifier;
-import aom.scripting.xs.xs.Vector;
+import aom.scripting.xs.xs.VectorLiteral;
 import aom.scripting.xs.xs.VectorType;
 import aom.scripting.xs.xs.VoidType;
 import aom.scripting.xs.xs.WhileStatement;
@@ -76,14 +70,14 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == XsPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case XsPackage.AND:
-				sequence_AndExpression(context, (And) semanticObject); 
+			case XsPackage.AND_EXPRESSION:
+				sequence_AndExpression(context, (AndExpression) semanticObject); 
 				return; 
-			case XsPackage.ARGUMENTS:
-				sequence_Arguments(context, (Arguments) semanticObject); 
+			case XsPackage.ASSIGN:
+				sequence_Assign(context, (Assign) semanticObject); 
 				return; 
-			case XsPackage.ASSIGNMENT_EXPRESSION:
-				sequence_Expression(context, (AssignmentExpression) semanticObject); 
+			case XsPackage.BLOCK:
+				sequence_Block(context, (Block) semanticObject); 
 				return; 
 			case XsPackage.BOOL_TYPE:
 				sequence_BoolType(context, (BoolType) semanticObject); 
@@ -94,23 +88,14 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case XsPackage.CALL:
 				sequence_Call(context, (Call) semanticObject); 
 				return; 
-			case XsPackage.COMPARISON:
-				sequence_ComparisonExpression(context, (Comparison) semanticObject); 
-				return; 
-			case XsPackage.COMPOUND_STATEMENT:
-				sequence_CompoundStatement(context, (CompoundStatement) semanticObject); 
+			case XsPackage.COMPARISON_EXPRESSION:
+				sequence_ComparisonExpression(context, (ComparisonExpression) semanticObject); 
 				return; 
 			case XsPackage.CONTINUE_STATEMENT:
 				sequence_ContinueStatement(context, (ContinueStatement) semanticObject); 
 				return; 
-			case XsPackage.EQUALS:
-				sequence_EqualsExpression(context, (Equals) semanticObject); 
-				return; 
-			case XsPackage.EXPRESSION:
-				sequence_Expression(context, (Expression) semanticObject); 
-				return; 
-			case XsPackage.EXPRESSION_STATEMENT:
-				sequence_ExpressionStatement(context, (ExpressionStatement) semanticObject); 
+			case XsPackage.EQUALS_EXPRESSION:
+				sequence_EqualsExpression(context, (EqualsExpression) semanticObject); 
 				return; 
 			case XsPackage.FACTOR:
 				sequence_MultiplicativeExpression(context, (Factor) semanticObject); 
@@ -121,11 +106,11 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case XsPackage.FOR_STATEMENT:
 				sequence_ForStatement(context, (ForStatement) semanticObject); 
 				return; 
-			case XsPackage.FUN_DECLARATION:
-				sequence_FunDeclaration(context, (FunDeclaration) semanticObject); 
+			case XsPackage.FOR_VAR_DECLARATION:
+				sequence_ForVarDeclaration(context, (ForVarDeclaration) semanticObject); 
 				return; 
-			case XsPackage.FUN_MODIFIER:
-				sequence_FunModifier(context, (FunModifier) semanticObject); 
+			case XsPackage.FUNCTION_DECLARATION:
+				sequence_FunctionDeclaration(context, (FunctionDeclaration) semanticObject); 
 				return; 
 			case XsPackage.GLOBAL_VAR_DECLARATION:
 				sequence_GlobalVarDeclaration(context, (GlobalVarDeclaration) semanticObject); 
@@ -133,9 +118,20 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case XsPackage.IF_ELSE_STATEMENT:
 				sequence_IfElseStatement(context, (IfElseStatement) semanticObject); 
 				return; 
-			case XsPackage.INCLUDE_STATEMENT:
-				sequence_IncludeStatement(context, (IncludeStatement) semanticObject); 
-				return; 
+			case XsPackage.INCLUDE_DECLARATION:
+				if (rule == grammarAccess.getIncludeDeclarationRule()) {
+					sequence_IncludeDeclaration(context, (IncludeDeclaration) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getDeclarationRule()) {
+					sequence_IncludeDeclaration_PseudoIncludeDeclaration(context, (IncludeDeclaration) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getPseudoIncludeDeclarationRule()) {
+					sequence_PseudoIncludeDeclaration(context, (IncludeDeclaration) semanticObject); 
+					return; 
+				}
+				else break;
 			case XsPackage.INT_TYPE:
 				sequence_IntType(context, (IntType) semanticObject); 
 				return; 
@@ -151,20 +147,17 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case XsPackage.LITERAL_STRING:
 				sequence_Literal(context, (LiteralString) semanticObject); 
 				return; 
-			case XsPackage.LITERAL_VECTOR:
-				sequence_Literal(context, (LiteralVector) semanticObject); 
+			case XsPackage.LOCAL_VAR_DECLARATION:
+				sequence_LocalVarDeclaration(context, (LocalVarDeclaration) semanticObject); 
 				return; 
-			case XsPackage.OR:
-				sequence_SimpleExpression(context, (Or) semanticObject); 
+			case XsPackage.OR_EXPRESSION:
+				sequence_SimpleExpression(context, (OrExpression) semanticObject); 
 				return; 
-			case XsPackage.PARAMS:
-				sequence_Params(context, (Params) semanticObject); 
+			case XsPackage.PARAMETER_DECLARATION:
+				sequence_ParameterDeclaration(context, (ParameterDeclaration) semanticObject); 
 				return; 
 			case XsPackage.POSTFIX_STATEMENT:
 				sequence_PostfixStatement(context, (PostfixStatement) semanticObject); 
-				return; 
-			case XsPackage.PRIMARY_EXPRESSION:
-				sequence_Atom(context, (PrimaryExpression) semanticObject); 
 				return; 
 			case XsPackage.PROGRAM:
 				sequence_Program(context, (Program) semanticObject); 
@@ -193,26 +186,8 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case XsPackage.VAR:
 				sequence_Var(context, (Var) semanticObject); 
 				return; 
-			case XsPackage.VAR_DECLARATION:
-				if (rule == grammarAccess.getForVarDeclarationRule()) {
-					sequence_ForVarDeclaration(context, (VarDeclaration) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getParameterDeclarationRule()) {
-					sequence_ParameterDeclaration(context, (VarDeclaration) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getVarDeclarationRule()
-						|| rule == grammarAccess.getVarDeclarationOrStatementRule()) {
-					sequence_VarDeclaration(context, (VarDeclaration) semanticObject); 
-					return; 
-				}
-				else break;
-			case XsPackage.VAR_MODIFIER:
-				sequence_VarModifier(context, (VarModifier) semanticObject); 
-				return; 
-			case XsPackage.VECTOR:
-				sequence_Vector(context, (Vector) semanticObject); 
+			case XsPackage.VECTOR_LITERAL:
+				sequence_Vector(context, (VectorLiteral) semanticObject); 
 				return; 
 			case XsPackage.VECTOR_TYPE:
 				sequence_VectorType(context, (VectorType) semanticObject); 
@@ -230,16 +205,20 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Expression returns Term
 	 *     SimpleExpression returns Term
-	 *     SimpleExpression.Or_1_0 returns Term
+	 *     SimpleExpression.OrExpression_1_0 returns Term
 	 *     AndExpression returns Term
-	 *     AndExpression.And_1_0 returns Term
+	 *     AndExpression.AndExpression_1_0 returns Term
 	 *     EqualsExpression returns Term
-	 *     EqualsExpression.Equals_1_0 returns Term
+	 *     EqualsExpression.EqualsExpression_1_0 returns Term
 	 *     ComparisonExpression returns Term
-	 *     ComparisonExpression.Comparison_1_0 returns Term
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns Term
 	 *     AdditiveExpression returns Term
 	 *     AdditiveExpression.Term_1_0 returns Term
+	 *     MultiplicativeExpression returns Term
+	 *     MultiplicativeExpression.Factor_1_0 returns Term
+	 *     Atom returns Term
 	 *
 	 * Constraint:
 	 *     (left=AdditiveExpression_Term_1_0 op=AddOp right=MultiplicativeExpression)
@@ -263,25 +242,35 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     SimpleExpression returns And
-	 *     SimpleExpression.Or_1_0 returns And
-	 *     AndExpression returns And
-	 *     AndExpression.And_1_0 returns And
+	 *     Expression returns AndExpression
+	 *     SimpleExpression returns AndExpression
+	 *     SimpleExpression.OrExpression_1_0 returns AndExpression
+	 *     AndExpression returns AndExpression
+	 *     AndExpression.AndExpression_1_0 returns AndExpression
+	 *     EqualsExpression returns AndExpression
+	 *     EqualsExpression.EqualsExpression_1_0 returns AndExpression
+	 *     ComparisonExpression returns AndExpression
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns AndExpression
+	 *     AdditiveExpression returns AndExpression
+	 *     AdditiveExpression.Term_1_0 returns AndExpression
+	 *     MultiplicativeExpression returns AndExpression
+	 *     MultiplicativeExpression.Factor_1_0 returns AndExpression
+	 *     Atom returns AndExpression
 	 *
 	 * Constraint:
-	 *     (left=AndExpression_And_1_0 op='&&' right=EqualsExpression)
+	 *     (left=AndExpression_AndExpression_1_0 op='&&' right=EqualsExpression)
 	 */
-	protected void sequence_AndExpression(ISerializationContext context, And semanticObject) {
+	protected void sequence_AndExpression(ISerializationContext context, AndExpression semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.AND__LEFT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.AND__LEFT));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.AND__OP) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.AND__OP));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.AND__RIGHT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.AND__RIGHT));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.AND_EXPRESSION__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.AND_EXPRESSION__LEFT));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.AND_EXPRESSION__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.AND_EXPRESSION__OP));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.AND_EXPRESSION__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.AND_EXPRESSION__RIGHT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAndExpressionAccess().getAndLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getAndExpressionAccess().getOpAmpersandAmpersandKeyword_1_1_0(), semanticObject.getOp());
 		feeder.accept(grammarAccess.getAndExpressionAccess().getRightEqualsExpressionParserRuleCall_1_2_0(), semanticObject.getRight());
 		feeder.finish();
@@ -290,49 +279,59 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Arguments returns Arguments
+	 *     VarDeclarationOrStatement returns Assign
+	 *     StatementOrBlock returns Assign
+	 *     Statement returns Assign
+	 *     ExpressionStatement returns Assign
+	 *     Expression returns Assign
+	 *     Assign returns Assign
+	 *     SimpleExpression returns Assign
+	 *     SimpleExpression.OrExpression_1_0 returns Assign
+	 *     AndExpression returns Assign
+	 *     AndExpression.AndExpression_1_0 returns Assign
+	 *     EqualsExpression returns Assign
+	 *     EqualsExpression.EqualsExpression_1_0 returns Assign
+	 *     ComparisonExpression returns Assign
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns Assign
+	 *     AdditiveExpression returns Assign
+	 *     AdditiveExpression.Term_1_0 returns Assign
+	 *     MultiplicativeExpression returns Assign
+	 *     MultiplicativeExpression.Factor_1_0 returns Assign
+	 *     Atom returns Assign
 	 *
 	 * Constraint:
-	 *     (expressions+=Expression expressions+=Expression*)
+	 *     (var=Var expression=Expression)
 	 */
-	protected void sequence_Arguments(ISerializationContext context, Arguments semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     SimpleExpression returns PrimaryExpression
-	 *     SimpleExpression.Or_1_0 returns PrimaryExpression
-	 *     AndExpression returns PrimaryExpression
-	 *     AndExpression.And_1_0 returns PrimaryExpression
-	 *     EqualsExpression returns PrimaryExpression
-	 *     EqualsExpression.Equals_1_0 returns PrimaryExpression
-	 *     ComparisonExpression returns PrimaryExpression
-	 *     ComparisonExpression.Comparison_1_0 returns PrimaryExpression
-	 *     AdditiveExpression returns PrimaryExpression
-	 *     AdditiveExpression.Term_1_0 returns PrimaryExpression
-	 *     MultiplicativeExpression returns PrimaryExpression
-	 *     MultiplicativeExpression.Factor_1_0 returns PrimaryExpression
-	 *     Atom returns PrimaryExpression
-	 *
-	 * Constraint:
-	 *     expression=Expression
-	 */
-	protected void sequence_Atom(ISerializationContext context, PrimaryExpression semanticObject) {
+	protected void sequence_Assign(ISerializationContext context, Assign semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.EXPRESSION__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.EXPRESSION__EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.ASSIGN__VAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.ASSIGN__VAR));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.ASSIGN__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.ASSIGN__EXPRESSION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAtomAccess().getExpressionExpressionParserRuleCall_0_1_1_0(), semanticObject.getExpression());
+		feeder.accept(grammarAccess.getAssignAccess().getVarVarParserRuleCall_1_0_0(), semanticObject.getVar());
+		feeder.accept(grammarAccess.getAssignAccess().getExpressionExpressionParserRuleCall_1_2_0(), semanticObject.getExpression());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     FunTypeSpecifier returns BoolType
+	 *     Block returns Block
+	 *     StatementOrBlock returns Block
+	 *
+	 * Constraint:
+	 *     contents+=VarDeclarationOrStatement*
+	 */
+	protected void sequence_Block(ISerializationContext context, Block semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     FunctionTypeSpecifier returns BoolType
 	 *     VarTypeSpecifier returns BoolType
 	 *     BoolType returns BoolType
 	 *
@@ -347,6 +346,7 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Contexts:
 	 *     VarDeclarationOrStatement returns BreakStatement
+	 *     StatementOrBlock returns BreakStatement
 	 *     Statement returns BreakStatement
 	 *     BreakStatement returns BreakStatement
 	 *
@@ -360,14 +360,19 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VarDeclarationOrStatement returns Call
+	 *     StatementOrBlock returns Call
+	 *     Statement returns Call
+	 *     ExpressionStatement returns Call
+	 *     Expression returns Call
 	 *     SimpleExpression returns Call
-	 *     SimpleExpression.Or_1_0 returns Call
+	 *     SimpleExpression.OrExpression_1_0 returns Call
 	 *     AndExpression returns Call
-	 *     AndExpression.And_1_0 returns Call
+	 *     AndExpression.AndExpression_1_0 returns Call
 	 *     EqualsExpression returns Call
-	 *     EqualsExpression.Equals_1_0 returns Call
+	 *     EqualsExpression.EqualsExpression_1_0 returns Call
 	 *     ComparisonExpression returns Call
-	 *     ComparisonExpression.Comparison_1_0 returns Call
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns Call
 	 *     AdditiveExpression returns Call
 	 *     AdditiveExpression.Term_1_0 returns Call
 	 *     MultiplicativeExpression returns Call
@@ -376,7 +381,7 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Call returns Call
 	 *
 	 * Constraint:
-	 *     (function=[FunDeclaration|ID] args=Arguments?)
+	 *     (function=[FunctionDeclaration|ID] (arguments+=Expression arguments+=Expression*)?)
 	 */
 	protected void sequence_Call(ISerializationContext context, Call semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -385,28 +390,35 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     SimpleExpression returns Comparison
-	 *     SimpleExpression.Or_1_0 returns Comparison
-	 *     AndExpression returns Comparison
-	 *     AndExpression.And_1_0 returns Comparison
-	 *     EqualsExpression returns Comparison
-	 *     EqualsExpression.Equals_1_0 returns Comparison
-	 *     ComparisonExpression returns Comparison
+	 *     Expression returns ComparisonExpression
+	 *     SimpleExpression returns ComparisonExpression
+	 *     SimpleExpression.OrExpression_1_0 returns ComparisonExpression
+	 *     AndExpression returns ComparisonExpression
+	 *     AndExpression.AndExpression_1_0 returns ComparisonExpression
+	 *     EqualsExpression returns ComparisonExpression
+	 *     EqualsExpression.EqualsExpression_1_0 returns ComparisonExpression
+	 *     ComparisonExpression returns ComparisonExpression
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns ComparisonExpression
+	 *     AdditiveExpression returns ComparisonExpression
+	 *     AdditiveExpression.Term_1_0 returns ComparisonExpression
+	 *     MultiplicativeExpression returns ComparisonExpression
+	 *     MultiplicativeExpression.Factor_1_0 returns ComparisonExpression
+	 *     Atom returns ComparisonExpression
 	 *
 	 * Constraint:
-	 *     (left=ComparisonExpression_Comparison_1_0 op=RelOp right=AdditiveExpression)
+	 *     (left=ComparisonExpression_ComparisonExpression_1_0 op=RelOp right=AdditiveExpression)
 	 */
-	protected void sequence_ComparisonExpression(ISerializationContext context, Comparison semanticObject) {
+	protected void sequence_ComparisonExpression(ISerializationContext context, ComparisonExpression semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.COMPARISON__LEFT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.COMPARISON__LEFT));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.COMPARISON__OP) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.COMPARISON__OP));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.COMPARISON__RIGHT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.COMPARISON__RIGHT));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.COMPARISON_EXPRESSION__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.COMPARISON_EXPRESSION__LEFT));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.COMPARISON_EXPRESSION__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.COMPARISON_EXPRESSION__OP));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.COMPARISON_EXPRESSION__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.COMPARISON_EXPRESSION__RIGHT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getComparisonExpressionAccess().getComparisonLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getComparisonExpressionAccess().getOpRelOpParserRuleCall_1_1_0(), semanticObject.getOp());
 		feeder.accept(grammarAccess.getComparisonExpressionAccess().getRightAdditiveExpressionParserRuleCall_1_2_0(), semanticObject.getRight());
 		feeder.finish();
@@ -415,21 +427,8 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     CompoundStatement returns CompoundStatement
-	 *     VarDeclarationOrStatement returns CompoundStatement
-	 *     Statement returns CompoundStatement
-	 *
-	 * Constraint:
-	 *     contents+=VarDeclarationOrStatement*
-	 */
-	protected void sequence_CompoundStatement(ISerializationContext context, CompoundStatement semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     VarDeclarationOrStatement returns ContinueStatement
+	 *     StatementOrBlock returns ContinueStatement
 	 *     Statement returns ContinueStatement
 	 *     ContinueStatement returns ContinueStatement
 	 *
@@ -443,26 +442,35 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     SimpleExpression returns Equals
-	 *     SimpleExpression.Or_1_0 returns Equals
-	 *     AndExpression returns Equals
-	 *     AndExpression.And_1_0 returns Equals
-	 *     EqualsExpression returns Equals
+	 *     Expression returns EqualsExpression
+	 *     SimpleExpression returns EqualsExpression
+	 *     SimpleExpression.OrExpression_1_0 returns EqualsExpression
+	 *     AndExpression returns EqualsExpression
+	 *     AndExpression.AndExpression_1_0 returns EqualsExpression
+	 *     EqualsExpression returns EqualsExpression
+	 *     EqualsExpression.EqualsExpression_1_0 returns EqualsExpression
+	 *     ComparisonExpression returns EqualsExpression
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns EqualsExpression
+	 *     AdditiveExpression returns EqualsExpression
+	 *     AdditiveExpression.Term_1_0 returns EqualsExpression
+	 *     MultiplicativeExpression returns EqualsExpression
+	 *     MultiplicativeExpression.Factor_1_0 returns EqualsExpression
+	 *     Atom returns EqualsExpression
 	 *
 	 * Constraint:
-	 *     (left=EqualsExpression_Equals_1_0 op=EqOp right=ComparisonExpression)
+	 *     (left=EqualsExpression_EqualsExpression_1_0 op=EqOp right=ComparisonExpression)
 	 */
-	protected void sequence_EqualsExpression(ISerializationContext context, Equals semanticObject) {
+	protected void sequence_EqualsExpression(ISerializationContext context, EqualsExpression semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.EQUALS__LEFT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.EQUALS__LEFT));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.EQUALS__OP) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.EQUALS__OP));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.EQUALS__RIGHT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.EQUALS__RIGHT));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.EQUALS_EXPRESSION__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.EQUALS_EXPRESSION__LEFT));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.EQUALS_EXPRESSION__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.EQUALS_EXPRESSION__OP));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.EQUALS_EXPRESSION__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.EQUALS_EXPRESSION__RIGHT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEqualsExpressionAccess().getEqualsLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getEqualsExpressionAccess().getEqualsExpressionLeftAction_1_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getEqualsExpressionAccess().getOpEqOpParserRuleCall_1_1_0(), semanticObject.getOp());
 		feeder.accept(grammarAccess.getEqualsExpressionAccess().getRightComparisonExpressionParserRuleCall_1_2_0(), semanticObject.getRight());
 		feeder.finish();
@@ -471,66 +479,7 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     VarDeclarationOrStatement returns ExpressionStatement
-	 *     Statement returns ExpressionStatement
-	 *     ExpressionStatement returns ExpressionStatement
-	 *
-	 * Constraint:
-	 *     expression=Expression
-	 */
-	protected void sequence_ExpressionStatement(ISerializationContext context, ExpressionStatement semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.EXPRESSION_STATEMENT__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.EXPRESSION_STATEMENT__EXPRESSION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getExpressionStatementAccess().getExpressionExpressionParserRuleCall_0_0(), semanticObject.getExpression());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Expression returns AssignmentExpression
-	 *
-	 * Constraint:
-	 *     (var=Var expression=Expression)
-	 */
-	protected void sequence_Expression(ISerializationContext context, AssignmentExpression semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.ASSIGNMENT_EXPRESSION__VAR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.ASSIGNMENT_EXPRESSION__VAR));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.EXPRESSION__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.EXPRESSION__EXPRESSION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getExpressionAccess().getVarVarParserRuleCall_0_1_0_0(), semanticObject.getVar());
-		feeder.accept(grammarAccess.getExpressionAccess().getExpressionExpressionParserRuleCall_0_1_2_0(), semanticObject.getExpression());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Expression returns Expression
-	 *
-	 * Constraint:
-	 *     expression=SimpleExpression
-	 */
-	protected void sequence_Expression(ISerializationContext context, Expression semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.EXPRESSION__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.EXPRESSION__EXPRESSION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getExpressionAccess().getExpressionSimpleExpressionParserRuleCall_1_0(), semanticObject.getExpression());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     FunTypeSpecifier returns FloatType
+	 *     FunctionTypeSpecifier returns FloatType
 	 *     VarTypeSpecifier returns FloatType
 	 *     FloatType returns FloatType
 	 *
@@ -545,11 +494,12 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Contexts:
 	 *     VarDeclarationOrStatement returns ForStatement
+	 *     StatementOrBlock returns ForStatement
 	 *     Statement returns ForStatement
 	 *     ForStatement returns ForStatement
 	 *
 	 * Constraint:
-	 *     (var=ForVarDeclaration op=RelOp expression=Expression statement=Statement)
+	 *     (var=ForVarDeclaration op=RelOp end=Expression statement=StatementOrBlock)
 	 */
 	protected void sequence_ForStatement(ISerializationContext context, ForStatement semanticObject) {
 		if (errorAcceptor != null) {
@@ -557,28 +507,29 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.FOR_STATEMENT__VAR));
 			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.FOR_STATEMENT__OP) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.FOR_STATEMENT__OP));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.FOR_STATEMENT__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.FOR_STATEMENT__EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.FOR_STATEMENT__END) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.FOR_STATEMENT__END));
 			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.FOR_STATEMENT__STATEMENT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.FOR_STATEMENT__STATEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getForStatementAccess().getVarForVarDeclarationParserRuleCall_2_0(), semanticObject.getVar());
-		feeder.accept(grammarAccess.getForStatementAccess().getOpRelOpParserRuleCall_4_0(), semanticObject.getOp());
-		feeder.accept(grammarAccess.getForStatementAccess().getExpressionExpressionParserRuleCall_5_0(), semanticObject.getExpression());
-		feeder.accept(grammarAccess.getForStatementAccess().getStatementStatementParserRuleCall_7_0(), semanticObject.getStatement());
+		feeder.accept(grammarAccess.getForStatementAccess().getVarForVarDeclarationParserRuleCall_3_0(), semanticObject.getVar());
+		feeder.accept(grammarAccess.getForStatementAccess().getOpRelOpParserRuleCall_5_0(), semanticObject.getOp());
+		feeder.accept(grammarAccess.getForStatementAccess().getEndExpressionParserRuleCall_6_0(), semanticObject.getEnd());
+		feeder.accept(grammarAccess.getForStatementAccess().getStatementStatementOrBlockParserRuleCall_8_0(), semanticObject.getStatement());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     ForVarDeclaration returns VarDeclaration
+	 *     VarDeclaration returns ForVarDeclaration
+	 *     ForVarDeclaration returns ForVarDeclaration
 	 *
 	 * Constraint:
 	 *     (name=ID value=Expression)
 	 */
-	protected void sequence_ForVarDeclaration(ISerializationContext context, VarDeclaration semanticObject) {
+	protected void sequence_ForVarDeclaration(ISerializationContext context, ForVarDeclaration semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__NAME));
@@ -586,33 +537,21 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getForVarDeclarationAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getForVarDeclarationAccess().getValueExpressionParserRuleCall_2_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getForVarDeclarationAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getForVarDeclarationAccess().getValueExpressionParserRuleCall_3_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Declaration returns FunDeclaration
-	 *     FunDeclaration returns FunDeclaration
+	 *     Declaration returns FunctionDeclaration
+	 *     FunctionDeclaration returns FunctionDeclaration
 	 *
 	 * Constraint:
-	 *     (modifier=FunModifier type=FunTypeSpecifier name=ID paramlist=Params? statements=CompoundStatement)
+	 *     (mutable?='mutable'? type=FunctionTypeSpecifier name=ID (parameters+=ParameterDeclaration parameters+=ParameterDeclaration*)? body=Block)
 	 */
-	protected void sequence_FunDeclaration(ISerializationContext context, FunDeclaration semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     FunModifier returns FunModifier
-	 *
-	 * Constraint:
-	 *     mutable?='mutable'?
-	 */
-	protected void sequence_FunModifier(ISerializationContext context, FunModifier semanticObject) {
+	protected void sequence_FunctionDeclaration(ISerializationContext context, FunctionDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -620,39 +559,26 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Contexts:
 	 *     Declaration returns GlobalVarDeclaration
+	 *     VarDeclaration returns GlobalVarDeclaration
 	 *     GlobalVarDeclaration returns GlobalVarDeclaration
 	 *
 	 * Constraint:
-	 *     (modifier=VarModifier type=VarTypeSpecifier name=ID value=LiteralOrVar)
+	 *     ((const?='const' | extern?='extern')* type=VarTypeSpecifier name=ID value=LiteralOrVar)
 	 */
 	protected void sequence_GlobalVarDeclaration(ISerializationContext context, GlobalVarDeclaration semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.GLOBAL_VAR_DECLARATION__MODIFIER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.GLOBAL_VAR_DECLARATION__MODIFIER));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__TYPE));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__NAME));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__VALUE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGlobalVarDeclarationAccess().getModifierVarModifierParserRuleCall_1_0(), semanticObject.getModifier());
-		feeder.accept(grammarAccess.getGlobalVarDeclarationAccess().getTypeVarTypeSpecifierParserRuleCall_2_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getGlobalVarDeclarationAccess().getNameIDTerminalRuleCall_3_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGlobalVarDeclarationAccess().getValueLiteralOrVarParserRuleCall_5_0(), semanticObject.getValue());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
 	 *     VarDeclarationOrStatement returns IfElseStatement
+	 *     StatementOrBlock returns IfElseStatement
 	 *     Statement returns IfElseStatement
 	 *     IfElseStatement returns IfElseStatement
 	 *
 	 * Constraint:
-	 *     (condition=Expression thenStatement=Statement elseStatement=Statement?)
+	 *     (condition=Expression thenStatement=StatementOrBlock elseStatement=StatementOrBlock?)
 	 */
 	protected void sequence_IfElseStatement(ISerializationContext context, IfElseStatement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -661,26 +587,37 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Declaration returns IncludeStatement
-	 *     IncludeStatement returns IncludeStatement
+	 *     IncludeDeclaration returns IncludeDeclaration
 	 *
 	 * Constraint:
 	 *     filePath=STRING
 	 */
-	protected void sequence_IncludeStatement(ISerializationContext context, IncludeStatement semanticObject) {
+	protected void sequence_IncludeDeclaration(ISerializationContext context, IncludeDeclaration semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.INCLUDE_STATEMENT__FILE_PATH) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.INCLUDE_STATEMENT__FILE_PATH));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.INCLUDE_DECLARATION__FILE_PATH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.INCLUDE_DECLARATION__FILE_PATH));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIncludeStatementAccess().getFilePathSTRINGTerminalRuleCall_1_0(), semanticObject.getFilePath());
+		feeder.accept(grammarAccess.getIncludeDeclarationAccess().getFilePathSTRINGTerminalRuleCall_2_0(), semanticObject.getFilePath());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     FunTypeSpecifier returns IntType
+	 *     Declaration returns IncludeDeclaration
+	 *
+	 * Constraint:
+	 *     (filePath=STRING | filePath=STRING)
+	 */
+	protected void sequence_IncludeDeclaration_PseudoIncludeDeclaration(ISerializationContext context, IncludeDeclaration semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     FunctionTypeSpecifier returns IntType
 	 *     VarTypeSpecifier returns IntType
 	 *     IntType returns IntType
 	 *
@@ -694,23 +631,24 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Expression returns LiteralBool
 	 *     SimpleExpression returns LiteralBool
-	 *     SimpleExpression.Or_1_0 returns LiteralBool
+	 *     SimpleExpression.OrExpression_1_0 returns LiteralBool
 	 *     AndExpression returns LiteralBool
-	 *     AndExpression.And_1_0 returns LiteralBool
+	 *     AndExpression.AndExpression_1_0 returns LiteralBool
 	 *     EqualsExpression returns LiteralBool
-	 *     EqualsExpression.Equals_1_0 returns LiteralBool
+	 *     EqualsExpression.EqualsExpression_1_0 returns LiteralBool
 	 *     ComparisonExpression returns LiteralBool
-	 *     ComparisonExpression.Comparison_1_0 returns LiteralBool
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns LiteralBool
 	 *     AdditiveExpression returns LiteralBool
 	 *     AdditiveExpression.Term_1_0 returns LiteralBool
 	 *     MultiplicativeExpression returns LiteralBool
 	 *     MultiplicativeExpression.Factor_1_0 returns LiteralBool
 	 *     Atom returns LiteralBool
 	 *     LiteralOrVar returns LiteralBool
+	 *     LiteralNumOrVar returns LiteralBool
 	 *     Literal returns LiteralBool
 	 *     LiteralNum returns LiteralBool
-	 *     LiteralNumOrVar returns LiteralBool
 	 *
 	 * Constraint:
 	 *     value=Bool
@@ -728,23 +666,24 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Expression returns LiteralFloat
 	 *     SimpleExpression returns LiteralFloat
-	 *     SimpleExpression.Or_1_0 returns LiteralFloat
+	 *     SimpleExpression.OrExpression_1_0 returns LiteralFloat
 	 *     AndExpression returns LiteralFloat
-	 *     AndExpression.And_1_0 returns LiteralFloat
+	 *     AndExpression.AndExpression_1_0 returns LiteralFloat
 	 *     EqualsExpression returns LiteralFloat
-	 *     EqualsExpression.Equals_1_0 returns LiteralFloat
+	 *     EqualsExpression.EqualsExpression_1_0 returns LiteralFloat
 	 *     ComparisonExpression returns LiteralFloat
-	 *     ComparisonExpression.Comparison_1_0 returns LiteralFloat
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns LiteralFloat
 	 *     AdditiveExpression returns LiteralFloat
 	 *     AdditiveExpression.Term_1_0 returns LiteralFloat
 	 *     MultiplicativeExpression returns LiteralFloat
 	 *     MultiplicativeExpression.Factor_1_0 returns LiteralFloat
 	 *     Atom returns LiteralFloat
 	 *     LiteralOrVar returns LiteralFloat
+	 *     LiteralNumOrVar returns LiteralFloat
 	 *     Literal returns LiteralFloat
 	 *     LiteralNum returns LiteralFloat
-	 *     LiteralNumOrVar returns LiteralFloat
 	 *
 	 * Constraint:
 	 *     value=SignedFloat
@@ -762,23 +701,24 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Expression returns LiteralInt
 	 *     SimpleExpression returns LiteralInt
-	 *     SimpleExpression.Or_1_0 returns LiteralInt
+	 *     SimpleExpression.OrExpression_1_0 returns LiteralInt
 	 *     AndExpression returns LiteralInt
-	 *     AndExpression.And_1_0 returns LiteralInt
+	 *     AndExpression.AndExpression_1_0 returns LiteralInt
 	 *     EqualsExpression returns LiteralInt
-	 *     EqualsExpression.Equals_1_0 returns LiteralInt
+	 *     EqualsExpression.EqualsExpression_1_0 returns LiteralInt
 	 *     ComparisonExpression returns LiteralInt
-	 *     ComparisonExpression.Comparison_1_0 returns LiteralInt
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns LiteralInt
 	 *     AdditiveExpression returns LiteralInt
 	 *     AdditiveExpression.Term_1_0 returns LiteralInt
 	 *     MultiplicativeExpression returns LiteralInt
 	 *     MultiplicativeExpression.Factor_1_0 returns LiteralInt
 	 *     Atom returns LiteralInt
 	 *     LiteralOrVar returns LiteralInt
+	 *     LiteralNumOrVar returns LiteralInt
 	 *     Literal returns LiteralInt
 	 *     LiteralNum returns LiteralInt
-	 *     LiteralNumOrVar returns LiteralInt
 	 *
 	 * Constraint:
 	 *     value=SignedInt
@@ -796,14 +736,15 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Expression returns LiteralString
 	 *     SimpleExpression returns LiteralString
-	 *     SimpleExpression.Or_1_0 returns LiteralString
+	 *     SimpleExpression.OrExpression_1_0 returns LiteralString
 	 *     AndExpression returns LiteralString
-	 *     AndExpression.And_1_0 returns LiteralString
+	 *     AndExpression.AndExpression_1_0 returns LiteralString
 	 *     EqualsExpression returns LiteralString
-	 *     EqualsExpression.Equals_1_0 returns LiteralString
+	 *     EqualsExpression.EqualsExpression_1_0 returns LiteralString
 	 *     ComparisonExpression returns LiteralString
-	 *     ComparisonExpression.Comparison_1_0 returns LiteralString
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns LiteralString
 	 *     AdditiveExpression returns LiteralString
 	 *     AdditiveExpression.Term_1_0 returns LiteralString
 	 *     MultiplicativeExpression returns LiteralString
@@ -828,50 +769,46 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     SimpleExpression returns LiteralVector
-	 *     SimpleExpression.Or_1_0 returns LiteralVector
-	 *     AndExpression returns LiteralVector
-	 *     AndExpression.And_1_0 returns LiteralVector
-	 *     EqualsExpression returns LiteralVector
-	 *     EqualsExpression.Equals_1_0 returns LiteralVector
-	 *     ComparisonExpression returns LiteralVector
-	 *     ComparisonExpression.Comparison_1_0 returns LiteralVector
-	 *     AdditiveExpression returns LiteralVector
-	 *     AdditiveExpression.Term_1_0 returns LiteralVector
-	 *     MultiplicativeExpression returns LiteralVector
-	 *     MultiplicativeExpression.Factor_1_0 returns LiteralVector
-	 *     Atom returns LiteralVector
-	 *     LiteralOrVar returns LiteralVector
-	 *     Literal returns LiteralVector
+	 *     VarDeclaration returns LocalVarDeclaration
+	 *     LocalVarDeclaration returns LocalVarDeclaration
+	 *     VarDeclarationOrStatement returns LocalVarDeclaration
 	 *
 	 * Constraint:
-	 *     value=Vector
+	 *     (type=VarTypeSpecifier name=ID value=Expression)
 	 */
-	protected void sequence_Literal(ISerializationContext context, LiteralVector semanticObject) {
+	protected void sequence_LocalVarDeclaration(ISerializationContext context, LocalVarDeclaration semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.LITERAL_VECTOR__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.LITERAL_VECTOR__VALUE));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.LOCAL_VAR_DECLARATION__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.LOCAL_VAR_DECLARATION__TYPE));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__NAME));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLiteralAccess().getValueVectorParserRuleCall_1_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getLocalVarDeclarationAccess().getTypeVarTypeSpecifierParserRuleCall_1_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getLocalVarDeclarationAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getLocalVarDeclarationAccess().getValueExpressionParserRuleCall_4_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
+	 *     Expression returns Factor
 	 *     SimpleExpression returns Factor
-	 *     SimpleExpression.Or_1_0 returns Factor
+	 *     SimpleExpression.OrExpression_1_0 returns Factor
 	 *     AndExpression returns Factor
-	 *     AndExpression.And_1_0 returns Factor
+	 *     AndExpression.AndExpression_1_0 returns Factor
 	 *     EqualsExpression returns Factor
-	 *     EqualsExpression.Equals_1_0 returns Factor
+	 *     EqualsExpression.EqualsExpression_1_0 returns Factor
 	 *     ComparisonExpression returns Factor
-	 *     ComparisonExpression.Comparison_1_0 returns Factor
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns Factor
 	 *     AdditiveExpression returns Factor
 	 *     AdditiveExpression.Term_1_0 returns Factor
 	 *     MultiplicativeExpression returns Factor
 	 *     MultiplicativeExpression.Factor_1_0 returns Factor
+	 *     Atom returns Factor
 	 *
 	 * Constraint:
 	 *     (left=MultiplicativeExpression_Factor_1_0 op=MulOp right=Atom)
@@ -895,43 +832,33 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     ParameterDeclaration returns VarDeclaration
+	 *     VarDeclaration returns ParameterDeclaration
+	 *     ParameterDeclaration returns ParameterDeclaration
 	 *
 	 * Constraint:
 	 *     (type=VarTypeSpecifier name=ID value=LiteralOrVar)
 	 */
-	protected void sequence_ParameterDeclaration(ISerializationContext context, VarDeclaration semanticObject) {
+	protected void sequence_ParameterDeclaration(ISerializationContext context, ParameterDeclaration semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__TYPE));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.PARAMETER_DECLARATION__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.PARAMETER_DECLARATION__TYPE));
 			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__NAME));
 			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getParameterDeclarationAccess().getTypeVarTypeSpecifierParserRuleCall_0_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getParameterDeclarationAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getParameterDeclarationAccess().getValueLiteralOrVarParserRuleCall_3_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getParameterDeclarationAccess().getTypeVarTypeSpecifierParserRuleCall_1_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getParameterDeclarationAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getParameterDeclarationAccess().getValueLiteralOrVarParserRuleCall_4_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Params returns Params
-	 *
-	 * Constraint:
-	 *     (params+=ParameterDeclaration params+=ParameterDeclaration*)?
-	 */
-	protected void sequence_Params(ISerializationContext context, Params semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     VarDeclarationOrStatement returns PostfixStatement
+	 *     StatementOrBlock returns PostfixStatement
 	 *     Statement returns PostfixStatement
 	 *     PostfixStatement returns PostfixStatement
 	 *
@@ -946,8 +873,8 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.POSTFIX_STATEMENT__OP));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPostfixStatementAccess().getVarVarDeclarationIDTerminalRuleCall_0_0_1(), semanticObject.getVar());
-		feeder.accept(grammarAccess.getPostfixStatementAccess().getOpPostFixOpParserRuleCall_1_0(), semanticObject.getOp());
+		feeder.accept(grammarAccess.getPostfixStatementAccess().getVarVarDeclarationIDTerminalRuleCall_1_0_1(), semanticObject.getVar());
+		feeder.accept(grammarAccess.getPostfixStatementAccess().getOpPostFixOpParserRuleCall_2_0(), semanticObject.getOp());
 		feeder.finish();
 	}
 	
@@ -957,7 +884,7 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Program returns Program
 	 *
 	 * Constraint:
-	 *     declarations+=Declaration+
+	 *     declarations+=Declaration*
 	 */
 	protected void sequence_Program(ISerializationContext context, Program semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -966,7 +893,26 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     PseudoIncludeDeclaration returns IncludeDeclaration
+	 *
+	 * Constraint:
+	 *     filePath=STRING
+	 */
+	protected void sequence_PseudoIncludeDeclaration(ISerializationContext context, IncludeDeclaration semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.INCLUDE_DECLARATION__FILE_PATH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.INCLUDE_DECLARATION__FILE_PATH));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPseudoIncludeDeclarationAccess().getFilePathSTRINGTerminalRuleCall_3_0(), semanticObject.getFilePath());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     VarDeclarationOrStatement returns ReturnStatement
+	 *     StatementOrBlock returns ReturnStatement
 	 *     Statement returns ReturnStatement
 	 *     ReturnStatement returns ReturnStatement
 	 *
@@ -992,9 +938,10 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             highFrequency?='highFrequency' | 
 	 *             group=ID | 
 	 *             minInterval=INT | 
-	 *             maxInterval=INT
+	 *             maxInterval=INT | 
+	 *             priority=INT
 	 *         )* 
-	 *         statements=CompoundStatement
+	 *         body=Block
 	 *     )
 	 */
 	protected void sequence_RuleDeclaration(ISerializationContext context, RuleDeclaration semanticObject) {
@@ -1004,23 +951,35 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     SimpleExpression returns Or
-	 *     SimpleExpression.Or_1_0 returns Or
+	 *     Expression returns OrExpression
+	 *     SimpleExpression returns OrExpression
+	 *     SimpleExpression.OrExpression_1_0 returns OrExpression
+	 *     AndExpression returns OrExpression
+	 *     AndExpression.AndExpression_1_0 returns OrExpression
+	 *     EqualsExpression returns OrExpression
+	 *     EqualsExpression.EqualsExpression_1_0 returns OrExpression
+	 *     ComparisonExpression returns OrExpression
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns OrExpression
+	 *     AdditiveExpression returns OrExpression
+	 *     AdditiveExpression.Term_1_0 returns OrExpression
+	 *     MultiplicativeExpression returns OrExpression
+	 *     MultiplicativeExpression.Factor_1_0 returns OrExpression
+	 *     Atom returns OrExpression
 	 *
 	 * Constraint:
-	 *     (left=SimpleExpression_Or_1_0 op='||' right=AndExpression)
+	 *     (left=SimpleExpression_OrExpression_1_0 op='||' right=AndExpression)
 	 */
-	protected void sequence_SimpleExpression(ISerializationContext context, Or semanticObject) {
+	protected void sequence_SimpleExpression(ISerializationContext context, OrExpression semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.OR__LEFT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.OR__LEFT));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.OR__OP) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.OR__OP));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.OR__RIGHT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.OR__RIGHT));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.OR_EXPRESSION__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.OR_EXPRESSION__LEFT));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.OR_EXPRESSION__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.OR_EXPRESSION__OP));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.OR_EXPRESSION__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.OR_EXPRESSION__RIGHT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSimpleExpressionAccess().getOrLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getSimpleExpressionAccess().getOrExpressionLeftAction_1_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getSimpleExpressionAccess().getOpVerticalLineVerticalLineKeyword_1_1_0(), semanticObject.getOp());
 		feeder.accept(grammarAccess.getSimpleExpressionAccess().getRightAndExpressionParserRuleCall_1_2_0(), semanticObject.getRight());
 		feeder.finish();
@@ -1029,7 +988,7 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     FunTypeSpecifier returns StringType
+	 *     FunctionTypeSpecifier returns StringType
 	 *     VarTypeSpecifier returns StringType
 	 *     StringType returns StringType
 	 *
@@ -1046,19 +1005,10 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     SwitchCase returns SwitchCase
 	 *
 	 * Constraint:
-	 *     (var=LiteralNumOrVar statement=Statement)
+	 *     ((value=LiteralNumOrVar | value=LiteralNumOrVar) statement=StatementOrBlock)
 	 */
 	protected void sequence_SwitchCase(ISerializationContext context, SwitchCase semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.SWITCH_CASE__VAR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.SWITCH_CASE__VAR));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.SWITCH_CASE__STATEMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.SWITCH_CASE__STATEMENT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSwitchCaseAccess().getVarLiteralNumOrVarParserRuleCall_1_0(), semanticObject.getVar());
-		feeder.accept(grammarAccess.getSwitchCaseAccess().getStatementStatementParserRuleCall_3_0(), semanticObject.getStatement());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1067,7 +1017,7 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     SwitchDefault returns SwitchDefault
 	 *
 	 * Constraint:
-	 *     statement=Statement
+	 *     statement=StatementOrBlock
 	 */
 	protected void sequence_SwitchDefault(ISerializationContext context, SwitchDefault semanticObject) {
 		if (errorAcceptor != null) {
@@ -1075,7 +1025,7 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.SWITCH_DEFAULT__STATEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSwitchDefaultAccess().getStatementStatementParserRuleCall_2_0(), semanticObject.getStatement());
+		feeder.accept(grammarAccess.getSwitchDefaultAccess().getStatementStatementOrBlockParserRuleCall_3_0(), semanticObject.getStatement());
 		feeder.finish();
 	}
 	
@@ -1083,11 +1033,12 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Contexts:
 	 *     VarDeclarationOrStatement returns SwitchStatement
+	 *     StatementOrBlock returns SwitchStatement
 	 *     Statement returns SwitchStatement
 	 *     SwitchStatement returns SwitchStatement
 	 *
 	 * Constraint:
-	 *     (var=[VarDeclaration|ID] cases+=SwitchCase* default=SwitchDefault?)
+	 *     (expression=Expression cases+=SwitchCase* default=SwitchDefault?)
 	 */
 	protected void sequence_SwitchStatement(ISerializationContext context, SwitchStatement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1096,57 +1047,21 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     VarDeclaration returns VarDeclaration
-	 *     VarDeclarationOrStatement returns VarDeclaration
-	 *
-	 * Constraint:
-	 *     (type=VarTypeSpecifier name=ID value=Expression)
-	 */
-	protected void sequence_VarDeclaration(ISerializationContext context, VarDeclaration semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__TYPE));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__NAME));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VAR_DECLARATION__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR_DECLARATION__VALUE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVarDeclarationAccess().getTypeVarTypeSpecifierParserRuleCall_0_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getVarDeclarationAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getVarDeclarationAccess().getValueExpressionParserRuleCall_3_0(), semanticObject.getValue());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     VarModifier returns VarModifier
-	 *
-	 * Constraint:
-	 *     (const?='const' | extern?='extern')*
-	 */
-	protected void sequence_VarModifier(ISerializationContext context, VarModifier semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Var returns Var
+	 *     Expression returns Var
 	 *     SimpleExpression returns Var
-	 *     SimpleExpression.Or_1_0 returns Var
+	 *     SimpleExpression.OrExpression_1_0 returns Var
 	 *     AndExpression returns Var
-	 *     AndExpression.And_1_0 returns Var
+	 *     AndExpression.AndExpression_1_0 returns Var
 	 *     EqualsExpression returns Var
-	 *     EqualsExpression.Equals_1_0 returns Var
+	 *     EqualsExpression.EqualsExpression_1_0 returns Var
 	 *     ComparisonExpression returns Var
-	 *     ComparisonExpression.Comparison_1_0 returns Var
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns Var
 	 *     AdditiveExpression returns Var
 	 *     AdditiveExpression.Term_1_0 returns Var
 	 *     MultiplicativeExpression returns Var
 	 *     MultiplicativeExpression.Factor_1_0 returns Var
 	 *     Atom returns Var
+	 *     Var returns Var
 	 *     LiteralOrVar returns Var
 	 *     LiteralNumOrVar returns Var
 	 *
@@ -1159,14 +1074,14 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VAR__DECLARATION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVarAccess().getDeclarationVarDeclarationIDTerminalRuleCall_0_1(), semanticObject.getDeclaration());
+		feeder.accept(grammarAccess.getVarAccess().getDeclarationVarDeclarationIDTerminalRuleCall_1_0_1(), semanticObject.getDeclaration());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     FunTypeSpecifier returns VectorType
+	 *     FunctionTypeSpecifier returns VectorType
 	 *     VarTypeSpecifier returns VectorType
 	 *     VectorType returns VectorType
 	 *
@@ -1180,31 +1095,47 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Vector returns Vector
+	 *     Expression returns VectorLiteral
+	 *     SimpleExpression returns VectorLiteral
+	 *     SimpleExpression.OrExpression_1_0 returns VectorLiteral
+	 *     AndExpression returns VectorLiteral
+	 *     AndExpression.AndExpression_1_0 returns VectorLiteral
+	 *     EqualsExpression returns VectorLiteral
+	 *     EqualsExpression.EqualsExpression_1_0 returns VectorLiteral
+	 *     ComparisonExpression returns VectorLiteral
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns VectorLiteral
+	 *     AdditiveExpression returns VectorLiteral
+	 *     AdditiveExpression.Term_1_0 returns VectorLiteral
+	 *     MultiplicativeExpression returns VectorLiteral
+	 *     MultiplicativeExpression.Factor_1_0 returns VectorLiteral
+	 *     Atom returns VectorLiteral
+	 *     LiteralOrVar returns VectorLiteral
+	 *     Literal returns VectorLiteral
+	 *     Vector returns VectorLiteral
 	 *
 	 * Constraint:
 	 *     (x=LiteralNumOrVar y=LiteralNumOrVar z=LiteralNumOrVar)
 	 */
-	protected void sequence_Vector(ISerializationContext context, Vector semanticObject) {
+	protected void sequence_Vector(ISerializationContext context, VectorLiteral semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VECTOR__X) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VECTOR__X));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VECTOR__Y) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VECTOR__Y));
-			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VECTOR__Z) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VECTOR__Z));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VECTOR_LITERAL__X) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VECTOR_LITERAL__X));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VECTOR_LITERAL__Y) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VECTOR_LITERAL__Y));
+			if (transientValues.isValueTransient(semanticObject, XsPackage.Literals.VECTOR_LITERAL__Z) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.VECTOR_LITERAL__Z));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVectorAccess().getXLiteralNumOrVarParserRuleCall_2_0(), semanticObject.getX());
-		feeder.accept(grammarAccess.getVectorAccess().getYLiteralNumOrVarParserRuleCall_4_0(), semanticObject.getY());
-		feeder.accept(grammarAccess.getVectorAccess().getZLiteralNumOrVarParserRuleCall_6_0(), semanticObject.getZ());
+		feeder.accept(grammarAccess.getVectorAccess().getXLiteralNumOrVarParserRuleCall_3_0(), semanticObject.getX());
+		feeder.accept(grammarAccess.getVectorAccess().getYLiteralNumOrVarParserRuleCall_5_0(), semanticObject.getY());
+		feeder.accept(grammarAccess.getVectorAccess().getZLiteralNumOrVarParserRuleCall_7_0(), semanticObject.getZ());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     FunTypeSpecifier returns VoidType
+	 *     FunctionTypeSpecifier returns VoidType
 	 *     VoidType returns VoidType
 	 *
 	 * Constraint:
@@ -1218,11 +1149,12 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Contexts:
 	 *     VarDeclarationOrStatement returns WhileStatement
+	 *     StatementOrBlock returns WhileStatement
 	 *     Statement returns WhileStatement
 	 *     WhileStatement returns WhileStatement
 	 *
 	 * Constraint:
-	 *     (condition=Expression statement=Statement)
+	 *     (condition=Expression statement=StatementOrBlock)
 	 */
 	protected void sequence_WhileStatement(ISerializationContext context, WhileStatement semanticObject) {
 		if (errorAcceptor != null) {
@@ -1232,8 +1164,8 @@ public class XSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XsPackage.Literals.WHILE_STATEMENT__STATEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getWhileStatementAccess().getConditionExpressionParserRuleCall_2_0(), semanticObject.getCondition());
-		feeder.accept(grammarAccess.getWhileStatementAccess().getStatementStatementParserRuleCall_4_0(), semanticObject.getStatement());
+		feeder.accept(grammarAccess.getWhileStatementAccess().getConditionExpressionParserRuleCall_3_0(), semanticObject.getCondition());
+		feeder.accept(grammarAccess.getWhileStatementAccess().getStatementStatementOrBlockParserRuleCall_5_0(), semanticObject.getStatement());
 		feeder.finish();
 	}
 	

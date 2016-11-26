@@ -2,6 +2,7 @@
  */
 package aom.scripting.xs.xs;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +14,6 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface Statement extends VarDeclarationOrStatement
+public interface Statement extends EObject
 {
 } // Statement

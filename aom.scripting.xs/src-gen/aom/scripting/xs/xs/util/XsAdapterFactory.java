@@ -85,9 +85,9 @@ public class XsAdapterFactory extends AdapterFactoryImpl
         return createDeclarationAdapter();
       }
       @Override
-      public Adapter caseIncludeStatement(IncludeStatement object)
+      public Adapter caseIncludeDeclaration(IncludeDeclaration object)
       {
-        return createIncludeStatementAdapter();
+        return createIncludeDeclarationAdapter();
       }
       @Override
       public Adapter caseVarDeclaration(VarDeclaration object)
@@ -95,24 +95,34 @@ public class XsAdapterFactory extends AdapterFactoryImpl
         return createVarDeclarationAdapter();
       }
       @Override
-      public Adapter caseVarModifier(VarModifier object)
+      public Adapter caseLocalVarDeclaration(LocalVarDeclaration object)
       {
-        return createVarModifierAdapter();
+        return createLocalVarDeclarationAdapter();
       }
       @Override
-      public Adapter caseFunDeclaration(FunDeclaration object)
+      public Adapter caseGlobalVarDeclaration(GlobalVarDeclaration object)
       {
-        return createFunDeclarationAdapter();
+        return createGlobalVarDeclarationAdapter();
       }
       @Override
-      public Adapter caseFunTypeSpecifier(FunTypeSpecifier object)
+      public Adapter caseParameterDeclaration(ParameterDeclaration object)
       {
-        return createFunTypeSpecifierAdapter();
+        return createParameterDeclarationAdapter();
       }
       @Override
-      public Adapter caseParams(Params object)
+      public Adapter caseForVarDeclaration(ForVarDeclaration object)
       {
-        return createParamsAdapter();
+        return createForVarDeclarationAdapter();
+      }
+      @Override
+      public Adapter caseFunctionDeclaration(FunctionDeclaration object)
+      {
+        return createFunctionDeclarationAdapter();
+      }
+      @Override
+      public Adapter caseType(Type object)
+      {
+        return createTypeAdapter();
       }
       @Override
       public Adapter caseRuleDeclaration(RuleDeclaration object)
@@ -120,24 +130,9 @@ public class XsAdapterFactory extends AdapterFactoryImpl
         return createRuleDeclarationAdapter();
       }
       @Override
-      public Adapter caseFunModifier(FunModifier object)
+      public Adapter caseBlock(Block object)
       {
-        return createFunModifierAdapter();
-      }
-      @Override
-      public Adapter caseVarTypeSpecifier(VarTypeSpecifier object)
-      {
-        return createVarTypeSpecifierAdapter();
-      }
-      @Override
-      public Adapter caseCompoundStatement(CompoundStatement object)
-      {
-        return createCompoundStatementAdapter();
-      }
-      @Override
-      public Adapter caseVarDeclarationOrStatement(VarDeclarationOrStatement object)
-      {
-        return createVarDeclarationOrStatementAdapter();
+        return createBlockAdapter();
       }
       @Override
       public Adapter caseStatement(Statement object)
@@ -145,9 +140,29 @@ public class XsAdapterFactory extends AdapterFactoryImpl
         return createStatementAdapter();
       }
       @Override
-      public Adapter caseExpressionStatement(ExpressionStatement object)
+      public Adapter caseSwitchCase(SwitchCase object)
       {
-        return createExpressionStatementAdapter();
+        return createSwitchCaseAdapter();
+      }
+      @Override
+      public Adapter caseSwitchDefault(SwitchDefault object)
+      {
+        return createSwitchDefaultAdapter();
+      }
+      @Override
+      public Adapter caseExpression(Expression object)
+      {
+        return createExpressionAdapter();
+      }
+      @Override
+      public Adapter caseVar(Var object)
+      {
+        return createVarAdapter();
+      }
+      @Override
+      public Adapter caseLiteral(Literal object)
+      {
+        return createLiteralAdapter();
       }
       @Override
       public Adapter casePostfixStatement(PostfixStatement object)
@@ -175,16 +190,6 @@ public class XsAdapterFactory extends AdapterFactoryImpl
         return createSwitchStatementAdapter();
       }
       @Override
-      public Adapter caseSwitchCase(SwitchCase object)
-      {
-        return createSwitchCaseAdapter();
-      }
-      @Override
-      public Adapter caseSwitchDefault(SwitchDefault object)
-      {
-        return createSwitchDefaultAdapter();
-      }
-      @Override
       public Adapter caseReturnStatement(ReturnStatement object)
       {
         return createReturnStatementAdapter();
@@ -200,34 +205,39 @@ public class XsAdapterFactory extends AdapterFactoryImpl
         return createBreakStatementAdapter();
       }
       @Override
-      public Adapter caseExpression(Expression object)
+      public Adapter caseAssign(Assign object)
       {
-        return createExpressionAdapter();
+        return createAssignAdapter();
       }
       @Override
-      public Adapter caseVar(Var object)
+      public Adapter caseOrExpression(OrExpression object)
       {
-        return createVarAdapter();
+        return createOrExpressionAdapter();
       }
       @Override
-      public Adapter caseLiteralOrVar(LiteralOrVar object)
+      public Adapter caseAndExpression(AndExpression object)
       {
-        return createLiteralOrVarAdapter();
+        return createAndExpressionAdapter();
       }
       @Override
-      public Adapter caseLiteral(Literal object)
+      public Adapter caseEqualsExpression(EqualsExpression object)
       {
-        return createLiteralAdapter();
+        return createEqualsExpressionAdapter();
       }
       @Override
-      public Adapter caseLiteralNum(LiteralNum object)
+      public Adapter caseComparisonExpression(ComparisonExpression object)
       {
-        return createLiteralNumAdapter();
+        return createComparisonExpressionAdapter();
       }
       @Override
-      public Adapter caseLiteralNumOrVar(LiteralNumOrVar object)
+      public Adapter caseTerm(Term object)
       {
-        return createLiteralNumOrVarAdapter();
+        return createTermAdapter();
+      }
+      @Override
+      public Adapter caseFactor(Factor object)
+      {
+        return createFactorAdapter();
       }
       @Override
       public Adapter caseCall(Call object)
@@ -235,9 +245,29 @@ public class XsAdapterFactory extends AdapterFactoryImpl
         return createCallAdapter();
       }
       @Override
-      public Adapter caseArguments(Arguments object)
+      public Adapter caseLiteralString(LiteralString object)
       {
-        return createArgumentsAdapter();
+        return createLiteralStringAdapter();
+      }
+      @Override
+      public Adapter caseLiteralInt(LiteralInt object)
+      {
+        return createLiteralIntAdapter();
+      }
+      @Override
+      public Adapter caseLiteralFloat(LiteralFloat object)
+      {
+        return createLiteralFloatAdapter();
+      }
+      @Override
+      public Adapter caseLiteralBool(LiteralBool object)
+      {
+        return createLiteralBoolAdapter();
+      }
+      @Override
+      public Adapter caseVectorLiteral(VectorLiteral object)
+      {
+        return createVectorLiteralAdapter();
       }
       @Override
       public Adapter caseIntType(IntType object)
@@ -268,81 +298,6 @@ public class XsAdapterFactory extends AdapterFactoryImpl
       public Adapter caseVoidType(VoidType object)
       {
         return createVoidTypeAdapter();
-      }
-      @Override
-      public Adapter caseVector(Vector object)
-      {
-        return createVectorAdapter();
-      }
-      @Override
-      public Adapter caseGlobalVarDeclaration(GlobalVarDeclaration object)
-      {
-        return createGlobalVarDeclarationAdapter();
-      }
-      @Override
-      public Adapter caseAssignmentExpression(AssignmentExpression object)
-      {
-        return createAssignmentExpressionAdapter();
-      }
-      @Override
-      public Adapter caseOr(Or object)
-      {
-        return createOrAdapter();
-      }
-      @Override
-      public Adapter caseAnd(And object)
-      {
-        return createAndAdapter();
-      }
-      @Override
-      public Adapter caseEquals(Equals object)
-      {
-        return createEqualsAdapter();
-      }
-      @Override
-      public Adapter caseComparison(Comparison object)
-      {
-        return createComparisonAdapter();
-      }
-      @Override
-      public Adapter caseTerm(Term object)
-      {
-        return createTermAdapter();
-      }
-      @Override
-      public Adapter caseFactor(Factor object)
-      {
-        return createFactorAdapter();
-      }
-      @Override
-      public Adapter casePrimaryExpression(PrimaryExpression object)
-      {
-        return createPrimaryExpressionAdapter();
-      }
-      @Override
-      public Adapter caseLiteralVector(LiteralVector object)
-      {
-        return createLiteralVectorAdapter();
-      }
-      @Override
-      public Adapter caseLiteralString(LiteralString object)
-      {
-        return createLiteralStringAdapter();
-      }
-      @Override
-      public Adapter caseLiteralInt(LiteralInt object)
-      {
-        return createLiteralIntAdapter();
-      }
-      @Override
-      public Adapter caseLiteralFloat(LiteralFloat object)
-      {
-        return createLiteralFloatAdapter();
-      }
-      @Override
-      public Adapter caseLiteralBool(LiteralBool object)
-      {
-        return createLiteralBoolAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -397,16 +352,16 @@ public class XsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.IncludeStatement <em>Include Statement</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.IncludeDeclaration <em>Include Declaration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.IncludeStatement
+   * @see aom.scripting.xs.xs.IncludeDeclaration
    * @generated
    */
-  public Adapter createIncludeStatementAdapter()
+  public Adapter createIncludeDeclarationAdapter()
   {
     return null;
   }
@@ -427,61 +382,91 @@ public class XsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.VarModifier <em>Var Modifier</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LocalVarDeclaration <em>Local Var Declaration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.VarModifier
+   * @see aom.scripting.xs.xs.LocalVarDeclaration
    * @generated
    */
-  public Adapter createVarModifierAdapter()
+  public Adapter createLocalVarDeclarationAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.FunDeclaration <em>Fun Declaration</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.GlobalVarDeclaration <em>Global Var Declaration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.FunDeclaration
+   * @see aom.scripting.xs.xs.GlobalVarDeclaration
    * @generated
    */
-  public Adapter createFunDeclarationAdapter()
+  public Adapter createGlobalVarDeclarationAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.FunTypeSpecifier <em>Fun Type Specifier</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.ParameterDeclaration <em>Parameter Declaration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.FunTypeSpecifier
+   * @see aom.scripting.xs.xs.ParameterDeclaration
    * @generated
    */
-  public Adapter createFunTypeSpecifierAdapter()
+  public Adapter createParameterDeclarationAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Params <em>Params</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.ForVarDeclaration <em>For Var Declaration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.Params
+   * @see aom.scripting.xs.xs.ForVarDeclaration
    * @generated
    */
-  public Adapter createParamsAdapter()
+  public Adapter createForVarDeclarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.FunctionDeclaration <em>Function Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see aom.scripting.xs.xs.FunctionDeclaration
+   * @generated
+   */
+  public Adapter createFunctionDeclarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Type <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see aom.scripting.xs.xs.Type
+   * @generated
+   */
+  public Adapter createTypeAdapter()
   {
     return null;
   }
@@ -502,61 +487,16 @@ public class XsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.FunModifier <em>Fun Modifier</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Block <em>Block</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.FunModifier
+   * @see aom.scripting.xs.xs.Block
    * @generated
    */
-  public Adapter createFunModifierAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.VarTypeSpecifier <em>Var Type Specifier</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.VarTypeSpecifier
-   * @generated
-   */
-  public Adapter createVarTypeSpecifierAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.CompoundStatement <em>Compound Statement</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.CompoundStatement
-   * @generated
-   */
-  public Adapter createCompoundStatementAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.VarDeclarationOrStatement <em>Var Declaration Or Statement</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.VarDeclarationOrStatement
-   * @generated
-   */
-  public Adapter createVarDeclarationOrStatementAdapter()
+  public Adapter createBlockAdapter()
   {
     return null;
   }
@@ -577,16 +517,76 @@ public class XsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.ExpressionStatement <em>Expression Statement</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.SwitchCase <em>Switch Case</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.ExpressionStatement
+   * @see aom.scripting.xs.xs.SwitchCase
    * @generated
    */
-  public Adapter createExpressionStatementAdapter()
+  public Adapter createSwitchCaseAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.SwitchDefault <em>Switch Default</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see aom.scripting.xs.xs.SwitchDefault
+   * @generated
+   */
+  public Adapter createSwitchDefaultAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Expression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see aom.scripting.xs.xs.Expression
+   * @generated
+   */
+  public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Var <em>Var</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see aom.scripting.xs.xs.Var
+   * @generated
+   */
+  public Adapter createVarAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Literal <em>Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see aom.scripting.xs.xs.Literal
+   * @generated
+   */
+  public Adapter createLiteralAdapter()
   {
     return null;
   }
@@ -667,36 +667,6 @@ public class XsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.SwitchCase <em>Switch Case</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.SwitchCase
-   * @generated
-   */
-  public Adapter createSwitchCaseAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.SwitchDefault <em>Switch Default</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.SwitchDefault
-   * @generated
-   */
-  public Adapter createSwitchDefaultAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.ReturnStatement <em>Return Statement</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -742,91 +712,106 @@ public class XsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Expression <em>Expression</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Assign <em>Assign</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.Expression
+   * @see aom.scripting.xs.xs.Assign
    * @generated
    */
-  public Adapter createExpressionAdapter()
+  public Adapter createAssignAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Var <em>Var</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.OrExpression <em>Or Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.Var
+   * @see aom.scripting.xs.xs.OrExpression
    * @generated
    */
-  public Adapter createVarAdapter()
+  public Adapter createOrExpressionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralOrVar <em>Literal Or Var</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.AndExpression <em>And Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.LiteralOrVar
+   * @see aom.scripting.xs.xs.AndExpression
    * @generated
    */
-  public Adapter createLiteralOrVarAdapter()
+  public Adapter createAndExpressionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Literal <em>Literal</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.EqualsExpression <em>Equals Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.Literal
+   * @see aom.scripting.xs.xs.EqualsExpression
    * @generated
    */
-  public Adapter createLiteralAdapter()
+  public Adapter createEqualsExpressionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralNum <em>Literal Num</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.ComparisonExpression <em>Comparison Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.LiteralNum
+   * @see aom.scripting.xs.xs.ComparisonExpression
    * @generated
    */
-  public Adapter createLiteralNumAdapter()
+  public Adapter createComparisonExpressionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralNumOrVar <em>Literal Num Or Var</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Term <em>Term</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.LiteralNumOrVar
+   * @see aom.scripting.xs.xs.Term
    * @generated
    */
-  public Adapter createLiteralNumOrVarAdapter()
+  public Adapter createTermAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Factor <em>Factor</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see aom.scripting.xs.xs.Factor
+   * @generated
+   */
+  public Adapter createFactorAdapter()
   {
     return null;
   }
@@ -847,16 +832,76 @@ public class XsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Arguments <em>Arguments</em>}'.
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralString <em>Literal String</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see aom.scripting.xs.xs.Arguments
+   * @see aom.scripting.xs.xs.LiteralString
    * @generated
    */
-  public Adapter createArgumentsAdapter()
+  public Adapter createLiteralStringAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralInt <em>Literal Int</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see aom.scripting.xs.xs.LiteralInt
+   * @generated
+   */
+  public Adapter createLiteralIntAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralFloat <em>Literal Float</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see aom.scripting.xs.xs.LiteralFloat
+   * @generated
+   */
+  public Adapter createLiteralFloatAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralBool <em>Literal Bool</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see aom.scripting.xs.xs.LiteralBool
+   * @generated
+   */
+  public Adapter createLiteralBoolAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.VectorLiteral <em>Vector Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see aom.scripting.xs.xs.VectorLiteral
+   * @generated
+   */
+  public Adapter createVectorLiteralAdapter()
   {
     return null;
   }
@@ -947,231 +992,6 @@ public class XsAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVoidTypeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Vector <em>Vector</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.Vector
-   * @generated
-   */
-  public Adapter createVectorAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.GlobalVarDeclaration <em>Global Var Declaration</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.GlobalVarDeclaration
-   * @generated
-   */
-  public Adapter createGlobalVarDeclarationAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.AssignmentExpression <em>Assignment Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.AssignmentExpression
-   * @generated
-   */
-  public Adapter createAssignmentExpressionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Or <em>Or</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.Or
-   * @generated
-   */
-  public Adapter createOrAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.And <em>And</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.And
-   * @generated
-   */
-  public Adapter createAndAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Equals <em>Equals</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.Equals
-   * @generated
-   */
-  public Adapter createEqualsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Comparison <em>Comparison</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.Comparison
-   * @generated
-   */
-  public Adapter createComparisonAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Term <em>Term</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.Term
-   * @generated
-   */
-  public Adapter createTermAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.Factor <em>Factor</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.Factor
-   * @generated
-   */
-  public Adapter createFactorAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.PrimaryExpression <em>Primary Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.PrimaryExpression
-   * @generated
-   */
-  public Adapter createPrimaryExpressionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralVector <em>Literal Vector</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.LiteralVector
-   * @generated
-   */
-  public Adapter createLiteralVectorAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralString <em>Literal String</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.LiteralString
-   * @generated
-   */
-  public Adapter createLiteralStringAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralInt <em>Literal Int</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.LiteralInt
-   * @generated
-   */
-  public Adapter createLiteralIntAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralFloat <em>Literal Float</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.LiteralFloat
-   * @generated
-   */
-  public Adapter createLiteralFloatAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link aom.scripting.xs.xs.LiteralBool <em>Literal Bool</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see aom.scripting.xs.xs.LiteralBool
-   * @generated
-   */
-  public Adapter createLiteralBoolAdapter()
   {
     return null;
   }

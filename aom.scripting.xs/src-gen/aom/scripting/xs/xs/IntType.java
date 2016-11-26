@@ -13,6 +13,6 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface IntType extends VarTypeSpecifier
+public interface IntType extends Type
 {
 } // IntType

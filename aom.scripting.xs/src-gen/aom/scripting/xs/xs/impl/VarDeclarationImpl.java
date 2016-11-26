@@ -4,7 +4,6 @@ package aom.scripting.xs.xs.impl;
 
 import aom.scripting.xs.xs.Expression;
 import aom.scripting.xs.xs.VarDeclaration;
-import aom.scripting.xs.xs.VarTypeSpecifier;
 import aom.scripting.xs.xs.XsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -14,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.VarDeclarationImpl#getType <em>Type</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.VarDeclarationImpl#getName <em>Name</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.VarDeclarationImpl#getValue <em>Value</em>}</li>
  * </ul>
@@ -30,18 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VarDeclarationImpl extends DeclarationImpl implements VarDeclaration
+public class VarDeclarationImpl extends MinimalEObjectImpl.Container implements VarDeclaration
 {
-  /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected VarTypeSpecifier type;
-
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -91,54 +80,6 @@ public class VarDeclarationImpl extends DeclarationImpl implements VarDeclaratio
   protected EClass eStaticClass()
   {
     return XsPackage.Literals.VAR_DECLARATION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VarTypeSpecifier getType()
-  {
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetType(VarTypeSpecifier newType, NotificationChain msgs)
-  {
-    VarTypeSpecifier oldType = type;
-    type = newType;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.VAR_DECLARATION__TYPE, oldType, newType);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setType(VarTypeSpecifier newType)
-  {
-    if (newType != type)
-    {
-      NotificationChain msgs = null;
-      if (type != null)
-        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.VAR_DECLARATION__TYPE, null, msgs);
-      if (newType != null)
-        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.VAR_DECLARATION__TYPE, null, msgs);
-      msgs = basicSetType(newType, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.VAR_DECLARATION__TYPE, newType, newType));
   }
 
   /**
@@ -222,8 +163,6 @@ public class VarDeclarationImpl extends DeclarationImpl implements VarDeclaratio
   {
     switch (featureID)
     {
-      case XsPackage.VAR_DECLARATION__TYPE:
-        return basicSetType(null, msgs);
       case XsPackage.VAR_DECLARATION__VALUE:
         return basicSetValue(null, msgs);
     }
@@ -240,8 +179,6 @@ public class VarDeclarationImpl extends DeclarationImpl implements VarDeclaratio
   {
     switch (featureID)
     {
-      case XsPackage.VAR_DECLARATION__TYPE:
-        return getType();
       case XsPackage.VAR_DECLARATION__NAME:
         return getName();
       case XsPackage.VAR_DECLARATION__VALUE:
@@ -260,9 +197,6 @@ public class VarDeclarationImpl extends DeclarationImpl implements VarDeclaratio
   {
     switch (featureID)
     {
-      case XsPackage.VAR_DECLARATION__TYPE:
-        setType((VarTypeSpecifier)newValue);
-        return;
       case XsPackage.VAR_DECLARATION__NAME:
         setName((String)newValue);
         return;
@@ -283,9 +217,6 @@ public class VarDeclarationImpl extends DeclarationImpl implements VarDeclaratio
   {
     switch (featureID)
     {
-      case XsPackage.VAR_DECLARATION__TYPE:
-        setType((VarTypeSpecifier)null);
-        return;
       case XsPackage.VAR_DECLARATION__NAME:
         setName(NAME_EDEFAULT);
         return;
@@ -306,8 +237,6 @@ public class VarDeclarationImpl extends DeclarationImpl implements VarDeclaratio
   {
     switch (featureID)
     {
-      case XsPackage.VAR_DECLARATION__TYPE:
-        return type != null;
       case XsPackage.VAR_DECLARATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case XsPackage.VAR_DECLARATION__VALUE:

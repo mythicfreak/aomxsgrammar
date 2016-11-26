@@ -2,7 +2,7 @@
  */
 package aom.scripting.xs.xs.impl;
 
-import aom.scripting.xs.xs.LiteralNumOrVar;
+import aom.scripting.xs.xs.Expression;
 import aom.scripting.xs.xs.Statement;
 import aom.scripting.xs.xs.SwitchCase;
 import aom.scripting.xs.xs.XsPackage;
@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.SwitchCaseImpl#getVar <em>Var</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.SwitchCaseImpl#getValue <em>Value</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.SwitchCaseImpl#getStatement <em>Statement</em>}</li>
  * </ul>
  * </p>
@@ -33,14 +33,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements SwitchCase
 {
   /**
-   * The cached value of the '{@link #getVar() <em>Var</em>}' containment reference.
+   * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVar()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected LiteralNumOrVar var;
+  protected Expression value;
 
   /**
    * The cached value of the '{@link #getStatement() <em>Statement</em>}' containment reference.
@@ -78,9 +78,9 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralNumOrVar getVar()
+  public Expression getValue()
   {
-    return var;
+    return value;
   }
 
   /**
@@ -88,13 +88,13 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVar(LiteralNumOrVar newVar, NotificationChain msgs)
+  public NotificationChain basicSetValue(Expression newValue, NotificationChain msgs)
   {
-    LiteralNumOrVar oldVar = var;
-    var = newVar;
+    Expression oldValue = value;
+    value = newValue;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.SWITCH_CASE__VAR, oldVar, newVar);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.SWITCH_CASE__VALUE, oldValue, newValue);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -105,20 +105,20 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVar(LiteralNumOrVar newVar)
+  public void setValue(Expression newValue)
   {
-    if (newVar != var)
+    if (newValue != value)
     {
       NotificationChain msgs = null;
-      if (var != null)
-        msgs = ((InternalEObject)var).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.SWITCH_CASE__VAR, null, msgs);
-      if (newVar != null)
-        msgs = ((InternalEObject)newVar).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.SWITCH_CASE__VAR, null, msgs);
-      msgs = basicSetVar(newVar, msgs);
+      if (value != null)
+        msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.SWITCH_CASE__VALUE, null, msgs);
+      if (newValue != null)
+        msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.SWITCH_CASE__VALUE, null, msgs);
+      msgs = basicSetValue(newValue, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.SWITCH_CASE__VAR, newVar, newVar));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.SWITCH_CASE__VALUE, newValue, newValue));
   }
 
   /**
@@ -179,8 +179,8 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
   {
     switch (featureID)
     {
-      case XsPackage.SWITCH_CASE__VAR:
-        return basicSetVar(null, msgs);
+      case XsPackage.SWITCH_CASE__VALUE:
+        return basicSetValue(null, msgs);
       case XsPackage.SWITCH_CASE__STATEMENT:
         return basicSetStatement(null, msgs);
     }
@@ -197,8 +197,8 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
   {
     switch (featureID)
     {
-      case XsPackage.SWITCH_CASE__VAR:
-        return getVar();
+      case XsPackage.SWITCH_CASE__VALUE:
+        return getValue();
       case XsPackage.SWITCH_CASE__STATEMENT:
         return getStatement();
     }
@@ -215,8 +215,8 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
   {
     switch (featureID)
     {
-      case XsPackage.SWITCH_CASE__VAR:
-        setVar((LiteralNumOrVar)newValue);
+      case XsPackage.SWITCH_CASE__VALUE:
+        setValue((Expression)newValue);
         return;
       case XsPackage.SWITCH_CASE__STATEMENT:
         setStatement((Statement)newValue);
@@ -235,8 +235,8 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
   {
     switch (featureID)
     {
-      case XsPackage.SWITCH_CASE__VAR:
-        setVar((LiteralNumOrVar)null);
+      case XsPackage.SWITCH_CASE__VALUE:
+        setValue((Expression)null);
         return;
       case XsPackage.SWITCH_CASE__STATEMENT:
         setStatement((Statement)null);
@@ -255,8 +255,8 @@ public class SwitchCaseImpl extends MinimalEObjectImpl.Container implements Swit
   {
     switch (featureID)
     {
-      case XsPackage.SWITCH_CASE__VAR:
-        return var != null;
+      case XsPackage.SWITCH_CASE__VALUE:
+        return value != null;
       case XsPackage.SWITCH_CASE__STATEMENT:
         return statement != null;
     }

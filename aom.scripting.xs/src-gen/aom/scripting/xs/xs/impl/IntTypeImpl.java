@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IntTypeImpl extends VarTypeSpecifierImpl implements IntType
+public class IntTypeImpl extends TypeImpl implements IntType
 {
   /**
    * <!-- begin-user-doc -->

@@ -18,7 +18,8 @@ package aom.scripting.xs.xs;
  *   <li>{@link aom.scripting.xs.xs.RuleDeclaration#getGroup <em>Group</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.RuleDeclaration#getMinInterval <em>Min Interval</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.RuleDeclaration#getMaxInterval <em>Max Interval</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.RuleDeclaration#getStatements <em>Statements</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.RuleDeclaration#getPriority <em>Priority</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.RuleDeclaration#getBody <em>Body</em>}</li>
  * </ul>
  * </p>
  *
@@ -211,29 +212,55 @@ public interface RuleDeclaration extends Declaration
   void setMaxInterval(int value);
 
   /**
-   * Returns the value of the '<em><b>Statements</b></em>' containment reference.
+   * Returns the value of the '<em><b>Priority</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Statements</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Priority</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Statements</em>' containment reference.
-   * @see #setStatements(CompoundStatement)
-   * @see aom.scripting.xs.xs.XsPackage#getRuleDeclaration_Statements()
+   * @return the value of the '<em>Priority</em>' attribute.
+   * @see #setPriority(int)
+   * @see aom.scripting.xs.xs.XsPackage#getRuleDeclaration_Priority()
+   * @model
+   * @generated
+   */
+  int getPriority();
+
+  /**
+   * Sets the value of the '{@link aom.scripting.xs.xs.RuleDeclaration#getPriority <em>Priority</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Priority</em>' attribute.
+   * @see #getPriority()
+   * @generated
+   */
+  void setPriority(int value);
+
+  /**
+   * Returns the value of the '<em><b>Body</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Body</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Body</em>' containment reference.
+   * @see #setBody(Block)
+   * @see aom.scripting.xs.xs.XsPackage#getRuleDeclaration_Body()
    * @model containment="true"
    * @generated
    */
-  CompoundStatement getStatements();
+  Block getBody();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.RuleDeclaration#getStatements <em>Statements</em>}' containment reference.
+   * Sets the value of the '{@link aom.scripting.xs.xs.RuleDeclaration#getBody <em>Body</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Statements</em>' containment reference.
-   * @see #getStatements()
+   * @param value the new value of the '<em>Body</em>' containment reference.
+   * @see #getBody()
    * @generated
    */
-  void setStatements(CompoundStatement value);
+  void setBody(Block value);
 
 } // RuleDeclaration

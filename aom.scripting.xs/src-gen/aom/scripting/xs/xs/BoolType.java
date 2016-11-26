@@ -13,6 +13,6 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface BoolType extends VarTypeSpecifier
+public interface BoolType extends Type
 {
 } // BoolType

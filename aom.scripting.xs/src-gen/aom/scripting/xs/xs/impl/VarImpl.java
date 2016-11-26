@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VarImpl extends LiteralOrVarImpl implements Var
+public class VarImpl extends ExpressionImpl implements Var
 {
   /**
    * The cached value of the '{@link #getDeclaration() <em>Declaration</em>}' reference.

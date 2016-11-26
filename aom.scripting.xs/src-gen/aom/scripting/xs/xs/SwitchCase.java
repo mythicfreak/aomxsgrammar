@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.SwitchCase#getVar <em>Var</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.SwitchCase#getValue <em>Value</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.SwitchCase#getStatement <em>Statement</em>}</li>
  * </ul>
  * </p>
@@ -24,30 +24,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface SwitchCase extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Var</b></em>' containment reference.
+   * Returns the value of the '<em><b>Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Var</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Value</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Var</em>' containment reference.
-   * @see #setVar(LiteralNumOrVar)
-   * @see aom.scripting.xs.xs.XsPackage#getSwitchCase_Var()
+   * @return the value of the '<em>Value</em>' containment reference.
+   * @see #setValue(Expression)
+   * @see aom.scripting.xs.xs.XsPackage#getSwitchCase_Value()
    * @model containment="true"
    * @generated
    */
-  LiteralNumOrVar getVar();
+  Expression getValue();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.SwitchCase#getVar <em>Var</em>}' containment reference.
+   * Sets the value of the '{@link aom.scripting.xs.xs.SwitchCase#getValue <em>Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Var</em>' containment reference.
-   * @see #getVar()
+   * @param value the new value of the '<em>Value</em>' containment reference.
+   * @see #getValue()
    * @generated
    */
-  void setVar(LiteralNumOrVar value);
+  void setValue(Expression value);
 
   /**
    * Returns the value of the '<em><b>Statement</b></em>' containment reference.

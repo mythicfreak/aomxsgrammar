@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class StringTypeImpl extends VarTypeSpecifierImpl implements StringType
+public class StringTypeImpl extends TypeImpl implements StringType
 {
   /**
    * <!-- begin-user-doc -->

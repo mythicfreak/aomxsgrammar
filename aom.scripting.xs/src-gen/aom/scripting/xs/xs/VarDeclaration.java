@@ -2,6 +2,7 @@
  */
 package aom.scripting.xs.xs;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,7 +12,6 @@ package aom.scripting.xs.xs;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.VarDeclaration#getType <em>Type</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.VarDeclaration#getName <em>Name</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.VarDeclaration#getValue <em>Value</em>}</li>
  * </ul>
@@ -21,34 +21,8 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface VarDeclaration extends Declaration, VarDeclarationOrStatement
+public interface VarDeclaration extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Type</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' containment reference.
-   * @see #setType(VarTypeSpecifier)
-   * @see aom.scripting.xs.xs.XsPackage#getVarDeclaration_Type()
-   * @model containment="true"
-   * @generated
-   */
-  VarTypeSpecifier getType();
-
-  /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.VarDeclaration#getType <em>Type</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' containment reference.
-   * @see #getType()
-   * @generated
-   */
-  void setType(VarTypeSpecifier value);
-
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->

@@ -41,13 +41,13 @@ public interface XsFactory extends EFactory
   Declaration createDeclaration();
 
   /**
-   * Returns a new object of class '<em>Include Statement</em>'.
+   * Returns a new object of class '<em>Include Declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Include Statement</em>'.
+   * @return a new object of class '<em>Include Declaration</em>'.
    * @generated
    */
-  IncludeStatement createIncludeStatement();
+  IncludeDeclaration createIncludeDeclaration();
 
   /**
    * Returns a new object of class '<em>Var Declaration</em>'.
@@ -59,40 +59,58 @@ public interface XsFactory extends EFactory
   VarDeclaration createVarDeclaration();
 
   /**
-   * Returns a new object of class '<em>Var Modifier</em>'.
+   * Returns a new object of class '<em>Local Var Declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Var Modifier</em>'.
+   * @return a new object of class '<em>Local Var Declaration</em>'.
    * @generated
    */
-  VarModifier createVarModifier();
+  LocalVarDeclaration createLocalVarDeclaration();
 
   /**
-   * Returns a new object of class '<em>Fun Declaration</em>'.
+   * Returns a new object of class '<em>Global Var Declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Fun Declaration</em>'.
+   * @return a new object of class '<em>Global Var Declaration</em>'.
    * @generated
    */
-  FunDeclaration createFunDeclaration();
+  GlobalVarDeclaration createGlobalVarDeclaration();
 
   /**
-   * Returns a new object of class '<em>Fun Type Specifier</em>'.
+   * Returns a new object of class '<em>Parameter Declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Fun Type Specifier</em>'.
+   * @return a new object of class '<em>Parameter Declaration</em>'.
    * @generated
    */
-  FunTypeSpecifier createFunTypeSpecifier();
+  ParameterDeclaration createParameterDeclaration();
 
   /**
-   * Returns a new object of class '<em>Params</em>'.
+   * Returns a new object of class '<em>For Var Declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Params</em>'.
+   * @return a new object of class '<em>For Var Declaration</em>'.
    * @generated
    */
-  Params createParams();
+  ForVarDeclaration createForVarDeclaration();
+
+  /**
+   * Returns a new object of class '<em>Function Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Function Declaration</em>'.
+   * @generated
+   */
+  FunctionDeclaration createFunctionDeclaration();
+
+  /**
+   * Returns a new object of class '<em>Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type</em>'.
+   * @generated
+   */
+  Type createType();
 
   /**
    * Returns a new object of class '<em>Rule Declaration</em>'.
@@ -104,40 +122,13 @@ public interface XsFactory extends EFactory
   RuleDeclaration createRuleDeclaration();
 
   /**
-   * Returns a new object of class '<em>Fun Modifier</em>'.
+   * Returns a new object of class '<em>Block</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Fun Modifier</em>'.
+   * @return a new object of class '<em>Block</em>'.
    * @generated
    */
-  FunModifier createFunModifier();
-
-  /**
-   * Returns a new object of class '<em>Var Type Specifier</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Var Type Specifier</em>'.
-   * @generated
-   */
-  VarTypeSpecifier createVarTypeSpecifier();
-
-  /**
-   * Returns a new object of class '<em>Compound Statement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Compound Statement</em>'.
-   * @generated
-   */
-  CompoundStatement createCompoundStatement();
-
-  /**
-   * Returns a new object of class '<em>Var Declaration Or Statement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Var Declaration Or Statement</em>'.
-   * @generated
-   */
-  VarDeclarationOrStatement createVarDeclarationOrStatement();
+  Block createBlock();
 
   /**
    * Returns a new object of class '<em>Statement</em>'.
@@ -149,13 +140,49 @@ public interface XsFactory extends EFactory
   Statement createStatement();
 
   /**
-   * Returns a new object of class '<em>Expression Statement</em>'.
+   * Returns a new object of class '<em>Switch Case</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Expression Statement</em>'.
+   * @return a new object of class '<em>Switch Case</em>'.
    * @generated
    */
-  ExpressionStatement createExpressionStatement();
+  SwitchCase createSwitchCase();
+
+  /**
+   * Returns a new object of class '<em>Switch Default</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Switch Default</em>'.
+   * @generated
+   */
+  SwitchDefault createSwitchDefault();
+
+  /**
+   * Returns a new object of class '<em>Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Expression</em>'.
+   * @generated
+   */
+  Expression createExpression();
+
+  /**
+   * Returns a new object of class '<em>Var</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Var</em>'.
+   * @generated
+   */
+  Var createVar();
+
+  /**
+   * Returns a new object of class '<em>Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Literal</em>'.
+   * @generated
+   */
+  Literal createLiteral();
 
   /**
    * Returns a new object of class '<em>Postfix Statement</em>'.
@@ -203,24 +230,6 @@ public interface XsFactory extends EFactory
   SwitchStatement createSwitchStatement();
 
   /**
-   * Returns a new object of class '<em>Switch Case</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Switch Case</em>'.
-   * @generated
-   */
-  SwitchCase createSwitchCase();
-
-  /**
-   * Returns a new object of class '<em>Switch Default</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Switch Default</em>'.
-   * @generated
-   */
-  SwitchDefault createSwitchDefault();
-
-  /**
    * Returns a new object of class '<em>Return Statement</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -248,58 +257,67 @@ public interface XsFactory extends EFactory
   BreakStatement createBreakStatement();
 
   /**
-   * Returns a new object of class '<em>Expression</em>'.
+   * Returns a new object of class '<em>Assign</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Expression</em>'.
+   * @return a new object of class '<em>Assign</em>'.
    * @generated
    */
-  Expression createExpression();
+  Assign createAssign();
 
   /**
-   * Returns a new object of class '<em>Var</em>'.
+   * Returns a new object of class '<em>Or Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Var</em>'.
+   * @return a new object of class '<em>Or Expression</em>'.
    * @generated
    */
-  Var createVar();
+  OrExpression createOrExpression();
 
   /**
-   * Returns a new object of class '<em>Literal Or Var</em>'.
+   * Returns a new object of class '<em>And Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal Or Var</em>'.
+   * @return a new object of class '<em>And Expression</em>'.
    * @generated
    */
-  LiteralOrVar createLiteralOrVar();
+  AndExpression createAndExpression();
 
   /**
-   * Returns a new object of class '<em>Literal</em>'.
+   * Returns a new object of class '<em>Equals Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal</em>'.
+   * @return a new object of class '<em>Equals Expression</em>'.
    * @generated
    */
-  Literal createLiteral();
+  EqualsExpression createEqualsExpression();
 
   /**
-   * Returns a new object of class '<em>Literal Num</em>'.
+   * Returns a new object of class '<em>Comparison Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal Num</em>'.
+   * @return a new object of class '<em>Comparison Expression</em>'.
    * @generated
    */
-  LiteralNum createLiteralNum();
+  ComparisonExpression createComparisonExpression();
 
   /**
-   * Returns a new object of class '<em>Literal Num Or Var</em>'.
+   * Returns a new object of class '<em>Term</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal Num Or Var</em>'.
+   * @return a new object of class '<em>Term</em>'.
    * @generated
    */
-  LiteralNumOrVar createLiteralNumOrVar();
+  Term createTerm();
+
+  /**
+   * Returns a new object of class '<em>Factor</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Factor</em>'.
+   * @generated
+   */
+  Factor createFactor();
 
   /**
    * Returns a new object of class '<em>Call</em>'.
@@ -311,13 +329,49 @@ public interface XsFactory extends EFactory
   Call createCall();
 
   /**
-   * Returns a new object of class '<em>Arguments</em>'.
+   * Returns a new object of class '<em>Literal String</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Arguments</em>'.
+   * @return a new object of class '<em>Literal String</em>'.
    * @generated
    */
-  Arguments createArguments();
+  LiteralString createLiteralString();
+
+  /**
+   * Returns a new object of class '<em>Literal Int</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Literal Int</em>'.
+   * @generated
+   */
+  LiteralInt createLiteralInt();
+
+  /**
+   * Returns a new object of class '<em>Literal Float</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Literal Float</em>'.
+   * @generated
+   */
+  LiteralFloat createLiteralFloat();
+
+  /**
+   * Returns a new object of class '<em>Literal Bool</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Literal Bool</em>'.
+   * @generated
+   */
+  LiteralBool createLiteralBool();
+
+  /**
+   * Returns a new object of class '<em>Vector Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Vector Literal</em>'.
+   * @generated
+   */
+  VectorLiteral createVectorLiteral();
 
   /**
    * Returns a new object of class '<em>Int Type</em>'.
@@ -372,141 +426,6 @@ public interface XsFactory extends EFactory
    * @generated
    */
   VoidType createVoidType();
-
-  /**
-   * Returns a new object of class '<em>Vector</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Vector</em>'.
-   * @generated
-   */
-  Vector createVector();
-
-  /**
-   * Returns a new object of class '<em>Global Var Declaration</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Global Var Declaration</em>'.
-   * @generated
-   */
-  GlobalVarDeclaration createGlobalVarDeclaration();
-
-  /**
-   * Returns a new object of class '<em>Assignment Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Assignment Expression</em>'.
-   * @generated
-   */
-  AssignmentExpression createAssignmentExpression();
-
-  /**
-   * Returns a new object of class '<em>Or</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Or</em>'.
-   * @generated
-   */
-  Or createOr();
-
-  /**
-   * Returns a new object of class '<em>And</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>And</em>'.
-   * @generated
-   */
-  And createAnd();
-
-  /**
-   * Returns a new object of class '<em>Equals</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Equals</em>'.
-   * @generated
-   */
-  Equals createEquals();
-
-  /**
-   * Returns a new object of class '<em>Comparison</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Comparison</em>'.
-   * @generated
-   */
-  Comparison createComparison();
-
-  /**
-   * Returns a new object of class '<em>Term</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Term</em>'.
-   * @generated
-   */
-  Term createTerm();
-
-  /**
-   * Returns a new object of class '<em>Factor</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Factor</em>'.
-   * @generated
-   */
-  Factor createFactor();
-
-  /**
-   * Returns a new object of class '<em>Primary Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Primary Expression</em>'.
-   * @generated
-   */
-  PrimaryExpression createPrimaryExpression();
-
-  /**
-   * Returns a new object of class '<em>Literal Vector</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal Vector</em>'.
-   * @generated
-   */
-  LiteralVector createLiteralVector();
-
-  /**
-   * Returns a new object of class '<em>Literal String</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal String</em>'.
-   * @generated
-   */
-  LiteralString createLiteralString();
-
-  /**
-   * Returns a new object of class '<em>Literal Int</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal Int</em>'.
-   * @generated
-   */
-  LiteralInt createLiteralInt();
-
-  /**
-   * Returns a new object of class '<em>Literal Float</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal Float</em>'.
-   * @generated
-   */
-  LiteralFloat createLiteralFloat();
-
-  /**
-   * Returns a new object of class '<em>Literal Bool</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal Bool</em>'.
-   * @generated
-   */
-  LiteralBool createLiteralBool();
 
   /**
    * Returns the package supported by this factory.

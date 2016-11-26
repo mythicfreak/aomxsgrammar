@@ -28,72 +28,77 @@ generate xs "http://aom.eso.com/xs"
   *  - switch cases don't require a 'break'
   */
 
-Program
-	: declarations += Declaration*
+Program returns Program
+	: {Program} declarations += Declaration*
 	;
 	
-Declaration
+Declaration returns Declaration
 	: GlobalVarDeclaration
-	| FunDeclaration
-	| IncludeStatement
+	| FunctionDeclaration
+	| IncludeDeclaration
+	| PseudoIncludeDeclaration
 	| RuleDeclaration
 	;
+	
+IncludeDeclaration returns IncludeDeclaration
+	: {IncludeDeclaration} 'include' filePath=STRING ';' // paths are relative to main directory (e.g. ai2 or trigger2), not to current directory
+	;
+	
+// can be used to make this program think an include declaration is present,
+// which is useful for stuff that is actually present at runtime e.g. because two files are included in a third one.
+PseudoIncludeDeclaration returns IncludeDeclaration
+	: {IncludeDeclaration} PSEUDO_PRECOMPILER 'include' filePath=STRING ';'
+	;
+	
+// supertype only
+VarDeclaration returns VarDeclaration
+	: LocalVarDeclaration
+	| GlobalVarDeclaration
+	| ParameterDeclaration
+	| ForVarDeclaration
+	;
+	
+LocalVarDeclaration returns LocalVarDeclaration
+	: {LocalVarDeclaration} type=VarTypeSpecifier name=ID '=' value=Expression ';'
+	;
+	
+GlobalVarDeclaration returns GlobalVarDeclaration
+	: {GlobalVarDeclaration} (const?='const'? & extern?='extern'?) type=VarTypeSpecifier name=ID '=' value=LiteralOrVar ';'
+	;
+	
+ParameterDeclaration returns ParameterDeclaration
+	: {ParameterDeclaration} type=VarTypeSpecifier name=ID '=' value=LiteralOrVar
+	;
+	
+ForVarDeclaration returns ForVarDeclaration
+	: {ForVarDeclaration} name=ID '=' value=Expression //type='int'
+	;
 
-IncludeStatement
-	: 'include' filePath=STRING ';' // paths are relative to main directory (e.g. ai2 or trigger2), not to current directory
+FunctionDeclaration returns FunctionDeclaration
+	: {FunctionDeclaration} mutable?='mutable'? type=FunctionTypeSpecifier name=ID
+		'(' ('void'? | parameters += ParameterDeclaration (',' parameters += ParameterDeclaration)*) ')'
+		body=Block
 	;
 	
-VarDeclaration
-	: type=VarTypeSpecifier name=ID '=' value=Expression //no semicolon to enable reuse
-	;
-	
-GlobalVarDeclaration returns VarDeclaration
-	: {GlobalVarDeclaration} modifier=VarModifier type=VarTypeSpecifier name=ID '=' value=LiteralOrVar ';'
-	;
-	
-VarModifier
-	: {VarModifier} (const?='const'? & extern?='extern'?)
-	;
-	
-ParameterDeclaration returns VarDeclaration
-	: type=VarTypeSpecifier name=ID '=' value=LiteralOrVar
-	;
-	
-ForVarDeclaration returns VarDeclaration
-	: name=ID '=' value=Expression //type='int'
-	;
-
-FunDeclaration
-	: modifier=FunModifier type=FunTypeSpecifier name=ID '(' paramlist=Params? ')' statements=CompoundStatement
-	;
-	
-FunTypeSpecifier
+FunctionTypeSpecifier returns Type
 	: VoidType
 	| VarTypeSpecifier
 	;
 	
-Params
-	: {Params} 'void'
-	| params += ParameterDeclaration (',' params += ParameterDeclaration)*
-	;
-	
-RuleDeclaration
-	: 'rule' name=ID (
+RuleDeclaration returns RuleDeclaration
+	: {RuleDeclaration} 'rule' name=ID (
 			(active?= 'active'|'inactive')
 			& runImmediately?='runImmediately'?
 			& highFrequency?='highFrequency'? 
 			& ('group' group=ID)? 
 			& ('minInterval' minInterval=INT)? 
 			& ('maxInterval' maxInterval=INT)?
+			& ('priority' priority=INT)?
 		)
-		statements=CompoundStatement
+		body=Block
 	;
 
-FunModifier
-	: {FunModifier} mutable?='mutable'?
-	;
-
-VarTypeSpecifier
+VarTypeSpecifier returns Type
 	: IntType
 	| FloatType
 	| BoolType
@@ -101,19 +106,23 @@ VarTypeSpecifier
 	| StringType
 	;
 	
-CompoundStatement
-	: {CompoundStatement} '{' contents += (VarDeclarationOrStatement)* '}'
+Block returns Block // cannot be used as a normal statement
+	: {Block} '{' contents += (VarDeclarationOrStatement)* '}'
 	;
 	
-VarDeclarationOrStatement
-	: VarDeclaration ';'
+VarDeclarationOrStatement returns Statement
+	: LocalVarDeclaration
 	| Statement
 	;
-		
-Statement
+	
+StatementOrBlock returns Statement
+	: Statement
+	| Block
+	;
+
+Statement returns Statement
 	: ExpressionStatement
     | PostfixStatement
-    | CompoundStatement
 	| IfElseStatement
 	| WhileStatement
 	| ForStatement
@@ -123,47 +132,48 @@ Statement
 	| BreakStatement 
 	;
 	
-ExpressionStatement //typically 1 line, ends in semicolon
-	: expression = Expression ';'
+ExpressionStatement returns Statement
+	: Call ';'
+	| Assign ';'
 	;
 	
-PostfixStatement
-	: var=[VarDeclaration] op=PostFixOp ';'
+PostfixStatement returns Statement
+	: {PostfixStatement} var=[VarDeclaration] op=PostFixOp ';'
 	;
 	
-IfElseStatement
-	: 'if' '(' condition = Expression ')' thenStatement = Statement (=>'else' elseStatement=Statement)?
+IfElseStatement returns Statement
+	: {IfElseStatement} 'if' '(' condition = Expression ')' thenStatement = StatementOrBlock (=>'else' elseStatement=StatementOrBlock)?
 	;
 	
-WhileStatement
-	: 'while' '(' condition = Expression ')' statement = Statement
+WhileStatement returns Statement
+	: {WhileStatement} 'while' '(' condition = Expression ')' statement = StatementOrBlock
 	;
 	
-ForStatement
-	: 'for' '(' var=ForVarDeclaration ';' op = RelOp expression = Expression ')' statement = Statement
+ForStatement returns Statement
+	: {ForStatement} 'for' '(' var=ForVarDeclaration ';' op = RelOp end = Expression ')' statement = StatementOrBlock
 	;
 	
-SwitchStatement
-	: 'switch' '(' var=[VarDeclaration] ')' '{' cases+=SwitchCase* default=SwitchDefault? '}'
+SwitchStatement returns Statement
+	: {SwitchStatement} 'switch' '(' expression=Expression ')' '{' cases+=SwitchCase* default=SwitchDefault? '}'
 	;
 	
-SwitchCase // TODO check if strings, floats, ... allowed
-	: 'case' '(' var=LiteralNumOrVar ')' ':' statement=Statement
+SwitchCase returns SwitchCase // TODO check if strings, floats, ... allowed
+	: {SwitchCase} 'case' (value=LiteralNumOrVar | '(' value=LiteralNumOrVar ')') ':' statement=StatementOrBlock
 	;
 	
-SwitchDefault
-	: 'default' ':' statement=Statement
+SwitchDefault returns SwitchDefault
+	: {SwitchDefault} 'default' ':' statement=StatementOrBlock
 	;
 
-ReturnStatement
+ReturnStatement returns Statement
 	: {ReturnStatement} 'return' ('(' expression = Expression ')')? ';'
 	;
 	
-ContinueStatement
+ContinueStatement returns Statement
 	: {ContinueStatement} 'continue' ';'
 	;
 	
-BreakStatement
+BreakStatement returns Statement
 	: {BreakStatement} 'break' ';'
 	;
 
@@ -172,25 +182,25 @@ PostFixOp
 	| '--'
 	;
 
-Expression
-	: {AssignmentExpression} (var = Var '=' expression = Expression)
-	| expression = SimpleExpression
+Expression returns Expression
+	: Assign
+	| SimpleExpression
 	;
 	
-Var
-	: declaration=[VarDeclaration]
+Assign returns Expression
+	: {Assign} (var=Var '=' expression=Expression)
 	;
 	
 SimpleExpression returns Expression
-	: AndExpression ({Or.left=current} op='||' right=AndExpression)*
+	: AndExpression ({OrExpression.left=current} op='||' right=AndExpression)*
 	;
 	
 AndExpression returns Expression
-	: EqualsExpression ({And.left=current} op='&&' right=EqualsExpression)*
+	: EqualsExpression ({AndExpression.left=current} op='&&' right=EqualsExpression)*
 	;
 
 EqualsExpression returns Expression
-	: ComparisonExpression ({Equals.left=current} op=EqOp right=ComparisonExpression)?
+	: ComparisonExpression ({EqualsExpression.left=current} op=EqOp right=ComparisonExpression)?
 	;
 	
 EqOp
@@ -199,7 +209,7 @@ EqOp
 	;
 
 ComparisonExpression returns Expression
-	: AdditiveExpression ({Comparison.left=current} op=RelOp right=AdditiveExpression)?
+	: AdditiveExpression ({ComparisonExpression.left=current} op=RelOp right=AdditiveExpression)?
 	;
 
 RelOp
@@ -229,62 +239,67 @@ MulOp
 	;
 	
 Atom returns Expression
-	: {PrimaryExpression} ('(' expression = Expression ')')
+	: '(' Expression ')'
 	| Call
-	| LiteralOrVar
-	;
-
-LiteralOrVar
-	: Var
 	| Literal
+	| Var
 	;
 
-Literal
+Call returns Expression
+	: {Call} function=[FunctionDeclaration] '(' (arguments += Expression (',' arguments += Expression)*)? ')' // TODO link with params?
+	;
+	
+Var returns Var
+	: {Var} declaration=[VarDeclaration]
+	;
+	
+LiteralOrVar returns Expression
+	: Literal
+	| Var
+	;
+
+LiteralNumOrVar returns Expression
 	: LiteralNum
-	| {LiteralVector} value=Vector
-	| {LiteralString} value=STRING //TODO concatenation != addition
+	| Var
+	;
+	
+Literal returns Literal
+	: LiteralNum
+	| Vector
+	| {LiteralString} value=STRING // TODO concatenation != addition
 	;
 
-LiteralNum
+LiteralNum returns Literal
 	: {LiteralInt} value=SignedInt
 	| {LiteralFloat} value=SignedFloat
 	| {LiteralBool} value=Bool // booleans are treated like ints
 	;
 	
-LiteralNumOrVar
-	: LiteralNum
-	| Var
+Vector returns Literal
+	: {VectorLiteral} 'vector' '(' x=LiteralNumOrVar ',' y=LiteralNumOrVar ',' z=LiteralNumOrVar ')' //only literals or constants, else use xsVectorSet
 	;
 	
-Call
-	: function=[FunDeclaration] '(' args=Arguments? ')'
-	;
-	
-Arguments
-	: expressions += Expression (',' expressions += Expression)* //TODO link with params
-	;
-
-IntType
+IntType returns Type
 	: {IntType} 'int'
 	;
 	
-FloatType
+FloatType returns Type
 	: {FloatType} 'float'
 	;
 	
-BoolType
+BoolType returns Type
 	: {BoolType} 'bool'
 	;
 	
-VectorType
+VectorType returns Type
 	: {VectorType} 'vector'
 	;
 	
-StringType
+StringType returns Type
 	: {StringType} 'string'
 	;
 	
-VoidType
+VoidType returns Type
 	: {VoidType} 'void'
 	;
 	
@@ -306,10 +321,6 @@ Bool returns ecore::EBoolean
 	| 'false'
 	;
 	
-Vector
-	: 'vector' '(' x=LiteralNumOrVar ',' y=LiteralNumOrVar ',' z=LiteralNumOrVar ')' //only literals or constants, else use xsVectorSet
-	;
-	
 	
 terminal ID: 
     ('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
@@ -324,9 +335,12 @@ terminal STRING:
  
 terminal ML_COMMENT: 
     '/*' -> '*/';
- 
+
+terminal PSEUDO_PRECOMPILER:
+	'//#';
+
 terminal SL_COMMENT: 
-    '//' !('\n'|'\r')* ('\r'? '\n')?;
+    '//' (!('\n'|'\r'|'#') !('\n'|'\r')*)? ('\r'? '\n')?;
  
 terminal WS: 
     (' '|'\t'|'\r'|'\n')+;
