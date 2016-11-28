@@ -39,6 +39,10 @@ import aom.scripting.xs.xs.LocalVarDeclaration
 import aom.scripting.xs.xs.IntType
 import aom.scripting.xs.xs.FloatType
 import aom.scripting.xs.xs.Type
+import org.eclipse.xtext.EcoreUtil2
+import aom.scripting.xs.xs.ReturnStatement
+import aom.scripting.xs.xs.IfElseStatement
+import aom.scripting.xs.xs.WhileStatement
 
 /**
  * Custom validation rules. 
@@ -84,6 +88,7 @@ class XSValidator extends AbstractXSValidator {
 		// (this list is likely not complete)
 		switch (eo) {
 			FunctionDeclaration: {
+				if(eo.name == null) return;
 				val existingDeclDesc = scopeProvider.getScope(eo, null).getSingleElement(QualifiedName.create(eo.name));
 				val existingDecl = existingDeclDesc.EObjectOrProxy
 				if (existingDecl != null) {
@@ -98,6 +103,7 @@ class XSValidator extends AbstractXSValidator {
 				}
 			}
 			RuleDeclaration: {
+				if(eo.name == null) return;
 				val existingDecl = scopeProvider.getScope(eo, null).getSingleElement(QualifiedName.create(eo.name)).
 					EObjectOrProxy;
 				if (existingDecl != null)
@@ -105,6 +111,7 @@ class XSValidator extends AbstractXSValidator {
 						XsPackage.Literals.RULE_DECLARATION__NAME);
 			}
 			ForVarDeclaration: {
+				if(eo.name == null) return;
 				// If a variable of a 'for' statement does not exist, is is created with type int.
 				// If the variable already exists then that variable is used, potentially crashing AoM if it is not an int or float (e.g. bool)
 				val existingDecl = scopeProvider.getScope(eo, null).getSingleElement(QualifiedName.create(eo.name)).
@@ -115,8 +122,14 @@ class XSValidator extends AbstractXSValidator {
 							return; // valid if first declaration was a for loop too
 						}
 						LocalVarDeclaration: {
-							error("This loop variable has previously been declared, but not as 'int' or 'float'",
-								XsPackage.Literals.VAR_DECLARATION__NAME);
+							val type = XSTypeChecker.type(existingDecl);
+							if (type != null && !type.isNumber())
+								error("This loop variable has previously been declared, but not as 'int' or 'float'",
+									XsPackage.Literals.VAR_DECLARATION__NAME);
+							if (type != null && type == XSTypeChecker.Type.FLOAT)
+								warning(
+									"This loop variable has previously been declared as a float. This works, but is likely unintended.",
+									XsPackage.Literals.VAR_DECLARATION__NAME);
 							return;
 						}
 						GlobalVarDeclaration: {
@@ -137,6 +150,7 @@ class XSValidator extends AbstractXSValidator {
 				}
 			}
 			GlobalVarDeclaration: {
+				if(eo.name == null) return;
 				val existingDecl = scopeProvider.getScope(eo, null).getSingleElement(QualifiedName.create(eo.name)).
 					EObjectOrProxy;
 				if (existingDecl != null) {
@@ -154,6 +168,7 @@ class XSValidator extends AbstractXSValidator {
 			}
 			LocalVarDeclaration,
 			ParameterDeclaration: {
+				if(eo.name == null) return;
 				// these can shadow global variables, but nothing else
 				val existingDecl = scopeProvider.getScope(eo, null).getSingleElement(QualifiedName.create(eo.name)).
 					EObjectOrProxy;
@@ -232,6 +247,26 @@ class XSValidator extends AbstractXSValidator {
 	def checkConstantInSwitchCase(SwitchCase c) {
 		if (!isConstant(c.value))
 			error("Switch case must use a constant value", XsPackage.Literals.SWITCH_CASE__VALUE);
+	}
+
+	@Check
+	def checkHasReturn(FunctionDeclaration func) {
+		if (XSTypeChecker.type(func) != XSTypeChecker.Type.VOID && !EcoreUtil2.eAllContents(func).exists [e|
+			e instanceof ReturnStatement
+		])
+			warning("Missing 'return' in non-void function", XsPackage.Literals.FUNCTION_DECLARATION__NAME);
+	}
+
+	@Check
+	def checkAssignInIf(IfElseStatement ifElse) {
+		if (ifElse.condition instanceof Assign)
+			warning("This is an assignment expression (=), not a comparison (==)", XsPackage.Literals.IF_ELSE_STATEMENT__CONDITION);
+	}
+
+	@Check
+	def checkAssignInWhile(WhileStatement whileStmt) {
+		if (whileStmt.condition instanceof Assign)
+			warning("This is an assignment expression (=), not a comparison (==)", XsPackage.Literals.WHILE_STATEMENT__CONDITION);
 	}
 
 }

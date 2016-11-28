@@ -1,10 +1,28 @@
 
 
-# set this to the location of the 'Java' reference source directory excluding the java package (i.e. the path should end in '/src/aom/scripting')
+
+# move this file to the directory where you want to generate the base library (should be an empty project in the AoM workspace)
+
+# and set this variable to the location of the 'Java' reference source directory
+# (including the Java package, i.e. the path should end in '/src/aom/scripting')
 # (can be an abosulte or a relative path)
 referenceDir = '../../workspace/AoMreference/src/aom/scripting/'
 
+# then execute the file using python >= 3.2
 
+
+
+
+
+
+
+
+
+
+
+
+
+# .java files to be converted to .xs
 included = [
 	'ui/console/AIDebug',
 	'ui/console/Camera',
@@ -97,6 +115,7 @@ for inc in included:
 		t = re.sub('(int|float|bool) (\w+)\s*([;,)])', '\\1 \\2=0\\3', t)
 		t = re.sub('\\bactive=', 'active_=', t)
 		t = re.sub('\\brunImmediately=', 'runImmediately_=', t)
+		t = re.sub('\\bpriority=', 'priority_=', t)
 		t = re.sub('\\bgroup=', 'group_=', t)
 		t = t.replace('vector vector(float x=0, float y=0, float z=0){}', '')
 		

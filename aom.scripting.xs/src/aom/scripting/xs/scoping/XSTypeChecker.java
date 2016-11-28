@@ -59,17 +59,21 @@ public class XSTypeChecker {
 	}
 	
 	public static enum Type {
-		VOID, NUMBER, VECTOR, STRING;
+		VOID, INT, FLOAT, BOOL, VECTOR, STRING;
 		@Override
 		public String toString() {
 			return name().toLowerCase();
+		}
+		
+		public boolean isNumber() {
+			return this == INT || this == FLOAT;
 		}
 	}
 	
 	private final static class XSTypeSwitch extends XsSwitch<Type> {
 		@Override
 		public Type caseAndExpression(final AndExpression object) {
-			return NUMBER;
+			return BOOL;
 		}
 		
 		@Override
@@ -79,7 +83,7 @@ public class XSTypeChecker {
 		
 		@Override
 		public Type caseBoolType(final BoolType object) {
-			return NUMBER;
+			return BOOL;
 		}
 		
 		@Override
@@ -89,12 +93,12 @@ public class XSTypeChecker {
 		
 		@Override
 		public Type caseComparisonExpression(final ComparisonExpression object) {
-			return NUMBER;
+			return BOOL;
 		}
 		
 		@Override
 		public Type caseEqualsExpression(final EqualsExpression object) {
-			return NUMBER;
+			return BOOL;
 		}
 		
 		@Override
@@ -106,12 +110,12 @@ public class XSTypeChecker {
 		
 		@Override
 		public Type caseFloatType(final FloatType object) {
-			return NUMBER;
+			return FLOAT;
 		}
 		
 		@Override
 		public Type caseForVarDeclaration(final ForVarDeclaration object) {
-			return NUMBER;
+			return INT;
 		}
 		
 		@Override
@@ -126,22 +130,22 @@ public class XSTypeChecker {
 		
 		@Override
 		public Type caseIntType(final IntType object) {
-			return NUMBER;
+			return INT;
 		}
 		
 		@Override
 		public Type caseLiteralBool(final LiteralBool object) {
-			return NUMBER;
+			return BOOL;
 		}
 		
 		@Override
 		public Type caseLiteralFloat(final LiteralFloat object) {
-			return NUMBER;
+			return FLOAT;
 		}
 		
 		@Override
 		public Type caseLiteralInt(final LiteralInt object) {
-			return NUMBER;
+			return INT;
 		}
 		
 		@Override
@@ -156,7 +160,7 @@ public class XSTypeChecker {
 		
 		@Override
 		public Type caseOrExpression(final OrExpression object) {
-			return NUMBER;
+			return BOOL;
 		}
 		
 		@Override
@@ -207,7 +211,7 @@ public class XSTypeChecker {
 	
 	private final static XSTypeSwitch typingSwitch = new XSTypeSwitch();
 	
-	private static Type type(final EObject o) {
+	public static Type type(final EObject o) {
 		if (o == null) // e.g. 'return' without a value
 			return VOID;
 		return typingSwitch.doSwitch(o);
@@ -231,29 +235,55 @@ public class XSTypeChecker {
 			validator.acceptError(error, object, feature, ValidationMessageAcceptor.INSIGNIFICANT_INDEX, null);
 		}
 		
-		private void checkEqualTypes(final EObject o1, final EObject o2, final String errorFormat, final EStructuralFeature feature) {
-			checkEqualTypes(type(o1), type(o2), errorFormat, feature);
+		private Type lastType1 = null, lastType2 = null;
+		
+		private void check(final boolean condition, final String errorFormat, final EStructuralFeature feature) {
+			check(condition, errorFormat, currentObject, feature);
 		}
 		
-		private void checkEqualTypes(final Type t1, final Type t2, final String errorFormat, final EStructuralFeature feature) {
-			if (t1 != null && t2 != null && t1 != t2)
-				error(String.format(errorFormat, t1, t2), feature);
+		private void check(final boolean condition, final String errorFormat, final EObject object, final EStructuralFeature feature) {
+			if (!condition)
+				error(String.format(errorFormat, lastType1, lastType2), object, feature);
 		}
 		
-		private void checkType(final EObject o, final Type t, final String errorFormat, final EStructuralFeature feature) {
-			checkEqualTypes(type(o), t, errorFormat, feature);
+		private boolean isType(final EObject o, final Type... types) {
+			return isType(type(o), types);
+		}
+		
+		private boolean isType(final Type type, final Type... types) {
+			if (type == null)
+				return true;
+			lastType1 = type;
+			lastType2 = null;
+			for (final Type t : types)
+				if (lastType1 == t)
+					return true;
+			return false;
+		}
+		
+		// numbers and booleans are freely exchangeable in assignments and function calls
+		private boolean assignable(final EObject o1, final EObject o2) {
+			lastType1 = type(o1);
+			lastType2 = type(o2);
+			return lastType1 == null || lastType2 == null || lastType1 == lastType2 || (lastType1.isNumber() || lastType1 == BOOL) && (lastType2.isNumber() || lastType2 == BOOL);
+		}
+		
+		private boolean equalOrNumbers(final Type t1, final Type t2) {
+			lastType1 = t1;
+			lastType2 = t2;
+			return t1 == null || t2 == null || t1 == t2 || t1.isNumber() && t2.isNumber();
 		}
 		
 		@Override
 		public Void caseAndExpression(final AndExpression and) {
-			checkType(and.getLeft(), NUMBER, "'and' operand must be a boolean", XsPackage.Literals.AND_EXPRESSION__LEFT);
-			checkType(and.getRight(), NUMBER, "'and' operand must be a boolean", XsPackage.Literals.AND_EXPRESSION__RIGHT);
+			check(isType(and.getLeft(), BOOL), "'and' operand must be a boolean", XsPackage.Literals.AND_EXPRESSION__LEFT);
+			check(isType(and.getRight(), BOOL), "'and' operand must be a boolean", XsPackage.Literals.AND_EXPRESSION__RIGHT);
 			return null;
 		}
 		
 		@Override
 		public Void caseAssign(final Assign assign) {
-			checkEqualTypes(assign.getVar(), assign.getExpression(), "Invalid types in variable assignment: Expected %1$s, got %2$s", XsPackage.Literals.ASSIGN__EXPRESSION);
+			check(assignable(assign.getVar(), assign.getExpression()), "Invalid types in variable assignment: Expected %1$s, got %2$s", XsPackage.Literals.ASSIGN__EXPRESSION);
 			return null;
 		}
 		
@@ -264,9 +294,7 @@ public class XSTypeChecker {
 			for (int i = 0; i < args.size() && i < func.getParameters().size(); i++) {
 				final Expression arg = args.get(i);
 				final ParameterDeclaration param = func.getParameters().get(i);
-				final Type ta = type(arg), tp = type(param);
-				if (ta != null && tp != null & ta != tp)
-					error("Parameter '" + param.getName() + "' requires a value of type " + tp + ", but a " + ta + " is given here", arg, null);
+				check(assignable(arg, param), "Parameter '" + param.getName() + "' requires a value of type %2$s, but a %1$s is given here", arg, null);
 			}
 			return null;
 		}
@@ -274,16 +302,16 @@ public class XSTypeChecker {
 		@Override
 		public Void caseComparisonExpression(final ComparisonExpression comparison) {
 			final Type left = type(comparison.getLeft()), right = type(comparison.getRight());
-			if (left != STRING && left != NUMBER && left != null)
+			if (left != null && left != STRING && !left.isNumber()) // comparing anything other than numbers or strings crashes triggers or even the whole game
 				error("Can only compare numbers and strings, but found " + left, XsPackage.Literals.COMPARISON_EXPRESSION__LEFT);
 			else
-				checkEqualTypes(left, right, "Compared values must be of the same type, but found %1$s and %2$s", null);
+				check(equalOrNumbers(left, right), "Compared values must be of the same type, but found %1$s and %2$s", null);
 			return null;
 		}
 		
 		@Override
 		public Void caseEqualsExpression(final EqualsExpression comparison) {
-			checkEqualTypes(comparison.getLeft(), comparison.getRight(), "Compared values must be of the same type, but found %1$s and %2$s", null);
+			check(equalOrNumbers(type(comparison.getLeft()), type(comparison.getRight())), "Compared values must be of the same type, but found %1$s and %2$s", null);
 			return null;
 		}
 		
@@ -291,81 +319,82 @@ public class XSTypeChecker {
 		public Void caseFactor(final Factor factor) {
 			final Type left = type(factor.getLeft()), right = type(factor.getRight());
 			if (factor.getOp().equals("%")) {
-				checkEqualTypes(left, NUMBER, "Modulo operand must be a number", XsPackage.Literals.FACTOR__LEFT);
-				checkEqualTypes(right, NUMBER, "Modulo operand must be a number", XsPackage.Literals.FACTOR__RIGHT);
+				check(isType(left, INT, FLOAT), "Modulo operand must be a number", XsPackage.Literals.FACTOR__LEFT);
+				check(isType(right, INT, FLOAT), "Modulo operand must be a number", XsPackage.Literals.FACTOR__RIGHT);
 			} else {
-				if (left != NUMBER && left != VECTOR && left != null)
+				if (left != INT && left != FLOAT && left != VECTOR && left != null)
 					error("Left multiplication or division operand must be a number or vector", XsPackage.Literals.FACTOR__LEFT);
-				checkEqualTypes(right, NUMBER, "Right multiplication or division operand must be a number", XsPackage.Literals.FACTOR__RIGHT);
+				check(isType(right, INT, FLOAT), "Right multiplication or division operand must be a number", XsPackage.Literals.FACTOR__RIGHT);
 			}
 			return null;
 		}
 		
 		@Override
 		public Void caseIfElseStatement(final IfElseStatement object) {
-			checkType(object.getCondition(), NUMBER, "Condition must be a boolean", XsPackage.Literals.IF_ELSE_STATEMENT__CONDITION);
+			// numbers work sometimes, but can also hang up the game or crash it, so this is an error
+			check(isType(object.getCondition(), BOOL), "Condition must be a boolean", XsPackage.Literals.IF_ELSE_STATEMENT__CONDITION);
 			return null;
 		}
 		
 		@Override
 		public Void caseOrExpression(final OrExpression object) {
-			checkType(object.getLeft(), NUMBER, "'or' operand must be a boolean", XsPackage.Literals.OR_EXPRESSION__LEFT);
-			checkType(object.getRight(), NUMBER, "'or' operand must be a boolean", XsPackage.Literals.OR_EXPRESSION__RIGHT);
+			check(isType(object.getLeft(), BOOL), "'or' operand must be a boolean", XsPackage.Literals.OR_EXPRESSION__LEFT);
+			check(isType(object.getRight(), BOOL), "'or' operand must be a boolean", XsPackage.Literals.OR_EXPRESSION__RIGHT);
 			return null;
 		}
 		
 		@Override
 		public Void caseForStatement(final ForStatement object) {
-			checkType(object.getEnd(), NUMBER, "End value of a 'for' loop must be a number, but got a %1$s", XsPackage.Literals.VAR_DECLARATION__VALUE);
+			check(isType(object.getEnd(), INT, FLOAT), "End value of a 'for' loop must be a number, but got a %1$s", XsPackage.Literals.VAR_DECLARATION__VALUE);
 			return null;
 		}
 		
 		@Override
 		public Void caseForVarDeclaration(final ForVarDeclaration object) {
-			checkType(object.getValue(), NUMBER, "Invalid initial value of type %2$s for loop variable (of type int)", XsPackage.Literals.VAR_DECLARATION__VALUE);
+			check(isType(object.getValue(), INT, FLOAT), "Invalid initial value of type %1$s for loop variable, should be a number", XsPackage.Literals.VAR_DECLARATION__VALUE);
 			return null;
 		}
 		
 		@Override
 		public Void caseGlobalVarDeclaration(final GlobalVarDeclaration object) {
-			checkEqualTypes(object.getValue(), object.getType(), "Invalid initial value of type %1$s for variable of type %2$s", XsPackage.Literals.VAR_DECLARATION__VALUE);
+			check(assignable(object.getValue(), object.getType()), "Invalid initial value of type %1$s for variable of type %2$s", XsPackage.Literals.VAR_DECLARATION__VALUE);
 			return null;
 		}
 		
 		@Override
 		public Void caseLocalVarDeclaration(final LocalVarDeclaration object) {
-			checkEqualTypes(object.getValue(), object.getType(), "Invalid initial value of type %1$s for variable of type %2$s", XsPackage.Literals.VAR_DECLARATION__VALUE);
+			check(assignable(object.getValue(), object.getType()), "Invalid initial value of type %1$s for variable of type %2$s", XsPackage.Literals.VAR_DECLARATION__VALUE);
 			return null;
 		}
 		
 		@Override
 		public Void caseParameterDeclaration(final ParameterDeclaration object) {
-			checkEqualTypes(object.getValue(), object.getType(), "Invalid initial value of type %1$s for variable of type %2$s", XsPackage.Literals.VAR_DECLARATION__VALUE);
+			check(assignable(object.getValue(), object.getType()), "Invalid initial value of type %1$s for variable of type %2$s", XsPackage.Literals.VAR_DECLARATION__VALUE);
 			return null;
 		}
 		
 		@Override
 		public Void casePostfixStatement(final PostfixStatement object) {
-			checkType(object.getVar(), NUMBER, "'++' and '--' require a numeric variable", XsPackage.Literals.POSTFIX_STATEMENT__VAR);
+			check(isType(object.getVar(), INT, FLOAT), "'++' and '--' require a numeric variable", XsPackage.Literals.POSTFIX_STATEMENT__VAR);
 			return null;
 		}
 		
 		@Override
 		public Void caseReturnStatement(final ReturnStatement object) {
-			final Type expected = type(EcoreUtil2.getContainerOfType(object, Declaration.class));
-			checkType(object.getExpression(), expected, "Invalid result type", object.getExpression() == null ? null : XsPackage.Literals.RETURN_STATEMENT__EXPRESSION);
+			final EObject expected = EcoreUtil2.getContainerOfType(object, Declaration.class);
+			check(assignable(object.getExpression(), expected), "Invalid result type", object.getExpression() == null ? null : XsPackage.Literals.RETURN_STATEMENT__EXPRESSION);
 			return null;
 		}
 		
 		@Override
 		public Void caseSwitchCase(final SwitchCase object) {
-			checkType(object.getValue(), NUMBER, "'case' requires a numeric value", XsPackage.Literals.SWITCH_CASE__VALUE);
+			check(isType(object.getValue(), INT, FLOAT), "'case' requires a numeric value", XsPackage.Literals.SWITCH_CASE__VALUE);
 			return null;
 		}
 		
 		@Override
 		public Void caseSwitchStatement(final SwitchStatement object) {
-			checkType(object.getExpression(), NUMBER, "Switched value must be a number", XsPackage.Literals.SWITCH_STATEMENT__EXPRESSION);
+			check(isType(object.getExpression(), INT, FLOAT), "Switched value must be a number", XsPackage.Literals.SWITCH_STATEMENT__EXPRESSION);
 			return null;
 		}
 		
@@ -375,32 +404,38 @@ public class XSTypeChecker {
 			if (object.getOp().equals("+")) {
 				final Type right = type(object.getRight());
 				switch (left) {
-					case NUMBER:
-						if (right != NUMBER && right != STRING && right != null)
-							error("'<number> +' requires a number or string as second operand", XsPackage.Literals.TERM__RIGHT);
+					case INT:
+					case FLOAT:
+						check(isType(right, INT, FLOAT, STRING), "'<number> +' requires a number or string as second operand", XsPackage.Literals.TERM__RIGHT);
 						break;
 					case STRING:
 						if (right == VOID)
 							error("'+' requires a non-void right operand", XsPackage.Literals.TERM__RIGHT);
 						break;
 					case VECTOR:
-						if (right != VECTOR && right != STRING && right != null)
-							error("'<vector> +' requires a vector or string as second operand", XsPackage.Literals.TERM__RIGHT);
+						check(isType(right, VECTOR, STRING), "'<vector> +' requires a vector or string as second operand", XsPackage.Literals.TERM__RIGHT);
 						break;
 					case VOID:
 						error("'+' requires a non-void left operand", XsPackage.Literals.TERM__LEFT);
 						break;
+					case BOOL:
+						error("'+' cannot be used with bools", XsPackage.Literals.TERM__LEFT);
+						break;
 				}
 			} else { // '-'
 				switch (left) {
-					case NUMBER:
-						checkType(object.getRight(), NUMBER, "'<number> -' requires a number as second operand", XsPackage.Literals.TERM__RIGHT);
+					case INT:
+					case FLOAT:
+						check(isType(object.getRight(), INT, FLOAT), "'<number> -' requires a number as second operand", XsPackage.Literals.TERM__RIGHT);
 						break;
 					case STRING:
-						error("'-' does not take a string operand", XsPackage.Literals.TERM__LEFT);
+						error("'-' cannot be used with strings", XsPackage.Literals.TERM__LEFT);
+						break;
+					case BOOL:
+						error("'-' cannot be used with bools", XsPackage.Literals.TERM__LEFT);
 						break;
 					case VECTOR:
-						checkType(object.getRight(), NUMBER, "'<vector> -' requires a vector as second operand", XsPackage.Literals.TERM__RIGHT);
+						check(isType(object.getRight(), VECTOR), "'<vector> -' requires a vector as second operand", XsPackage.Literals.TERM__RIGHT);
 						break;
 					case VOID:
 						error("'-' requires a non-void left operand", XsPackage.Literals.TERM__LEFT);
@@ -413,14 +448,15 @@ public class XSTypeChecker {
 		@Override
 		public Void caseVectorLiteral(final VectorLiteral object) {
 			for (final EReference l : Arrays.asList(XsPackage.Literals.VECTOR_LITERAL__X, XsPackage.Literals.VECTOR_LITERAL__Y, XsPackage.Literals.VECTOR_LITERAL__Z)) {
-				checkType((Expression) object.eGet(l), NUMBER, "vector() requires numeric arguments", l);
+				check(isType((Expression) object.eGet(l), INT, FLOAT), "vector() requires numeric arguments", l);
 			}
 			return null;
 		}
 		
 		@Override
 		public Void caseWhileStatement(final WhileStatement object) {
-			checkType(object.getCondition(), NUMBER, "Condition must be a boolean", XsPackage.Literals.WHILE_STATEMENT__CONDITION);
+			// numbers work, but 0 is true which makes no sense, so let's make this an error
+			check(isType(object.getCondition(), BOOL), "Condition must be a boolean", XsPackage.Literals.WHILE_STATEMENT__CONDITION);
 			return null;
 		}
 	}

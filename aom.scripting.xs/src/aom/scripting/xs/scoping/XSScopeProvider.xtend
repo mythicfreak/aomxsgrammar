@@ -54,6 +54,8 @@ class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarative
 
 	public def static getFile(IResourceDescriptionsProvider resourceDescriptionsProvider, Resource eResource,
 		String file) {
+		if (file == null)
+			return null;
 		val f = file.split("/").map[s|URI.encodeSegment(s, false)];
 		return resourceDescriptionsProvider.getResourceDescriptions(eResource.resourceSet).allResourceDescriptions.
 			findFirst [ rd |
@@ -84,29 +86,17 @@ class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarative
 		}
 
 		def IEObjectDescription getFromFile(String file, QualifiedName name) {
-			val eos = getExportedObjects(p.resourceDescriptionsProvider, rootElement.eResource, file);
-			if (eos != null) {
-				for (eo : eos) {
-					if (eo.EClass == XsPackage.eINSTANCE.includeDeclaration) {
-						val transitive = getFromFile(eo.name.getSegment(1), name); // second segment is the path
-						if (transitive != null)
-							return transitive;
-					} else if (eo.name.equalsIgnoreCase(name)) {
-						return eo;
-					}
-				}
-			}
-			return null;
+			return getFromExportedObjects(getExportedObjects(p.resourceDescriptionsProvider, rootElement.eResource, file), name);
 		}
 
 		def IEObjectDescription getFromExportedObjects(Iterable<IEObjectDescription> exportedObjects, QualifiedName name) {
 			if (exportedObjects != null) {
 				for (eo : exportedObjects) {
-					if (eo.EClass == XsPackage.eINSTANCE.includeDeclaration) {
+					if (eo.EObjectOrProxy instanceof IncludeDeclaration) {
 						val transitive = getFromFile(eo.name.getSegment(1), name); // second segment is the path
 						if (transitive != null)
 							return transitive;
-					} else if (eo.name.equalsIgnoreCase(name)) {
+					} else if (eo.name.equals(name)) {
 						return eo;
 					}
 				}
@@ -114,6 +104,10 @@ class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarative
 			return null;
 		}
 
+		// scoping rules:
+		// - scoping is linear from the top of the file to the current object, i.e. declarations after the current objects are not visible
+		// --- can make forward declarations of functions with 'mutable <header> {}'
+		// - case sensitive
 		override getSingleElement(QualifiedName name) {
 			// check base library - here done via any project that has a file named __std__.xs
 			val __std__ = getFile(p.resourceDescriptionsProvider, rootElement.eResource, "__std__.xs");
@@ -136,15 +130,15 @@ class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarative
 							return r;
 					}
 					GlobalVarDeclaration: {
-						if (decl.name.equalsIgnoreCase(name.firstSegment))
+						if (decl.name.equals(name.firstSegment))
 							return desc(decl);
 					}
 					FunctionDeclaration: {
-						if (decl.name.equalsIgnoreCase(name.firstSegment))
+						if (decl.name.equals(name.firstSegment))
 							return desc(decl);
 					}
 					RuleDeclaration: {
-						if (decl.name.equalsIgnoreCase(name.firstSegment))
+						if (decl.name.equals(name.firstSegment))
 							return desc(decl);
 					}
 				}
@@ -155,7 +149,7 @@ class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarative
 						if (c == upToObject)
 							return null;
 						if (c instanceof VarDeclaration &&
-							(c as VarDeclaration).name.equalsIgnoreCase(name.firstSegment))
+							(c as VarDeclaration).name.equals(name.firstSegment))
 							return desc(c);
 					};
 					return null;
