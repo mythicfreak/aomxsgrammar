@@ -43,6 +43,8 @@ import org.eclipse.xtext.EcoreUtil2
 import aom.scripting.xs.xs.ReturnStatement
 import aom.scripting.xs.xs.IfElseStatement
 import aom.scripting.xs.xs.WhileStatement
+import aom.scripting.xs.xs.Term
+import aom.scripting.xs.xs.Factor
 
 /**
  * Custom validation rules. 
@@ -267,6 +269,22 @@ class XSValidator extends AbstractXSValidator {
 	def checkAssignInWhile(WhileStatement whileStmt) {
 		if (whileStmt.condition instanceof Assign)
 			warning("This is an assignment expression (=), not a comparison (==)", XsPackage.Literals.WHILE_STATEMENT__CONDITION);
+	}
+
+	@Check
+	def checkFloatModule(Factor factor) {
+		if (factor.op == "%" && (XSTypeChecker.type(factor.left) == XSTypeChecker.Type.FLOAT || XSTypeChecker.type(factor.right) == XSTypeChecker.Type.FLOAT))
+			warning("Modulo on floats returns the result of an integer modulo operation", null);
+	}
+
+	@Check
+	def checkPassingFloatToIntParameter(Call call) {
+		if (call.function == null)
+			return;
+		for (var i = 0; i < Math.min(call.arguments.size, call.function.parameters.size); i++) {
+			if (XSTypeChecker.type(call.arguments.get(i)) == XSTypeChecker.Type.INT && XSTypeChecker.type(call.function.parameters.get(i)) == XSTypeChecker.Type.FLOAT)
+				warning("Passing an integer to a function that expects a float may result in calculations to be done in integers instead of floats inside the function", call.arguments.get(i), null);
+		}
 	}
 
 }

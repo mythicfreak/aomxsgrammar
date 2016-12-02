@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.xtext.EcoreUtil2;
@@ -311,7 +312,11 @@ public class XSTypeChecker {
 		
 		@Override
 		public Void caseEqualsExpression(final EqualsExpression comparison) {
-			check(equalOrNumbers(type(comparison.getLeft()), type(comparison.getRight())), "Compared values must be of the same type, but found %1$s and %2$s", null);
+			Type left = type(comparison.getLeft());
+			if (left == Type.VECTOR) // comparing vectors doesn't crash the game, but e.g. 'vector(10,0,10) == cInvalidVector' is true, so it is not useful.
+				error("Comparing vectors doesn't work", XsPackage.Literals.EQUALS_EXPRESSION__LEFT);
+			else
+				check(equalOrNumbers(left, type(comparison.getRight())), "Compared values must be of the same type, but found %1$s and %2$s", null);
 			return null;
 		}
 		

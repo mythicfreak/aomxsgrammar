@@ -32,6 +32,9 @@ import aom.scripting.xs.xs.impl.XsPackageImpl
 import aom.scripting.xs.xs.IncludeDeclaration
 import aom.scripting.xs.xs.FunctionDeclaration
 import java.util.ArrayList
+import java.util.IdentityHashMap
+import org.eclipse.emf.ecore.EClass
+import org.eclipse.emf.ecore.EcorePackage
 
 /**
  * This class contains custom scoping description.
@@ -52,20 +55,20 @@ class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarative
 	@Inject
 	private IResourceDescriptionsProvider resourceDescriptionsProvider;
 
+	// URI handling causes massive lags, maybe this helps a little
+	private final static IdentityHashMap<String, IResourceDescription> cache = new IdentityHashMap();
+
 	public def static getFile(IResourceDescriptionsProvider resourceDescriptionsProvider, Resource eResource,
 		String file) {
 		if (file == null)
 			return null;
-		val f = file.split("/").map[s|URI.encodeSegment(s, false)];
-		return resourceDescriptionsProvider.getResourceDescriptions(eResource.resourceSet).allResourceDescriptions.
-			findFirst [ rd |
-				rd.URI.segmentsList.drop(2).elementsEqual(f)
-			];
-	}
-
-	public def static getExportedObjects(IResourceDescriptionsProvider resourceDescriptionsProvider, Resource eResource,
-		String file) {
-		getFile(resourceDescriptionsProvider, eResource, file)?.getExportedObjects();
+		return cache.computeIfAbsent(file, [
+			val f = file.split("/").map[s|URI.encodeSegment(s, false)];
+			return resourceDescriptionsProvider.getResourceDescriptions(eResource.resourceSet).allResourceDescriptions.
+				findFirst [ rd |
+					rd.URI.segmentsList.drop(2).elementsEqual(f)
+				];
+		]);
 	}
 
 	static class XSScope implements IScope {
@@ -84,23 +87,29 @@ class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarative
 		def EObjectDescription desc(EObject obj) {
 			return new EObjectDescription(p.qualifiedNameProvider.getFullyQualifiedName(obj), obj, null);
 		}
-
-		def IEObjectDescription getFromFile(String file, QualifiedName name) {
-			return getFromExportedObjects(getExportedObjects(p.resourceDescriptionsProvider, rootElement.eResource, file), name);
+		
+		public def getFile(String file) {
+			if (file == null)
+				return null;
+			return getFile(p.resourceDescriptionsProvider, rootElement.eResource, file);
 		}
 
-		def IEObjectDescription getFromExportedObjects(Iterable<IEObjectDescription> exportedObjects, QualifiedName name) {
-			if (exportedObjects != null) {
-				for (eo : exportedObjects) {
-					if (eo.EObjectOrProxy instanceof IncludeDeclaration) {
-						val transitive = getFromFile(eo.name.getSegment(1), name); // second segment is the path
-						if (transitive != null)
-							return transitive;
-					} else if (eo.name.equals(name)) {
-						return eo;
-					}
-				}
+		def IEObjectDescription getFromFile(String file, QualifiedName name) {
+			val resource = getFile(file);
+			if (resource == null)
+				return null;
+			
+			val exportedDirect = resource.getExportedObjects(EcorePackage.Literals.EOBJECT, name, false).iterator;
+			if (exportedDirect.hasNext)
+				return exportedDirect.next;
+			
+			val exportedInculdes = resource.getExportedObjectsByType(XsPackage.Literals.INCLUDE_DECLARATION);
+			for (eo : exportedInculdes) {
+				val transitive = getFromFile(eo.name.getSegment(1), name); // second segment is the path
+				if (transitive != null)
+					return transitive;
 			}
+			
 			return null;
 		}
 
@@ -114,7 +123,7 @@ class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarative
 			// ignore base library in the base library itself
 			if (__std__ != null && (__std__.URI.segmentsList.get(0) != rootElement.eResource.URI.segmentsList.get(0) ||
 				__std__.URI.segmentsList.get(1) != rootElement.eResource.URI.segmentsList.get(1))) {
-				val std = getFromExportedObjects(__std__.exportedObjects, name);
+				val std = getFromFile("__std__.xs", name);
 				if (std != null)
 					return std;
 			}
@@ -148,8 +157,7 @@ class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarative
 						val c = iter.next;
 						if (c == upToObject)
 							return null;
-						if (c instanceof VarDeclaration &&
-							(c as VarDeclaration).name.equals(name.firstSegment))
+						if (c instanceof VarDeclaration && (c as VarDeclaration).name?.equals(name.firstSegment))
 							return desc(c);
 					};
 					return null;
@@ -173,7 +181,7 @@ class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarative
 		override getAllElements() {
 			var result = new ArrayList<IEObjectDescription>();
 
-			val std = getExportedObjects(p.resourceDescriptionsProvider, rootElement.eResource, "__std__.xs");
+			val std = getFile("__std__.xs").exportedObjects;
 			if (std != null)
 				result.addAll(std);
 
@@ -183,8 +191,7 @@ class XSScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarative
 					return result;
 				switch (decl) {
 					IncludeDeclaration: {
-						val r = getExportedObjects(p.resourceDescriptionsProvider, rootElement.eResource,
-							decl.filePath);
+						val r = getFile(decl.filePath).exportedObjects;
 						if (r != null)
 							result.addAll(r);
 					}

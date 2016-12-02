@@ -322,6 +322,10 @@ Bool returns ecore::EBoolean
 	;
 	
 	
+// 'goto' is reserved, but I haven't tested whether and how it works. (actually, functions with this as name can be created, but calling them doesn't work)
+GoTo: 'goto';
+
+
 terminal ID: 
     ('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
  
@@ -331,7 +335,7 @@ terminal INT returns ecore::EInt:
 terminal STRING: 
     '"' ( '\\"' | !('"'|'\n') )* '"';
     // XS strings use invalid escaping: the backslash only escapes double quotes and nothing else,
-    // i.e. '\"' is '"', but '\\' is not '\', it's either '\\' or '\"' depending on where in the string it is.
+    // i.e. '\"' is '"', but '\\' is not '\', it's either '\\' or '\"' depending on if it is in the middle of a string or at the very end.
  
 terminal ML_COMMENT: 
     '/*' -> '*/';
