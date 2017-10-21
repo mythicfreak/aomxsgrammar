@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class LiteralStringImpl extends ExpressionImpl implements LiteralString
+public class LiteralStringImpl extends LiteralImpl implements LiteralString
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.

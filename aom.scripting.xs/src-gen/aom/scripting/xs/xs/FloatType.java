@@ -13,6 +13,6 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface FloatType extends VarTypeSpecifier
+public interface FloatType extends Type
 {
 } // FloatType

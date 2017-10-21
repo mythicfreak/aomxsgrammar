@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class VectorTypeImpl extends VarTypeSpecifierImpl implements VectorType
+public class VectorTypeImpl extends TypeImpl implements VectorType
 {
   /**
    * <!-- begin-user-doc -->

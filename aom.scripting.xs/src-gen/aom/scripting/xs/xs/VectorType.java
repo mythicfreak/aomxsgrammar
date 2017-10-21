@@ -13,6 +13,6 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface VectorType extends VarTypeSpecifier
+public interface VectorType extends Type
 {
 } // VectorType

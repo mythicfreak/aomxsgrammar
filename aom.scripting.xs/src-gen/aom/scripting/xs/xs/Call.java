@@ -2,7 +2,7 @@
  */
 package aom.scripting.xs.xs;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link aom.scripting.xs.xs.Call#getFunction <em>Function</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.Call#getArgs <em>Args</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.Call#getArguments <em>Arguments</em>}</li>
  * </ul>
  * </p>
  *
@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Call extends EObject
+public interface Call extends Expression
 {
   /**
    * Returns the value of the '<em><b>Function</b></em>' reference.
@@ -32,12 +32,12 @@ public interface Call extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Function</em>' reference.
-   * @see #setFunction(FunDeclaration)
+   * @see #setFunction(FunctionDeclaration)
    * @see aom.scripting.xs.xs.XsPackage#getCall_Function()
    * @model
    * @generated
    */
-  FunDeclaration getFunction();
+  FunctionDeclaration getFunction();
 
   /**
    * Sets the value of the '{@link aom.scripting.xs.xs.Call#getFunction <em>Function</em>}' reference.
@@ -47,32 +47,22 @@ public interface Call extends EObject
    * @see #getFunction()
    * @generated
    */
-  void setFunction(FunDeclaration value);
+  void setFunction(FunctionDeclaration value);
 
   /**
-   * Returns the value of the '<em><b>Args</b></em>' containment reference.
+   * Returns the value of the '<em><b>Arguments</b></em>' containment reference list.
+   * The list contents are of type {@link aom.scripting.xs.xs.Expression}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Args</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Arguments</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Args</em>' containment reference.
-   * @see #setArgs(Arguments)
-   * @see aom.scripting.xs.xs.XsPackage#getCall_Args()
+   * @return the value of the '<em>Arguments</em>' containment reference list.
+   * @see aom.scripting.xs.xs.XsPackage#getCall_Arguments()
    * @model containment="true"
    * @generated
    */
-  Arguments getArgs();
-
-  /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.Call#getArgs <em>Args</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Args</em>' containment reference.
-   * @see #getArgs()
-   * @generated
-   */
-  void setArgs(Arguments value);
+  EList<Expression> getArguments();
 
 } // Call

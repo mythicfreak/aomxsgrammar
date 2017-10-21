@@ -66,57 +66,49 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
     {
       case XsPackage.PROGRAM: return createProgram();
       case XsPackage.DECLARATION: return createDeclaration();
-      case XsPackage.CONSTANT_NUM: return createConstantNum();
-      case XsPackage.LITERAL_OR_CONSTANT_NUM: return createLiteralOrConstantNum();
-      case XsPackage.VECTOR: return createVector();
+      case XsPackage.INCLUDE_DECLARATION: return createIncludeDeclaration();
       case XsPackage.VAR_DECLARATION: return createVarDeclaration();
-      case XsPackage.FUN_DECLARATION: return createFunDeclaration();
-      case XsPackage.INCLUDE_STATEMENT: return createIncludeStatement();
+      case XsPackage.LOCAL_VAR_DECLARATION: return createLocalVarDeclaration();
+      case XsPackage.GLOBAL_VAR_DECLARATION: return createGlobalVarDeclaration();
+      case XsPackage.PARAMETER_DECLARATION: return createParameterDeclaration();
+      case XsPackage.FOR_VAR_DECLARATION: return createForVarDeclaration();
+      case XsPackage.FUNCTION_DECLARATION: return createFunctionDeclaration();
+      case XsPackage.TYPE: return createType();
       case XsPackage.RULE_DECLARATION: return createRuleDeclaration();
-      case XsPackage.VAR_MODIFIER: return createVarModifier();
-      case XsPackage.FUN_MODIFIER: return createFunModifier();
+      case XsPackage.BLOCK: return createBlock();
+      case XsPackage.STATEMENT: return createStatement();
+      case XsPackage.SWITCH_CASE: return createSwitchCase();
+      case XsPackage.SWITCH_DEFAULT: return createSwitchDefault();
+      case XsPackage.EXPRESSION: return createExpression();
+      case XsPackage.VAR: return createVar();
+      case XsPackage.LITERAL: return createLiteral();
+      case XsPackage.POSTFIX_STATEMENT: return createPostfixStatement();
+      case XsPackage.IF_ELSE_STATEMENT: return createIfElseStatement();
+      case XsPackage.WHILE_STATEMENT: return createWhileStatement();
+      case XsPackage.FOR_STATEMENT: return createForStatement();
+      case XsPackage.SWITCH_STATEMENT: return createSwitchStatement();
+      case XsPackage.RETURN_STATEMENT: return createReturnStatement();
+      case XsPackage.CONTINUE_STATEMENT: return createContinueStatement();
+      case XsPackage.BREAK_STATEMENT: return createBreakStatement();
+      case XsPackage.ASSIGN: return createAssign();
+      case XsPackage.OR_EXPRESSION: return createOrExpression();
+      case XsPackage.AND_EXPRESSION: return createAndExpression();
+      case XsPackage.EQUALS_EXPRESSION: return createEqualsExpression();
+      case XsPackage.COMPARISON_EXPRESSION: return createComparisonExpression();
+      case XsPackage.TERM: return createTerm();
+      case XsPackage.FACTOR: return createFactor();
+      case XsPackage.CALL: return createCall();
+      case XsPackage.LITERAL_STRING: return createLiteralString();
+      case XsPackage.LITERAL_INT: return createLiteralInt();
+      case XsPackage.LITERAL_FLOAT: return createLiteralFloat();
+      case XsPackage.LITERAL_BOOL: return createLiteralBool();
+      case XsPackage.VECTOR_LITERAL: return createVectorLiteral();
       case XsPackage.INT_TYPE: return createIntType();
       case XsPackage.FLOAT_TYPE: return createFloatType();
       case XsPackage.BOOL_TYPE: return createBoolType();
       case XsPackage.VECTOR_TYPE: return createVectorType();
       case XsPackage.STRING_TYPE: return createStringType();
       case XsPackage.VOID_TYPE: return createVoidType();
-      case XsPackage.VAR_TYPE_SPECIFIER: return createVarTypeSpecifier();
-      case XsPackage.FUN_TYPE_SPECIFIER: return createFunTypeSpecifier();
-      case XsPackage.PARAMS: return createParams();
-      case XsPackage.COMPOUND_STATEMENT: return createCompoundStatement();
-      case XsPackage.VAR_DECLARATION_OR_STATEMENT: return createVarDeclarationOrStatement();
-      case XsPackage.STATEMENT: return createStatement();
-      case XsPackage.EXPRESSION_STATEMENT: return createExpressionStatement();
-      case XsPackage.IF_ELSE_STATEMENT: return createIfElseStatement();
-      case XsPackage.WHILE_STATEMENT: return createWhileStatement();
-      case XsPackage.FOR_STATEMENT: return createForStatement();
-      case XsPackage.SWITCH_STATEMENT: return createSwitchStatement();
-      case XsPackage.SWITCH_CASE: return createSwitchCase();
-      case XsPackage.SWITCH_DEFAULT: return createSwitchDefault();
-      case XsPackage.RETURN_STATEMENT: return createReturnStatement();
-      case XsPackage.CONTINUE_STATEMENT: return createContinueStatement();
-      case XsPackage.BREAK_STATEMENT: return createBreakStatement();
-      case XsPackage.EXPRESSION: return createExpression();
-      case XsPackage.VAR: return createVar();
-      case XsPackage.CALL: return createCall();
-      case XsPackage.ARGUMENTS: return createArguments();
-      case XsPackage.SIGNED_NUM: return createSignedNum();
-      case XsPackage.EMPTY_EXPRESSION_STATEMENT: return createEmptyExpressionStatement();
-      case XsPackage.ASSIGNMENT_EXPRESSION: return createAssignmentExpression();
-      case XsPackage.POSTFIX_EXPRESSION: return createPostfixExpression();
-      case XsPackage.OR: return createOr();
-      case XsPackage.AND: return createAnd();
-      case XsPackage.EQUALS: return createEquals();
-      case XsPackage.COMPARISON: return createComparison();
-      case XsPackage.TERM: return createTerm();
-      case XsPackage.FACTOR: return createFactor();
-      case XsPackage.PRIMARY_EXPRESSION: return createPrimaryExpression();
-      case XsPackage.LITERAL_INT: return createLiteralInt();
-      case XsPackage.LITERAL_FLOAT: return createLiteralFloat();
-      case XsPackage.LITERAL_BOOL: return createLiteralBool();
-      case XsPackage.LITERAL_VECTOR: return createLiteralVector();
-      case XsPackage.LITERAL_STRING: return createLiteralString();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -149,32 +141,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ConstantNum createConstantNum()
+  public IncludeDeclaration createIncludeDeclaration()
   {
-    ConstantNumImpl constantNum = new ConstantNumImpl();
-    return constantNum;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LiteralOrConstantNum createLiteralOrConstantNum()
-  {
-    LiteralOrConstantNumImpl literalOrConstantNum = new LiteralOrConstantNumImpl();
-    return literalOrConstantNum;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Vector createVector()
-  {
-    VectorImpl vector = new VectorImpl();
-    return vector;
+    IncludeDeclarationImpl includeDeclaration = new IncludeDeclarationImpl();
+    return includeDeclaration;
   }
 
   /**
@@ -193,10 +163,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FunDeclaration createFunDeclaration()
+  public LocalVarDeclaration createLocalVarDeclaration()
   {
-    FunDeclarationImpl funDeclaration = new FunDeclarationImpl();
-    return funDeclaration;
+    LocalVarDeclarationImpl localVarDeclaration = new LocalVarDeclarationImpl();
+    return localVarDeclaration;
   }
 
   /**
@@ -204,10 +174,54 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public IncludeStatement createIncludeStatement()
+  public GlobalVarDeclaration createGlobalVarDeclaration()
   {
-    IncludeStatementImpl includeStatement = new IncludeStatementImpl();
-    return includeStatement;
+    GlobalVarDeclarationImpl globalVarDeclaration = new GlobalVarDeclarationImpl();
+    return globalVarDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ParameterDeclaration createParameterDeclaration()
+  {
+    ParameterDeclarationImpl parameterDeclaration = new ParameterDeclarationImpl();
+    return parameterDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ForVarDeclaration createForVarDeclaration()
+  {
+    ForVarDeclarationImpl forVarDeclaration = new ForVarDeclarationImpl();
+    return forVarDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FunctionDeclaration createFunctionDeclaration()
+  {
+    FunctionDeclarationImpl functionDeclaration = new FunctionDeclarationImpl();
+    return functionDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Type createType()
+  {
+    TypeImpl type = new TypeImpl();
+    return type;
   }
 
   /**
@@ -226,10 +240,10 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public VarModifier createVarModifier()
+  public Block createBlock()
   {
-    VarModifierImpl varModifier = new VarModifierImpl();
-    return varModifier;
+    BlockImpl block = new BlockImpl();
+    return block;
   }
 
   /**
@@ -237,10 +251,296 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FunModifier createFunModifier()
+  public Statement createStatement()
   {
-    FunModifierImpl funModifier = new FunModifierImpl();
-    return funModifier;
+    StatementImpl statement = new StatementImpl();
+    return statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SwitchCase createSwitchCase()
+  {
+    SwitchCaseImpl switchCase = new SwitchCaseImpl();
+    return switchCase;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SwitchDefault createSwitchDefault()
+  {
+    SwitchDefaultImpl switchDefault = new SwitchDefaultImpl();
+    return switchDefault;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression createExpression()
+  {
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Var createVar()
+  {
+    VarImpl var = new VarImpl();
+    return var;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Literal createLiteral()
+  {
+    LiteralImpl literal = new LiteralImpl();
+    return literal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PostfixStatement createPostfixStatement()
+  {
+    PostfixStatementImpl postfixStatement = new PostfixStatementImpl();
+    return postfixStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IfElseStatement createIfElseStatement()
+  {
+    IfElseStatementImpl ifElseStatement = new IfElseStatementImpl();
+    return ifElseStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public WhileStatement createWhileStatement()
+  {
+    WhileStatementImpl whileStatement = new WhileStatementImpl();
+    return whileStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ForStatement createForStatement()
+  {
+    ForStatementImpl forStatement = new ForStatementImpl();
+    return forStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SwitchStatement createSwitchStatement()
+  {
+    SwitchStatementImpl switchStatement = new SwitchStatementImpl();
+    return switchStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ReturnStatement createReturnStatement()
+  {
+    ReturnStatementImpl returnStatement = new ReturnStatementImpl();
+    return returnStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ContinueStatement createContinueStatement()
+  {
+    ContinueStatementImpl continueStatement = new ContinueStatementImpl();
+    return continueStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BreakStatement createBreakStatement()
+  {
+    BreakStatementImpl breakStatement = new BreakStatementImpl();
+    return breakStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Assign createAssign()
+  {
+    AssignImpl assign = new AssignImpl();
+    return assign;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OrExpression createOrExpression()
+  {
+    OrExpressionImpl orExpression = new OrExpressionImpl();
+    return orExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AndExpression createAndExpression()
+  {
+    AndExpressionImpl andExpression = new AndExpressionImpl();
+    return andExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EqualsExpression createEqualsExpression()
+  {
+    EqualsExpressionImpl equalsExpression = new EqualsExpressionImpl();
+    return equalsExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ComparisonExpression createComparisonExpression()
+  {
+    ComparisonExpressionImpl comparisonExpression = new ComparisonExpressionImpl();
+    return comparisonExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Term createTerm()
+  {
+    TermImpl term = new TermImpl();
+    return term;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Factor createFactor()
+  {
+    FactorImpl factor = new FactorImpl();
+    return factor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Call createCall()
+  {
+    CallImpl call = new CallImpl();
+    return call;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LiteralString createLiteralString()
+  {
+    LiteralStringImpl literalString = new LiteralStringImpl();
+    return literalString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LiteralInt createLiteralInt()
+  {
+    LiteralIntImpl literalInt = new LiteralIntImpl();
+    return literalInt;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LiteralFloat createLiteralFloat()
+  {
+    LiteralFloatImpl literalFloat = new LiteralFloatImpl();
+    return literalFloat;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LiteralBool createLiteralBool()
+  {
+    LiteralBoolImpl literalBool = new LiteralBoolImpl();
+    return literalBool;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VectorLiteral createVectorLiteral()
+  {
+    VectorLiteralImpl vectorLiteral = new VectorLiteralImpl();
+    return vectorLiteral;
   }
 
   /**
@@ -307,402 +607,6 @@ public class XsFactoryImpl extends EFactoryImpl implements XsFactory
   {
     VoidTypeImpl voidType = new VoidTypeImpl();
     return voidType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VarTypeSpecifier createVarTypeSpecifier()
-  {
-    VarTypeSpecifierImpl varTypeSpecifier = new VarTypeSpecifierImpl();
-    return varTypeSpecifier;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FunTypeSpecifier createFunTypeSpecifier()
-  {
-    FunTypeSpecifierImpl funTypeSpecifier = new FunTypeSpecifierImpl();
-    return funTypeSpecifier;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Params createParams()
-  {
-    ParamsImpl params = new ParamsImpl();
-    return params;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CompoundStatement createCompoundStatement()
-  {
-    CompoundStatementImpl compoundStatement = new CompoundStatementImpl();
-    return compoundStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VarDeclarationOrStatement createVarDeclarationOrStatement()
-  {
-    VarDeclarationOrStatementImpl varDeclarationOrStatement = new VarDeclarationOrStatementImpl();
-    return varDeclarationOrStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Statement createStatement()
-  {
-    StatementImpl statement = new StatementImpl();
-    return statement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ExpressionStatement createExpressionStatement()
-  {
-    ExpressionStatementImpl expressionStatement = new ExpressionStatementImpl();
-    return expressionStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IfElseStatement createIfElseStatement()
-  {
-    IfElseStatementImpl ifElseStatement = new IfElseStatementImpl();
-    return ifElseStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public WhileStatement createWhileStatement()
-  {
-    WhileStatementImpl whileStatement = new WhileStatementImpl();
-    return whileStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ForStatement createForStatement()
-  {
-    ForStatementImpl forStatement = new ForStatementImpl();
-    return forStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SwitchStatement createSwitchStatement()
-  {
-    SwitchStatementImpl switchStatement = new SwitchStatementImpl();
-    return switchStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SwitchCase createSwitchCase()
-  {
-    SwitchCaseImpl switchCase = new SwitchCaseImpl();
-    return switchCase;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SwitchDefault createSwitchDefault()
-  {
-    SwitchDefaultImpl switchDefault = new SwitchDefaultImpl();
-    return switchDefault;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ReturnStatement createReturnStatement()
-  {
-    ReturnStatementImpl returnStatement = new ReturnStatementImpl();
-    return returnStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ContinueStatement createContinueStatement()
-  {
-    ContinueStatementImpl continueStatement = new ContinueStatementImpl();
-    return continueStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BreakStatement createBreakStatement()
-  {
-    BreakStatementImpl breakStatement = new BreakStatementImpl();
-    return breakStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Expression createExpression()
-  {
-    ExpressionImpl expression = new ExpressionImpl();
-    return expression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Var createVar()
-  {
-    VarImpl var = new VarImpl();
-    return var;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Call createCall()
-  {
-    CallImpl call = new CallImpl();
-    return call;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Arguments createArguments()
-  {
-    ArgumentsImpl arguments = new ArgumentsImpl();
-    return arguments;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SignedNum createSignedNum()
-  {
-    SignedNumImpl signedNum = new SignedNumImpl();
-    return signedNum;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EmptyExpressionStatement createEmptyExpressionStatement()
-  {
-    EmptyExpressionStatementImpl emptyExpressionStatement = new EmptyExpressionStatementImpl();
-    return emptyExpressionStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AssignmentExpression createAssignmentExpression()
-  {
-    AssignmentExpressionImpl assignmentExpression = new AssignmentExpressionImpl();
-    return assignmentExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PostfixExpression createPostfixExpression()
-  {
-    PostfixExpressionImpl postfixExpression = new PostfixExpressionImpl();
-    return postfixExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Or createOr()
-  {
-    OrImpl or = new OrImpl();
-    return or;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public And createAnd()
-  {
-    AndImpl and = new AndImpl();
-    return and;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Equals createEquals()
-  {
-    EqualsImpl equals = new EqualsImpl();
-    return equals;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Comparison createComparison()
-  {
-    ComparisonImpl comparison = new ComparisonImpl();
-    return comparison;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Term createTerm()
-  {
-    TermImpl term = new TermImpl();
-    return term;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Factor createFactor()
-  {
-    FactorImpl factor = new FactorImpl();
-    return factor;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PrimaryExpression createPrimaryExpression()
-  {
-    PrimaryExpressionImpl primaryExpression = new PrimaryExpressionImpl();
-    return primaryExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LiteralInt createLiteralInt()
-  {
-    LiteralIntImpl literalInt = new LiteralIntImpl();
-    return literalInt;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LiteralFloat createLiteralFloat()
-  {
-    LiteralFloatImpl literalFloat = new LiteralFloatImpl();
-    return literalFloat;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LiteralBool createLiteralBool()
-  {
-    LiteralBoolImpl literalBool = new LiteralBoolImpl();
-    return literalBool;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LiteralVector createLiteralVector()
-  {
-    LiteralVectorImpl literalVector = new LiteralVectorImpl();
-    return literalVector;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LiteralString createLiteralString()
-  {
-    LiteralStringImpl literalString = new LiteralStringImpl();
-    return literalString;
   }
 
   /**

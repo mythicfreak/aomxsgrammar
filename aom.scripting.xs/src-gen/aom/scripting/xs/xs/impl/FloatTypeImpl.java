@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class FloatTypeImpl extends VarTypeSpecifierImpl implements FloatType
+public class FloatTypeImpl extends TypeImpl implements FloatType
 {
   /**
    * <!-- begin-user-doc -->

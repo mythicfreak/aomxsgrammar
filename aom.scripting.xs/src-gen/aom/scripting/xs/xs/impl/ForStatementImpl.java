@@ -4,8 +4,8 @@ package aom.scripting.xs.xs.impl;
 
 import aom.scripting.xs.xs.Expression;
 import aom.scripting.xs.xs.ForStatement;
+import aom.scripting.xs.xs.ForVarDeclaration;
 import aom.scripting.xs.xs.Statement;
-import aom.scripting.xs.xs.VarDeclaration;
 import aom.scripting.xs.xs.XsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link aom.scripting.xs.xs.impl.ForStatementImpl#getVar <em>Var</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.ForStatementImpl#getOp <em>Op</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.impl.ForStatementImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.ForStatementImpl#getEnd <em>End</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.ForStatementImpl#getStatement <em>Statement</em>}</li>
  * </ul>
  * </p>
@@ -42,7 +42,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
    * @generated
    * @ordered
    */
-  protected VarDeclaration var;
+  protected ForVarDeclaration var;
 
   /**
    * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -65,14 +65,14 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
   protected String op = OP_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
+   * The cached value of the '{@link #getEnd() <em>End</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExpression()
+   * @see #getEnd()
    * @generated
    * @ordered
    */
-  protected Expression expression;
+  protected Expression end;
 
   /**
    * The cached value of the '{@link #getStatement() <em>Statement</em>}' containment reference.
@@ -110,7 +110,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
    * <!-- end-user-doc -->
    * @generated
    */
-  public VarDeclaration getVar()
+  public ForVarDeclaration getVar()
   {
     return var;
   }
@@ -120,9 +120,9 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVar(VarDeclaration newVar, NotificationChain msgs)
+  public NotificationChain basicSetVar(ForVarDeclaration newVar, NotificationChain msgs)
   {
-    VarDeclaration oldVar = var;
+    ForVarDeclaration oldVar = var;
     var = newVar;
     if (eNotificationRequired())
     {
@@ -137,7 +137,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVar(VarDeclaration newVar)
+  public void setVar(ForVarDeclaration newVar)
   {
     if (newVar != var)
     {
@@ -181,9 +181,9 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getExpression()
+  public Expression getEnd()
   {
-    return expression;
+    return end;
   }
 
   /**
@@ -191,13 +191,13 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs)
+  public NotificationChain basicSetEnd(Expression newEnd, NotificationChain msgs)
   {
-    Expression oldExpression = expression;
-    expression = newExpression;
+    Expression oldEnd = end;
+    end = newEnd;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.FOR_STATEMENT__EXPRESSION, oldExpression, newExpression);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.FOR_STATEMENT__END, oldEnd, newEnd);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -208,20 +208,20 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setExpression(Expression newExpression)
+  public void setEnd(Expression newEnd)
   {
-    if (newExpression != expression)
+    if (newEnd != end)
     {
       NotificationChain msgs = null;
-      if (expression != null)
-        msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.FOR_STATEMENT__EXPRESSION, null, msgs);
-      if (newExpression != null)
-        msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.FOR_STATEMENT__EXPRESSION, null, msgs);
-      msgs = basicSetExpression(newExpression, msgs);
+      if (end != null)
+        msgs = ((InternalEObject)end).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.FOR_STATEMENT__END, null, msgs);
+      if (newEnd != null)
+        msgs = ((InternalEObject)newEnd).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.FOR_STATEMENT__END, null, msgs);
+      msgs = basicSetEnd(newEnd, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.FOR_STATEMENT__EXPRESSION, newExpression, newExpression));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.FOR_STATEMENT__END, newEnd, newEnd));
   }
 
   /**
@@ -284,8 +284,8 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
     {
       case XsPackage.FOR_STATEMENT__VAR:
         return basicSetVar(null, msgs);
-      case XsPackage.FOR_STATEMENT__EXPRESSION:
-        return basicSetExpression(null, msgs);
+      case XsPackage.FOR_STATEMENT__END:
+        return basicSetEnd(null, msgs);
       case XsPackage.FOR_STATEMENT__STATEMENT:
         return basicSetStatement(null, msgs);
     }
@@ -306,8 +306,8 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
         return getVar();
       case XsPackage.FOR_STATEMENT__OP:
         return getOp();
-      case XsPackage.FOR_STATEMENT__EXPRESSION:
-        return getExpression();
+      case XsPackage.FOR_STATEMENT__END:
+        return getEnd();
       case XsPackage.FOR_STATEMENT__STATEMENT:
         return getStatement();
     }
@@ -325,13 +325,13 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
     switch (featureID)
     {
       case XsPackage.FOR_STATEMENT__VAR:
-        setVar((VarDeclaration)newValue);
+        setVar((ForVarDeclaration)newValue);
         return;
       case XsPackage.FOR_STATEMENT__OP:
         setOp((String)newValue);
         return;
-      case XsPackage.FOR_STATEMENT__EXPRESSION:
-        setExpression((Expression)newValue);
+      case XsPackage.FOR_STATEMENT__END:
+        setEnd((Expression)newValue);
         return;
       case XsPackage.FOR_STATEMENT__STATEMENT:
         setStatement((Statement)newValue);
@@ -351,13 +351,13 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
     switch (featureID)
     {
       case XsPackage.FOR_STATEMENT__VAR:
-        setVar((VarDeclaration)null);
+        setVar((ForVarDeclaration)null);
         return;
       case XsPackage.FOR_STATEMENT__OP:
         setOp(OP_EDEFAULT);
         return;
-      case XsPackage.FOR_STATEMENT__EXPRESSION:
-        setExpression((Expression)null);
+      case XsPackage.FOR_STATEMENT__END:
+        setEnd((Expression)null);
         return;
       case XsPackage.FOR_STATEMENT__STATEMENT:
         setStatement((Statement)null);
@@ -380,8 +380,8 @@ public class ForStatementImpl extends StatementImpl implements ForStatement
         return var != null;
       case XsPackage.FOR_STATEMENT__OP:
         return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
-      case XsPackage.FOR_STATEMENT__EXPRESSION:
-        return expression != null;
+      case XsPackage.FOR_STATEMENT__END:
+        return end != null;
       case XsPackage.FOR_STATEMENT__STATEMENT:
         return statement != null;
     }

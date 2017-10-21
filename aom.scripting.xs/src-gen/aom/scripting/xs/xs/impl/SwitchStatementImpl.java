@@ -2,10 +2,10 @@
  */
 package aom.scripting.xs.xs.impl;
 
+import aom.scripting.xs.xs.Expression;
 import aom.scripting.xs.xs.SwitchCase;
 import aom.scripting.xs.xs.SwitchDefault;
 import aom.scripting.xs.xs.SwitchStatement;
-import aom.scripting.xs.xs.VarDeclaration;
 import aom.scripting.xs.xs.XsPackage;
 
 import java.util.Collection;
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.SwitchStatementImpl#getVar <em>Var</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.SwitchStatementImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.SwitchStatementImpl#getCases <em>Cases</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.SwitchStatementImpl#getDefault <em>Default</em>}</li>
  * </ul>
@@ -41,14 +41,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class SwitchStatementImpl extends StatementImpl implements SwitchStatement
 {
   /**
-   * The cached value of the '{@link #getVar() <em>Var</em>}' reference.
+   * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVar()
+   * @see #getExpression()
    * @generated
    * @ordered
    */
-  protected VarDeclaration var;
+  protected Expression expression;
 
   /**
    * The cached value of the '{@link #getCases() <em>Cases</em>}' containment reference list.
@@ -96,19 +96,9 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public VarDeclaration getVar()
+  public Expression getExpression()
   {
-    if (var != null && var.eIsProxy())
-    {
-      InternalEObject oldVar = (InternalEObject)var;
-      var = (VarDeclaration)eResolveProxy(oldVar);
-      if (var != oldVar)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, XsPackage.SWITCH_STATEMENT__VAR, oldVar, var));
-      }
-    }
-    return var;
+    return expression;
   }
 
   /**
@@ -116,22 +106,37 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public VarDeclaration basicGetVar()
+  public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs)
   {
-    return var;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setVar(VarDeclaration newVar)
-  {
-    VarDeclaration oldVar = var;
-    var = newVar;
+    Expression oldExpression = expression;
+    expression = newExpression;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.SWITCH_STATEMENT__VAR, oldVar, var));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.SWITCH_STATEMENT__EXPRESSION, oldExpression, newExpression);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExpression(Expression newExpression)
+  {
+    if (newExpression != expression)
+    {
+      NotificationChain msgs = null;
+      if (expression != null)
+        msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.SWITCH_STATEMENT__EXPRESSION, null, msgs);
+      if (newExpression != null)
+        msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.SWITCH_STATEMENT__EXPRESSION, null, msgs);
+      msgs = basicSetExpression(newExpression, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.SWITCH_STATEMENT__EXPRESSION, newExpression, newExpression));
   }
 
   /**
@@ -206,6 +211,8 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
   {
     switch (featureID)
     {
+      case XsPackage.SWITCH_STATEMENT__EXPRESSION:
+        return basicSetExpression(null, msgs);
       case XsPackage.SWITCH_STATEMENT__CASES:
         return ((InternalEList<?>)getCases()).basicRemove(otherEnd, msgs);
       case XsPackage.SWITCH_STATEMENT__DEFAULT:
@@ -224,9 +231,8 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
   {
     switch (featureID)
     {
-      case XsPackage.SWITCH_STATEMENT__VAR:
-        if (resolve) return getVar();
-        return basicGetVar();
+      case XsPackage.SWITCH_STATEMENT__EXPRESSION:
+        return getExpression();
       case XsPackage.SWITCH_STATEMENT__CASES:
         return getCases();
       case XsPackage.SWITCH_STATEMENT__DEFAULT:
@@ -246,8 +252,8 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
   {
     switch (featureID)
     {
-      case XsPackage.SWITCH_STATEMENT__VAR:
-        setVar((VarDeclaration)newValue);
+      case XsPackage.SWITCH_STATEMENT__EXPRESSION:
+        setExpression((Expression)newValue);
         return;
       case XsPackage.SWITCH_STATEMENT__CASES:
         getCases().clear();
@@ -270,8 +276,8 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
   {
     switch (featureID)
     {
-      case XsPackage.SWITCH_STATEMENT__VAR:
-        setVar((VarDeclaration)null);
+      case XsPackage.SWITCH_STATEMENT__EXPRESSION:
+        setExpression((Expression)null);
         return;
       case XsPackage.SWITCH_STATEMENT__CASES:
         getCases().clear();
@@ -293,8 +299,8 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
   {
     switch (featureID)
     {
-      case XsPackage.SWITCH_STATEMENT__VAR:
-        return var != null;
+      case XsPackage.SWITCH_STATEMENT__EXPRESSION:
+        return expression != null;
       case XsPackage.SWITCH_STATEMENT__CASES:
         return cases != null && !cases.isEmpty();
       case XsPackage.SWITCH_STATEMENT__DEFAULT:

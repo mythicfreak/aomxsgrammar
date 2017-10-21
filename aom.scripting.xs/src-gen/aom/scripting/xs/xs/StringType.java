@@ -13,6 +13,6 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface StringType extends VarTypeSpecifier
+public interface StringType extends Type
 {
 } // StringType

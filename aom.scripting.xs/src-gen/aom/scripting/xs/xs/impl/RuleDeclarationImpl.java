@@ -2,7 +2,7 @@
  */
 package aom.scripting.xs.xs.impl;
 
-import aom.scripting.xs.xs.CompoundStatement;
+import aom.scripting.xs.xs.Block;
 import aom.scripting.xs.xs.RuleDeclaration;
 import aom.scripting.xs.xs.XsPackage;
 
@@ -21,13 +21,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#getName <em>Name</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#isActive <em>Active</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#isRunImmediately <em>Run Immediately</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#isHighFrequency <em>High Frequency</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#getGroup <em>Group</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#getMinInterval <em>Min Interval</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#getMaxInterval <em>Max Interval</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#getStatements <em>Statements</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#getPriority <em>Priority</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.RuleDeclarationImpl#getBody <em>Body</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,6 +37,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclaration
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #isActive() <em>Active</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -156,14 +178,34 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   protected int maxInterval = MAX_INTERVAL_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getStatements() <em>Statements</em>}' containment reference.
+   * The default value of the '{@link #getPriority() <em>Priority</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStatements()
+   * @see #getPriority()
    * @generated
    * @ordered
    */
-  protected CompoundStatement statements;
+  protected static final int PRIORITY_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getPriority() <em>Priority</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPriority()
+   * @generated
+   * @ordered
+   */
+  protected int priority = PRIORITY_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBody()
+   * @generated
+   * @ordered
+   */
+  protected Block body;
 
   /**
    * <!-- begin-user-doc -->
@@ -184,6 +226,29 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   protected EClass eStaticClass()
   {
     return XsPackage.Literals.RULE_DECLARATION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.RULE_DECLARATION__NAME, oldName, name));
   }
 
   /**
@@ -329,9 +394,9 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
    * <!-- end-user-doc -->
    * @generated
    */
-  public CompoundStatement getStatements()
+  public int getPriority()
   {
-    return statements;
+    return priority;
   }
 
   /**
@@ -339,13 +404,36 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetStatements(CompoundStatement newStatements, NotificationChain msgs)
+  public void setPriority(int newPriority)
   {
-    CompoundStatement oldStatements = statements;
-    statements = newStatements;
+    int oldPriority = priority;
+    priority = newPriority;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.RULE_DECLARATION__PRIORITY, oldPriority, priority));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Block getBody()
+  {
+    return body;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBody(Block newBody, NotificationChain msgs)
+  {
+    Block oldBody = body;
+    body = newBody;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.RULE_DECLARATION__STATEMENTS, oldStatements, newStatements);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.RULE_DECLARATION__BODY, oldBody, newBody);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -356,20 +444,20 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setStatements(CompoundStatement newStatements)
+  public void setBody(Block newBody)
   {
-    if (newStatements != statements)
+    if (newBody != body)
     {
       NotificationChain msgs = null;
-      if (statements != null)
-        msgs = ((InternalEObject)statements).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.RULE_DECLARATION__STATEMENTS, null, msgs);
-      if (newStatements != null)
-        msgs = ((InternalEObject)newStatements).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.RULE_DECLARATION__STATEMENTS, null, msgs);
-      msgs = basicSetStatements(newStatements, msgs);
+      if (body != null)
+        msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.RULE_DECLARATION__BODY, null, msgs);
+      if (newBody != null)
+        msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.RULE_DECLARATION__BODY, null, msgs);
+      msgs = basicSetBody(newBody, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.RULE_DECLARATION__STATEMENTS, newStatements, newStatements));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.RULE_DECLARATION__BODY, newBody, newBody));
   }
 
   /**
@@ -382,8 +470,8 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
-      case XsPackage.RULE_DECLARATION__STATEMENTS:
-        return basicSetStatements(null, msgs);
+      case XsPackage.RULE_DECLARATION__BODY:
+        return basicSetBody(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -398,6 +486,8 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
+      case XsPackage.RULE_DECLARATION__NAME:
+        return getName();
       case XsPackage.RULE_DECLARATION__ACTIVE:
         return isActive();
       case XsPackage.RULE_DECLARATION__RUN_IMMEDIATELY:
@@ -410,8 +500,10 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
         return getMinInterval();
       case XsPackage.RULE_DECLARATION__MAX_INTERVAL:
         return getMaxInterval();
-      case XsPackage.RULE_DECLARATION__STATEMENTS:
-        return getStatements();
+      case XsPackage.RULE_DECLARATION__PRIORITY:
+        return getPriority();
+      case XsPackage.RULE_DECLARATION__BODY:
+        return getBody();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -426,6 +518,9 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
+      case XsPackage.RULE_DECLARATION__NAME:
+        setName((String)newValue);
+        return;
       case XsPackage.RULE_DECLARATION__ACTIVE:
         setActive((Boolean)newValue);
         return;
@@ -444,8 +539,11 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
       case XsPackage.RULE_DECLARATION__MAX_INTERVAL:
         setMaxInterval((Integer)newValue);
         return;
-      case XsPackage.RULE_DECLARATION__STATEMENTS:
-        setStatements((CompoundStatement)newValue);
+      case XsPackage.RULE_DECLARATION__PRIORITY:
+        setPriority((Integer)newValue);
+        return;
+      case XsPackage.RULE_DECLARATION__BODY:
+        setBody((Block)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -461,6 +559,9 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
+      case XsPackage.RULE_DECLARATION__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case XsPackage.RULE_DECLARATION__ACTIVE:
         setActive(ACTIVE_EDEFAULT);
         return;
@@ -479,8 +580,11 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
       case XsPackage.RULE_DECLARATION__MAX_INTERVAL:
         setMaxInterval(MAX_INTERVAL_EDEFAULT);
         return;
-      case XsPackage.RULE_DECLARATION__STATEMENTS:
-        setStatements((CompoundStatement)null);
+      case XsPackage.RULE_DECLARATION__PRIORITY:
+        setPriority(PRIORITY_EDEFAULT);
+        return;
+      case XsPackage.RULE_DECLARATION__BODY:
+        setBody((Block)null);
         return;
     }
     super.eUnset(featureID);
@@ -496,6 +600,8 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
   {
     switch (featureID)
     {
+      case XsPackage.RULE_DECLARATION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case XsPackage.RULE_DECLARATION__ACTIVE:
         return active != ACTIVE_EDEFAULT;
       case XsPackage.RULE_DECLARATION__RUN_IMMEDIATELY:
@@ -508,8 +614,10 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
         return minInterval != MIN_INTERVAL_EDEFAULT;
       case XsPackage.RULE_DECLARATION__MAX_INTERVAL:
         return maxInterval != MAX_INTERVAL_EDEFAULT;
-      case XsPackage.RULE_DECLARATION__STATEMENTS:
-        return statements != null;
+      case XsPackage.RULE_DECLARATION__PRIORITY:
+        return priority != PRIORITY_EDEFAULT;
+      case XsPackage.RULE_DECLARATION__BODY:
+        return body != null;
     }
     return super.eIsSet(featureID);
   }
@@ -525,7 +633,9 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (active: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", active: ");
     result.append(active);
     result.append(", runImmediately: ");
     result.append(runImmediately);
@@ -537,6 +647,8 @@ public class RuleDeclarationImpl extends DeclarationImpl implements RuleDeclarat
     result.append(minInterval);
     result.append(", maxInterval: ");
     result.append(maxInterval);
+    result.append(", priority: ");
+    result.append(priority);
     result.append(')');
     return result.toString();
   }

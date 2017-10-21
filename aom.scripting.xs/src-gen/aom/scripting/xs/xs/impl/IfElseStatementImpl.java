@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link aom.scripting.xs.xs.impl.IfElseStatementImpl#getCondition <em>Condition</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.impl.IfElseStatementImpl#getIfStatement <em>If Statement</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.IfElseStatementImpl#getThenStatement <em>Then Statement</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.impl.IfElseStatementImpl#getElseStatement <em>Else Statement</em>}</li>
  * </ul>
  * </p>
@@ -43,14 +43,14 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
   protected Expression condition;
 
   /**
-   * The cached value of the '{@link #getIfStatement() <em>If Statement</em>}' containment reference.
+   * The cached value of the '{@link #getThenStatement() <em>Then Statement</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIfStatement()
+   * @see #getThenStatement()
    * @generated
    * @ordered
    */
-  protected Statement ifStatement;
+  protected Statement thenStatement;
 
   /**
    * The cached value of the '{@link #getElseStatement() <em>Else Statement</em>}' containment reference.
@@ -136,9 +136,9 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public Statement getIfStatement()
+  public Statement getThenStatement()
   {
-    return ifStatement;
+    return thenStatement;
   }
 
   /**
@@ -146,13 +146,13 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIfStatement(Statement newIfStatement, NotificationChain msgs)
+  public NotificationChain basicSetThenStatement(Statement newThenStatement, NotificationChain msgs)
   {
-    Statement oldIfStatement = ifStatement;
-    ifStatement = newIfStatement;
+    Statement oldThenStatement = thenStatement;
+    thenStatement = newThenStatement;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.IF_ELSE_STATEMENT__IF_STATEMENT, oldIfStatement, newIfStatement);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XsPackage.IF_ELSE_STATEMENT__THEN_STATEMENT, oldThenStatement, newThenStatement);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -163,20 +163,20 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIfStatement(Statement newIfStatement)
+  public void setThenStatement(Statement newThenStatement)
   {
-    if (newIfStatement != ifStatement)
+    if (newThenStatement != thenStatement)
     {
       NotificationChain msgs = null;
-      if (ifStatement != null)
-        msgs = ((InternalEObject)ifStatement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.IF_ELSE_STATEMENT__IF_STATEMENT, null, msgs);
-      if (newIfStatement != null)
-        msgs = ((InternalEObject)newIfStatement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.IF_ELSE_STATEMENT__IF_STATEMENT, null, msgs);
-      msgs = basicSetIfStatement(newIfStatement, msgs);
+      if (thenStatement != null)
+        msgs = ((InternalEObject)thenStatement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XsPackage.IF_ELSE_STATEMENT__THEN_STATEMENT, null, msgs);
+      if (newThenStatement != null)
+        msgs = ((InternalEObject)newThenStatement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XsPackage.IF_ELSE_STATEMENT__THEN_STATEMENT, null, msgs);
+      msgs = basicSetThenStatement(newThenStatement, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.IF_ELSE_STATEMENT__IF_STATEMENT, newIfStatement, newIfStatement));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.IF_ELSE_STATEMENT__THEN_STATEMENT, newThenStatement, newThenStatement));
   }
 
   /**
@@ -239,8 +239,8 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
     {
       case XsPackage.IF_ELSE_STATEMENT__CONDITION:
         return basicSetCondition(null, msgs);
-      case XsPackage.IF_ELSE_STATEMENT__IF_STATEMENT:
-        return basicSetIfStatement(null, msgs);
+      case XsPackage.IF_ELSE_STATEMENT__THEN_STATEMENT:
+        return basicSetThenStatement(null, msgs);
       case XsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT:
         return basicSetElseStatement(null, msgs);
     }
@@ -259,8 +259,8 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
     {
       case XsPackage.IF_ELSE_STATEMENT__CONDITION:
         return getCondition();
-      case XsPackage.IF_ELSE_STATEMENT__IF_STATEMENT:
-        return getIfStatement();
+      case XsPackage.IF_ELSE_STATEMENT__THEN_STATEMENT:
+        return getThenStatement();
       case XsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT:
         return getElseStatement();
     }
@@ -280,8 +280,8 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
       case XsPackage.IF_ELSE_STATEMENT__CONDITION:
         setCondition((Expression)newValue);
         return;
-      case XsPackage.IF_ELSE_STATEMENT__IF_STATEMENT:
-        setIfStatement((Statement)newValue);
+      case XsPackage.IF_ELSE_STATEMENT__THEN_STATEMENT:
+        setThenStatement((Statement)newValue);
         return;
       case XsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT:
         setElseStatement((Statement)newValue);
@@ -303,8 +303,8 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
       case XsPackage.IF_ELSE_STATEMENT__CONDITION:
         setCondition((Expression)null);
         return;
-      case XsPackage.IF_ELSE_STATEMENT__IF_STATEMENT:
-        setIfStatement((Statement)null);
+      case XsPackage.IF_ELSE_STATEMENT__THEN_STATEMENT:
+        setThenStatement((Statement)null);
         return;
       case XsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT:
         setElseStatement((Statement)null);
@@ -325,8 +325,8 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
     {
       case XsPackage.IF_ELSE_STATEMENT__CONDITION:
         return condition != null;
-      case XsPackage.IF_ELSE_STATEMENT__IF_STATEMENT:
-        return ifStatement != null;
+      case XsPackage.IF_ELSE_STATEMENT__THEN_STATEMENT:
+        return thenStatement != null;
       case XsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT:
         return elseStatement != null;
     }

@@ -2,6 +2,7 @@
  */
 package aom.scripting.xs.xs;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,8 +12,7 @@ package aom.scripting.xs.xs;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.VarDeclaration#getModifier <em>Modifier</em>}</li>
- *   <li>{@link aom.scripting.xs.xs.VarDeclaration#getType <em>Type</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.VarDeclaration#getName <em>Name</em>}</li>
  *   <li>{@link aom.scripting.xs.xs.VarDeclaration#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
@@ -21,59 +21,33 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface VarDeclaration extends Declaration, VarDeclarationOrStatement
+public interface VarDeclaration extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Modifier</b></em>' containment reference.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Modifier</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Modifier</em>' containment reference.
-   * @see #setModifier(VarModifier)
-   * @see aom.scripting.xs.xs.XsPackage#getVarDeclaration_Modifier()
-   * @model containment="true"
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see aom.scripting.xs.xs.XsPackage#getVarDeclaration_Name()
+   * @model
    * @generated
    */
-  VarModifier getModifier();
+  String getName();
 
   /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.VarDeclaration#getModifier <em>Modifier</em>}' containment reference.
+   * Sets the value of the '{@link aom.scripting.xs.xs.VarDeclaration#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Modifier</em>' containment reference.
-   * @see #getModifier()
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  void setModifier(VarModifier value);
-
-  /**
-   * Returns the value of the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Type</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' containment reference.
-   * @see #setType(VarTypeSpecifier)
-   * @see aom.scripting.xs.xs.XsPackage#getVarDeclaration_Type()
-   * @model containment="true"
-   * @generated
-   */
-  VarTypeSpecifier getType();
-
-  /**
-   * Sets the value of the '{@link aom.scripting.xs.xs.VarDeclaration#getType <em>Type</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' containment reference.
-   * @see #getType()
-   * @generated
-   */
-  void setType(VarTypeSpecifier value);
+  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Value</b></em>' containment reference.

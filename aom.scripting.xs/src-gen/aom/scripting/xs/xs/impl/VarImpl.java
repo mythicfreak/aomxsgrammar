@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,23 +20,23 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link aom.scripting.xs.xs.impl.VarImpl#getName <em>Name</em>}</li>
+ *   <li>{@link aom.scripting.xs.xs.impl.VarImpl#getDeclaration <em>Declaration</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class VarImpl extends MinimalEObjectImpl.Container implements Var
+public class VarImpl extends ExpressionImpl implements Var
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' reference.
+   * The cached value of the '{@link #getDeclaration() <em>Declaration</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getDeclaration()
    * @generated
    * @ordered
    */
-  protected VarDeclaration name;
+  protected VarDeclaration declaration;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,19 +64,19 @@ public class VarImpl extends MinimalEObjectImpl.Container implements Var
    * <!-- end-user-doc -->
    * @generated
    */
-  public VarDeclaration getName()
+  public VarDeclaration getDeclaration()
   {
-    if (name != null && name.eIsProxy())
+    if (declaration != null && declaration.eIsProxy())
     {
-      InternalEObject oldName = (InternalEObject)name;
-      name = (VarDeclaration)eResolveProxy(oldName);
-      if (name != oldName)
+      InternalEObject oldDeclaration = (InternalEObject)declaration;
+      declaration = (VarDeclaration)eResolveProxy(oldDeclaration);
+      if (declaration != oldDeclaration)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, XsPackage.VAR__NAME, oldName, name));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, XsPackage.VAR__DECLARATION, oldDeclaration, declaration));
       }
     }
-    return name;
+    return declaration;
   }
 
   /**
@@ -85,9 +84,9 @@ public class VarImpl extends MinimalEObjectImpl.Container implements Var
    * <!-- end-user-doc -->
    * @generated
    */
-  public VarDeclaration basicGetName()
+  public VarDeclaration basicGetDeclaration()
   {
-    return name;
+    return declaration;
   }
 
   /**
@@ -95,12 +94,12 @@ public class VarImpl extends MinimalEObjectImpl.Container implements Var
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(VarDeclaration newName)
+  public void setDeclaration(VarDeclaration newDeclaration)
   {
-    VarDeclaration oldName = name;
-    name = newName;
+    VarDeclaration oldDeclaration = declaration;
+    declaration = newDeclaration;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.VAR__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, XsPackage.VAR__DECLARATION, oldDeclaration, declaration));
   }
 
   /**
@@ -113,9 +112,9 @@ public class VarImpl extends MinimalEObjectImpl.Container implements Var
   {
     switch (featureID)
     {
-      case XsPackage.VAR__NAME:
-        if (resolve) return getName();
-        return basicGetName();
+      case XsPackage.VAR__DECLARATION:
+        if (resolve) return getDeclaration();
+        return basicGetDeclaration();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -130,8 +129,8 @@ public class VarImpl extends MinimalEObjectImpl.Container implements Var
   {
     switch (featureID)
     {
-      case XsPackage.VAR__NAME:
-        setName((VarDeclaration)newValue);
+      case XsPackage.VAR__DECLARATION:
+        setDeclaration((VarDeclaration)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -147,8 +146,8 @@ public class VarImpl extends MinimalEObjectImpl.Container implements Var
   {
     switch (featureID)
     {
-      case XsPackage.VAR__NAME:
-        setName((VarDeclaration)null);
+      case XsPackage.VAR__DECLARATION:
+        setDeclaration((VarDeclaration)null);
         return;
     }
     super.eUnset(featureID);
@@ -164,8 +163,8 @@ public class VarImpl extends MinimalEObjectImpl.Container implements Var
   {
     switch (featureID)
     {
-      case XsPackage.VAR__NAME:
-        return name != null;
+      case XsPackage.VAR__DECLARATION:
+        return declaration != null;
     }
     return super.eIsSet(featureID);
   }

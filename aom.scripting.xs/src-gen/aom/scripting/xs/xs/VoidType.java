@@ -13,6 +13,6 @@ package aom.scripting.xs.xs;
  * @model
  * @generated
  */
-public interface VoidType extends FunTypeSpecifier
+public interface VoidType extends Type
 {
 } // VoidType
